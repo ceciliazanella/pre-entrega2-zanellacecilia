@@ -1,0 +1,2079 @@
+/* ------ RESET ------ */
+
+/* font-family: 'Corinthia', cursive; */
+/* font-family: 'Lato', sans-serif; */
+
+* {
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	text-transform: bold;
+
+	color: #D9CAB3;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+
+/* ------ HEADER ------ */
+
+.logo {
+	max-width: 60%;
+}
+
+.contenedor {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.header_wrapper {
+	background-image: url(/imagenes/image_index/portada.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-image:
+		linear-gradient(#0000008e, rgba(94, 11, 21, 0.329)), url(/imagenes/image_index/portada.jpg);
+
+	min-height: 900px;
+	padding: 2rem;
+	margin: 0 auto 0;
+
+	font-family: 'Lato', sans-serif;
+	font-weight: 900;
+}
+
+/* ------ HEADER CAMBIO SECCIONES ------ */
+
+hr {
+	border: solid 2px #90323D;
+}
+
+.header_seccion {
+	background-color: #5E0B15;
+
+	max-height: 240px;
+	padding-top: 2rem;
+	margin: 0 auto;
+}
+
+.contenedor__seccion {
+	background-color: #ffffff;
+	min-height: 200px;
+	margin-top: 200px;
+
+	color: #5E0B15;
+	text-align: center;
+}
+
+.contenedor__seccion h1 {
+	font-size: 2.8rem;
+	font-weight: 900;
+}
+
+.descripcion__seccion {
+	max-width: 1024px;
+	min-height: 200px;
+	margin: 0 auto;
+
+	line-height: 0.5rem;
+}
+
+.descripcion__seccion h3 {
+	color: #90323D;
+	font-size: 2rem;
+	font-weight: 900;
+	text-align: center;
+}
+
+.descripcion__seccion h4 {
+	color: #BC8034;
+	font-size: 1.5rem;
+	font-style: italic;
+	text-align: center;
+}
+
+/* --- NAV --- */
+
+.navbar-nav {
+	padding-left: 4rem;
+
+	gap: 2rem;
+
+	text-align: right;
+}
+
+.navbar-toggler-icon {
+	color: #D9CAB3;
+}
+
+.nav-item {
+	background-color: #5E0B15;
+	border-radius: 2rem;
+	box-shadow: inset 0px 0px 10px 0 #00000093;
+
+	width: 100%;
+	padding: 1rem;
+
+	gap: 1rem;
+
+	color: #D9CAB3;
+}
+
+.nav-link {
+	color: #D9CAB3;
+	font-family: "Lato", sans-serif;
+	font-size: 1rem;
+	font-weight: 900;
+}
+
+.nav-link:hover {
+	color: #BC8034;
+	text-shadow: #5E0B15;
+	font-size: 1.2rem;
+
+	transition: 0.6s ease-in-out;
+}
+
+.navbar .a {
+	color: #8C7A6B;
+}
+
+.navbar-toggler {
+	color: #D9CAB3;
+}
+
+[data-bs-theme="dark"] {
+	--bs-body-bg: none;
+	--bs-border-color-translucent: none;
+}
+
+.dropdown-menu {
+	background-color: #5e0b15c7;
+	box-shadow: inset 0px 0px 10px 0 #5e0b1593;
+
+	font-size: 0.6rem;
+}
+
+.dropdown-item {
+	color: #8C7A6B;
+	font-family: "Lato", sans-serif;
+	font-size: 1.2rem;
+	text-align: right;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+	background-color: #d9cab386;
+
+	color: #5E0B15;
+	font-style: italic;
+	text-shadow: #5E0B15;
+
+	transition: 1s;
+}
+
+.contenedor__titular {
+	background-color: #5e0b1593;
+	box-shadow: inset 0px 0px 10px 0 #5E0B15;
+
+	max-width: 100%;
+	height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 9rem;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	justify-content: center;
+	align-self: center;
+
+	text-align: center;
+	line-height: 0.2;
+}
+
+/* ------ H1 ------ */
+
+.contenedor__titular h1 {
+	color: #D9CAB3;
+	font-family: 'Corinthia', cursive;
+	font-size: 4.6rem;
+	line-height: 0.8;
+}
+
+.contenedor__titular h3 {
+	color: #BC8034;
+	font-family: 'Corinthia', cursive;
+	font-size: 2.6rem;
+	font-weight: 700;
+}
+
+.contenedor__titular h4 {
+	color: #D9CAB3;
+	font-size: 1.6rem;
+	font-weight: 900;
+}
+
+/* ------ MAIN ------ */
+
+/* --- FORM --- */
+
+form {
+	text-align: center;
+}
+
+form input,
+textarea {
+	border: #5E0B15 solid 1px;
+	border-radius: 1rem;
+	box-shadow: inset 0px 0px 10px 0 #5E0B15;
+
+	width: 450px;
+	padding: 1rem;
+	margin: 1rem;
+
+	color: #BC8034;
+	font-family: "Lato", sans-serif;
+	font-size: 1rem;
+}
+
+.boton_value {
+	background-color: #5E0B15;
+	border-radius: 1rem;
+
+	color: #8C7A6B;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.boton_value:hover {
+	box-shadow: 2px 2px 4px 0 #5E0B15;
+
+	color: #BC8034;
+	font-size: 1.2rem;
+	text-shadow: #BC8034;
+
+	transition: 1s ease-in-out;
+}
+
+/* --- DESTACADO --- */
+
+.contenedor__destacado {
+	padding: 1.5rem 2rem 4rem;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center;
+
+	gap: 2rem;
+
+	text-align: center;
+	line-height: 3rem;
+}
+
+.contenedor__destacado h3 {
+	color: #90323D;
+	font-size: 1.5rem;
+	font-style: italic;
+	font-weight: 700;
+}
+
+.contenedor__destacado h4 {
+	color: #BC8034;
+	font-size: 1.2rem;
+}
+
+.boton {
+	width: 70%;
+
+	align-self: center;
+	justify-self: center;
+
+	font-size: 1.5rem;
+	font-weight: 900;
+	text-align: center;
+}
+
+.boton h5 {
+	border: solid 2px #8C7A6B;
+	border-radius: 0.3rem;
+
+	padding: 1rem 1.5rem 1rem;
+
+	color: #8C7A6B;
+	font-weight: 700;
+}
+
+.boton h5:hover {
+	background-color: #8C7A6B;
+	border: solid 2px #8C7A6B;
+
+	color: #D9CAB3;
+	text-shadow: #5E0B15;
+}
+
+/* --- CAROUSEL --- */
+
+.carousel {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow: scroll;
+}
+
+.foto__carousel {
+	flex: 1 0 auto;
+
+	width: 600px;
+	height: 450px;
+	padding: 1.5rem;
+
+	object-fit: cover;
+
+	transition: 0.6s ease-in-out;
+}
+
+.foto__carousel:hover {
+	display: flex;
+	cursor: pointer;
+
+	transform: scale(1.1);
+
+	transition: 0.6s ease-in-out;
+}
+
+/*  ------ TITULO SECCIONES ------ */
+
+.titular h2 {
+	padding: 4rem 0 4rem;
+
+	align-content: center;
+	justify-items: center;
+
+	color: #5E0B15;
+	font-family: 'Lato', sans-serif;
+	font-size: 2rem;
+	font-weight: 900;
+	text-align: center;
+}
+
+/* ------ DATOS ------ */
+
+.contenedor__datos {
+	max-width: 1024px;
+	margin: 0 auto;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	text-align: center;
+}
+
+.contenedor__datos img {
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+
+	transition: all 0.8s ease;
+}
+
+.contenedor__datos img:hover {
+	transition: all 0.6s ease;
+	filter: brightness(60%);
+}
+
+.datos {
+	padding: 2rem;
+}
+
+.contenedor {
+	max-width: 1024px;
+	margin: 0 auto;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	text-align: center;
+}
+
+.contenedor img {
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+
+	transition: all 0.8s ease;
+}
+
+.contenedor img:hover {
+	transition: all 0.6s ease;
+	filter: brightness(60%);
+}
+
+/* ------ PRODUCTOS ------ */
+
+.contenedor__productos {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	gap: 2rem;
+}
+
+.contenedor__productos p {
+	padding: 2rem 0 0 0;
+}
+
+.contenedor__productos h4 {
+	padding: 0 2rem 0 2rem;
+}
+
+ol {
+	background-color: #D9CAB3;
+
+	padding: 1rem;
+	margin: 1rem;
+}
+
+.parrafo h2 {
+	color: #BC8034;
+	font-size: 1.4rem;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 2rem;
+	text-align: initial;
+
+	padding: 1rem;
+}
+
+.parrafo h3 {
+	color: #5E0B15;
+	font-size: 1.4rem;
+	font-weight: 400;
+	line-height: 2.2;
+	text-align: initial;
+
+	padding: 1rem;
+}
+
+.parrafo h4 {
+	color: #8C7A6B;
+	font-size: 1.2rem;
+	font-weight: 700;
+	line-height: 2rem;
+	text-align: center;
+}
+
+.parrafo h5 {
+	color: #90323D;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 2.5rem;
+	text-align: center;
+}
+
+.sub__titulo {
+	min-height: 300px;
+	padding: 0 0 0 0;
+
+	align-self: flex-end;
+
+	font-size: 2rem;
+	text-align: left;
+	line-height: 0.2;
+}
+
+.subtitulo {
+	min-height: 300px;
+	padding: 0 0 0 0;
+
+	align-self: flex-start;
+
+	font-size: 2rem;
+	text-align: left;
+	line-height: 0.2;
+}
+
+.subtitulo h2 {
+	color: #90323D;
+	font-weight: 900;
+}
+
+.subtitulo h3 {
+	color: #BC8034;
+	font-style: italic;
+}
+
+.sub__titulo h2 {
+	color: #90323D;
+	font-weight: 900;
+}
+
+.sub__titulo h3 {
+	color: #BC8034;
+	font-style: italic;
+}
+
+.titulo {
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0 0 0;
+
+	line-height: 0.2rem;
+}
+
+.titulo h2 {
+	color: #5E0B15;
+
+	font-size: 2rem;
+	font-weight: 900;
+	text-align: center;
+}
+
+.titulo h3 {
+	color: #BC8034;
+
+	font-size: 1.2rem;
+	font-style: italic;
+	font-weight: 900;
+	text-align: center;
+}
+
+.link {
+	min-height: 300px;
+	width: 40%;
+	padding: 0 1.5rem 0;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	align-self: flex-end;
+
+	font-size: 1.3rem;
+	font-weight: 900;
+	font-style: italic;
+	text-align: center;
+}
+
+.link h5 {
+	border: solid 1px #8C7A6B;
+	border-radius: 0.5rem;
+
+	padding: 1rem;
+
+	color: #8C7A6B;
+	font-weight: 700;
+}
+
+.link h5:hover {
+	background-color: #5E0B15;
+	border: solid 1px #5E0B15;
+
+	color: #D9CAB3;
+	text-shadow: #5E0B15;
+
+	transition: 0.8s;
+}
+
+.enlace__tortas {
+	background-image: url(../imagenes/image_index/tortas_artesanales.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: contain;
+
+	max-height: 450px;
+
+	display: flex;
+	flex-direction: column;
+
+	padding: 2rem 1.5rem 2rem 0;
+}
+
+.enlace__pasteleria {
+	background-image: url(../imagenes/image_index/pastelería_creativa.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: cover;
+
+	max-height: 450px;
+	padding: 2rem 2.5rem 2rem 0;
+
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.enlace__dulce {
+	background-image: url(../imagenes/image_index/mesa_dulce.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom;
+
+	min-height: 350px;
+	padding: 0 2rem 0 2rem;
+
+	display: flex;
+	flex-direction: row;
+
+	justify-content: space-between;
+	align-items: center;
+
+	overflow: hidden;
+}
+
+.enlace__lunch {
+	background-image: url(../imagenes/image_index/servicio_de_luch.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+
+	min-height: 350px;
+	padding: 0 2rem 0 2rem;
+
+	display: flex;
+	flex-direction: row;
+
+	justify-content: space-between;
+	align-items: center;
+
+	overflow: hidden;
+}
+
+/* ------ PROMO ------ */
+
+.contenedor__promo {
+	background-color: #5E0B15;
+	width: 100%;
+	padding: 2rem;
+	margin: 0 auto;
+
+	color: #D9CAB3;
+
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 400px 250px;
+
+	gap: 0.5rem;
+}
+
+.contenedor__promo ul {
+	padding-left: 0;
+}
+
+.icono__promo,
+.promo {
+	grid-column: 1/2;
+	grid-row: 1/2;
+
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.icono__promo {
+	align-self: self-start;
+}
+
+.promo {
+	align-self: self-end;
+}
+
+.promo h2 {
+	color: #BC8034;
+	font-size: 1.8rem;
+	font-weight: 900;
+}
+
+.promo h3 {
+	color: #D9CAB3;
+	font-size: 1.5rem;
+	font-weight: 900;
+	font-style: italic;
+}
+
+.promo__lista,
+.promo__listado {
+	grid-column: 2/3;
+	grid-row: 1/2;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	color: #BC8034;
+	font-size: 0.1rem;
+	font-style: italic;
+}
+
+.promo__lista {
+	align-self: flex-start;
+	padding: 0;
+	margin: 0;
+}
+
+.promo__listado {
+	align-self: flex-end;
+	padding: 0;
+	margin: 0;
+}
+
+.promo__detalle {
+	grid-column: 1/2;
+	grid-row: 2/3;
+
+	align-self: flex-end;
+
+	color: #8C7A6B;
+	font-size: 1.2rem;
+}
+
+.boton__b {
+	grid-column: 2/3;
+	grid-row: 2/3;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	align-self: flex-end;
+	justify-items: center;
+}
+
+.boton__b h5 {
+	border: solid 3px #D9CAB3;
+	border-radius: 0.3rem;
+
+	width: 100%;
+	padding: 1rem;
+
+	color: #D9CAB3;
+	font-size: 1rem;
+	text-align: center;
+}
+
+.boton__b h5:hover {
+	border: solid 3px #BC8034;
+	border-radius: 0.3rem;
+
+	color: #BC8034;
+	text-shadow: #BC8034;
+
+	transition: 0.8s;
+}
+
+/* ------ ENVIOS ------ */
+
+.contenedor__envios {
+	background-color: #8C7A6B;
+
+	padding: 2rem 2rem 2rem 2rem;
+
+	color: #90323D;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 200px 100px;
+
+	align-items: flex-end;
+
+	gap: 0.5rem;
+}
+
+.icono__envios,
+.envios {
+	grid-column: 1/2;
+	grid-row: 1/2;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.icono__envios {
+	grid-column: 1/2;
+	grid-row: 1/2;
+
+	width: auto;
+	padding: 0 0 1rem;
+
+	align-self: self-start;
+	justify-self: self-end;
+}
+
+.envios {
+	align-self: self-end;
+}
+
+.envios h2 {
+	color: #5E0B15;
+	font-weight: 700;
+	font-size: 1.2rem;
+}
+
+.envios h3 {
+	font-size: 1rem;
+}
+
+.envios h4 {
+	color: #5E0B15;
+	font-size: 0.8rem;
+	font-style: italic;
+}
+
+.compra {
+	grid-column: 2/3;
+	grid-row: 1/2;
+
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.compra h5 {
+	background-color: #90323D;
+	border-radius: 0.5rem;
+
+	width: 100%;
+	padding: 1rem;
+
+	color: #8C7A6B;
+	font-size: 1rem;
+	font-weight: 900;
+	text-align: center;
+}
+
+.compra h5:hover {
+	background-color: #D9CAB3;
+	border-radius: 0.5rem;
+
+	color: #8C7A6B;
+	text-shadow: #90323D;
+
+	transition: 1.5s;
+}
+
+.icono__consulta {
+	grid-column: 1/2;
+	grid-row: 2/3;
+
+	width: auto;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	align-self: center;
+	justify-self: self-end;
+}
+
+.consulta {
+	grid-column: 2/3;
+	grid-row: 1/2;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	align-content: flex-start;
+}
+
+.consulta h5 {
+	background-color: #90323D;
+	border-radius: 0.5rem;
+
+	width: 100%;
+	padding: 1rem;
+
+	color: #8C7A6B;
+	font-size: 1rem;
+	font-weight: 900;
+	text-align: center;
+}
+
+.consulta h5:hover {
+	background-color: #D9CAB3;
+	border-radius: 0.5rem;
+
+	color: #8C7A6B;
+	text-shadow: #90323D;
+
+	transition: 1.5s;
+}
+
+/* --- FOTOS SUB SECCIONES --- */
+
+.foto__butter,
+.foto__cream,
+.foto__fondant,
+.foto__fon,
+.foto__number,
+.foto__letter {
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+
+	transition: 0.6s ease-in-out;
+}
+
+.foto__butter:hover,
+.foto__cream:hover,
+.foto__fondant:hover,
+.foto__fon:hover,
+.foto__number:hover,
+.foto__letter:hover {
+	cursor: pointer;
+
+	transform: scale(1.1);
+
+	transition: 0.6s ease-in-out;
+}
+
+.titulo__butter,
+.titulo__fondant,
+.titulo__letter {
+	padding: 8rem;
+
+	color: #BC8034;
+	font-family: "Lato", sans-serif;
+	font-size: 2rem;
+	font-weight: 700;
+	font-style: italic;
+}
+
+/* ------ GRILLA SECCIONES / MENU ------ */
+
+.contenedor__menu {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+
+	margin: 0 auto;
+}
+
+.contenedor__menu li {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.img__menu {
+	display: none;
+}
+
+.img__especial {
+	display: none;
+}
+
+.texto__menu {
+	color: #8C7A6B;
+	margin: 2rem;
+	font-family: "Lato", sans-serif;
+	font-size: 0.5rem;
+	font-style: italic;
+	text-align: left;
+	font-style: initial;
+}
+
+.titulo__menu {
+	color: #90323D;
+	margin: 2rem;
+	font-family: "Lato", sans-serif;
+	font-size: 1rem;
+	font-weight: 700;
+	text-align: left;
+	font-style: initial;
+}
+
+hr {
+	border: solid 2px #5E0B15;
+	margin: 0 auto;
+}
+
+/* ------ FOOTER ------ */
+
+.contenedor_footer {
+	padding: 2rem;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	align-items: center;
+
+	text-align: center;
+
+	gap: 1rem;
+}
+
+.contenedor_footer ul {
+	padding: 2rem 0 0 0;
+
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+}
+
+.contenedor_footer li {
+	padding: 0.5rem 0 0 0;
+
+	justify-self: center;
+	align-self: center;
+}
+
+.contenedor__redes {
+	display: flex;
+}
+
+.contenedor__redes ul {
+	padding: 2rem;
+
+	display: flex;
+	flex-direction: row;
+
+	justify-content: center;
+
+	gap: 1rem;
+}
+
+footer h6 {
+	color: #BC8034;
+	font-weight: 700;
+	font-size: 0.8rem;
+}
+
+footer h5 {
+	color: #90323D;
+	font-style: italic;
+	font-size: 1rem;
+}
+
+/* ------ ------ ------ ------ RESPONSIVE 820px ------ ------ ------ ------ */
+
+@media(min-width: 820px) {
+
+	/* --- NAV --- */
+
+	.nav-item {
+		max-width: 720px;
+	}
+
+}
+
+/* ------ ------ ------ ------ RESPONSIVE 990px ------ ------ ------ ------ */
+
+@media(min-width: 990px) {
+
+	/* --- NAV --- */
+
+	.nav-item {
+		background-color: #ffffff00;
+		border-radius: 0;
+		box-shadow: none;
+
+		padding: 0;
+		margin-left: 0;
+
+		color: #D9CAB3;
+	}
+}
+
+/* ------ ------ ------ ------ RESPONSIVE 1024px ------ ------ ------ ------ */
+
+@media(min-width: 1024px) {
+
+	/* --- NAV --- */
+
+	.contenedor__titular {
+		margin-top: 12rem;
+	}
+
+	/* ------ MAIN ------ */
+
+	/* --- FORM --- */
+
+	form {
+		max-width: 400px;
+		padding: 2rem;
+		margin: 0 auto;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 100px 300px 200px;
+
+		text-align: center;
+
+		justify-content: center;
+		align-items: self-start;
+
+		gap: 1rem;
+	}
+
+	form input,
+	textarea {
+		grid-column: 2/3;
+
+		border: #5E0B15 solid 1px;
+		border-radius: 1rem;
+
+		max-width: 400px;
+
+		color: #BC8034;
+
+		align-self: center;
+		justify-self: center;
+	}
+
+	.boton_value {
+		background-color: #5E0B15;
+		border-radius: 1rem;
+
+		width: 95%;
+
+		color: #8C7A6B;
+		font-weight: bold;
+		font-size: 1rem;
+
+		align-self: center;
+		justify-self: center;
+	}
+
+	/* --- DESTACADO --- */
+
+	.contenedor_destacado {
+		padding: 6rem;
+
+		gap: 4rem;
+	}
+
+	.boton {
+		width: 60%;
+
+		text-align: center;
+
+		align-self: center;
+		justify-self: center;
+	}
+
+
+	/*  ------ TITULOS ------ */
+
+	.titular h2 {
+		font-size: 3rem;
+		font-weight: 900;
+	}
+
+	/* ------ GRILLA SECCIONES / PRODUCTOS ------ */
+
+	.contenedor__productos {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 550px 500px 150px 500px;
+
+		gap: 0;
+	}
+
+	.parrafo__tortas {
+		grid-column: 1/2;
+		grid-row: 1/2;
+
+		margin: 0 2rem 0;
+	}
+
+	.links__tortas {
+		grid-column: 1/2;
+		grid-row: 2/3;
+	}
+
+	.parrafo__pasteleria {
+		grid-column: 2/3;
+		grid-row: 1/2;
+
+		margin: 0 2rem 0;
+	}
+
+	.links__pasteleria {
+		grid-column: 2/3;
+		grid-row: 2/3;
+	}
+
+	.parrafo__dulce {
+		grid-column: 1/2;
+		grid-row: 3/4;
+
+		margin: 0 2rem 0;
+	}
+
+	.links__dulce {
+		grid-column: 1/2;
+		grid-row: 4/5;
+	}
+
+	.parrafo__lunch {
+		grid-column: 2/3;
+		grid-row: 3/4;
+
+		margin: 0 2rem 0;
+	}
+
+	.links__lunch {
+		grid-column: 2/3;
+		grid-row: 4/5;
+	}
+
+	.contenedor__productos p {
+		padding: 2rem 0 0 0;
+	}
+
+	.contenedor__productos h4 {
+		padding: 0 2rem 0 2rem;
+	}
+
+	.parrafo h4 {
+		color: #8C7A6B;
+		font-size: 1.2rem;
+		font-weight: 700;
+		line-height: 2rem;
+		text-align: center;
+	}
+
+	.enlace__tortas {
+		background-image: url(../imagenes/image_index/tortas_artesanales.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: contain;
+
+		max-height: 450px;
+		padding: 0 0 0;
+
+		display: flex;
+		flex-direction: column;
+	}
+
+	.subtitulo {
+		min-height: 300px;
+		margin: 0 4rem 0;
+
+		font-size: 1.5rem;
+		text-align: left;
+
+		align-self: flex-end;
+	}
+
+	.subtitulo h2 {
+		color: #90323D;
+	}
+
+	.subtitulo h3 {
+		color: #BC8034;
+		font-style: italic;
+	}
+
+	.link {
+		width: 40%;
+		min-height: 300px;
+		margin: 0 4rem 0;
+
+		font-size: 1.3rem;
+		font-weight: 900;
+		font-style: italic;
+		text-align: center;
+
+		align-self: flex-end;
+	}
+
+	.link h5 {
+		border: solid 1px #8C7A6B;
+		border-radius: 0.5rem;
+
+		color: #8C7A6B;
+	}
+
+	.link h5:hover {
+		background-color: #5E0B15;
+		border: solid 1px #5E0B15;
+
+		color: #D9CAB3;
+		text-shadow: #5E0B15;
+
+		transition: 0.8s;
+	}
+
+	.enlace__pasteleria {
+		background-image: url(../imagenes/image_index/pastelería_creativa.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: cover;
+
+		max-height: 450px;
+		padding: 0 0 0;
+
+		display: flex;
+		flex-direction: column;
+
+		overflow: hidden;
+	}
+
+	.enlace__dulce {
+		background-image: url(../imagenes/image_index/mesa_dulce.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: bottom;
+
+		padding: 0 0 0;
+
+		display: flex;
+		flex-direction: row;
+
+		justify-content: space-between;
+
+		overflow: hidden;
+	}
+
+	.enlace__lunch {
+		background-image: url(../imagenes/image_index/servicio_de_luch.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: bottom center;
+
+		min-height: 350px;
+		padding: 0 0 0;
+
+		display: flex;
+		flex-direction: row;
+
+		justify-content: space-between;
+
+		overflow: hidden;
+	}
+
+	/* ------ PROMO ------ */
+
+	.contenedor__promo {
+		background-color: #5E0B15;
+
+		padding: 3rem;
+
+		display: grid;
+		grid-template-columns: 1.5fr 2fr 1.5fr 1.5fr;
+		grid-template-rows: 300px 100px;
+
+		grid-template-areas:
+			"promo lista fiestas consulta"
+			"promo lista fiestas consulta";
+
+		justify-self: center;
+
+		gap: 0.5rem;
+
+		color: #D9CAB3;
+	}
+
+	.icono__promo {
+		grid-column: 1/2;
+		grid-row: 1/2;
+
+		align-self: self-start;
+	}
+
+	.promo {
+		grid-column: 1/2;
+		grid-row: 2/3;
+
+		align-self: self-end;
+
+		letter-spacing: 0.1rem;
+	}
+
+	.promo h2 {
+		color: #BC8034;
+		font-size: 1.8rem;
+		font-weight: 900;
+	}
+
+	.promo h3 {
+		color: #D9CAB3;
+		font-size: 1.5rem;
+		font-weight: 900;
+		font-style: italic;
+		letter-spacing: 0.5rem;
+	}
+
+	.promo__lista,
+	.promo__listado {
+		color: #BC8034;
+		font-size: 1.2rem;
+		font-style: italic;
+		line-height: 1.6rem;
+	}
+
+	.promo__lista {
+		grid-column: 2/3;
+		grid-row: 1/2;
+
+		align-self: self-start;
+	}
+
+	.promo__listado {
+		grid-column: 2/3;
+		grid-row: 2/3;
+
+		padding: 6rem 0 0;
+
+		align-self: self-end;
+	}
+
+	.promo__detalle {
+		grid-area: fiestas;
+
+		align-self: center;
+
+		color: #8C7A6B;
+		font-size: 1.2rem;
+	}
+
+	.boton__b {
+		grid-area: consulta;
+
+		width: 100%;
+
+		align-self: flex-end;
+
+		text-align: center;
+	}
+
+	.boton__b h5 {
+		border: solid 3px #D9CAB3;
+		border-radius: 0.3rem;
+
+		padding: 1rem 1.5rem 1rem;
+
+		color: #D9CAB3;
+		font-size: 1.2rem;
+	}
+
+	.boton__b h5:hover {
+		border: solid 3px #BC8034;
+		border-radius: 0.3rem;
+
+		color: #BC8034;
+		text-shadow: #BC8034;
+
+		transition: 0.8s;
+	}
+
+	/* ------ ENVIOS ------ */
+
+	.contenedor__envios {
+		background-color: #8C7A6B;
+
+		padding: 3rem;
+
+		color: #90323D;
+
+		display: grid;
+		grid-template-columns: 1.5fr 2fr;
+		grid-template-rows: 150px 100px;
+
+		gap: 3rem;
+	}
+
+	.icono__envios,
+	.envios {
+		grid-column: 1/2;
+		grid-row: 1/2;
+
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+
+	.icono__envios {
+		width: auto;
+		padding: 0 0 1rem;
+
+		align-self: self-start;
+		justify-self: self-end;
+	}
+
+	.envios {
+		align-self: flex-start;
+	}
+
+	.envios h2 {
+		color: #5E0B15;
+		font-weight: 900;
+		font-size: 2rem;
+	}
+
+	.envios h3 {
+		font-size: 2rem;
+	}
+
+	.envios h4 {
+		font-size: 1.5rem;
+	}
+
+	.compra {
+		grid-column: 2/3;
+		grid-row: 1/2;
+	}
+
+	.icono__consulta {
+		grid-column: 1/2;
+		grid-row: 2/3;
+
+		width: auto;
+
+		align-self: center;
+		justify-self: self-end;
+	}
+
+	.consulta {
+		grid-column: 2/3;
+		grid-row: 2/3;
+
+		justify-self: self-end;
+	}
+
+	/* ------ GRILLA SECCIONES / MENU ------ */
+
+	hr {
+		min-width: 1024px;
+	}
+
+	.contenedor__menu {
+		width: 100%;
+		padding-right: 2rem;
+
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.contenedor__menu h5 {
+		width: 650px;
+	}
+
+	.contenedor__menu img {
+		display: flex;
+
+		width: 180px;
+		height: 180px;
+
+		object-fit: cover;
+
+		transition: 0.4s ease-in-out;
+
+		z-index: 1;
+	}
+
+	.img__menu:hover {
+		display: flex;
+		cursor: pointer;
+
+		transform: scale(1.5);
+
+		transition: 0.4s ease-in-out;
+
+		z-index: 1;
+	}
+
+	/* ------ FOOTER ------ */
+
+	.contenedor_footer {
+		padding: 2rem 4rem 4rem;
+
+		display: grid;
+		grid-template-columns: 1fr 2fr 1fr 2fr;
+		grid-template-rows: 130px 100px;
+
+		grid-template-areas:
+			"datos datos datos datos"
+			"redes redes redes redes";
+
+		gap: 1rem;
+	}
+
+	.whatsapp {
+		display: flex;
+		flex-direction: row;
+
+		justify-self: center;
+		align-self: flex-start;
+	}
+
+	.mail {
+		display: flex;
+		flex-direction: row;
+
+		justify-self: center;
+		align-self: flex-start;
+	}
+
+	.ubicacion {
+		display: flex;
+		flex-direction: row;
+
+		justify-self: center;
+		align-self: flex-start;
+	}
+
+	.horario {
+		display: flex;
+		flex-direction: row;
+
+		justify-self: center;
+		align-self: flex-start;
+	}
+
+	.contenedor__redes {
+		grid-area: redes;
+
+		padding: 10rem 0 2rem;
+
+		display: flex;
+		flex-direction: row;
+
+		justify-self: center;
+		align-self: center;
+	}
+
+}
+
+/* ------ ------ ------ ------ RESPONSIVE 1200px ------ ------ ------ ------ */
+
+@media (min-width: 1200px) {
+
+	/* ------ MAIN ------ */
+
+	/* --- FORM --- */
+
+	form {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 100px 300px 200px;
+
+		max-width: 500px;
+		padding: 2rem;
+		margin: 0 auto;
+
+		justify-content: center;
+		align-items: self-start;
+
+		text-align: center;
+
+		gap: 1rem;
+	}
+
+	form input,
+	textarea {
+		grid-column: 2/3;
+
+		border: #5E0B15 solid 1px;
+		border-radius: 1rem;
+
+		max-width: 500px;
+
+		color: #BC8034;
+
+		align-self: center;
+		justify-self: center;
+	}
+
+	.boton_value {
+		background-color: #5E0B15;
+		border-radius: 1rem;
+
+		width: 95%;
+
+		color: #8C7A6B;
+
+		font-weight: bold;
+		font-size: 1rem;
+
+		align-self: center;
+		justify-self: center;
+	}
+
+	/* --- DESTACADO --- */
+
+	.contenedor__destacado {
+		padding: 2.5rem 2rem 4.5rem;
+
+		gap: 0.5rem;
+	}
+
+	/* ------ GRILLA SECCIONES / PRODUCTOS ------ */
+
+	.contenedor__productos {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: auto 300px;
+
+		gap: 0;
+	}
+
+	.parrafo__tortas {
+		grid-column: 1/2;
+		grid-row: 1/2;
+
+		margin: 0 0 0;
+	}
+
+	.links__tortas {
+		grid-column: 1/2;
+		grid-row: 2/3;
+	}
+
+	.parrafo__pasteleria {
+		grid-column: 2/3;
+		grid-row: 1/2;
+
+		margin: 0 0 0;
+	}
+
+	.links__pasteleria {
+		grid-column: 2/3;
+		grid-row: 2/3;
+	}
+
+	.parrafo__dulce {
+		grid-column: 3/4;
+		grid-row: 1/2;
+
+		margin: 0 0 0;
+	}
+
+	.links__dulce {
+		grid-column: 3/4;
+		grid-row: 2/3;
+	}
+
+	.parrafo__lunch {
+		grid-column: 4/5;
+		grid-row: 1/2;
+
+		margin: 0 0 0;
+	}
+
+	.links__lunch {
+		grid-column: 4/5;
+		grid-row: 2/3;
+	}
+
+	.contenedor__productos p {
+		padding: 0 1rem 0;
+	}
+
+	.contenedor__productos h4 {
+		padding: 0 1.2rem 0;
+	}
+
+	.parrafo h4 {
+		color: #8C7A6B;
+		font-size: 1.2rem;
+		font-weight: 700;
+		line-height: 2rem;
+		text-align: center;
+	}
+
+	.enlace__tortas {
+		background-image: url(../imagenes/image_index/tortas_artesanales.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: contain;
+
+		max-height: 300px;
+
+		display: flex;
+		flex-direction: column;
+	}
+
+	.subtitulo {
+		min-height: 200px;
+		padding: 0 0 0 6rem;
+
+		align-content: flex-end;
+	}
+
+	.link {
+		min-height: 250px;
+		width: 100%;
+
+		text-align: center;
+
+		align-self: center;
+	}
+
+	.enlace__pasteleria {
+		background-image: url(../imagenes/image_index/pastelería_creativa.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: cover;
+
+		max-height: 300px;
+
+		display: flex;
+		flex-direction: column;
+
+		overflow: hidden;
+	}
+
+	.enlace__dulce {
+		background-image: url(../imagenes/image_index/mesa_dulce.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: bottom;
+
+		display: flex;
+		flex-direction: column;
+
+		overflow: hidden;
+	}
+
+	.enlace__lunch {
+		background-image: url(../imagenes/image_index/servicio_de_luch.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: bottom center;
+
+		min-height: 300px;
+
+		display: flex;
+		flex-direction: column;
+
+		overflow: hidden;
+	}
+
+	/* ------ PROMO ------ */
+
+	.contenedor__promo {
+		padding: 4rem;
+	}
+
+	/* ------ ENVIOS ------ */
+
+	.contenedor__envios {
+		padding: 4rem;
+	}
+
+	/* ------ GRILLA SECCIONES / SOBRE MI ------ */
+
+	.contenedor__grilla {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 100vh 80vh 80vh;
+
+		max-width: 1200px;
+		padding: 4rem;
+		margin: 0 auto;
+	}
+
+	.primer__foto {
+		grid-column: 1/2;
+		grid-row: 1/2;
+
+		width: 100%;
+		height: auto;
+	}
+
+	.primer__texto {
+		grid-column: 2/3;
+		grid-row: 1/2;
+
+		padding: 2rem;
+
+		align-self: center;
+	}
+
+	.segunda__foto {
+		grid-column: 2/3;
+		grid-row: 2/3;
+
+		width: 100%;
+		height: auto;
+	}
+
+	.segundo__texto {
+		grid-column: 1/2;
+		grid-row: 2/3;
+
+		padding: 2rem;
+
+		align-self: center;
+	}
+
+	.tercer__foto {
+		grid-column: 1/2;
+		grid-row: 3/4;
+
+		width: 100%;
+		height: auto;
+	}
+
+	.tercer__texto {
+		grid-column: 2/3;
+		grid-row: 3/4;
+
+		padding: 2rem;
+
+		align-self: center;
+	}
+
+	/* ------ GRILLA SECCIONES / TORTAS ------ */
+
+	.contenedor__datos {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 40vh 20vh 40vh 85vh 50vh;
+
+		max-width: 1200px;
+		padding: 8rem 0 8rem 0;
+		margin: 0 auto;
+
+		align-items: flex-start;
+		justify-content: center;
+	}
+
+	.foto__butter {
+		grid-column: 1/2;
+		grid-row: 1/2;
+	}
+
+	.foto__cream {
+		grid-column: 1/2;
+		grid-row: 3/4;
+	}
+
+	.foto__fondant {
+		grid-column: 2/3;
+		grid-row: 1/2;
+	}
+
+	.foto__fon {
+		grid-column: 2/3;
+		grid-row: 3/4;
+	}
+
+	.foto__letter {
+		grid-column: 3/4;
+		grid-row: 1/2;
+	}
+
+	.foto__number {
+		grid-column: 3/4;
+		grid-row: 3/4;
+	}
+
+	.titulo__butter {
+		grid-column: 1/2;
+		grid-row: 2/3;
+	}
+
+	.titulo__fondant {
+		grid-column: 2/3;
+		grid-row: 2/3;
+	}
+
+	.titulo__letter {
+		grid-column: 3/4;
+		grid-row: 2/3;
+	}
+
+	.butter {
+		grid-column: 1/2;
+		grid-row: 4/5;
+	}
+
+	.butter__lista {
+		grid-column: 1/2;
+		grid-row: 5/6;
+	}
+
+	.fondant {
+		grid-column: 2/3;
+		grid-row: 4/5;
+	}
+
+	.fondant__lista {
+		grid-column: 2/3;
+		grid-row: 5/6;
+	}
+
+	.letter {
+		grid-column: 3/4;
+		grid-row: 4/5;
+	}
+
+	.letter__lista {
+		grid-column: 3/4;
+		grid-row: 5/6;
+	}
+
+	/* ------ GRILLA SECCIONES / MENU ------ */
+
+	hr {
+		min-width: 1200px;
+	}
+
+	.contenedor__menu {
+		width: 100%;
+		padding-right: 2rem;
+
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.contenedor__menu h5 {
+		width: 600px;
+	}
+
+	.contenedor__menu img {
+		display: flex;
+
+		width: 180px;
+		height: 180px;
+
+		object-fit: cover;
+
+		transition: 0.4s ease-in-out;
+
+		z-index: 1;
+	}
+
+	.img__menu:hover {
+		display: flex;
+		cursor: pointer;
+
+		transform: scale(1.5);
+
+		transition: 0.4s ease-in-out;
+
+		z-index: 1;
+	}
+}
