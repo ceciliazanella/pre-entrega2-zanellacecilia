@@ -192,8 +192,9 @@ hr {
 	background-color: #5e0b1593;
 	box-shadow: inset 0px 0px 10px 0 #5E0B15;
 
-	max-width: 100%;
-	height: 300px;
+	width: 100%;
+	height: 20vh;
+	padding: 2rem;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 9rem;
@@ -1093,17 +1094,12 @@ footer h5 {
 
 		color: #D9CAB3;
 	}
+
 }
 
 /* ------ ------ ------ ------ RESPONSIVE 1024px ------ ------ ------ ------ */
 
 @media(min-width: 1024px) {
-
-	/* --- NAV --- */
-
-	.contenedor__titular {
-		margin-top: 12rem;
-	}
 
 	/* ------ MAIN ------ */
 
@@ -1185,7 +1181,7 @@ footer h5 {
 	.contenedor__productos {
 		display: grid;
 		grid-template-columns: 50% 50%;
-		grid-template-rows: 550px 500px 150px 500px;
+		grid-template-rows: 600px 500px 200px 600px;
 
 		gap: 0;
 	}
@@ -1254,22 +1250,9 @@ footer h5 {
 		text-align: center;
 	}
 
-	.enlace__tortas {
-		background-image: url(../imagenes/image_index/tortas_artesanales.png);
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: contain;
-
-		max-height: 450px;
-		padding: 0 0 0;
-
-		display: flex;
-		flex-direction: column;
-	}
-
 	.subtitulo {
 		min-height: 300px;
-		margin: 0 4rem 0;
+		margin: 0 4rem 3.5rem;
 
 		font-size: 1.5rem;
 		text-align: left;
@@ -1277,19 +1260,14 @@ footer h5 {
 		align-self: flex-end;
 	}
 
-	.subtitulo h2 {
-		color: #90323D;
-	}
-
-	.subtitulo h3 {
-		color: #BC8034;
-		font-style: italic;
+	.sub__titulo {
+		padding-right: 4rem;
 	}
 
 	.link {
 		width: 40%;
 		min-height: 300px;
-		margin: 0 4rem 0;
+		margin: 0 0 0;
 
 		font-size: 1.3rem;
 		font-weight: 900;
@@ -1299,21 +1277,19 @@ footer h5 {
 		align-self: flex-end;
 	}
 
-	.link h5 {
-		border: solid 1px #8C7A6B;
-		border-radius: 0.5rem;
+	.enlace__tortas {
+		background-image: url(../imagenes/image_index/tortas_artesanales.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: contain;
 
-		color: #8C7A6B;
-	}
+		max-height: 450px;
+		padding: 4rem 0 0;
 
-	.link h5:hover {
-		background-color: #5E0B15;
-		border: solid 1px #5E0B15;
+		display: flex;
+		flex-direction: column;
 
-		color: #D9CAB3;
-		text-shadow: #5E0B15;
-
-		transition: 0.8s;
+		align-content: flex-end;
 	}
 
 	.enlace__pasteleria {
@@ -1323,7 +1299,7 @@ footer h5 {
 		background-position: cover;
 
 		max-height: 450px;
-		padding: 0 0 0;
+		padding: 4rem 0 0;
 
 		display: flex;
 		flex-direction: column;
@@ -1372,7 +1348,7 @@ footer h5 {
 		padding: 3rem;
 
 		display: grid;
-		grid-template-columns: 1.5fr 2fr 1.5fr 1.5fr;
+		grid-template-columns: 2fr 2fr 1.5fr 1.5fr;
 		grid-template-rows: 300px 100px;
 
 		grid-template-areas:
@@ -1728,142 +1704,165 @@ footer h5 {
 
 	.contenedor__productos {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-template-rows: auto 300px;
+		grid-template-columns: 1.5fr 1.5fr 2fr 2fr;
+		grid-template-rows: 60vh 30vh;
 
-		gap: 0;
+		width: 100%;
+
+		padding: 0;
+		margin: 0;
+
+		align-items: flex-start;
+	}
+
+	.enlace__pasteleria,
+	.enlace__tortas {
+		width: 70%;
+		max-height: max-content;
+		background-position: bottom left;
+
+		display: flex;
+		flex-wrap: wrap;
+
+		align-self: flex-end;
+		justify-content: center;
+	}
+
+	.enlace__dulce,
+	.enlace__lunch {
+		width: 100%;
+		max-height: max-content;
+		background-position: bottom;
+
+		display: flex;
+		flex-wrap: wrap;
+		align-self: flex-end;
+		justify-content: center;
+	}
+
+	.subtitulo {
+		padding: 10rem 0 0 0;
+		margin: 0;
+
+		align-self: center;
+		justify-content: center;
+
+		text-align: center;
+	}
+
+	.subtitulo h2 {
+		font-size: 1.3rem;
+	}
+
+	.sub__titulo {
+		padding: 10rem 0 0 0;
+		margin: 0;
+
+		align-self: center;
+		justify-content: center;
+
+		text-align: center;
+	}
+	
+	.sub__titulo h2 {
+		font-size: 1.3rem;
+	}
+
+	.link {
+		width: 100%;
+
+		padding: 0;
+		margin: 0 0 10rem 0;
+
+		align-self: flex-end;
+		justify-content: center;
 	}
 
 	.parrafo__tortas {
 		grid-column: 1/2;
 		grid-row: 1/2;
 
-		margin: 0 0 0;
+		padding: 0;
+		margin: 0;
 	}
 
 	.links__tortas {
 		grid-column: 1/2;
 		grid-row: 2/3;
+
+		padding: 0;
+		margin: 0;
 	}
 
 	.parrafo__pasteleria {
 		grid-column: 2/3;
 		grid-row: 1/2;
 
-		margin: 0 0 0;
+		padding: 0;
+		margin: 0;
 	}
 
 	.links__pasteleria {
 		grid-column: 2/3;
 		grid-row: 2/3;
+
+		padding: 0;
+		margin: 0;
 	}
 
 	.parrafo__dulce {
 		grid-column: 3/4;
 		grid-row: 1/2;
 
-		margin: 0 0 0;
+		padding: 0;
+		margin: 0;
 	}
 
 	.links__dulce {
 		grid-column: 3/4;
 		grid-row: 2/3;
+
+		padding: 0;
+		margin: 0;
 	}
 
 	.parrafo__lunch {
 		grid-column: 4/5;
 		grid-row: 1/2;
 
-		margin: 0 0 0;
+		padding: 0;
+		margin: 0;
 	}
 
 	.links__lunch {
 		grid-column: 4/5;
 		grid-row: 2/3;
+
+		padding: 0;
+		margin: 0;
 	}
 
 	.contenedor__productos p {
-		padding: 0 1rem 0;
+		padding: 0;
+		margin: 0;
 	}
 
 	.contenedor__productos h4 {
-		padding: 0 1.2rem 0;
+		padding: 0;
+		margin: 0;
 	}
 
 	.parrafo h4 {
+		padding: 1rem;
+		margin: 0;
+
 		color: #8C7A6B;
 		font-size: 1.2rem;
 		font-weight: 700;
 		line-height: 2rem;
 		text-align: center;
-	}
 
-	.enlace__tortas {
-		background-image: url(../imagenes/image_index/tortas_artesanales.png);
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: contain;
-
-		max-height: 300px;
-
-		display: flex;
-		flex-direction: column;
-	}
-
-	.subtitulo {
-		min-height: 200px;
-		padding: 0 0 0 6rem;
-
-		align-content: flex-end;
-	}
-
-	.link {
-		min-height: 250px;
-		width: 100%;
-
-		text-align: center;
-
-		align-self: center;
-	}
-
-	.enlace__pasteleria {
-		background-image: url(../imagenes/image_index/pastelería_creativa.png);
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: cover;
-
-		max-height: 300px;
-
-		display: flex;
-		flex-direction: column;
-
-		overflow: hidden;
-	}
-
-	.enlace__dulce {
-		background-image: url(../imagenes/image_index/mesa_dulce.png);
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: bottom;
-
-		display: flex;
-		flex-direction: column;
-
-		overflow: hidden;
-	}
-
-	.enlace__lunch {
-		background-image: url(../imagenes/image_index/servicio_de_luch.png);
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: bottom center;
-
-		min-height: 300px;
-
-		display: flex;
-		flex-direction: column;
-
-		overflow: hidden;
+		align-items: flex-start;
 	}
 
 	/* ------ PROMO ------ */
