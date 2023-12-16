@@ -235,6 +235,15 @@ hr {
 /* --- FORM --- */
 
 form {
+	padding: 2rem;
+	
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	align-items: center;
+	justify-content: center;
+
 	text-align: center;
 }
 
@@ -244,9 +253,9 @@ textarea {
 	border-radius: 1rem;
 	box-shadow: inset 0px 0px 10px 0 #5E0B15;
 
-	width: 450px;
+	max-width: 350px;
 	padding: 1rem;
-	margin: 1rem;
+	margin: 0.5rem;
 
 	color: #BC8034;
 	font-family: "Lato", sans-serif;
@@ -1085,6 +1094,33 @@ footer h5 {
 		max-width: 720px;
 	}
 
+	/* ------ MAIN ------ */
+
+	/* --- FORM --- */
+
+	form input,
+	textarea {
+		border: #5E0B15 solid 1px;
+		border-radius: 1rem;
+		box-shadow: inset 0px 0px 10px 0 #5E0B15;
+
+		min-width: 700px;
+		padding: 1.2rem;
+		margin: 1rem;
+
+		color: #BC8034;
+		font-family: "Lato", sans-serif;
+		font-size: 1rem;
+	}
+
+	.boton_value {
+		background-color: #5E0B15;
+		border-radius: 1rem;
+
+		color: #8C7A6B;
+		font-size: 1rem;
+		font-weight: bold;
+	}
 }
 
 /* ------ ------ ------ ------ RESPONSIVE 990px ------ ------ ------ ------ */
@@ -1115,18 +1151,17 @@ footer h5 {
 	/* --- FORM --- */
 
 	form {
-		max-width: 400px;
-		padding: 2rem;
-		margin: 0 auto;
-
+		max-width: 1024px;
+		padding: 6rem;
+	
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 100px 300px 200px;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 10% 30% 20%;
 
 		text-align: center;
 
 		justify-content: center;
-		align-items: self-start;
+		align-items: flex-start;
 
 		gap: 1rem;
 	}
@@ -1135,29 +1170,13 @@ footer h5 {
 	textarea {
 		grid-column: 2/3;
 
-		border: #5E0B15 solid 1px;
-		border-radius: 1rem;
-
-		max-width: 400px;
-
-		color: #BC8034;
-
-		align-self: center;
-		justify-self: center;
+		min-width: 400px;
+		padding: 1rem;
+		margin: 1rem;
 	}
-
+	
 	.boton_value {
-		background-color: #5E0B15;
-		border-radius: 1rem;
-
 		width: 95%;
-
-		color: #8C7A6B;
-		font-weight: bold;
-		font-size: 1rem;
-
-		align-self: center;
-		justify-self: center;
 	}
 
 	/* --- DESTACADO --- */
@@ -1650,23 +1669,22 @@ footer h5 {
 
 @media (min-width: 1200px) {
 
-	/* ------ MAIN ------ */
+		/* ------ MAIN ------ */
 
 	/* --- FORM --- */
 
 	form {
+		max-width: 1200px;
+		padding: 4rem;
+	
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 100px 300px 200px;
-
-		max-width: 500px;
-		padding: 2rem;
-		margin: 0 auto;
-
-		justify-content: center;
-		align-items: self-start;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 10% 30% 20%;
 
 		text-align: center;
+
+		justify-content: center;
+		align-items: flex-start;
 
 		gap: 1rem;
 	}
@@ -1675,30 +1693,13 @@ footer h5 {
 	textarea {
 		grid-column: 2/3;
 
-		border: #5E0B15 solid 1px;
-		border-radius: 1rem;
-
-		max-width: 500px;
-
-		color: #BC8034;
-
-		align-self: center;
-		justify-self: center;
+		min-width: 500px;
+		padding: 1rem;
+		margin: 1rem;
 	}
-
+	
 	.boton_value {
-		background-color: #5E0B15;
-		border-radius: 1rem;
-
 		width: 95%;
-
-		color: #8C7A6B;
-
-		font-weight: bold;
-		font-size: 1rem;
-
-		align-self: center;
-		justify-self: center;
 	}
 
 	/* --- DESTACADO --- */
@@ -1739,7 +1740,7 @@ footer h5 {
 	.enlace__dulce,
 	.enlace__lunch {
 		width: 100%;
-	
+
 		margin-top: 2rem;
 		background-position: bottom;
 
