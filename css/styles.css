@@ -74,9 +74,13 @@ hr {
 
 .contenedor__seccion {
 	background-color: #ffffff;
-	min-height: 200px;
+	min-height: 400px;
 	padding: 2rem;
 	margin-top: 200px;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
 
 	color: #5E0B15;
 	text-align: center;
@@ -236,7 +240,7 @@ hr {
 
 form {
 	padding: 2rem;
-	
+
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
@@ -387,9 +391,7 @@ textarea {
 }
 
 /* ------ DATOS ------ */
-
 .contenedor__datos {
-	max-width: 1024px;
 	margin: 0 auto;
 
 	display: flex;
@@ -405,6 +407,10 @@ textarea {
 
 	object-fit: cover;
 
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+
 	transition: all 0.8s ease;
 }
 
@@ -418,7 +424,7 @@ textarea {
 }
 
 .contenedor {
-	max-width: 1024px;
+	max-width: 1200px;
 	margin: 0 auto;
 
 	display: flex;
@@ -1153,7 +1159,8 @@ footer h5 {
 	form {
 		max-width: 1024px;
 		padding: 6rem;
-	
+		margin: 0 auto;
+
 		display: grid;
 		grid-template-columns: 50% 50%;
 		grid-template-rows: 10% 30% 20%;
@@ -1174,7 +1181,7 @@ footer h5 {
 		padding: 1rem;
 		margin: 1rem;
 	}
-	
+
 	.boton_value {
 		width: 95%;
 	}
@@ -1669,14 +1676,15 @@ footer h5 {
 
 @media (min-width: 1200px) {
 
-		/* ------ MAIN ------ */
+	/* ------ MAIN ------ */
 
 	/* --- FORM --- */
 
 	form {
 		max-width: 1200px;
 		padding: 4rem;
-	
+		margin: 0 auto;
+
 		display: grid;
 		grid-template-columns: 50% 50%;
 		grid-template-rows: 10% 30% 20%;
@@ -1697,7 +1705,7 @@ footer h5 {
 		padding: 1rem;
 		margin: 1rem;
 	}
-	
+
 	.boton_value {
 		width: 95%;
 	}
@@ -1955,10 +1963,10 @@ footer h5 {
 	.contenedor__datos {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 40vh 10vh 40vh 60vh 40vh;
+		grid-template-rows: 20% 10% 20% 30% 20%;
 
 		max-width: 1200px;
-		padding: 8rem 0 8rem 0;
+		padding: 6rem 0 6rem 0;
 		margin: 0 auto;
 
 		align-items: flex-start;
