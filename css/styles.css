@@ -26,10 +26,15 @@ img {
 	max-width: 100%;
 }
 
-body {
+body,
+footer {
+	background-color: #ffffff;
 	font-family: 'Lato', sans-serif;
 }
 
+header {
+	font-family: "Lato", sans-serif;
+}
 
 /* ------ HEADER ------ */
 
@@ -38,8 +43,13 @@ body {
 }
 
 .contenedor {
-	max-width: 1100px;
-	margin: 0 auto;
+	max-width: 1980px;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	align-content: center;
 }
 
 .header_wrapper {
@@ -52,7 +62,12 @@ body {
 
 	min-height: 900px;
 	padding: 2rem;
-	margin: 0 auto 0;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	align-content: center;
 
 	font-family: 'Lato', sans-serif;
 	font-weight: 900;
@@ -74,9 +89,9 @@ hr {
 
 .contenedor__seccion {
 	background-color: #ffffff;
-	min-height: 400px;
+	min-height: 20vh;
 	padding: 2rem;
-	margin-top: 200px;
+	margin-top: 10rem;
 
 	display: flex;
 	flex-wrap: wrap;
@@ -92,8 +107,9 @@ hr {
 }
 
 .descripcion__seccion {
+	background-color: #ffffff;
 	max-width: 1024px;
-	min-height: 200px;
+	min-height: 20vh;
 	margin: 0 auto;
 
 	line-height: 0.5rem;
@@ -197,9 +213,9 @@ hr {
 	background-color: #5e0b1593;
 	box-shadow: inset 0px 0px 10px 0 #5E0B15;
 
-	width: 100%;
+	width: 70%;
 	height: 30vh;
-	margin: 10rem 0 0;
+	margin: 8rem;
 
 	display: flex;
 	flex-wrap: wrap;
@@ -235,6 +251,15 @@ hr {
 }
 
 /* ------ MAIN ------ */
+
+.contenedor_main {
+	max-width: 1200px;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	align-items: center;
+}
 
 /* --- FORM --- */
 
@@ -377,17 +402,14 @@ textarea {
 
 /*  ------ TITULO SECCIONES ------ */
 
-.titular h2 {
+.titular {
 	padding: 4rem 0 4rem;
-
-	align-content: center;
-	justify-items: center;
+	margin: 0 auto;
 
 	color: #5E0B15;
 	font-family: 'Lato', sans-serif;
 	font-size: 2rem;
 	font-weight: 900;
-	text-align: center;
 }
 
 /* ------ DATOS ------ */
@@ -424,14 +446,8 @@ textarea {
 }
 
 .contenedor {
-	max-width: 1200px;
+	max-width: 1980px;
 	margin: 0 auto;
-
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-
-	text-align: center;
 }
 
 .contenedor img {
@@ -454,6 +470,9 @@ textarea {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
+
+	justify-items: center;
+	align-content: center;
 
 	gap: 2rem;
 }
@@ -525,7 +544,7 @@ ol {
 	min-height: 300px;
 	padding: 0 0 0 0;
 
-	align-self: flex-start;
+	align-self: center;
 
 	font-size: 2rem;
 	text-align: left;
@@ -624,6 +643,9 @@ ol {
 	display: flex;
 	flex-direction: column;
 
+	justify-items: center;
+	align-content: center;
+
 	padding: 2rem 1.5rem 2rem 0;
 }
 
@@ -640,6 +662,9 @@ ol {
 
 	display: flex;
 	flex-direction: column;
+
+	justify-items: center;
+	align-content: center;
 }
 
 .enlace__dulce {
@@ -654,7 +679,7 @@ ol {
 	display: flex;
 	flex-direction: row;
 
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 
 	overflow: hidden;
@@ -672,7 +697,7 @@ ol {
 	display: flex;
 	flex-direction: row;
 
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 
 	overflow: hidden;
@@ -682,7 +707,6 @@ ol {
 
 .contenedor__promo {
 	background-color: #5E0B15;
-	width: 100%;
 	padding: 2rem;
 	margin: 0 auto;
 
@@ -705,17 +729,19 @@ ol {
 .promo {
 	grid-column: 1/2;
 	grid-row: 1/2;
-
-	display: flex;
-	flex-wrap: wrap;
 }
 
 .icono__promo {
-	align-self: self-start;
+	width: 60%;
+	align-self: flex-start;
 }
 
 .promo {
-	align-self: self-end;
+	align-self: flex-end;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
 }
 
 .promo h2 {
@@ -832,15 +858,12 @@ ol {
 	grid-column: 1/2;
 	grid-row: 1/2;
 
-	width: auto;
-	padding: 0 0 1rem;
-
-	align-self: self-start;
-	justify-self: self-end;
+	align-self: flex-start;
+	justify-self: flex-end;
 }
 
 .envios {
-	align-self: self-end;
+	align-self: flex-end;
 }
 
 .envios h2 {
@@ -894,13 +917,11 @@ ol {
 	grid-column: 1/2;
 	grid-row: 2/3;
 
-	width: auto;
-
 	display: flex;
 	flex-wrap: wrap;
 
 	align-self: center;
-	justify-self: self-end;
+	justify-self: flex-end;
 }
 
 .consulta {
@@ -1027,11 +1048,16 @@ ol {
 }
 
 hr {
+	width: 90%;
 	border: solid 2px #5E0B15;
 	margin: 0 auto;
 }
 
 /* ------ FOOTER ------ */
+
+footer {
+	background-color: #ffffff;
+}
 
 .contenedor_footer {
 	padding: 2rem;
@@ -1216,9 +1242,12 @@ footer h5 {
 	.contenedor__productos {
 		display: grid;
 		grid-template-columns: 50% 50%;
-		grid-template-rows: 600px 500px 200px 600px;
+		grid-template-rows: 60vh 30vh 40vh 30vh;
+
+		justify-content: space-between;
 
 		gap: 0;
+
 	}
 
 	.parrafo__tortas {
@@ -1287,57 +1316,57 @@ footer h5 {
 
 	.subtitulo {
 		min-height: 300px;
+		padding: 0;
 		margin: 0 4rem 3.5rem;
 
 		font-size: 1.5rem;
 		text-align: left;
-
-		align-self: flex-end;
 	}
 
 	.sub__titulo {
-		padding-right: 4rem;
+		align-self: center;
+
+		padding: 0;
 	}
 
 	.link {
-		width: 40%;
-		min-height: 300px;
-		margin: 0 0 0;
+		align-self: flex-end;
+
+		padding: 0;
 
 		font-size: 1.3rem;
 		font-weight: 900;
 		font-style: italic;
 		text-align: center;
-
-		align-self: flex-end;
 	}
 
 	.enlace__tortas {
 		background-image: url(../imagenes/image_index/tortas_artesanales.png);
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-position: contain;
+		background-position: bottom left;
 
-		max-height: 450px;
-		padding: 4rem 0 0;
+		width: 100%;
+		max-height: 400px;
+		padding: 0 0 0;
 
-		display: flex;
-		flex-direction: column;
+		align-self: flex-end;
 
-		align-content: flex-end;
+		overflow: hidden;
 	}
 
 	.enlace__pasteleria {
 		background-image: url(../imagenes/image_index/pastelería_creativa.png);
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-position: cover;
+		background-position: bottom left;
 
-		max-height: 450px;
-		padding: 4rem 0 0;
 
-		display: flex;
-		flex-direction: column;
+		width: 100%;
+		max-height: 400px;
+		padding: 0 0 0;
+
+		align-self: flex-end;
 
 		overflow: hidden;
 	}
@@ -1348,12 +1377,14 @@ footer h5 {
 		background-repeat: no-repeat;
 		background-position: bottom;
 
+		width: 100%;
 		padding: 0 0 0;
 
 		display: flex;
 		flex-direction: row;
 
 		justify-content: space-between;
+		align-items: center;
 
 		overflow: hidden;
 	}
@@ -1364,6 +1395,7 @@ footer h5 {
 		background-repeat: no-repeat;
 		background-position: bottom center;
 
+		width: 100%;
 		min-height: 350px;
 		padding: 0 0 0;
 
@@ -1400,6 +1432,8 @@ footer h5 {
 	.icono__promo {
 		grid-column: 1/2;
 		grid-row: 1/2;
+
+		width: 50%;
 
 		align-self: self-start;
 	}
@@ -1567,7 +1601,7 @@ footer h5 {
 	/* ------ GRILLA SECCIONES / MENU ------ */
 
 	hr {
-		min-width: 1024px;
+		width: 100%;
 	}
 
 	.contenedor__menu {
@@ -1723,7 +1757,7 @@ footer h5 {
 	.contenedor__productos {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-template-rows: 80% 20%;
+		grid-template-rows: 60vh 30vh;
 
 		width: 100%;
 
@@ -1742,22 +1776,20 @@ footer h5 {
 		flex-wrap: wrap;
 		flex-direction: column;
 
-		justify-items: flex-end;
+		align-content: flex-end;
 	}
 
 	.enlace__dulce,
 	.enlace__lunch {
 		width: 100%;
-
-		margin-top: 2rem;
+		
 		background-position: bottom;
 
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
 
-		justify-items: center;
-
+		align-self: flex-end;
 	}
 
 	.subtitulo {
@@ -1887,6 +1919,10 @@ footer h5 {
 
 	.contenedor__promo {
 		padding: 4rem;
+	}
+
+	.icono__promo {
+		width: 35%;
 	}
 
 	/* ------ ENVIOS ------ */
@@ -2051,11 +2087,11 @@ footer h5 {
 	/* ------ GRILLA SECCIONES / MENU ------ */
 
 	hr {
-		min-width: 1200px;
+		width: 90%;
 	}
 
 	.contenedor__menu {
-		width: 100%;
+		max-width: 1980px;
 		padding-right: 2rem;
 
 		display: flex;
