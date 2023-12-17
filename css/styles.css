@@ -44,12 +44,8 @@ header {
 
 .contenedor {
 	max-width: 1980px;
-
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-
-	align-content: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .header_wrapper {
@@ -60,13 +56,15 @@ header {
 	background-image:
 		linear-gradient(#0000008e, rgba(94, 11, 21, 0.329)), url(../imagenes/image_index/portada.jpg);
 
+	width: 100%;
 	min-height: 900px;
-	padding: 2rem;
+	padding: 0;
 
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
 
+	justify-items: center;
 	align-content: center;
 
 	font-family: 'Lato', sans-serif;
@@ -85,6 +83,13 @@ hr {
 	max-height: 240px;
 	padding-top: 2rem;
 	margin: 0 auto;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	justify-items: center;
+	align-content: center;
 }
 
 .contenedor__seccion {
@@ -137,6 +142,11 @@ hr {
 	gap: 2rem;
 
 	text-align: right;
+}
+
+.navbar,
+.container {
+	padding: 1rem 2rem;
 }
 
 .navbar-toggler-icon {
@@ -213,17 +223,17 @@ hr {
 	background-color: #5e0b1593;
 	box-shadow: inset 0px 0px 10px 0 #5E0B15;
 
-	width: 70%;
+	width: 100%;
 	height: 30vh;
-	margin: 8rem;
+	padding: 2rem;
+	margin: 8rem 0;
 
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
 
 	justify-content: center;
-	align-self: center;
-
+	
 	text-align: center;
 	line-height: 0.2;
 }
@@ -374,19 +384,29 @@ textarea {
 /* --- CAROUSEL --- */
 
 .carousel {
-	display: flex;
-	flex-wrap: nowrap;
-	overflow: scroll;
+	background-color: #ffffff;
+	width: 800px;
+	height: 400px;
+	margin: 3rem auto;
+
+	object-fit: cover;
+	object-position: 50% 50%;
+
+	overflow: hidden;
+
+	transition: 0.6s ease-in-out;
 }
 
 .foto__carousel {
-	flex: 1 0 auto;
 
-	width: 600px;
-	height: 450px;
-	padding: 1.5rem;
+	width: 800px;
+	height: 400px;
+	margin: 0 auto;
 
 	object-fit: cover;
+	object-position: 50% 50%;
+
+	overflow: hidden;
 
 	transition: 0.6s ease-in-out;
 }
@@ -395,7 +415,7 @@ textarea {
 	display: flex;
 	cursor: pointer;
 
-	transform: scale(1.1);
+	transform: scale(1.4);
 
 	transition: 0.6s ease-in-out;
 }
@@ -405,14 +425,18 @@ textarea {
 .titular {
 	padding: 4rem 0 4rem;
 	margin: 0 auto;
+}
 
+.titular h2 {
 	color: #5E0B15;
 	font-family: 'Lato', sans-serif;
-	font-size: 2rem;
+	font-size: 2.5rem;
 	font-weight: 900;
+	text-align: center;
 }
 
 /* ------ DATOS ------ */
+
 .contenedor__datos {
 	margin: 0 auto;
 
@@ -1172,6 +1196,34 @@ footer h5 {
 		color: #D9CAB3;
 	}
 
+	.carousel {
+		background-color: #ffffff;
+		width: 700px;
+		height: 400px;
+		margin: 0 auto;
+
+		object-fit: cover;
+		object-position: 50% 50%;
+
+		overflow: hidden;
+
+		transition: 0.6s ease-in-out;
+	}
+
+	.foto__carousel {
+
+		width: 700px;
+		height: 400px;
+		margin: 0 auto;
+
+		object-fit: cover;
+		object-position: 50% 50%;
+
+		overflow: hidden;
+
+		transition: 0.6s ease-in-out;
+	}
+
 }
 
 /* ------ ------ ------ ------ RESPONSIVE 1024px ------ ------ ------ ------ */
@@ -1232,9 +1284,13 @@ footer h5 {
 
 	/*  ------ TITULOS ------ */
 
-	.titular h2 {
-		font-size: 3rem;
-		font-weight: 900;
+	.carousel {
+		margin-top: 4rem;
+		margin-bottom: 4rem;
+	}
+
+	.titular {
+		padding: 4rem 0 0 0;
 	}
 
 	/* ------ GRILLA SECCIONES / PRODUCTOS ------ */
@@ -1242,7 +1298,7 @@ footer h5 {
 	.contenedor__productos {
 		display: grid;
 		grid-template-columns: 50% 50%;
-		grid-template-rows: 60vh 30vh 40vh 30vh;
+		grid-template-rows: 40vh 20vh 20vh 20vh;
 
 		justify-content: space-between;
 
@@ -1601,7 +1657,7 @@ footer h5 {
 	/* ------ GRILLA SECCIONES / MENU ------ */
 
 	hr {
-		width: 100%;
+		width: 95%;
 	}
 
 	.contenedor__menu {
@@ -1752,14 +1808,18 @@ footer h5 {
 		gap: 0.5rem;
 	}
 
+	.titular {
+		margin: 0 0 6rem 0;
+	}
+
 	/* ------ GRILLA SECCIONES / PRODUCTOS ------ */
 
 	.contenedor__productos {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-template-rows: 60vh 30vh;
+		grid-template-rows: 45vh 35vh;
 
-		width: 100%;
+		max-width: 1200;
 
 		padding: 0;
 		margin: 0;
@@ -1782,7 +1842,7 @@ footer h5 {
 	.enlace__dulce,
 	.enlace__lunch {
 		width: 100%;
-		
+
 		background-position: bottom;
 
 		display: flex;
@@ -1929,6 +1989,14 @@ footer h5 {
 
 	.contenedor__envios {
 		padding: 4rem;
+	}
+
+	.icono__envios {
+		width: 20%;
+	}
+
+	.icono__consulta+ {
+		width: 20%;
 	}
 
 	/* ------ GRILLA SECCIONES / SOBRE MI ------ */
@@ -2087,7 +2155,7 @@ footer h5 {
 	/* ------ GRILLA SECCIONES / MENU ------ */
 
 	hr {
-		width: 90%;
+		max-width: 95%;
 	}
 
 	.contenedor__menu {
