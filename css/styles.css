@@ -473,7 +473,7 @@ textarea {
 }
 
 .contenedor {
-	max-width: 1980px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 
@@ -759,7 +759,7 @@ ol {
 }
 
 .icono__promo {
-	width: 60%;
+	width: 70%;
 	align-self: flex-start;
 }
 
@@ -866,7 +866,7 @@ ol {
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 200px 100px;
 
-	align-items: flex-end;
+	align-items: center;
 
 	gap: 0.5rem;
 }
@@ -882,30 +882,31 @@ ol {
 }
 
 .icono__envios {
-	grid-column: 1/2;
+	width: 100%;
+	grid-column: 2/3;
 	grid-row: 1/2;
 
-	align-self: flex-start;
-	justify-self: flex-end;
+	align-self: center;
+	justify-self: center;
 }
 
 .envios {
-	align-self: flex-end;
+	align-self: center;
 }
 
 .envios h2 {
 	color: #5E0B15;
 	font-weight: 700;
-	font-size: 1.2rem;
+	font-size: 2rem;
 }
 
 .envios h3 {
-	font-size: 1rem;
+	font-size: 1.2rem;
 }
 
 .envios h4 {
 	color: #5E0B15;
-	font-size: 0.8rem;
+	font-size: 1rem;
 	font-style: italic;
 }
 
@@ -948,7 +949,7 @@ ol {
 	flex-wrap: wrap;
 
 	align-self: center;
-	justify-self: flex-end;
+	justify-self: center;
 }
 
 .consulta {
@@ -958,7 +959,7 @@ ol {
 	display: flex;
 	flex-wrap: wrap;
 
-	align-content: flex-start;
+	align-content: flex-end;
 }
 
 .consulta h5 {
@@ -1143,6 +1144,42 @@ footer h5 {
 	font-size: 1rem;
 }
 
+/* ------ ------ ------ ------ RESPONSIVE 720px ------ ------ ------ ------ */
+
+@media(min-width: 720px) {
+
+	/* ------ MAIN ------ */
+	
+	.icono__promo {
+		width: 45%;
+	}
+
+	.contenedor__envios{
+		padding-top: 4rem;
+	}
+	
+	.icono__envios {
+		width: 50%;
+	}
+
+	.envios h2 {
+		color: #5E0B15;
+		font-weight: 700;
+		font-size: 2.5rem;
+	}
+	
+	.envios h3 {
+		font-size: 2rem;
+	}
+	
+	.envios h4 {
+		color: #5E0B15;
+		font-size: 1.5rem;
+		font-style: italic;
+	}
+
+}
+
 /* ------ ------ ------ ------ RESPONSIVE 820px ------ ------ ------ ------ */
 
 @media(min-width: 820px) {
@@ -1231,25 +1268,6 @@ footer h5 {
 		transition: 0.6s ease-in-out;
 	}
 
-	.icono__promo{
-		width: 35%;
-	}
-
-	.envios h2{
-		font-size: 2.2rem;
-	}
-
-	.envios h3{
-		font-size: 2rem;
-	}
-
-	.envios h4{
-		font-size: 1.5rem;
-	}
-
-	.icono__envios{
-		width: 32%;
-	}
 }
 
 /* ------ ------ ------ ------ RESPONSIVE 1024px ------ ------ ------ ------ */
@@ -1515,16 +1533,16 @@ footer h5 {
 		grid-column: 1/2;
 		grid-row: 1/2;
 
-		width: 50%;
+		width: 60%;
 
-		align-self: self-start;
+		align-self: flex-start;
 	}
 
 	.promo {
 		grid-column: 1/2;
 		grid-row: 2/3;
 
-		align-self: self-end;
+		align-self: flex-end;
 
 		letter-spacing: 0.1rem;
 	}
@@ -1633,11 +1651,11 @@ footer h5 {
 	}
 
 	.icono__envios {
-		width: auto;
+		width: 40%;
 		padding: 0 0 1rem;
 
-		align-self: self-start;
-		justify-self: self-end;
+		align-self: flex-start;
+		justify-self: flex-end;
 	}
 
 	.envios {
@@ -1647,15 +1665,15 @@ footer h5 {
 	.envios h2 {
 		color: #5E0B15;
 		font-weight: 900;
-		font-size: 2rem;
+		font-size: 3rem;
 	}
 
 	.envios h3 {
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 
 	.envios h4 {
-		font-size: 1.5rem;
+		font-size: 1rem;
 	}
 
 	.compra {
@@ -1803,14 +1821,14 @@ footer h5 {
 
 		display: grid;
 		grid-template-columns: 50% 50%;
-		grid-template-rows: 10% 30% 20%;
+		grid-template-rows: 10% 50% 40%;
 
 		text-align: center;
 
 		justify-content: center;
 		align-items: flex-start;
 
-		gap: 1rem;
+		gap: 2rem;
 	}
 
 	form input,
@@ -1843,9 +1861,9 @@ footer h5 {
 	.contenedor__productos {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-template-rows: 60% 40%;
+		grid-template-rows: 70% 30%;
 
-		max-width: 1200;
+		max-width: 1024;
 
 		padding: 0;
 		margin: 0;
@@ -1989,7 +2007,7 @@ footer h5 {
 	}
 
 	.parrafo h4 {
-		padding: 0 1rem 1rem 3rem;
+		padding: 0 1rem 0 1rem;
 		margin: 0;
 
 		color: #8C7A6B;
@@ -2008,21 +2026,39 @@ footer h5 {
 	}
 
 	.icono__promo {
-		width: 35%;
+		width: 50%;
 	}
 
 	/* ------ ENVIOS ------ */
 
-	.contenedor__envios {
-		padding: 4rem;
+	/* ------ MAIN ------ */
+	
+	.icono__promo {
+		width: 45%;
 	}
 
+	.contenedor__envios{
+		padding-top: 4rem;
+	}
+	
 	.icono__envios {
-		width: 20%;
+		width: 30%;
 	}
 
-	.icono__consulta+ {
-		width: 20%;
+	.envios h2 {
+		color: #5E0B15;
+		font-weight: 700;
+		font-size: 3rem;
+	}
+	
+	.envios h3 {
+		font-size: 2.7rem;
+	}
+	
+	.envios h4 {
+		color: #5E0B15;
+		font-size: 1rem;
+		font-style: italic;
 	}
 
 	/* ------ GRILLA SECCIONES / SOBRE MI ------ */
@@ -2093,12 +2129,12 @@ footer h5 {
 	.contenedor__datos {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 20% 10% 20% 30% 20%;
+		grid-template-rows: 15% 10% 15% 35% 25%;
 
 		max-width: 1200px;
-		padding: 6rem 0 6rem 0;
+		padding: 10rem 0 0 0;
 		margin: 0 auto;
-
+	
 		align-items: flex-start;
 		justify-content: center;
 	}
@@ -2136,16 +2172,22 @@ footer h5 {
 	.titulo__butter {
 		grid-column: 1/2;
 		grid-row: 2/3;
+
+		align-self: center;
 	}
 
 	.titulo__fondant {
 		grid-column: 2/3;
 		grid-row: 2/3;
+
+		align-self: center;
 	}
 
 	.titulo__letter {
 		grid-column: 3/4;
 		grid-row: 2/3;
+
+		align-self: center;
 	}
 
 	.butter {
