@@ -278,12 +278,12 @@ hr {
 
 form {
 
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
 
-align-items: center;
-justify-content: space-between;
+	align-items: center;
+	justify-content: space-between;
 
 }
 
@@ -565,8 +565,8 @@ ol {
 }
 
 .subtitulo {
-	min-height: 450px;
-	padding: 0;
+	max-height: 400px;
+	padding: 2rem;
 
 	align-self: start;
 
@@ -614,23 +614,23 @@ ol {
 .titulo h3 {
 	color: #BC8034;
 
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	font-style: italic;
 	font-weight: 900;
 	text-align: center;
 }
 
 .link {
-	min-height: 300px;
+	min-height: 250px;
 	width: 25%;
-	padding-top: 2.5rem;
+	padding-top: 1.5rem;
 
 	display: flex;
 	flex-wrap: wrap;
 
 	align-self: flex-end;
 
-	font-size: 1.3rem;
+	font-size: 1rem;
 	font-weight: 900;
 	font-style: italic;
 	text-align: center;
@@ -638,9 +638,9 @@ ol {
 
 .link h5 {
 	border: solid 1px #8C7A6B;
-	border-radius: 0.5rem;
+	border-radius: 0.2rem;
 
-	padding: 1rem;
+	padding: 0.4rem;
 
 	color: #8C7A6B;
 	font-weight: 700;
@@ -662,7 +662,7 @@ ol {
 	background-repeat: no-repeat;
 	background-position: contain;
 
-	max-height: 450px;
+	max-height: 400px;
 
 	display: flex;
 	flex-direction: column;
@@ -680,7 +680,7 @@ ol {
 	background-repeat: no-repeat;
 	background-position: cover;
 
-	max-height: 450px;
+	max-height: 400px;
 	padding: 2rem 4rem 2rem 0;
 
 	overflow: hidden;
@@ -698,11 +698,11 @@ ol {
 	background-repeat: no-repeat;
 	background-position: bottom;
 
-	min-height: 400px;
+	max-height: 800px;
 	padding: 0 2rem 0 2rem;
 
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 
 	justify-content: center;
 	align-items: center;
@@ -714,16 +714,13 @@ ol {
 	background-image: url(../imagenes/image_index/servicio_de_luch.png);
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-position: bottom center;
+	background-position: bottom;
 
-	min-height: 400px;
-	padding: 0 2rem 0 2rem;
+	max-height: 800px;
+	padding: 0rem 2rem 0 2rem;
 
 	display: flex;
-	flex-direction: row;
-
-	justify-content: center;
-	align-items: center;
+	flex-direction: column;
 
 	overflow: hidden;
 }
@@ -1162,8 +1159,8 @@ footer h5 {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 60% 20% 20%;
 
-		align-items: end;
-		justify-items: center;
+		align-items: start;
+		justify-items: start;
 
 		gap: 0.5rem;
 	}
@@ -1177,6 +1174,7 @@ footer h5 {
 		grid-column: 1/2;
 		grid-row: 1/2;
 
+		justify-self: start;
 		line-height: 0.1rem;
 	}
 
@@ -1214,10 +1212,10 @@ footer h5 {
 		background-color: #90323D;
 		border-radius: 1rem;
 
-		padding: 2rem 3rem;
+		padding: 2rem 12rem;
 
 		color: #8C7A6B;
-		font-size: 2rem;
+		font-size: 1.8rem;
 		font-weight: 900;
 		text-align: center;
 	}
@@ -1233,16 +1231,17 @@ footer h5 {
 	.consulta {
 		grid-column: 2/3;
 		grid-row: 3/4;
+
 	}
 
 	.consulta h5 {
 		background-color: #90323D;
 		border-radius: 1rem;
 
-		padding: 1.8rem 2rem;
+		padding: 1.5rem 12rem;
 
 		color: #8C7A6B;
-		font-size: 1.3rem;
+		font-size: 1rem;
 		font-weight: 900;
 		text-align: center;
 	}
@@ -1336,83 +1335,7 @@ footer h5 {
 
 		transition: 0.6s ease-in-out;
 	}
-
-	/* --- ENVIOS --- */
-
-	.contenedor__envios {
-
-		display: flex;
-		flex-wrap: nowrap;
-		flex-direction: row;
-
-		padding-top: 6rem;
-
-		align-items: end;
-		justify-content: space-between;
-	}
-
-	.contenedor__envios img {
-		width: 80%;
-
-		object-fit: contain;
-	}
-
-	.icono__envios {
-		align-self: flex-end;
-		padding-bottom: 10rem;
-	}
-
-	.envios h2 {
-		color: #5E0B15;
-		font-weight: 700;
-		font-size: 3.5rem;
-		letter-spacing: 1.5rem;
-	}
-
-	.envios h3 {
-		font-size: 3rem;
-	}
-
-	.envios h4 {
-		color: #5E0B15;
-		font-size: 2.2rem;
-		font-style: italic;
-	}
-
-	.compra {
-		align-self: end;
-	}
-
-	.compra h5 {
-		background-color: #90323D;
-		border-radius: 1rem;
-
-		padding: 1rem 3rem;
-
-		color: #8C7A6B;
-		font-size: 2rem;
-		font-weight: 900;
-		text-align: center;
-
-		align-self: end;
-	}
-
-	.icono__consulta {
-		padding-top: 15rem;
-	}
-
-	.consulta h5 {
-		background-color: #90323D;
-		border-radius: 1rem;
-
-		padding: 1rem;
-
-		color: #8C7A6B;
-		font-size: 1rem;
-		font-weight: 900;
-		text-align: center;
-	}
-
+	
 }
 
 /* ------ ------ ------ ------ RESPONSIVE 1024px ------ ------ ------ ------ */
@@ -1569,9 +1492,9 @@ footer h5 {
 	}
 
 	.sub__titulo {
-		align-self: center;
-
-		padding: 0;
+		text-align: left;
+	
+		padding: 0 2.5rem 0 0;
 	}
 
 	.link {
@@ -1720,7 +1643,7 @@ footer h5 {
 		grid-column: 2/3;
 		grid-row: 1/2;
 
-		align-self: self-start;
+		align-self: start;
 	}
 
 	.promo__listado {
@@ -1729,7 +1652,7 @@ footer h5 {
 
 		padding: 6rem 0 0;
 
-		align-self: self-end;
+		align-self: end;
 	}
 
 	.promo__detalle {
@@ -1771,80 +1694,78 @@ footer h5 {
 		transition: 0.8s;
 	}
 
-	/* --- ENVIOS --- */
+	/* ------ ENVIOS ------ */
 
 	.contenedor__envios {
+		background-color: #8C7A6B;
 
-		display: flex;
-		flex-wrap: nowrap;
-		flex-direction: row;
+		padding: 3rem;
 
-		align-items: end;
-		justify-content: space-between;
+		color: #90323D;
 
-		padding-top: 6rem;
+		display: grid;
+		grid-template-columns: 1.5fr 2fr;
+		grid-template-rows: 150px 100px;
+
+		gap: 3rem;
 	}
 
-	.contenedor__envios img {
-		width: 80%;
+	.icono__envios,
+	.envios {
+		grid-column: 1/2;
+		grid-row: 1/2;
 
-		object-fit: contain;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
 	}
 
 	.icono__envios {
-		align-self: flex-end;
-		padding-bottom: 10rem;
+		width: auto;
+		padding: 0 0 1rem;
+
+		align-self: start;
+		justify-self: end;
+	}
+
+	.envios {
+		align-self: flex-start;
 	}
 
 	.envios h2 {
 		color: #5E0B15;
-		font-weight: 700;
-		font-size: 3.5rem;
-		letter-spacing: 1.5rem;
+		font-weight: 900;
+		font-size: 2rem;
 	}
 
 	.envios h3 {
-		font-size: 3rem;
+		font-size: 2rem;
 	}
 
 	.envios h4 {
-		color: #5E0B15;
-		font-size: 2.2rem;
-		font-style: italic;
+		font-size: 1.5rem;
 	}
 
 	.compra {
-		align-self: end;
-	}
-
-	.compra h5 {
-		background-color: #90323D;
-		border-radius: 1rem;
-
-		padding: 1rem 3rem;
-
-		color: #8C7A6B;
-		font-size: 2rem;
-		font-weight: 900;
-		text-align: center;
-
-		align-self: end;
+		grid-column: 2/3;
+		grid-row: 1/2;
 	}
 
 	.icono__consulta {
-		padding-top: 15rem;
+		grid-column: 1/2;
+		grid-row: 2/3;
+
+		width: auto;
+
+		align-self: center;
+		justify-self: end;
 	}
 
-	.consulta h5 {
-		background-color: #90323D;
-		border-radius: 1rem;
+	.consulta {
+		grid-column: 2/3;
+		grid-row: 2/3;
 
-		padding: 1rem;
-
-		color: #8C7A6B;
-		font-size: 1rem;
-		font-weight: 900;
-		text-align: center;
+		justify-self: end;
 	}
 
 	/* ------ GRILLA SECCIONES / MENU ------ */
@@ -2046,10 +1967,9 @@ footer h5 {
 	}
 
 	.subtitulo {
-		min-height: 50px;
-		padding: 0 1rem 0 0;
-		margin: 0;
-
+		min-height: 60px;
+		padding: 0 1.5rem 0 0;
+		
 		align-self: flex-end;
 
 		text-align: left;
@@ -2060,8 +1980,8 @@ footer h5 {
 	}
 
 	.sub__titulo {
-		min-height: 10px;
-		padding: 0 0.7rem 0 0;
+		min-height: 130px;
+		padding: 0 1rem 0 0;
 		margin: 0;
 
 		text-align: right;
@@ -2180,74 +2100,26 @@ footer h5 {
 
 	/* ------ ENVIOS ------ */
 
-	/* ------ MAIN ------ */
-
-	.icono__promo {
-		width: 45%;
+	.envios h2{
+		font-size: 2.5rem;
 	}
 
-	.contenedor__envios {
-		padding: 4rem 4rem 6rem 4rem;
-		grid-template-columns: 1fr 2fr;
-
-		justify-content: end;
+	.envios h3{
+		font-size: 2.4rem;
 	}
 
-	.icono__envios {
-		grid-column: 2/3;
-		grid-row: 1/2;
-
-		width: 25%;
-
-		justify-self: flex-start;
-		align-self: center;
+	.envios h4{
+		font-size: 1.8rem;
 	}
 
-	.icono__consulta {
-		grid-column: 2/3;
-		grid-row: 2/3;
-
-		justify-self: flex-start;
-		align-self: center;
+	.compra h5 {
+		padding: 2rem 15rem;
 	}
 
-	.compra {
-		width: 50%;
-		grid-column: 2/3;
+	.consulta h5 {
+		padding: 1.5rem 15rem;
 	}
 
-	.compra h4 {
-		padding: 0;
-		margin: 0;
-	}
-
-	.consulta {
-		width: 50%;
-		grid-column: 2/3;
-	}
-
-
-	.envios {
-		text-anchor: 1rem;
-		line-height: 0.2rem;
-	}
-
-	.envios h2 {
-		color: #5E0B15;
-		font-weight: 700;
-		font-size: 3.5rem;
-		letter-spacing: 1rem;
-	}
-
-	.envios h3 {
-		font-size: 2.7rem;
-	}
-
-	.envios h4 {
-		color: #5E0B15;
-		font-size: 2rem;
-		font-style: italic;
-	}
 
 	/* ------ GRILLA SECCIONES / SOBRE MI ------ */
 
