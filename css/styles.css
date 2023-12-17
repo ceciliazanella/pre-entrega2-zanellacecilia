@@ -37,7 +37,10 @@ header {
 }
 
 hr {
+	background-color: #90323D;
+	border: solid 2px #90323D;
 	width: 95%;
+	padding: 0.2rem;
 }
 
 /* ------ HEADER ------ */
@@ -77,15 +80,10 @@ hr {
 	overflow: hidden;
 }
 
-/* ------ HEADER CAMBIO SECCIONES ------ */
-
-hr {
-	border: solid 2px #90323D;
-}
+/* ------ HEADER / CAMBIO SECCIONES ------ */
 
 .header_seccion {
 	background-color: #5E0B15;
-
 	max-height: 240px;
 	padding-top: 2rem;
 	margin: 0 auto;
@@ -225,6 +223,8 @@ hr {
 	transition: 1s;
 }
 
+/* --- H1 --- */
+
 .contenedor__titular {
 	background-color: #5e0b1593;
 	box-shadow: inset 0px 0px 10px 0 #5E0B15;
@@ -240,8 +240,6 @@ hr {
 	text-align: center;
 	line-height: 0.2;
 }
-
-/* ------ H1 ------ */
 
 .contenedor__titular h1 {
 	color: #D9CAB3;
@@ -277,14 +275,12 @@ hr {
 /* --- FORM --- */
 
 form {
-
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
 
 	align-items: center;
 	justify-content: space-between;
-
 }
 
 form input,
@@ -385,27 +381,21 @@ textarea {
 /* --- CAROUSEL --- */
 
 .carousel {
-	background-color: #ffffff;
-	width: 600px;
-	height: 250px;
-	margin: 3rem auto;
-
-	object-fit: cover;
-	object-position: 50% 50%;
-
+	width: 60%;
+	max-height: 300px;
+	
 	overflow: hidden;
 
 	transition: 0.6s ease-in-out;
 }
 
 .foto__carousel {
-
-	width: 600px;
-	height: 250px;
-	margin: 0 auto;
-
+	width: 100%;
+	height: 600px;
+	
 	object-fit: cover;
-	object-position: 50% 50%;
+
+	object-position: center bottom;
 
 	overflow: hidden;
 
@@ -421,7 +411,7 @@ textarea {
 	transition: 0.6s ease-in-out;
 }
 
-/*  ------ TITULO SECCIONES ------ */
+/*  --- TITULO SECCIONES --- */
 
 .titular {
 	padding: 4rem 0 4rem;
@@ -436,7 +426,7 @@ textarea {
 	text-align: center;
 }
 
-/* ------ DATOS ------ */
+/* --- DATOS --- */
 
 .contenedor__datos {
 	margin: 0 auto;
@@ -489,7 +479,7 @@ textarea {
 	filter: brightness(60%);
 }
 
-/* ------ PRODUCTOS ------ */
+/* --- PRODUCTOS --- */
 
 .contenedor__productos {
 	display: flex;
@@ -512,30 +502,29 @@ textarea {
 
 ol {
 	background-color: #D9CAB3;
-
 	padding: 1rem;
 	margin: 1rem;
 }
 
 .parrafo h2 {
+	padding: 1rem;
+
 	color: #BC8034;
 	font-size: 1.4rem;
 	font-style: italic;
 	font-weight: 400;
 	line-height: 2rem;
 	text-align: initial;
-
-	padding: 1rem;
 }
 
 .parrafo h3 {
+	padding: 1rem;
+
 	color: #5E0B15;
 	font-size: 1.2rem;
 	font-weight: 400;
 	line-height: 2.2;
 	text-align: initial;
-
-	padding: 1rem;
 }
 
 .parrafo h4 {
@@ -605,7 +594,6 @@ ol {
 
 .titulo h2 {
 	color: #5E0B15;
-
 	font-size: 2rem;
 	font-weight: 900;
 	text-align: center;
@@ -613,7 +601,6 @@ ol {
 
 .titulo h3 {
 	color: #BC8034;
-
 	font-size: 1.5rem;
 	font-style: italic;
 	font-weight: 900;
@@ -639,7 +626,6 @@ ol {
 .link h5 {
 	border: solid 1px #8C7A6B;
 	border-radius: 0.2rem;
-
 	padding: 0.4rem;
 
 	color: #8C7A6B;
@@ -663,6 +649,7 @@ ol {
 	background-position: contain;
 
 	max-height: 400px;
+	padding: 2rem 4rem 2rem 0;
 
 	display: flex;
 	flex-direction: column;
@@ -670,7 +657,6 @@ ol {
 	justify-items: center;
 	align-content: center;
 
-	padding: 2rem 4rem 2rem 0;
 	overflow: hidden;
 }
 
@@ -725,20 +711,20 @@ ol {
 	overflow: hidden;
 }
 
-/* ------ PROMO ------ */
+/* --- PROMO --- */
 
 .contenedor__promo {
 	background-color: #5E0B15;
 	padding: 2rem;
 	margin: 0 auto;
 
-	color: #D9CAB3;
-
 	display: grid;
 	grid-template-columns: 50% 50%;
 	grid-template-rows: 400px 250px;
 
 	gap: 0.5rem;
+
+	color: #D9CAB3;
 }
 
 .contenedor__promo ul {
@@ -761,11 +747,11 @@ ol {
 }
 
 .promo {
-	align-self: flex-end;
-
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
+
+	align-self: flex-end;
 }
 
 .promo h2 {
@@ -795,15 +781,17 @@ ol {
 }
 
 .promo__lista {
-	align-self: flex-start;
 	padding: 0;
 	margin: 0;
+
+	align-self: flex-start;
 }
 
 .promo__listado {
-	align-self: flex-end;
 	padding: 0;
 	margin: 0;
+
+	align-self: flex-end;
 }
 
 .promo__detalle {
@@ -832,7 +820,6 @@ ol {
 .boton__b h5 {
 	border: solid 3px #D9CAB3;
 	border-radius: 0.3rem;
-
 	padding: 1rem;
 
 	color: #D9CAB3;
@@ -850,11 +837,10 @@ ol {
 	transition: 0.8s;
 }
 
-/* ------ ENVIOS ------ */
+/* --- ENVIOS --- */
 
 .contenedor__envios {
 	background-color: #8C7A6B;
-
 	padding: 1rem 2.8rem 2.5rem 2rem;
 
 	color: #90323D;
@@ -885,10 +871,10 @@ ol {
 	grid-column: 2/3;
 	grid-row: 1/2;
 
+	padding-bottom: 2rem;
+
 	align-self: end;
 	justify-self: center;
-
-	padding-bottom: 2rem;
 }
 
 .envios h2 {
@@ -916,7 +902,6 @@ ol {
 .compra h5 {
 	background-color: #90323D;
 	border-radius: 1rem;
-
 	padding: 2rem 1rem;
 
 	color: #8C7A6B;
@@ -941,7 +926,6 @@ ol {
 
 	align-self: end;
 	justify-self: center;
-
 }
 
 .consulta {
@@ -952,7 +936,6 @@ ol {
 .consulta h5 {
 	background-color: #90323D;
 	border-radius: 1rem;
-
 	padding: 0.5rem;
 
 	color: #8C7A6B;
@@ -1003,11 +986,11 @@ ol {
 .titulo__butter,
 .titulo__fondant,
 .titulo__letter {
-	padding: 4rem;
-
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
+
+	padding: 4rem;
 
 	align-items: center;
 
@@ -1018,13 +1001,13 @@ ol {
 	font-style: italic;
 }
 
-/* ------ GRILLA SECCIONES / MENU ------ */
+/* --- GRILLA SECCIONES / MENU --- */
 
 .contenedor__menu {
-	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -1042,8 +1025,9 @@ ol {
 }
 
 .texto__menu {
-	color: #8C7A6B;
 	margin: 2rem;
+
+	color: #8C7A6B;
 	font-family: "Lato", sans-serif;
 	font-size: 0.5rem;
 	font-style: italic;
@@ -1052,19 +1036,14 @@ ol {
 }
 
 .titulo__menu {
-	color: #90323D;
 	margin: 2rem;
+
+	color: #90323D;
 	font-family: "Lato", sans-serif;
 	font-size: 1rem;
 	font-weight: 700;
 	text-align: left;
 	font-style: initial;
-}
-
-hr {
-	width: 90%;
-	border: solid 2px #5E0B15;
-	margin: 0 auto;
 }
 
 /* ------ FOOTER ------ */
@@ -1074,24 +1053,24 @@ footer {
 }
 
 .contenedor_footer {
-	padding: 2rem;
-
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
 
+	padding: 2rem;
+
+	gap: 1rem;
+
 	align-items: center;
 
 	text-align: center;
-
-	gap: 1rem;
 }
 
 .contenedor_footer ul {
-	padding: 2rem 0 0 0;
-
 	display: flex;
 	flex-direction: column;
+
+	padding: 2rem 0 0 0;
 
 	align-items: center;
 }
@@ -1108,14 +1087,14 @@ footer {
 }
 
 .contenedor__redes ul {
-	padding: 2rem;
-
 	display: flex;
 	flex-direction: row;
 
-	justify-content: center;
+	padding: 2rem;
 
 	gap: 1rem;
+
+	justify-content: center;
 }
 
 footer h6 {
@@ -1130,11 +1109,13 @@ footer h5 {
 	font-size: 1rem;
 }
 
+
 /* ------ ------ ------ ------ RESPONSIVE 720px ------ ------ ------ ------ */
 
 @media(min-width: 720px) {
 
 	/* ------ MAIN ------ */
+
 	.contenedor__promo {
 		padding: 4rem 4rem 4rem 6rem;
 		margin: 0 auto;
@@ -1145,108 +1126,8 @@ footer h5 {
 
 		justify-self: start;
 	}
-
-	/* ------ ENVIOS ------ */
-
-	.contenedor__envios {
-		background-color: #8C7A6B;
-
-		padding: 4rem;
-
-		color: #90323D;
-
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 60% 20% 20%;
-
-		align-items: start;
-		justify-items: start;
-
-		gap: 0.5rem;
-	}
-
-	.contenedor__envios img {
-		width: 100%;
-		object-fit: contain;
-	}
-
-	.envios {
-		grid-column: 1/2;
-		grid-row: 1/2;
-
-		justify-self: start;
-		line-height: 0.1rem;
-	}
-
-	.icono__envios {
-		grid-column: 2/3;
-		grid-row: 1/2;
-
-		align-self: end;
-		justify-self: center;
-	}
-
-	.envios h2 {
-		color: #5E0B15;
-		font-weight: 700;
-		font-size: 3.5rem;
-		letter-spacing: 1.5rem;
-	}
-
-	.envios h3 {
-		font-size: 3rem;
-	}
-
-	.envios h4 {
-		color: #5E0B15;
-		font-size: 2.2rem;
-		font-style: italic;
-	}
-
-	.compra {
-		grid-column: 2/3;
-		grid-row: 1/2;
-	}
-
-	.compra h5 {
-		background-color: #90323D;
-		border-radius: 1rem;
-
-		padding: 2rem 12rem;
-
-		color: #8C7A6B;
-		font-size: 1.8rem;
-		font-weight: 900;
-		text-align: center;
-	}
-
-	.icono__consulta {
-		grid-column: 1/2;
-		grid-row: 2/3;
-
-		align-self: end;
-		justify-self: start;
-	}
-
-	.consulta {
-		grid-column: 2/3;
-		grid-row: 3/4;
-
-	}
-
-	.consulta h5 {
-		background-color: #90323D;
-		border-radius: 1rem;
-
-		padding: 1.5rem 12rem;
-
-		color: #8C7A6B;
-		font-size: 1rem;
-		font-weight: 900;
-		text-align: center;
-	}
-
 }
+
 
 /* ------ ------ ------ ------ RESPONSIVE 820px ------ ------ ------ ------ */
 
@@ -1267,7 +1148,6 @@ footer h5 {
 		border: #5E0B15 solid 1px;
 		border-radius: 1rem;
 		box-shadow: inset 0px 0px 10px 0 #5E0B15;
-
 		min-width: 700px;
 		padding: 1.2rem;
 		margin: 1rem;
@@ -1287,9 +1167,12 @@ footer h5 {
 	}
 }
 
+
 /* ------ ------ ------ ------ RESPONSIVE 990px ------ ------ ------ ------ */
 
 @media(min-width: 990px) {
+
+	/* ------ HEADER ------ */
 
 	/* --- NAV --- */
 
@@ -1297,45 +1180,11 @@ footer h5 {
 		background-color: #ffffff00;
 		border-radius: 0;
 		box-shadow: none;
-
 		padding: 0;
 		margin-left: 0;
 
 		color: #D9CAB3;
 	}
-
-	/* ------ MAIN ------ */
-
-	/* --- CAROUSEL --- */
-
-	.carousel {
-		background-color: #ffffff;
-		width: 700px;
-		height: 400px;
-		margin: 0 auto;
-
-		object-fit: cover;
-		object-position: 50% 50%;
-
-		overflow: hidden;
-
-		transition: 0.6s ease-in-out;
-	}
-
-	.foto__carousel {
-
-		width: 700px;
-		height: 400px;
-		margin: 0 auto;
-
-		object-fit: cover;
-		object-position: 50% 50%;
-
-		overflow: hidden;
-
-		transition: 0.6s ease-in-out;
-	}
-	
 }
 
 /* ------ ------ ------ ------ RESPONSIVE 1024px ------ ------ ------ ------ */
@@ -1384,6 +1233,10 @@ footer h5 {
 		gap: 4rem;
 	}
 
+	.titular {
+		padding: 4rem 0 0 0;
+	}
+
 	.boton {
 		width: 60%;
 
@@ -1393,18 +1246,13 @@ footer h5 {
 		justify-self: center;
 	}
 
-
-	/*  ------ TITULOS ------ */
+	/* --- CAROUSEL --- */
 
 	.carousel {
 		margin-top: 4rem;
 		margin-bottom: 4rem;
 	}
-
-	.titular {
-		padding: 4rem 0 0 0;
-	}
-
+	
 	/* ------ GRILLA SECCIONES / PRODUCTOS ------ */
 
 	.contenedor__productos {
@@ -1415,7 +1263,6 @@ footer h5 {
 		justify-content: space-between;
 
 		gap: 0;
-
 	}
 
 	.parrafo__tortas {
@@ -1493,14 +1340,14 @@ footer h5 {
 
 	.sub__titulo {
 		text-align: left;
-	
+
 		padding: 0 2.5rem 0 0;
 	}
 
 	.link {
-		align-self: flex-end;
-
 		padding: 0;
+
+		align-self: flex-end;
 
 		font-size: 1.3rem;
 		font-weight: 900;
@@ -1528,7 +1375,6 @@ footer h5 {
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: bottom left;
-
 
 		width: 100%;
 		max-height: 400px;
@@ -1575,11 +1421,10 @@ footer h5 {
 		overflow: hidden;
 	}
 
-	/* ------ PROMO ------ */
+	/* --- PROMO --- */
 
 	.contenedor__promo {
 		background-color: #5E0B15;
-
 		padding: 3rem;
 		margin: 0 auto;
 
@@ -1694,56 +1539,60 @@ footer h5 {
 		transition: 0.8s;
 	}
 
-	/* ------ ENVIOS ------ */
+	/* --- ENVIOS --- */
 
 	.contenedor__envios {
 		background-color: #8C7A6B;
-
-		padding: 3rem;
-
-		color: #90323D;
+		padding: 4rem;
 
 		display: grid;
-		grid-template-columns: 1.5fr 2fr;
-		grid-template-rows: 150px 100px;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 60% 20% 20%;
 
-		gap: 3rem;
+		align-items: start;
+		justify-items: start;
+
+		gap: 0.5rem;
+
+		color: #90323D;
 	}
 
-	.icono__envios,
+	.contenedor__envios img {
+		width: 100%;
+		object-fit: contain;
+	}
+
 	.envios {
 		grid-column: 1/2;
 		grid-row: 1/2;
 
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: column;
+		justify-self: start;
+		line-height: 0.1rem;
 	}
 
 	.icono__envios {
-		width: auto;
-		padding: 0 0 1rem;
+		grid-column: 2/3;
+		grid-row: 1/2;
 
-		align-self: start;
-		justify-self: end;
-	}
-
-	.envios {
-		align-self: flex-start;
+		align-self: end;
+		justify-self: center;
 	}
 
 	.envios h2 {
 		color: #5E0B15;
-		font-weight: 900;
-		font-size: 2rem;
+		font-weight: 700;
+		font-size: 3.5rem;
+		letter-spacing: 1.5rem;
 	}
 
 	.envios h3 {
-		font-size: 2rem;
+		font-size: 3rem;
 	}
 
 	.envios h4 {
-		font-size: 1.5rem;
+		color: #5E0B15;
+		font-size: 2.2rem;
+		font-style: italic;
 	}
 
 	.compra {
@@ -1751,28 +1600,42 @@ footer h5 {
 		grid-row: 1/2;
 	}
 
+	.compra h5 {
+		background-color: #90323D;
+		border-radius: 1rem;
+		padding: 2rem 12rem;
+
+		color: #8C7A6B;
+		font-size: 1.8rem;
+		font-weight: 900;
+		text-align: center;
+	}
+
 	.icono__consulta {
 		grid-column: 1/2;
 		grid-row: 2/3;
 
-		width: auto;
-
-		align-self: center;
-		justify-self: end;
+		align-self: end;
+		justify-self: start;
 	}
 
 	.consulta {
 		grid-column: 2/3;
-		grid-row: 2/3;
-
-		justify-self: end;
+		grid-row: 3/4;
 	}
 
-	/* ------ GRILLA SECCIONES / MENU ------ */
+	.consulta h5 {
+		background-color: #90323D;
+		border-radius: 1rem;
+		padding: 1.5rem 12rem;
 
-	hr {
-		width: 95%;
+		color: #8C7A6B;
+		font-size: 1rem;
+		font-weight: 900;
+		text-align: center;
 	}
+
+	/* --- GRILLA SECCIONES / MENU --- */
 
 	.contenedor__menu {
 		width: 100%;
@@ -1873,8 +1736,8 @@ footer h5 {
 		justify-self: center;
 		align-self: center;
 	}
-
 }
+
 
 /* ------ ------ ------ ------ RESPONSIVE 1200px ------ ------ ------ ------ */
 
@@ -1926,7 +1789,7 @@ footer h5 {
 		margin: 0 0 6rem 0;
 	}
 
-	/* ------ GRILLA SECCIONES / PRODUCTOS ------ */
+	/* --- GRILLA SECCIONES / PRODUCTOS --- */
 
 	.contenedor__productos {
 		display: grid;
@@ -1934,7 +1797,6 @@ footer h5 {
 		grid-template-rows: 70% 30%;
 
 		max-width: 1024;
-
 		padding: 0;
 		margin: 0;
 
@@ -1969,7 +1831,7 @@ footer h5 {
 	.subtitulo {
 		min-height: 60px;
 		padding: 0 1.5rem 0 0;
-		
+
 		align-self: flex-end;
 
 		text-align: left;
@@ -1993,7 +1855,6 @@ footer h5 {
 
 	.link {
 		width: 10%;
-
 		padding: 2rem 4rem;
 		margin: 0;
 
@@ -2088,7 +1949,7 @@ footer h5 {
 		align-items: flex-start;
 	}
 
-	/* ------ PROMO ------ */
+	/* --- PROMO --- */
 
 	.contenedor__promo {
 		padding: 4rem;
@@ -2098,17 +1959,90 @@ footer h5 {
 		width: 50%;
 	}
 
-	/* ------ ENVIOS ------ */
+	/* --- ENVIOS --- */
 
-	.envios h2{
+	.contenedor__envios {
+		background-color: #8C7A6B;
+		padding: 3rem;
+
+		color: #90323D;
+
+		display: grid;
+		grid-template-columns: 1.5fr 2fr;
+		grid-template-rows: 150px 100px;
+
+		gap: 3rem;
+	}
+
+	.icono__envios,
+	.envios {
+		grid-column: 1/2;
+		grid-row: 1/2;
+
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+
+	.icono__envios {
+		width: auto;
+		padding: 0 0 1rem;
+
+		align-self: start;
+		justify-self: end;
+	}
+
+	.envios {
+		align-self: flex-start;
+	}
+
+	.envios h2 {
+		color: #5E0B15;
+		font-weight: 900;
+		font-size: 2rem;
+	}
+
+	.envios h3 {
+		font-size: 2rem;
+	}
+
+	.envios h4 {
+		font-size: 1.5rem;
+	}
+
+	.compra {
+		grid-column: 2/3;
+		grid-row: 1/2;
+	}
+
+	.icono__consulta {
+		grid-column: 1/2;
+		grid-row: 2/3;
+
+		width: auto;
+
+		align-self: center;
+		justify-self: end;
+	}
+
+	.consulta {
+		grid-column: 2/3;
+		grid-row: 2/3;
+
+		justify-self: end;
+	}
+
+	/* --- ENVIOS --- */
+
+	.envios h2 {
 		font-size: 2.5rem;
 	}
 
-	.envios h3{
+	.envios h3 {
 		font-size: 2.4rem;
 	}
 
-	.envios h4{
+	.envios h4 {
 		font-size: 1.8rem;
 	}
 
@@ -2120,8 +2054,7 @@ footer h5 {
 		padding: 1.5rem 15rem;
 	}
 
-
-	/* ------ GRILLA SECCIONES / SOBRE MI ------ */
+	/* --- GRILLA SECCIONES / SOBRE MI --- */
 
 	.contenedor__grilla {
 		display: grid;
@@ -2184,7 +2117,7 @@ footer h5 {
 		align-self: center;
 	}
 
-	/* ------ GRILLA SECCIONES / TORTAS ------ */
+	/* --- GRILLA SECCIONES / TORTAS --- */
 
 	.contenedor__datos {
 		display: grid;
@@ -2280,11 +2213,7 @@ footer h5 {
 		grid-row: 5/6;
 	}
 
-	/* ------ GRILLA SECCIONES / MENU ------ */
-
-	hr {
-		max-width: 95%;
-	}
+	/* --- GRILLA SECCIONES / MENU --- */
 
 	.contenedor__menu {
 		max-width: 1980px;
