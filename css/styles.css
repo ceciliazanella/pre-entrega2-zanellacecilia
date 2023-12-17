@@ -36,7 +36,7 @@ header {
 	font-family: "Lato", sans-serif;
 }
 
-hr{
+hr {
 	width: 95%;
 }
 
@@ -100,9 +100,9 @@ hr {
 
 .contenedor__seccion {
 	background-color: #ffffff;
-	min-height: 20vh;
+	min-height: 40vh;
 	padding: 2rem;
-	margin-top: 10rem;
+	margin: 10rem 0;
 
 	display: flex;
 	flex-wrap: wrap;
@@ -277,26 +277,24 @@ hr {
 /* --- FORM --- */
 
 form {
-	padding: 2rem;
 
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
 
-	align-items: center;
-	justify-content: center;
+align-items: center;
+justify-content: space-between;
 
-	text-align: center;
 }
 
 form input,
 textarea {
 	border: #5E0B15 solid 1px;
-	border-radius: 1rem;
+	border-radius: 0.5rem;
 	box-shadow: inset 0px 0px 10px 0 #5E0B15;
 
-	width: 380px;
-	padding: 1rem;
+	width: 320px;
+	padding: 0.5rem;
 	margin: 0.5rem;
 
 	color: #BC8034;
@@ -558,23 +556,22 @@ ol {
 
 .sub__titulo {
 	min-height: 300px;
-	padding: 0 0 0 0;
 
 	align-self: flex-end;
 
 	font-size: 2rem;
-	text-align: left;
+	text-align: right;
 	line-height: 0.2;
 }
 
 .subtitulo {
-	min-height: 300px;
-	padding: 0 0 0 0;
+	min-height: 450px;
+	padding: 0;
 
-	align-self: center;
+	align-self: start;
 
 	font-size: 2rem;
-	text-align: left;
+	text-align: center;
 	line-height: 0.2;
 }
 
@@ -625,8 +622,8 @@ ol {
 
 .link {
 	min-height: 300px;
-	width: 40%;
-	padding: 0 1.5rem 0;
+	width: 25%;
+	padding-top: 2.5rem;
 
 	display: flex;
 	flex-wrap: wrap;
@@ -673,7 +670,8 @@ ol {
 	justify-items: center;
 	align-content: center;
 
-	padding: 2rem 1.5rem 2rem 0;
+	padding: 2rem 4rem 2rem 0;
+	overflow: hidden;
 }
 
 .enlace__pasteleria {
@@ -683,7 +681,7 @@ ol {
 	background-position: cover;
 
 	max-height: 450px;
-	padding: 2rem 2.5rem 2rem 0;
+	padding: 2rem 4rem 2rem 0;
 
 	overflow: hidden;
 
@@ -700,7 +698,7 @@ ol {
 	background-repeat: no-repeat;
 	background-position: bottom;
 
-	min-height: 350px;
+	min-height: 400px;
 	padding: 0 2rem 0 2rem;
 
 	display: flex;
@@ -718,7 +716,7 @@ ol {
 	background-repeat: no-repeat;
 	background-position: bottom center;
 
-	min-height: 350px;
+	min-height: 400px;
 	padding: 0 2rem 0 2rem;
 
 	display: flex;
@@ -760,7 +758,9 @@ ol {
 
 .icono__promo {
 	width: 70%;
+
 	align-self: flex-start;
+	justify-self: center;
 }
 
 .promo {
@@ -858,46 +858,47 @@ ol {
 .contenedor__envios {
 	background-color: #8C7A6B;
 
-	padding: 2rem 2rem 2rem 2rem;
+	padding: 1rem 2.8rem 2.5rem 2rem;
 
 	color: #90323D;
 
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 200px 100px;
+	grid-template-rows: 60% 20% 20%;
 
 	align-items: center;
+	justify-items: center;
 
 	gap: 0.5rem;
 }
 
-.icono__envios,
+.contenedor__envios img {
+	width: 100%;
+	object-fit: contain;
+}
+
 .envios {
 	grid-column: 1/2;
 	grid-row: 1/2;
 
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
+	line-height: 0.1rem;
 }
 
 .icono__envios {
-	width: 100%;
 	grid-column: 2/3;
 	grid-row: 1/2;
 
-	align-self: center;
+	align-self: end;
 	justify-self: center;
-}
 
-.envios {
-	align-self: center;
+	padding-bottom: 2rem;
 }
 
 .envios h2 {
 	color: #5E0B15;
 	font-weight: 700;
 	font-size: 2rem;
+	letter-spacing: 0.2rem;
 }
 
 .envios h3 {
@@ -906,34 +907,30 @@ ol {
 
 .envios h4 {
 	color: #5E0B15;
-	font-size: 1rem;
+	font-size: 0.9rem;
 	font-style: italic;
 }
 
 .compra {
 	grid-column: 2/3;
 	grid-row: 1/2;
-
-	display: flex;
-	flex-wrap: wrap;
 }
 
 .compra h5 {
 	background-color: #90323D;
-	border-radius: 0.5rem;
+	border-radius: 1rem;
 
-	width: 100%;
-	padding: 1rem;
+	padding: 2rem 1rem;
 
 	color: #8C7A6B;
-	font-size: 1rem;
+	font-size: 1.5rem;
 	font-weight: 900;
 	text-align: center;
 }
 
 .compra h5:hover {
 	background-color: #D9CAB3;
-	border-radius: 0.5rem;
+	border-radius: 1rem;
 
 	color: #8C7A6B;
 	text-shadow: #90323D;
@@ -945,39 +942,31 @@ ol {
 	grid-column: 1/2;
 	grid-row: 2/3;
 
-	display: flex;
-	flex-wrap: wrap;
-
-	align-self: center;
+	align-self: end;
 	justify-self: center;
+
 }
 
 .consulta {
 	grid-column: 2/3;
-	grid-row: 1/2;
-
-	display: flex;
-	flex-wrap: wrap;
-
-	align-content: flex-end;
+	grid-row: 3/4;
 }
 
 .consulta h5 {
 	background-color: #90323D;
-	border-radius: 0.5rem;
+	border-radius: 1rem;
 
-	width: 100%;
-	padding: 1rem;
+	padding: 0.5rem;
 
 	color: #8C7A6B;
-	font-size: 1rem;
+	font-size: 0.8rem;
 	font-weight: 900;
 	text-align: center;
 }
 
 .consulta h5:hover {
 	background-color: #D9CAB3;
-	border-radius: 0.5rem;
+	border-radius: 1rem;
 
 	color: #8C7A6B;
 	text-shadow: #90323D;
@@ -1149,33 +1138,113 @@ footer h5 {
 @media(min-width: 720px) {
 
 	/* ------ MAIN ------ */
-	
-	.icono__promo {
-		width: 45%;
+	.contenedor__promo {
+		padding: 4rem 4rem 4rem 6rem;
+		margin: 0 auto;
 	}
 
-	.contenedor__envios{
-		padding-top: 4rem;
+	.icono__promo {
+		width: 45%;
+
+		justify-self: start;
 	}
-	
+
+	/* ------ ENVIOS ------ */
+
+	.contenedor__envios {
+		background-color: #8C7A6B;
+
+		padding: 4rem;
+
+		color: #90323D;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 60% 20% 20%;
+
+		align-items: end;
+		justify-items: center;
+
+		gap: 0.5rem;
+	}
+
+	.contenedor__envios img {
+		width: 100%;
+		object-fit: contain;
+	}
+
+	.envios {
+		grid-column: 1/2;
+		grid-row: 1/2;
+
+		line-height: 0.1rem;
+	}
+
 	.icono__envios {
-		width: 50%;
+		grid-column: 2/3;
+		grid-row: 1/2;
+
+		align-self: end;
+		justify-self: center;
 	}
 
 	.envios h2 {
 		color: #5E0B15;
 		font-weight: 700;
-		font-size: 2.5rem;
+		font-size: 3.5rem;
+		letter-spacing: 1.5rem;
 	}
-	
+
 	.envios h3 {
-		font-size: 2rem;
+		font-size: 3rem;
 	}
-	
+
 	.envios h4 {
 		color: #5E0B15;
-		font-size: 1.5rem;
+		font-size: 2.2rem;
 		font-style: italic;
+	}
+
+	.compra {
+		grid-column: 2/3;
+		grid-row: 1/2;
+	}
+
+	.compra h5 {
+		background-color: #90323D;
+		border-radius: 1rem;
+
+		padding: 2rem 3rem;
+
+		color: #8C7A6B;
+		font-size: 2rem;
+		font-weight: 900;
+		text-align: center;
+	}
+
+	.icono__consulta {
+		grid-column: 1/2;
+		grid-row: 2/3;
+
+		align-self: end;
+		justify-self: start;
+	}
+
+	.consulta {
+		grid-column: 2/3;
+		grid-row: 3/4;
+	}
+
+	.consulta h5 {
+		background-color: #90323D;
+		border-radius: 1rem;
+
+		padding: 1.8rem 2rem;
+
+		color: #8C7A6B;
+		font-size: 1.3rem;
+		font-weight: 900;
+		text-align: center;
 	}
 
 }
@@ -1266,6 +1335,82 @@ footer h5 {
 		overflow: hidden;
 
 		transition: 0.6s ease-in-out;
+	}
+
+	/* --- ENVIOS --- */
+
+	.contenedor__envios {
+
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: row;
+
+		padding-top: 6rem;
+
+		align-items: end;
+		justify-content: space-between;
+	}
+
+	.contenedor__envios img {
+		width: 80%;
+
+		object-fit: contain;
+	}
+
+	.icono__envios {
+		align-self: flex-end;
+		padding-bottom: 10rem;
+	}
+
+	.envios h2 {
+		color: #5E0B15;
+		font-weight: 700;
+		font-size: 3.5rem;
+		letter-spacing: 1.5rem;
+	}
+
+	.envios h3 {
+		font-size: 3rem;
+	}
+
+	.envios h4 {
+		color: #5E0B15;
+		font-size: 2.2rem;
+		font-style: italic;
+	}
+
+	.compra {
+		align-self: end;
+	}
+
+	.compra h5 {
+		background-color: #90323D;
+		border-radius: 1rem;
+
+		padding: 1rem 3rem;
+
+		color: #8C7A6B;
+		font-size: 2rem;
+		font-weight: 900;
+		text-align: center;
+
+		align-self: end;
+	}
+
+	.icono__consulta {
+		padding-top: 15rem;
+	}
+
+	.consulta h5 {
+		background-color: #90323D;
+		border-radius: 1rem;
+
+		padding: 1rem;
+
+		color: #8C7A6B;
+		font-size: 1rem;
+		font-weight: 900;
+		text-align: center;
 	}
 
 }
@@ -1513,6 +1658,7 @@ footer h5 {
 		background-color: #5E0B15;
 
 		padding: 3rem;
+		margin: 0 auto;
 
 		display: grid;
 		grid-template-columns: 2fr 2fr 1.5fr 1.5fr;
@@ -1536,6 +1682,7 @@ footer h5 {
 		width: 60%;
 
 		align-self: flex-start;
+		justify-self: start;
 	}
 
 	.promo {
@@ -1624,78 +1771,80 @@ footer h5 {
 		transition: 0.8s;
 	}
 
-	/* ------ ENVIOS ------ */
+	/* --- ENVIOS --- */
 
 	.contenedor__envios {
-		background-color: #8C7A6B;
-
-		padding: 3rem;
-
-		color: #90323D;
-
-		display: grid;
-		grid-template-columns: 1.5fr 2fr;
-		grid-template-rows: 150px 100px;
-
-		gap: 3rem;
-	}
-
-	.icono__envios,
-	.envios {
-		grid-column: 1/2;
-		grid-row: 1/2;
 
 		display: flex;
-		flex-wrap: wrap;
-		flex-direction: column;
+		flex-wrap: nowrap;
+		flex-direction: row;
+
+		align-items: end;
+		justify-content: space-between;
+
+		padding-top: 6rem;
+	}
+
+	.contenedor__envios img {
+		width: 80%;
+
+		object-fit: contain;
 	}
 
 	.icono__envios {
-		width: 40%;
-		padding: 0 0 1rem;
-
-		align-self: flex-start;
-		justify-self: flex-end;
-	}
-
-	.envios {
-		align-self: flex-start;
+		align-self: flex-end;
+		padding-bottom: 10rem;
 	}
 
 	.envios h2 {
 		color: #5E0B15;
-		font-weight: 900;
-		font-size: 3rem;
+		font-weight: 700;
+		font-size: 3.5rem;
+		letter-spacing: 1.5rem;
 	}
 
 	.envios h3 {
-		font-size: 2.5rem;
+		font-size: 3rem;
 	}
 
 	.envios h4 {
-		font-size: 1rem;
+		color: #5E0B15;
+		font-size: 2.2rem;
+		font-style: italic;
 	}
 
 	.compra {
-		grid-column: 2/3;
-		grid-row: 1/2;
+		align-self: end;
+	}
+
+	.compra h5 {
+		background-color: #90323D;
+		border-radius: 1rem;
+
+		padding: 1rem 3rem;
+
+		color: #8C7A6B;
+		font-size: 2rem;
+		font-weight: 900;
+		text-align: center;
+
+		align-self: end;
 	}
 
 	.icono__consulta {
-		grid-column: 1/2;
-		grid-row: 2/3;
-
-		width: auto;
-
-		align-self: center;
-		justify-self: self-end;
+		padding-top: 15rem;
 	}
 
-	.consulta {
-		grid-column: 2/3;
-		grid-row: 2/3;
+	.consulta h5 {
+		background-color: #90323D;
+		border-radius: 1rem;
 
-		justify-self: self-end;
+		padding: 1rem;
+
+		color: #8C7A6B;
+		font-size: 1rem;
+		font-weight: 900;
+		text-align: center;
 	}
 
 	/* ------ GRILLA SECCIONES / MENU ------ */
@@ -2032,32 +2181,71 @@ footer h5 {
 	/* ------ ENVIOS ------ */
 
 	/* ------ MAIN ------ */
-	
+
 	.icono__promo {
 		width: 45%;
 	}
 
-	.contenedor__envios{
-		padding-top: 4rem;
+	.contenedor__envios {
+		padding: 4rem 4rem 6rem 4rem;
+		grid-template-columns: 1fr 2fr;
+
+		justify-content: end;
 	}
-	
+
 	.icono__envios {
-		width: 30%;
+		grid-column: 2/3;
+		grid-row: 1/2;
+
+		width: 25%;
+
+		justify-self: flex-start;
+		align-self: center;
+	}
+
+	.icono__consulta {
+		grid-column: 2/3;
+		grid-row: 2/3;
+
+		justify-self: flex-start;
+		align-self: center;
+	}
+
+	.compra {
+		width: 50%;
+		grid-column: 2/3;
+	}
+
+	.compra h4 {
+		padding: 0;
+		margin: 0;
+	}
+
+	.consulta {
+		width: 50%;
+		grid-column: 2/3;
+	}
+
+
+	.envios {
+		text-anchor: 1rem;
+		line-height: 0.2rem;
 	}
 
 	.envios h2 {
 		color: #5E0B15;
 		font-weight: 700;
-		font-size: 3rem;
+		font-size: 3.5rem;
+		letter-spacing: 1rem;
 	}
-	
+
 	.envios h3 {
 		font-size: 2.7rem;
 	}
-	
+
 	.envios h4 {
 		color: #5E0B15;
-		font-size: 1rem;
+		font-size: 2rem;
 		font-style: italic;
 	}
 
@@ -2134,7 +2322,7 @@ footer h5 {
 		max-width: 1200px;
 		padding: 10rem 0 0 0;
 		margin: 0 auto;
-	
+
 		align-items: flex-start;
 		justify-content: center;
 	}
