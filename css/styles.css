@@ -41,6 +41,7 @@ hr {
 	border: solid 2px #90323D;
 	width: 95%;
 	padding: 0.2rem;
+	margin: 0 auto;
 }
 
 /* ------ HEADER ------ */
@@ -263,6 +264,11 @@ hr {
 
 /* ------ MAIN ------ */
 
+.font__detalle{
+	font-style: italic;
+	font-weight: 700;
+}
+
 .contenedor_main {
 	max-width: 1200px;
 
@@ -381,14 +387,11 @@ textarea {
 /* --- CAROUSEL --- */
 
 .carousel {
-	width: 70%;
-	height: 250px;
-
+	width: 60%;
+	max-height: 140px;
+	
 	object-fit: cover;
-	object-position: center;
-
-	display: flex;
-	flex-wrap: wrap;
+	object-position: bottom center;
 
 	overflow: hidden;
 
@@ -397,14 +400,10 @@ textarea {
 
 .foto__carousel {
 	width: 100%;
-	height: 450px;
+	max-height: 600px;
 	
 	object-fit: cover;
-
-	display: flex;
-	flex-wrap: wrap;
-
-	object-position: center;
+	object-position: bottom center;
 
 	overflow: hidden;
 
@@ -423,7 +422,7 @@ textarea {
 /*  --- TITULO SECCIONES --- */
 
 .titular {
-	padding: 4rem 0 4rem;
+	padding: 6rem 0 2rem;
 	margin: 0 auto;
 }
 
@@ -1260,8 +1259,8 @@ footer h5 {
 	/* --- CAROUSEL --- */
 
 .carousel {
-	width: 60%;
-	height: 350px;
+	width: 70%;
+	max-height: 450px;
 
 	object-fit: cover;
 	object-position: 50% 50%;
@@ -1276,15 +1275,13 @@ footer h5 {
 
 .foto__carousel {
 	width: 100%;
-	height: 600px;
+	height: 300px;
 	
 	object-fit: cover;
 	object-position: 50% 50%;
 
 	display: flex;
 	flex-wrap: wrap;
-
-	
 
 	overflow: hidden;
 
