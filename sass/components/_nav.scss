@@ -1,0 +1,117 @@
+/* ------ BODY > HEADER > NAV ------ */
+header {
+    max-width: 1980px;
+    margin: 0 auto;
+
+    z-index: 1;
+
+    .logo {
+        max-width: 60%;
+    }
+
+    //--- NAV ---//
+    .navbar-nav {
+        background-color: $principalcolor;
+        border-radius: 20% 5% 5% 50%;
+
+        padding: 2rem;
+        margin-top: 2rem;
+
+        gap: 1rem;
+
+        text-align: right;
+
+        @include md-1000 {
+            background-color: #ffffff00;
+        }
+    }
+
+    .navbar,
+    .container {
+        padding: 1rem 2rem;
+    }
+
+    .navbar-toggler-icon {
+        color: $ultraligthcolor;
+    }
+
+    .nav-item {
+        width: 100%;
+        padding-right: 0.5rem;
+
+        gap: 2rem;
+
+        color: $ultraligthcolor;
+
+        @include md-1000 {
+            background-color: #ffffff00;
+            border-radius: 0;
+            box-shadow: none;
+            padding: 0;
+            margin-left: 0;
+
+            color: $ultraligthcolor;
+        }
+    }
+
+    .nav-link {
+        color: $ultraligthcolor;
+        font-size: 1rem;
+        font-weight: 900;
+
+        &:hover {
+            color: $terciarycolor;
+            text-shadow: 1px 1px 1px rgb(0, 0, 0);
+            font-size: 1.2rem;
+
+            transition: 0.6s ease-in-out;
+        }
+    }
+
+    .navbar .a {
+        color: $ligthcolor;
+    }
+
+    .navbar-toggler {
+        color: $ultraligthcolor;
+        border: solid 1px $ultraligthcolor;
+        box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.432);
+    }
+
+    [data-bs-theme="dark"] {
+        --bs-body-bg: none;
+        --bs-border-color-translucent: none;
+    }
+
+    //--- NAV > MENU DESPLEGABLE ---//
+    .dropdown-menu {
+        background-color: 0;
+        border-radius: 0;
+        padding: 2rem;
+
+        color: $ultraligthcolor;
+        font-size: 1rem;
+
+        &:hover {
+            color: $terciarycolor;
+            text-shadow: $principalcolor;
+            font-size: 1.2rem;
+
+            transition: 0.6s ease-in-out;
+        }
+    }
+
+    .dropdown-item:focus,
+    .dropdown-item:hover {
+        background-color: #ffffff00;
+        border-radius: 50% 20% / 10% 40%;
+
+        color: $terciarycolor;
+        font-style: italic;
+        font-size: 1rem;
+        font-weight: 900;
+        text-shadow: $principalcolor;
+
+        transition: 1s;
+    }
+}

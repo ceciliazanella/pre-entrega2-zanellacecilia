@@ -1,0 +1,99 @@
+//--- FORMULARIO ---//
+form {
+    @include flex-center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    gap: 1rem;
+
+    @include md-1024 {
+        max-width: 1000px;
+        padding: 4rem;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 70px 300px 70px;
+
+        text-align: center;
+
+        align-items: start;
+        justify-content: center;
+
+        gap: 1.8rem;
+    }
+
+    @include md-1200 {
+        max-width: 1100px;
+
+        gap: 2rem;
+    }
+
+    textarea {
+        border: 0;
+        border-radius: 0.8rem;
+        box-shadow: inset 3px 3px 4px 0 rgba(20, 20, 20, 0.5);
+
+        width: 320px;
+        height: 300px;
+        padding: 0.8rem;
+
+        color: $ligthcolor;
+        font-size: 1rem;
+        font-weight: 700;
+
+        @include md-768 {
+            width: 700px;
+        }
+
+        @include md-1024 {
+            max-width: 400px;
+        }
+
+        @include md-1200 {
+            max-width: 450px;
+        }
+    }
+
+    input {
+        @extend textarea;
+        height: 50px;
+
+        @include md-1024 {
+            justify-self: center;
+            width: 400px;
+            height: 80px;
+        }
+
+        @include md-1200 {
+            justify-self: center;
+            width: 450px;
+        }
+    }
+
+    .boton_value {
+        background-color: $principalcolor;
+        border: 0;
+        color: $ligthcolor;
+        font-weight: 900;
+        letter-spacing: 0.3rem;
+
+        transition: all 0.8s ease-in-out;
+
+        @include md-1024 {
+            grid-column: 2/3;
+            grid-row: 3/4;
+
+            align-self: center;
+        }
+
+        &:hover {
+            box-shadow: 2px 2px 4px 0 $principalcolor;
+            color: $terciarycolor;
+            text-shadow: $terciarycolor;
+
+            transition: all 0.8s ease-in-out;
+            transform: scale(1.1);
+        }
+    }
+}

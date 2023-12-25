@@ -1,0 +1,200 @@
+.grilla_tortas {
+    @include flex-center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    text-align: center;
+
+    @include md-1024 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 450px 200px 450px 1350px 600px;
+
+        width: 1024px;
+        padding: 0;
+        margin: 0 auto;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 1rem;
+
+        //TEXTOS / PÁRRAFOS TORTAS ARTESANALES//
+        .butter {
+            grid-column: 1/2;
+            grid-row: 4/5;
+
+            align-self: start;
+        }
+
+        .fondant {
+            grid-column: 2/3;
+            grid-row: 4/5;
+
+            align-self: start;
+        }
+
+        .letter {
+            grid-column: 3/4;
+            grid-row: 4/5;
+
+            align-self: start;
+        }
+
+        .parrafo {
+            align-self: start;
+
+            & h2 {
+                text-align: left;
+            }
+        }
+    }
+
+    & img {
+        width: 350px;
+        height: 450px;
+        border-radius: 50% 20% / 10% 40%;
+        box-shadow: inset 0px 0px 10px 0 rgba(20, 20, 20, 0.692);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.671);
+
+        object-fit: cover;
+
+        transition: all 0.8s ease;
+    }
+
+    & &:hover {
+        transition: all 0.6s ease;
+        filter: brightness(60%);
+    }
+
+    li {
+        padding: 1rem 0;
+    }
+}
+
+//TÍTULOS TORTAS ARTESANALES//
+.titulo__butter {
+    @include flex-center;
+
+    padding: 4rem;
+
+    align-items: center;
+
+    & h2 {
+        color: $terciarycolor;
+        text-shadow: 1px 1px 1px #000000;
+        font-size: 1.6rem;
+        font-weight: 700;
+        font-style: italic;
+        letter-spacing: 0.4rem;
+    }
+
+    @include md-1024 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+
+        align-self: center;
+    }
+}
+
+.acentuado h3 {
+    color: $secundarycolor;
+    text-shadow: none;
+    font-family: $decorativefont;
+    font-size: 4.5rem;
+    line-height: 2rem;
+}
+
+.titulo__fondant {
+    @extend .titulo__butter;
+
+    @include md-1024 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+
+        align-self: center;
+    }
+}
+
+.titulo__letter {
+    @extend .titulo__butter;
+
+    @include md-1024 {
+        grid-column: 3/4;
+        grid-row: 2/3;
+
+        align-self: center;
+    }
+}
+
+//FOTOS TORTAS ARTESANALES//
+.foto__butter {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    margin: 3rem auto;
+
+    object-fit: cover;
+
+    transition: 0.8s ease;
+
+    z-index: 3;
+
+    @include md-1024 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    & :hover {
+        cursor: pointer;
+
+        transform: scale(1.2);
+
+        transition: 0.8s ease;
+    }
+}
+
+.foto__cream {
+    @extend .foto__butter;
+
+    @include md-1024 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+}
+
+.foto__fondant {
+    @extend .foto__butter;
+
+    @include md-1024 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+}
+
+.foto__fon {
+    @extend .foto__butter;
+
+    @include md-1024 {
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+}
+
+.foto__number {
+    @extend .foto__butter;
+
+    @include md-1024 {
+        grid-column: 3/4;
+        grid-row: 3/4;
+    }
+}
+
+.foto__letter {
+    @extend .foto__butter;
+
+    @include md-1024 {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+}

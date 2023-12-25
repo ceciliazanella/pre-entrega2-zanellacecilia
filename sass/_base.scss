@@ -1,0 +1,250 @@
+//--- VARIABLES ---//
+
+//COLORES//
+$principalcolor: #5e0b15;
+$secundarycolor: #90323d;
+$terciarycolor: #bc8034;
+$ligthcolor: #8c7a6b;
+$ultraligthcolor: #d9cab3;
+
+//TIPOGRAFÍAS//
+$principalfont: "Lato", sans-serif;
+$decorativefont: "Corinthia", cursive;
+
+//--- DETALLES PARA TIPOGRAFIAS ---//
+.font__detalle {
+    font-style: italic;
+    font-weight: 700;
+}
+
+.enfasis {
+    color: #bc8034;
+    font-weight: 900;
+}
+
+//CONTENEDOR --- elementos no infinitos ---//
+.contenedor {
+    max-width: 1980px;
+    margin: 0 auto;
+}
+
+//--- TEXTOS / PÁRRAFOS ---//
+.parrafo {
+    padding: 1rem 2rem;
+
+    & h2 {
+        color: $terciarycolor;
+        font-size: 1.2rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 2rem;
+        text-align: center;
+
+        margin-bottom: 0;
+    }
+
+    & h3 {
+        color: $principalcolor;
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 2.2;
+        text-align: initial;
+
+        margin-bottom: 0;
+    }
+
+    & h4 {
+        color: $ligthcolor;
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 2rem;
+        text-align: center;
+
+        margin-bottom: 0;
+    }
+
+    & h5 {
+        color: $secundarycolor;
+        font-size: 1.1rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        text-align: center;
+
+        margin-bottom: 0;
+    }
+}
+
+//MIXINS Y MEDIA QUERIES//
+//H1//
+@mixin h1 {
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0.3rem;
+    color: $principalcolor;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+//CENTRAR//
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//CENTRAR EN COLUMNA//
+@mixin flexbox-column($justify, $align) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-items: $justify;
+    align-content: $align;
+}
+
+//--- RESPONSIVE 720px ---//
+@mixin md-768 {
+    @media(min-width: 768px) {
+        @content;
+    }
+}
+
+//--- RESPONSIVE 1000px ---//
+@mixin md-1000 {
+    @media(min-width: 1000px) {
+        @content;
+    }
+}
+
+//--- RESPONSIVE 1024px ---//
+@mixin md-1024 {
+    @media(min-width: 1024px) {
+        @content;
+    }
+}
+
+//--- RESPONSIVE 1200px ---//
+@mixin md-1200 {
+    @media(min-width: 1200px) {
+        @content;
+    }
+}
+
+/* ------ RESET ------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: $principalfont;
+}
+
+a {
+    text-decoration: none;
+    text-transform: bold;
+    color: $ultraligthcolor;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+hr {
+    border: solid 1.5px $principalcolor;
+    border-radius: 0.3rem;
+    width: 95%;
+    margin: 2rem auto;
+
+    z-index: 2;
+}
+
+/* ------ BODY ------ */
+body {
+    background-color: #ffffff;
+    max-width: 1980px;
+    margin: 0 auto;
+}
+
+/* ------ MAIN ------ */
+main {
+    background-color: #ffffff;
+    max-width: 1980px;
+    margin: 0 auto;
+
+    .contenedor_main {
+        max-width: 1200px;
+
+        @include flex-center;
+        flex-wrap: wrap;
+
+        align-items: center;
+    }
+
+    //--- DESCRIPCION DE CADA UNA DE LAS PAGES / SECCIONES ---//
+    .contenedor__seccion {
+        background-color: #ffffff;
+        width: 100%;
+        height: 200px;
+        padding: 0 2rem;
+
+        @include flex-center;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        color: $principalcolor;
+        text-align: center;
+
+        & h1 {
+            @include h1;
+        }
+
+        & h2 {
+            color: $principalcolor;
+            font-size: 1.3rem;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        & img {
+            width: 50px;
+        }
+    }
+
+    .descripcion__seccion {
+        background-color: #ffffff;
+        width: 100%;
+        height: 250px;
+        padding: 0 4rem;
+
+        @include flex-center;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        line-height: 0.5rem;
+
+        gap: 1rem;
+
+        & h3 {
+            color: $secundarycolor;
+            font-size: 1.5rem;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        & h4 {
+            color: $terciarycolor;
+            font-size: 1.2rem;
+            font-style: italic;
+            text-align: center;
+        }
+    }
+
+}

@@ -1,0 +1,932 @@
+    //--- HEADER > H1 EN INDEX ---//
+    .contenedor__h1 {
+        background-color: #5e0b1593;
+        box-shadow: inset 0px 0px 10px 0 $principalcolor;
+
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        margin: 8rem 0;
+
+        @include flex-center;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        text-align: center;
+        line-height: 0.2;
+
+        & h1 {
+            color: $ultraligthcolor;
+            text-shadow: 3px 3px rgb(0, 0, 0);
+            font-family: $decorativefont;
+            font-size: 4.6rem;
+            line-height: 0.8;
+        }
+
+        & h3 {
+            color: $terciarycolor;
+            font-family: $decorativefont;
+            font-size: 2.6rem;
+            font-weight: 700;
+        }
+
+        & h4 {
+            color: $ultraligthcolor;
+            text-shadow: 3px 3px rgb(0, 0, 0);
+            font-size: 1.6rem;
+            font-weight: 900;
+        }
+    }
+
+    //--- DESTACADO EN INDEX ---//
+    .contenedor__destacado {
+        @include flex-center;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        padding: 4rem;
+
+        text-align: center;
+        line-height: 3rem;
+
+        & h3 {
+            color: $secundarycolor;
+            font-size: 1.5rem;
+            font-style: italic;
+            font-weight: 700;
+            line-height: 2rem;
+        }
+
+        & h4 {
+            color: $terciarycolor;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+        }
+    }
+
+    //--- SECCIÓN PRODUCTOS / INDEX ---//
+    //TITULO PRODUCTOS//
+    .titulo__productos {
+        padding: 2rem;
+        margin: 0 auto;
+
+        & h2 {
+            -webkit-text-fill-color: rgba(255, 255, 255, 0);
+            -webkit-text-stroke-color: $principalcolor;
+            -webkit-text-stroke-width: 2px;
+            padding: 2rem 0 0 0;
+            margin: 0;
+            letter-spacing: 0.6rem;
+            font-size: 2rem;
+            font-weight: 900;
+            text-align: center;
+        }
+    }
+
+    .contenedor__productos {
+        @include flexbox-column(center, center);
+
+        padding: 0 0 3rem 0;
+
+        & h4 {
+            padding: 1rem 0;
+            margin: 0;
+        }
+
+        ol {
+            background-color: $ultraligthcolor;
+            padding: 1rem;
+            margin: 1rem;
+        }
+
+        @include md-1000 {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 480px 400px 200px 400px;
+
+            align-items: start;
+            justify-content: center;
+
+            padding: 0 2rem 2rem 2rem;
+
+            gap: 2rem;
+
+            .parrafo__tortas {
+                grid-column: 1/2;
+                grid-row: 1/2;
+
+                margin: 0;
+
+                @include md-1200 {
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+            .links__tortas {
+                grid-column: 1/2;
+                grid-row: 2/3;
+
+                padding: 0 2rem 0 0;
+
+                @include md-1000 {
+                    padding: 0 2rem 2rem 0;
+                }
+
+                @include md-1200 {
+                    grid-column: 1/2;
+                    grid-row: 2/3;
+
+                    padding: 0 1rem 2rem 0;
+                    margin: 0;
+                }
+            }
+
+            .parrafo__pasteleria {
+                grid-column: 2/3;
+                grid-row: 1/2;
+
+                margin: 0;
+
+                @include md-1200 {
+                    grid-column: 2/3;
+                    grid-row: 1/2;
+
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+            .links__pasteleria {
+                grid-column: 2/3;
+                grid-row: 2/3;
+
+                padding: 0 2rem 0 0;
+
+                @include md-1000 {
+                    padding: 0 2rem 2rem 0;
+                }
+
+                @include md-1200 {
+                    grid-column: 2/3;
+                    grid-row: 2/3;
+
+                    padding: 0 1rem 2rem 0;
+                    margin: 0;
+                }
+            }
+
+            .parrafo__dulce {
+                grid-column: 1/2;
+                grid-row: 3/4;
+
+                margin: 0;
+
+                @include md-1200 {
+                    grid-column: 3/4;
+                    grid-row: 1/2;
+
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+            .links__dulce {
+                grid-column: 1/2;
+                grid-row: 4/5;
+
+                padding: 0 2rem 0 2rem;
+
+                @include md-1200 {
+                    grid-column: 3/4;
+                    grid-row: 2/3;
+
+                    @include flex-center;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+
+                    padding: 0 0 5rem 0;
+                }
+            }
+
+            .parrafo__lunch {
+                grid-column: 2/3;
+                grid-row: 3/4;
+
+                margin: 0;
+
+                @include md-1200 {
+                    grid-column: 4/5;
+                    grid-row: 1/2;
+
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+            .links__lunch {
+                grid-column: 2/3;
+                grid-row: 4/5;
+
+                padding: 0 2rem 0 2rem;
+
+                @include md-1200 {
+                    grid-column: 4/5;
+                    grid-row: 2/3;
+
+                    @include flex-center;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+
+                    padding: 0 0 5rem 0;
+                }
+            }
+
+            @include md-1200 {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 500px 500px;
+
+                max-width: 1200px;
+                margin: 0 auto;
+
+                align-items: start;
+                justify-content: center;
+
+                padding: 0 1rem 1rem 1rem;
+
+                gap: 1rem;
+
+                text-align: justify;
+                line-height: 1rem;
+
+                .parrafo h4 {
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    //IMAGEN DE FONDO / SECCIÓN PRODUCTOS INDEX//
+    .enlace__tortas {
+        background-image: url(../imagenes/image_index/tortas_artesanales.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: contain;
+        border-bottom-left-radius: 50%;
+
+        overflow: hidden;
+
+        min-height: 280px;
+        padding: 0 2rem 0.5rem 0;
+
+        @include flexbox-column(end, end);
+        align-items: end;
+        justify-content: space-between;
+
+        @include md-1000 {
+            width: 100%;
+            max-height: 400px;
+            padding: 0 0 0;
+
+            align-self: flex-end;
+        }
+    }
+
+    .enlace__pasteleria {
+        background-image: url(../imagenes/image_index/pastelería_creativa.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: cover;
+        border-bottom-left-radius: 50%;
+
+        overflow: hidden;
+
+        min-height: 280px;
+        padding: 0 2rem 0.5rem 0;
+
+        @include flexbox-column (center, end);
+        align-items: end;
+        justify-content: space-between;
+
+        @include md-1000 {
+            width: 100%;
+            max-height: 400px;
+            padding: 0 0 0;
+
+            align-self: flex-end;
+        }
+    }
+
+    .enlace__dulce {
+        background-image: url(../imagenes/image_index/mesa_dulce.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        border-radius: 10% 25%;
+
+        overflow: hidden;
+
+        min-height: 280px;
+        padding: 0 0 0.5rem 0;
+
+        @include flexbox-column (center, center);
+        align-items: center;
+
+        @include md-768 {
+            min-height: 400px;
+        }
+
+        @include md-1000 {
+            width: 100%;
+            padding: 0;
+
+            display: flex;
+            flex-direction: row;
+
+            justify-content: space-between;
+            align-items: center;
+
+            overflow: hidden;
+        }
+
+        @include md-1200 {
+            min-height: 350px;
+
+            align-self: end;
+        }
+    }
+
+    .enlace__lunch {
+        background-image: url(../imagenes/image_index/servicio_de_luch.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        border-radius: 10% 25%;
+
+        overflow: hidden;
+
+        min-height: 280px;
+        padding: 0 0 0.5rem 0;
+
+        @include flexbox-column (center, center);
+        align-items: center;
+
+        @include md-768 {
+            min-height: 400px;
+        }
+
+        @include md-1000 {
+            width: 100%;
+            height: 300px;
+            padding: 0;
+
+            display: flex;
+            flex-direction: row;
+
+            justify-content: space-between;
+            align-items: center;
+
+            overflow: hidden;
+        }
+
+        @include md-1200 {
+            min-height: 350px;
+
+            align-self: end;
+        }
+    }
+
+    //SUBTÍTULOS / SECCIÓN PRODUCTOS INDEX//
+    .subtitulo {
+        text-align: center;
+
+        & h2 {
+            margin: 0;
+            color: $secundarycolor;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.486);
+            letter-spacing: 0.1rem;
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        & h3 {
+            margin: 0;
+            font-family: $decorativefont;
+            line-height: 1rem;
+            color: $terciarycolor;
+            font-size: 2.5rem;
+            font-style: italic;
+        }
+    }
+
+    //--- SECTOR PROMOCIÓN / INDEX ---//
+    .contenedor__promo {
+        background-color: $principalcolor;
+        border-radius: 20% 0 10% 0;
+        padding: 1.5rem;
+        margin: 0 auto;
+
+        gap: 0.8rem;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 400px 250px;
+
+        overflow: hidden;
+
+        align-content: center;
+        justify-items: center;
+
+        @include md-768 {
+            padding: 4rem 2rem;
+            grid-template-rows: 400px 150px;
+        }
+
+        @include md-1000 {
+            max-width: 1200px;
+            padding: 4rem;
+            margin: 0 auto;
+            border-radius: 20% 0 20% 0;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 450px;
+
+            grid-template-areas:
+                "promo lista fiesta consulta";
+
+            gap: 2rem;
+        }
+
+        & ul h4 {
+            margin-bottom: 0;
+            color: $ligthcolor;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 900;
+
+            @include md-768 {
+                font-size: 1.3rem;
+            }
+        }
+
+        & li h5 {
+            padding: 0.2rem 0;
+            margin-bottom: 0;
+            color: $terciarycolor;
+            font-size: 1.2rem;
+            font-style: italic;
+            font-weight: 700;
+
+            @include md-768 {
+                font-size: 1.5rem;
+            }
+        }
+
+        .icono__promo {
+            width: 150px;
+
+            align-self: start;
+            justify-self: center;
+        }
+
+        .promo {
+            @include flex-center;
+            flex-direction: column;
+
+            align-self: end;
+
+            text-align: center;
+            letter-spacing: 0.3rem;
+
+            & h2 {
+                align-self: center;
+                justify-self: end;
+
+                padding: 0;
+                margin: 0;
+
+                color: $terciarycolor;
+                text-shadow: 2px 2px rgb(0, 0, 0);
+                font-size: 1.5rem;
+                font-weight: 900;
+                line-height: 1.4rem;
+
+                @include md-768 {
+                    font-size: 1.6rem;
+                    line-height: 1.2rem;
+                }
+
+                @include md-1000 {
+                    line-height: 2.2rem;
+                }
+            }
+
+            & h4 {
+                align-self: center;
+                justify-self: end;
+
+                padding: 0;
+                margin: 0;
+
+                color: $ultraligthcolor;
+                text-shadow: 2px 2px rgb(0, 0, 0);
+                font-size: 1.5rem;
+                font-weight: 700;
+                line-height: 1.4rem;
+                font-style: italic;
+
+                @include md-768 {
+                    font-size: 2rem;
+                    line-height: 2rem;
+                }
+            }
+
+            & .resaltar h3 {
+                align-self: start;
+                justify-self: end;
+                padding: 0;
+                margin: 0;
+                color: $ligthcolor;
+                text-shadow: 2px 2px rgb(0, 0, 0);
+                font-family: $decorativefont;
+                font-size: 3.8rem;
+                font-weight: 800;
+
+                @include md-768 {
+                    font-size: 4.8rem;
+                }
+
+                @include md-1000 {
+                    font-size: 5rem;
+                }
+            }
+        }
+
+        .icono__promo,
+        .promo {
+            grid-column: 1/2;
+            grid-row: 1/2;
+
+            @include md-1000 {
+                grid-area: promo;
+            }
+        }
+
+        .promo__lista,
+        .promo__listado {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+
+        .promo__lista {
+            padding: 0;
+            margin: 0;
+
+            align-self: flex-start;
+
+            @include md-1000 {
+                grid-area: lista;
+
+                align-self: start;
+            }
+        }
+
+        .promo__listado {
+            padding: 0;
+            margin: 0;
+
+            align-self: flex-end;
+
+            @include md-1000 {
+                grid-area: lista;
+
+                align-self: end;
+            }
+        }
+
+        .promo__detalle {
+            grid-column: 1/2;
+            grid-row: 2/3;
+
+            @include flex-center;
+            flex-direction: column;
+            justify-content: end;
+            align-items: center;
+
+            @include md-1000 {
+                grid-area: fiesta;
+
+                align-self: center;
+
+                gap: 1rem;
+            }
+
+            & h2 {
+                padding: 0;
+                margin: 0;
+                color: $ultraligthcolor;
+                text-shadow: 2px 2px rgb(0, 0, 0);
+                font-size: 1.8rem;
+                font-weight: 700;
+                letter-spacing: 0.22rem;
+                line-height: 2rem;
+                text-align: center;
+            }
+
+            & h3 {
+                padding: 0;
+                margin: 0;
+                color: $terciarycolor;
+                text-shadow: 1px 1px rgb(255, 255, 255);
+                font-size: 1.5rem;
+                font-weight: 900;
+                letter-spacing: 0.22rem;
+                line-height: 2rem;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    //BOTÓN//
+    .consultame {
+        grid-column: 2/3;
+        grid-row: 2/3;
+
+        align-self: end;
+        justify-self: start;
+
+        @include md-1000 {
+            grid-area: consulta;
+
+            align-self: end;
+            justify-self: center;
+        }
+
+        & h5 {
+            border: solid 0.2rem $ultraligthcolor;
+            border-radius: 0.3rem;
+            padding: 0.8rem 0.3rem;
+            margin: 0;
+
+            color: $ultraligthcolor;
+            box-shadow: 2px 2px 4px 0 rgba(20, 20, 20, 0.3);
+            font-size: 1rem;
+            font-weight: 900;
+            letter-spacing: 0.1rem;
+            text-align: center;
+
+            transition: all 0.8s ease-in-out;
+
+            @include md-768 {
+                font-size: 2rem;
+                padding: 1rem 1rem;
+            }
+
+            @include md-1000 {
+                font-size: 1rem;
+                padding: 1rem 1rem;
+
+                grid-area: consulta;
+
+                align-self: flex-end;
+            }
+        }
+
+        & h5:hover {
+            border: solid 0.2rem $terciarycolor;
+            border-radius: 0.3rem;
+
+            color: $terciarycolor;
+            text-shadow: $terciarycolor;
+
+            transition: all 0.8s ease-in-out;
+        }
+    }
+
+    //--- SECTOR ENVÍOS / INDEX ---//
+    .contenedor__envios {
+        background-color: $ligthcolor;
+        border-radius: 0 20% 0 20%;
+        padding: 2rem;
+
+        color: $secundarycolor;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 150px 80px 50px;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 1rem;
+
+        @include md-768 {
+            padding: 4rem;
+
+            grid-template-rows: 220px 140px 80px;
+        }
+
+        @include md-1000 {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 250px;
+
+            grid-template-areas:
+                "icono pedido comprar icono2 consulta";
+
+            max-width: 1200px;
+            padding: 2rem;
+            margin: 0 auto;
+
+            gap: 1rem;
+
+            align-items: end;
+            justify-content: center;
+        }
+
+        & img {
+            width: 120px;
+            padding: 0;
+            margin: 0;
+
+            @include md-768 {
+                width: 200px;
+            }
+        }
+
+        .envios {
+            grid-column: 1/2;
+            grid-row: 1/2;
+
+            line-height: 0.1rem;
+
+            @include md-1000 {
+                grid-area: pedido;
+
+                align-self: end;
+            }
+
+            & h2 {
+                padding: 0;
+                margin: 0;
+                -webkit-text-fill-color: rgba(255, 255, 255, 0);
+                -webkit-text-stroke-color: $principalcolor;
+                -webkit-text-stroke-width: 2px;
+                font-size: 2.3rem;
+                font-weight: 900;
+                letter-spacing: 0.25rem;
+                line-height: 2.2rem;
+
+                @include md-768 {
+                    font-size: 3rem;
+                    letter-spacing: 0.5rem;
+                    line-height: 2.8rem;
+                }
+
+                @include md-1000 {
+                    font-size: 3rem;
+                    letter-spacing: 0.3rem;
+                    line-height: 2.8rem;
+                }
+            }
+
+            & h3 {
+                padding: 0;
+                margin: 0;
+                color: $secundarycolor;
+                text-shadow: 1px 1px rgb(255, 255, 255);
+                font-size: 1.4rem;
+                font-weight: 900;
+
+                @include md-768 {
+                    font-size: 2rem;
+                }
+
+                @include md-1000 {
+                    font-size: 1.75rem;
+                }
+            }
+
+            & h4 {
+                padding: 0;
+                margin: 0;
+                color: $principalcolor;
+                font-size: 1.05rem;
+                font-weight: 700;
+                font-style: italic;
+                line-height: 1.2rem;
+
+                @include md-768 {
+                    font-size: 1.8rem;
+                    letter-spacing: 0.1rem;
+                    line-height: 2rem;
+                }
+
+                @include md-1000 {
+                    font-size: 1.5rem;
+                    line-height: 1.8rem;
+                }
+            }
+        }
+
+        .icono__envios {
+            grid-column: 2/3;
+            grid-row: 1/2;
+
+            justify-self: center;
+
+            @include md-1000 {
+                grid-area: icono;
+
+                align-self: start;
+            }
+        }
+
+        //BOTÓN//
+        .comprar h5 {
+            grid-column: 2/3;
+            grid-row: 2/3;
+
+            background-color: $principalcolor;
+            border-radius: 0.3rem;
+            box-shadow: 2px 2px 6px 0 rgba(20, 20, 20, 0.596);
+            padding: 1.2rem 0.5rem;
+            margin: 0;
+
+            color: $ligthcolor;
+            font-size: 1.2rem;
+            font-weight: 900;
+            text-align: center;
+            transition: all 1.8s;
+
+            @include md-1000 {
+                grid-area: comprar;
+            }
+
+            &:hover {
+                background-color: $ultraligthcolor;
+                border-radius: 0.3rem;
+
+                color: $terciarycolor;
+
+                transition: all 1.8s;
+                transform: scale(1.2);
+            }
+        }
+
+        .icono__consulta {
+            grid-column: 1/2;
+            grid-row: 2/3;
+
+            justify-self: center;
+
+            @include md-1000 {
+                grid-area: icono2;
+
+                align-self: end;
+            }
+        }
+
+        //BOTÓN//
+        .consulta h5 {
+            grid-column: 1/2;
+            grid-row: 3/4;
+
+            background-color: $principalcolor;
+            border-radius: 0.3rem;
+            box-shadow: 2px 2px 6px 0 rgba(20, 20, 20, 0.596);
+            padding: 0.5rem;
+            margin: 0;
+
+            color: $ligthcolor;
+            font-size: 0.8rem;
+            font-weight: 900;
+            text-align: center;
+
+            @include md-768 {
+                padding: 0.8rem;
+                font-size: 1rem;
+            }
+
+            @include md-1000 {
+                grid-area: consulta;
+
+                align-self: flex-end;
+            }
+
+            &:hover {
+                background-color: $ultraligthcolor;
+                border-radius: 0.3rem;
+
+                color: $ligthcolor;
+                text-shadow: $secundarycolor;
+
+                transition: 1.5s;
+            }
+        }
+    }

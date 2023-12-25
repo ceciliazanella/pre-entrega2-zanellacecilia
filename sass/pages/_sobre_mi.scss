@@ -1,0 +1,95 @@
+//SUBTÍTULO SOBRE MÍ//       
+.contenedor__grilla {
+    @include flex-center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    @include md-1200 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 800px 800px 800px;
+
+        max-width: 1200px;
+        padding: 6rem 0 6rem 0;
+
+        justify-content: center;
+
+        .derecha h5 {
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            text-align: right;
+
+            border-right: 3mm ridge $principalcolor;
+            padding-right: 0.5rem;
+        }
+
+        .izquierda h4 {
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+            text-align: left;
+        }
+
+        .izquierda h5 {
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            text-align: left;
+
+            border-left: 3mm ridge $principalcolor;
+            padding-left: 0.5rem;
+        }
+    }
+
+    .subtitulo__sobremi {
+        padding: 3rem;
+        text-align: left;
+
+        & h2 {
+            padding-top: 2rem;
+            margin-bottom: 0;
+            color: $principalcolor;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.466);
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.3rem;
+
+            @include md-1200 {
+                padding-top: 0;
+            }
+        }
+
+        & h3 {
+            margin-bottom: 0;
+            color: $terciarycolor;
+            font-family: $decorativefont;
+            font-size: 3rem;
+            font-style: italic;
+            line-height: 2.5rem;
+        }
+    }
+}
+
+//IMAGÉNES SOBRE MÍ//
+.img {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+
+    & .rigth {
+        border-radius: 20% 10%;
+    }
+
+    &.center {
+        border-radius: 20% 30% 50% 70%;
+    }
+
+    & .left {
+        border-radius: 10% 20%;
+    }
+
+    transition: all 0.8s ease;
+
+    &:hover {
+        transition: all 0.8s ease;
+        filter: brightness(60%);
+    }
+}

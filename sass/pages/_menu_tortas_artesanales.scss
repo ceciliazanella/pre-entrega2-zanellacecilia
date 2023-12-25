@@ -1,0 +1,85 @@
+.contenedor__menu {
+    @include flex-center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    align-content: space-between;
+    justify-items: start;
+
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+
+    @include md-1024 {
+        flex-direction: row;
+    }
+
+    & li {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+//TÍTULO MENÚ TORTAS ARTESANALES//
+.titulo__menu h4 {
+    color: $secundarycolor;
+    text-shadow: 1px 1.5px 1.5px #000000;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-align: left;
+}
+
+//TEXTO MENÚ TORTAS ARTESANALES//
+.texto__menu h5 {
+    color: $ligthcolor;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 2rem;
+    text-align: inherit;
+
+    @include md-1024 {
+        width: 700px;
+        padding-right: 2rem;
+    }
+
+    @include md-1200 {
+        width: 800px;
+        padding-right: 4rem;
+    }
+}
+
+//IMÁGENES MENÚ TORTAS ARTESANALES//
+.img__menu {
+    display: none;
+
+    @include md-1024 {
+        display: flex;
+
+        width: 180px;
+        height: 180px;
+
+        object-fit: cover;
+
+        transition: 0.4s ease-in-out;
+
+        z-index: 1;
+
+        &:hover {
+            display: flex;
+            cursor: pointer;
+
+            transform: scale(1.5);
+
+            transition: 0.4s ease-in-out;
+
+            z-index: 1;
+        }
+    }
+
+    @include md-1200 {
+        width: 220px;
+        height: 220px;
+    }
+}
