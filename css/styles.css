@@ -373,43 +373,36 @@ header .logo {
 }
 header .navbar-nav {
   background-color: #5e0b15;
-  border-radius: 20% 5% 5% 50%;
+  border-radius: 0 0 15% 50%;
   padding: 2rem;
   margin-top: 2rem;
   gap: 1rem;
-  text-align: right;
 }
 @media (min-width: 1000px) {
   header .navbar-nav {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 0;
   }
 }
-header .navbar,
-header .container {
+header .navbar, header .container {
   padding: 1rem 2rem;
 }
 header .navbar-toggler-icon {
   color: #d9cab3;
 }
 header .nav-item {
+  background-color: rgba(0, 0, 0, 0);
   width: 100%;
   padding-right: 0.5rem;
-  gap: 2rem;
-  color: #d9cab3;
-}
-@media (min-width: 1000px) {
-  header .nav-item {
-    background-color: rgba(255, 255, 255, 0);
-    border-radius: 0;
-    box-shadow: none;
-    padding: 0;
-    margin-left: 0;
-    color: #d9cab3;
-  }
+  gap: 1rem;
+  color: #8c7a6b;
+  font-size: 1rem;
+  text-align: right;
 }
 header .nav-link {
+  background-color: rgba(0, 0, 0, 0);
   color: #d9cab3;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 900;
 }
 header .nav-link:hover {
@@ -418,12 +411,12 @@ header .nav-link:hover {
   font-size: 1.2rem;
   transition: 0.6s ease-in-out;
 }
-header .navbar .a {
+header .navbar .a, header .container .a {
   color: #8c7a6b;
 }
 header .navbar-toggler {
-  color: #d9cab3;
-  border: solid 1px #d9cab3;
+  color: #8c7a6b;
+  border: solid 1px #8c7a6b;
   box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.432);
 }
 header [data-bs-theme=dark] {
@@ -431,28 +424,46 @@ header [data-bs-theme=dark] {
   --bs-border-color-translucent: none;
 }
 header .dropdown-menu {
-  background-color: 0;
-  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: inset 0px 0px 10px 0 rgba(94, 11, 21, 0.5764705882);
+  border-radius: 50% 20%/10% 40%;
   padding: 2rem;
-  color: #d9cab3;
   font-size: 1rem;
+}
+@media (min-width: 1000px) {
+  header .dropdown-menu {
+    background-color: #5e0b15;
+    border-radius: 5% 10% 40% 5%;
+  }
 }
 header .dropdown-menu:hover {
   color: #bc8034;
-  text-shadow: #5e0b15;
   font-size: 1.2rem;
   transition: 0.6s ease-in-out;
 }
+header .dropdown-item {
+  color: #8c7a6b;
+  font-size: 1.2rem;
+  text-align: right;
+}
+@media (min-width: 1000px) {
+  header .dropdown-item {
+    padding: 0 1rem 0 0;
+    text-align: left;
+  }
+}
 header .dropdown-item:focus,
 header .dropdown-item:hover {
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 50% 20%/10% 40%;
   color: #bc8034;
+  text-shadow: 1px 1px 1px 0, 0, 0, 0.3;
   font-style: italic;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 900;
   text-shadow: #5e0b15;
-  transition: 1s;
+  transition: all 1s ease;
+  transform: scale 1.1;
 }
 
 /* ------ FOOTER ------ */
