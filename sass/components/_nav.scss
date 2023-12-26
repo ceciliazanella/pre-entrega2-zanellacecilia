@@ -18,17 +18,14 @@ header {
         margin-top: 2rem;
 
         gap: 1rem;
-
-        text-align: right;
-
-        @include md-1000 {
-            background-color: #ffffff00;
-        }
     }
 
-    .navbar,
-    .container {
+    .navbar {
         padding: 1rem 2rem;
+    }
+
+    .container {
+        @extend .navbar
     }
 
     .navbar-toggler-icon {
@@ -36,27 +33,21 @@ header {
     }
 
     .nav-item {
+        background-color: rgba(0, 0, 0, 0);
         width: 100%;
         padding-right: 0.5rem;
 
-        gap: 2rem;
-
-        color: $ultraligthcolor;
-
-        @include md-1000 {
-            background-color: #ffffff00;
-            border-radius: 0;
-            box-shadow: none;
-            padding: 0;
-            margin-left: 0;
-
-            color: $ultraligthcolor;
-        }
+        gap: 1rem;
+        
+        color: $ligthcolor;
+        font-size: 1rem;
+        text-align: right;
     }
 
     .nav-link {
+        background-color: rgba(0, 0, 0, 0);
         color: $ultraligthcolor;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 900;
 
         &:hover {
@@ -73,8 +64,8 @@ header {
     }
 
     .navbar-toggler {
-        color: $ultraligthcolor;
-        border: solid 1px $ultraligthcolor;
+        color: $ligthcolor;
+        border: solid 1px $ligthcolor;
         box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.432);
     }
 
@@ -85,25 +76,31 @@ header {
 
     //--- NAV > MENU DESPLEGABLE ---//
     .dropdown-menu {
-        background-color: 0;
-        border-radius: 0;
+        background-color: #5e0b15c7;
+        box-shadow: inset 0px 0px 10px 0 #5e0b1593;
+        border-radius: 50% 20% / 10% 40%;
         padding: 2rem;
 
-        color: $ultraligthcolor;
         font-size: 1rem;
 
         &:hover {
             color: $terciarycolor;
-            text-shadow: $principalcolor;
+
             font-size: 1.2rem;
 
             transition: 0.6s ease-in-out;
         }
     }
 
+    .dropdown-item {
+        color: $ligthcolor;
+        font-size: 1.2rem;
+        text-align: right;
+    }
+
     .dropdown-item:focus,
     .dropdown-item:hover {
-        background-color: #ffffff00;
+        background-color: $ultraligthcolor;
         border-radius: 50% 20% / 10% 40%;
 
         color: $terciarycolor;
