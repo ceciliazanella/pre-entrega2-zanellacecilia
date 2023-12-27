@@ -1,19 +1,29 @@
     //--- HEADER > H1 / INDEX ---//
     .contenedor__h1 {
         background-color: #5e0b1593;
+        border-radius: 5% 5% 15% 5%;
         //Transparencia en base al $principalcolor//
         @include shadow_inset (5px);
 
-        width: 100%;
-        height: 100%;
+        width: 450px;
         padding: 2rem;
-        margin: 8rem 0;
+        margin: 8rem auto;
 
         @include flexbox-column (center, center);
 
         text-align: center;
 
         line-height: 0.2;
+
+        @include md-1000 {
+            width: 600px;
+            border-radius: 5% 5% 20% 5%;
+        }
+
+        @include md-1200 {
+            width: 800px;
+            border-radius: 5% 5% 25% 5%;
+        }
 
         & h1 {
             color: $ultraligthcolor;
@@ -40,6 +50,7 @@
 
     //--- DESTACADO EN INDEX ---//
     .contenedor__destacado {
+        max-width: 750px;
         @include flexbox-column (center, center);
 
         padding: 4rem;
@@ -102,12 +113,12 @@
         @include md-1000 {
             display: grid;
             grid-template-columns: 50% 50%;
-            grid-template-rows: 480px 400px 200px 400px;
+            grid-template-rows: 485px 450px 285px 450px;
 
             align-items: start;
             justify-content: center;
 
-            padding: 0 2rem 2rem 2rem;
+            padding: 0 4rem 0 4rem;
 
             gap: 2rem;
 
@@ -141,9 +152,6 @@
                 @include md-1200 {
                     grid-column: 1/2;
                     grid-row: 2/3;
-
-                    padding: 0 1rem 2rem 0;
-                    margin: 0;
                 }
             }
 
@@ -177,9 +185,6 @@
                 @include md-1200 {
                     grid-column: 2/3;
                     grid-row: 2/3;
-
-                    padding: 0 1rem 2rem 0;
-                    margin: 0;
                 }
             }
 
@@ -209,12 +214,6 @@
                 @include md-1200 {
                     grid-column: 3/4;
                     grid-row: 2/3;
-
-                    @include flex-center;
-                    flex-wrap: wrap;
-                    flex-direction: column;
-
-                    padding: 0 0 5rem 0;
                 }
             }
 
@@ -244,12 +243,6 @@
                 @include md-1200 {
                     grid-column: 4/5;
                     grid-row: 2/3;
-
-                    @include flex-center;
-                    flex-wrap: wrap;
-                    flex-direction: column;
-
-                    padding: 0 0 5rem 0;
                 }
             }
         }
@@ -265,7 +258,7 @@
             align-items: start;
             justify-content: center;
 
-            padding: 0 1rem 1rem 1rem;
+            padding: 0 2rem 2rem 2rem;
 
             gap: 1rem;
 
@@ -298,7 +291,7 @@
             @include md-1000 {
                 width: 100%;
                 max-height: 400px;
-                padding: 0 0 0;
+                padding: 0 0.5rem 1rem 0;
 
                 align-self: flex-end;
             }
@@ -324,7 +317,7 @@
             @include md-1000 {
                 width: 100%;
                 max-height: 400px;
-                padding: 0 0 0;
+                padding: 0 0.5rem 1rem 0;
 
                 align-self: flex-end;
             }
@@ -351,13 +344,9 @@
 
             @include md-1000 {
                 width: 100%;
-                padding: 0;
+                padding-top: 4.4rem;
 
-                display: flex;
-                flex-direction: row;
-
-                justify-content: space-between;
-                align-items: center;
+                @include flexbox-column (center, center);
 
                 overflow: hidden;
             }
@@ -390,14 +379,9 @@
 
             @include md-1000 {
                 width: 100%;
-                height: 300px;
-                padding: 0;
+                padding-top: 4.4rem;
 
-                display: flex;
-                flex-direction: row;
-
-                justify-content: space-between;
-                align-items: center;
+                @include flexbox-column (center, center);
 
                 overflow: hidden;
             }
@@ -439,10 +423,10 @@
     .contenedor__promo {
         background-color: $principalcolor;
         border-radius: 20% 0 10% 0;
-        padding: 1.5rem;
+        padding: 2rem 1.5rem;
         margin: 0 auto;
 
-        gap: 0.8rem;
+        gap: 1rem;
 
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -475,10 +459,11 @@
         }
 
         & ul h4 {
+            padding: 0;
             margin-bottom: 0;
 
             color: $ligthcolor;
-            font-size: 1rem;
+            font-size: 1.2rem;
             font-style: normal;
             font-weight: 900;
 
@@ -488,12 +473,13 @@
         }
 
         & li h5 {
-            padding: 0.2rem 0;
+            padding: 0;
             margin-bottom: 0;
+
             color: $terciarycolor;
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-style: italic;
-            font-weight: 700;
+            font-weight: 600;
 
             @include md-768 {
                 font-size: 1.5rem;
@@ -610,13 +596,13 @@
         }
 
         .promo__listado {
-            padding: 0;
+            padding-top: 8rem;
             margin: 0;
 
             grid-column: 2/3;
             grid-row: 1/2;
 
-            align-self: flex-end;
+            align-self: center;
 
             @include md-1000 {
                 grid-area: lista;
@@ -671,16 +657,42 @@
             }
         }
 
+        //ÍCONO ESPECIAL NAVIDAD//
+        .ornamentos {
+            display: none;
+
+            @include md-1000 {
+                display: block;
+                grid-area: consulta;
+
+                align-self: start;
+            }
+
+            @include md-1200 {
+                display: block;
+                grid-area: consulta;
+
+                align-self: center;
+            }
+        }
+
         //BOTÓN DE CONSULTA / BLOQUE PROMO//
         .consultame {
             grid-column: 2/3;
             grid-row: 2/3;
 
-            align-self: end;
-            justify-self: start;
+            align-self: start;
+            justify-self: center;
 
             @include md-1000 {
                 grid-area: consulta;
+
+                align-self: end;
+                justify-self: center;
+            }
+
+            @include md-1200 {
+                grid-area: fiesta;
 
                 align-self: end;
                 justify-self: center;
@@ -743,6 +755,8 @@
         align-items: center;
         justify-content: center;
 
+        overflow: hidden;
+
         gap: 1rem;
 
         @include md-768 {
@@ -752,31 +766,28 @@
         }
 
         @include md-1000 {
+            display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             grid-template-rows: 250px;
 
             grid-template-areas:
                 "icono pedido comprar icono2 consulta";
 
-            max-width: 1200px;
-            padding: 2rem;
+            padding: 2rem 4rem 3rem 2rem;
             margin: 0 auto;
 
             gap: 1rem;
-
-            align-items: end;
-            justify-content: center;
         }
 
         //ÍCONOS BLOQUE ENVÍOS//
         & img {
-            width: 120px;
+            width: 100%;
+            height: 100%;
             padding: 0;
             margin: 0;
 
-            @include md-768 {
-                width: 200px;
-            }
+            object-fit: contain;
+            overflow: hidden;
         }
 
         //TÍTULO BLOQUE ENVÍOS//
@@ -858,50 +869,90 @@
             }
         }
 
-        //ÍCONO PRINCIPAL ENVÍOS//
+        //ÍCONO PRINCIPAL ENVÍOS / carrito//
         .icono__envios {
+            width: 70%;
+
             grid-column: 2/3;
             grid-row: 1/2;
 
             justify-self: center;
 
             @include md-1000 {
+                width: 70%;
+
                 grid-area: icono;
 
-                align-self: start;
+                align-self: center;
+            }
+        }
+
+        //ÍCONO COMPRAR / corazón con flecha//
+        .icono__comprar {
+            display: none;
+
+            @include md-1000 {
+                display: block;
+
+                width: 70%;
+
+                grid-area: comprar;
+
+                align-self: center;
+                justify-self: center;
             }
         }
 
         //BOTÓN COMPRAR / BLOQUE ENVÍOS//
-        .comprar h5 {
+        .comprar {
             grid-column: 2/3;
             grid-row: 2/3;
 
-            background-color: $principalcolor;
-            border-radius: 0.3rem;
-            @include shadow (3px);
-            padding: 1.2rem 0.5rem;
-            margin: 0;
-
-            color: $ligthcolor;
-            font-size: 1.2rem;
-            font-weight: 900;
-            text-align: center;
-            transition: all 1.8s;
-
             @include md-1000 {
                 grid-area: comprar;
+
+                align-self: end;
             }
 
-            &:hover {
-                background-color: $ultraligthcolor;
+            & h5 {
+                background-color: $principalcolor;
                 border-radius: 0.3rem;
+                @include shadow (3px);
+                padding: 1.2rem 0.5rem;
+                margin: 0;
 
-                color: $terciarycolor;
-                @include text_shadow (0.5px);
-
+                color: $ligthcolor;
+                font-size: 1.2rem;
+                font-weight: 900;
+                text-align: center;
                 transition: all 1.8s;
-                transform: scale(1.2);
+
+                &:hover {
+                    background-color: $ultraligthcolor;
+                    border-radius: 0.3rem;
+
+                    color: $terciarycolor;
+                    @include text_shadow (0.5px);
+
+                    transition: all 1.8s;
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        //ÍCONO CONSULTA / sobre//
+        .icono__sobre {
+            display: none;
+
+            @include md-1000 {
+                display: block;
+
+                width: 50%;
+
+                grid-area: consulta;
+
+                align-self: center;
+                justify-self: center;
             }
         }
 
@@ -910,30 +961,24 @@
             grid-column: 1/2;
             grid-row: 2/3;
 
+            width: 100%;
+
             justify-self: center;
 
             @include md-1000 {
                 grid-area: icono2;
 
+                width: 80%;
+
                 align-self: end;
+                justify-self: end;
             }
         }
 
         //BOTÓN CONSULTA / BLOQUE ENVÍOS//
-        .consulta h5 {
+        .consulta {
             grid-column: 1/2;
             grid-row: 3/4;
-
-            background-color: $principalcolor;
-            border-radius: 0.3rem;
-            @include shadow (2px);
-            padding: 0.5rem;
-            margin: 0;
-
-            color: $ligthcolor;
-            font-size: 0.8rem;
-            font-weight: 900;
-            text-align: center;
 
             @include md-768 {
                 padding: 0.8rem;
@@ -944,15 +989,30 @@
                 grid-area: consulta;
 
                 align-self: flex-end;
+
+                padding: 0;
             }
 
-            &:hover {
-                background-color: $ultraligthcolor;
+            & h5 {
+                background-color: $principalcolor;
                 border-radius: 0.3rem;
+                @include shadow (2px);
+                padding: 0.5rem;
+                margin: 0;
 
                 color: $ligthcolor;
+                font-size: 0.8rem;
+                font-weight: 900;
+                text-align: center;
 
-                transition: 1.5s;
+                &:hover {
+                    background-color: $ultraligthcolor;
+                    border-radius: 0.3rem;
+
+                    color: $ligthcolor;
+
+                    transition: 1.5s;
+                }
             }
         }
     }

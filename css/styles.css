@@ -204,7 +204,7 @@ main .contenedor_main {
   box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.5);
   color: #bc8034;
   text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: all 0.8s ease-in-out;
 }
 
@@ -341,7 +341,6 @@ body .header_wrapper {
   background-attachment: fixed;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5568627451), rgba(94, 11, 21, 0.329)), url(../imagenes/image_index/portada.jpg);
   width: 100%;
-  min-height: 900px;
   padding-top: 2rem;
   border-radius: 0 0 15% 0;
   display: flex;
@@ -350,6 +349,7 @@ body .header_wrapper {
   justify-items: center;
   align-content: center;
   overflow: hidden;
+  object-fit: cover;
   font-family: "Lato", sans-serif;
   font-weight: 900;
 }
@@ -554,11 +554,11 @@ footer .contenedor__redes ul .ired {
 
 .contenedor__h1 {
   background-color: rgba(94, 11, 21, 0.5764705882);
+  border-radius: 5% 5% 15% 5%;
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100%;
+  width: 450px;
   padding: 2rem;
-  margin: 8rem 0;
+  margin: 8rem auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -566,6 +566,18 @@ footer .contenedor__redes ul .ired {
   align-content: center;
   text-align: center;
   line-height: 0.2;
+}
+@media (min-width: 1000px) {
+  .contenedor__h1 {
+    width: 600px;
+    border-radius: 5% 5% 20% 5%;
+  }
+}
+@media (min-width: 1200px) {
+  .contenedor__h1 {
+    width: 800px;
+    border-radius: 5% 5% 25% 5%;
+  }
 }
 .contenedor__h1 h1 {
   color: #d9cab3;
@@ -588,6 +600,7 @@ footer .contenedor__redes ul .ired {
 }
 
 .contenedor__destacado {
+  max-width: 750px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -647,10 +660,10 @@ footer .contenedor__redes ul .ired {
   .contenedor__productos {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 480px 400px 200px 400px;
+    grid-template-rows: 485px 450px 285px 450px;
     align-items: start;
     justify-content: center;
-    padding: 0 2rem 2rem 2rem;
+    padding: 0 4rem 0 4rem;
     gap: 2rem;
   }
   .contenedor__productos .parrafo__tortas {
@@ -683,8 +696,6 @@ footer .contenedor__redes ul .ired {
   .contenedor__productos .links__tortas {
     grid-column: 1/2;
     grid-row: 2/3;
-    padding: 0 1rem 2rem 0;
-    margin: 0;
   }
 }
 @media (min-width: 1000px) {
@@ -718,8 +729,6 @@ footer .contenedor__redes ul .ired {
   .contenedor__productos .links__pasteleria {
     grid-column: 2/3;
     grid-row: 2/3;
-    padding: 0 1rem 2rem 0;
-    margin: 0;
   }
 }
 @media (min-width: 1000px) {
@@ -748,13 +757,6 @@ footer .contenedor__redes ul .ired {
   .contenedor__productos .links__dulce {
     grid-column: 3/4;
     grid-row: 2/3;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: 0 0 5rem 0;
   }
 }
 @media (min-width: 1000px) {
@@ -783,13 +785,6 @@ footer .contenedor__redes ul .ired {
   .contenedor__productos .links__lunch {
     grid-column: 4/5;
     grid-row: 2/3;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: 0 0 5rem 0;
   }
 }
 @media (min-width: 1200px) {
@@ -801,7 +796,7 @@ footer .contenedor__redes ul .ired {
     margin: 0 auto;
     align-items: start;
     justify-content: center;
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 2rem 2rem 2rem;
     gap: 1rem;
     text-align: justify;
     line-height: 1rem;
@@ -831,7 +826,7 @@ footer .contenedor__redes ul .ired {
   .contenedor__productos .enlace__tortas {
     width: 100%;
     max-height: 400px;
-    padding: 0 0 0;
+    padding: 0 0.5rem 1rem 0;
     align-self: flex-end;
   }
 }
@@ -856,7 +851,7 @@ footer .contenedor__redes ul .ired {
   .contenedor__productos .enlace__pasteleria {
     width: 100%;
     max-height: 400px;
-    padding: 0 0 0;
+    padding: 0 0.5rem 1rem 0;
     align-self: flex-end;
   }
 }
@@ -884,11 +879,12 @@ footer .contenedor__redes ul .ired {
 @media (min-width: 1000px) {
   .contenedor__productos .enlace__dulce {
     width: 100%;
-    padding: 0;
+    padding-top: 4.4rem;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-items: center;
+    align-content: center;
     overflow: hidden;
   }
 }
@@ -922,12 +918,12 @@ footer .contenedor__redes ul .ired {
 @media (min-width: 1000px) {
   .contenedor__productos .enlace__lunch {
     width: 100%;
-    height: 300px;
-    padding: 0;
+    padding-top: 4.4rem;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-items: center;
+    align-content: center;
     overflow: hidden;
   }
 }
@@ -960,9 +956,9 @@ footer .contenedor__redes ul .ired {
 .contenedor__promo {
   background-color: #5e0b15;
   border-radius: 20% 0 10% 0;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
   margin: 0 auto;
-  gap: 0.8rem;
+  gap: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 400px 250px;
@@ -990,9 +986,10 @@ footer .contenedor__redes ul .ired {
   }
 }
 .contenedor__promo ul h4 {
+  padding: 0;
   margin-bottom: 0;
   color: #8c7a6b;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 900;
 }
@@ -1002,12 +999,12 @@ footer .contenedor__redes ul .ired {
   }
 }
 .contenedor__promo li h5 {
-  padding: 0.2rem 0;
+  padding: 0;
   margin-bottom: 0;
   color: #bc8034;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .contenedor__promo li h5 {
@@ -1113,11 +1110,11 @@ footer .contenedor__redes ul .ired {
   }
 }
 .contenedor__promo .promo__listado {
-  padding: 0;
+  padding-top: 8rem;
   margin: 0;
   grid-column: 2/3;
   grid-row: 1/2;
-  align-self: flex-end;
+  align-self: center;
 }
 @media (min-width: 1000px) {
   .contenedor__promo .promo__listado {
@@ -1165,15 +1162,39 @@ footer .contenedor__redes ul .ired {
   text-align: center;
   text-transform: uppercase;
 }
+.contenedor__promo .ornamentos {
+  display: none;
+}
+@media (min-width: 1000px) {
+  .contenedor__promo .ornamentos {
+    display: block;
+    grid-area: consulta;
+    align-self: start;
+  }
+}
+@media (min-width: 1200px) {
+  .contenedor__promo .ornamentos {
+    display: block;
+    grid-area: consulta;
+    align-self: center;
+  }
+}
 .contenedor__promo .consultame {
   grid-column: 2/3;
   grid-row: 2/3;
-  align-self: end;
-  justify-self: start;
+  align-self: start;
+  justify-self: center;
 }
 @media (min-width: 1000px) {
   .contenedor__promo .consultame {
     grid-area: consulta;
+    align-self: end;
+    justify-self: center;
+  }
+}
+@media (min-width: 1200px) {
+  .contenedor__promo .consultame {
+    grid-area: fiesta;
     align-self: end;
     justify-self: center;
   }
@@ -1223,6 +1244,7 @@ footer .contenedor__redes ul .ired {
   grid-template-rows: 150px 80px 50px;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   gap: 1rem;
 }
 @media (min-width: 768px) {
@@ -1233,26 +1255,22 @@ footer .contenedor__redes ul .ired {
 }
 @media (min-width: 1000px) {
   .contenedor__envios {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 250px;
     grid-template-areas: "icono pedido comprar icono2 consulta";
-    max-width: 1200px;
-    padding: 2rem;
+    padding: 2rem 4rem 3rem 2rem;
     margin: 0 auto;
     gap: 1rem;
-    align-items: end;
-    justify-content: center;
   }
 }
 .contenedor__envios img {
-  width: 120px;
+  width: 100%;
+  height: 100%;
   padding: 0;
   margin: 0;
-}
-@media (min-width: 768px) {
-  .contenedor__envios img {
-    width: 200px;
-  }
+  object-fit: contain;
+  overflow: hidden;
 }
 .contenedor__envios .envios {
   grid-column: 1/2;
@@ -1331,19 +1349,41 @@ footer .contenedor__redes ul .ired {
   }
 }
 .contenedor__envios .icono__envios {
+  width: 70%;
   grid-column: 2/3;
   grid-row: 1/2;
   justify-self: center;
 }
 @media (min-width: 1000px) {
   .contenedor__envios .icono__envios {
+    width: 70%;
     grid-area: icono;
-    align-self: start;
+    align-self: center;
+  }
+}
+.contenedor__envios .icono__comprar {
+  display: none;
+}
+@media (min-width: 1000px) {
+  .contenedor__envios .icono__comprar {
+    display: block;
+    width: 70%;
+    grid-area: comprar;
+    align-self: center;
+    justify-self: center;
+  }
+}
+.contenedor__envios .comprar {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+@media (min-width: 1000px) {
+  .contenedor__envios .comprar {
+    grid-area: comprar;
+    align-self: end;
   }
 }
 .contenedor__envios .comprar h5 {
-  grid-column: 2/3;
-  grid-row: 2/3;
   background-color: #5e0b15;
   border-radius: 0.3rem;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
@@ -1355,11 +1395,6 @@ footer .contenedor__redes ul .ired {
   text-align: center;
   transition: all 1.8s;
 }
-@media (min-width: 1000px) {
-  .contenedor__envios .comprar h5 {
-    grid-area: comprar;
-  }
-}
 .contenedor__envios .comprar h5:hover {
   background-color: #d9cab3;
   border-radius: 0.3rem;
@@ -1368,20 +1403,50 @@ footer .contenedor__redes ul .ired {
   transition: all 1.8s;
   transform: scale(1.2);
 }
+.contenedor__envios .icono__sobre {
+  display: none;
+}
+@media (min-width: 1000px) {
+  .contenedor__envios .icono__sobre {
+    display: block;
+    width: 50%;
+    grid-area: consulta;
+    align-self: center;
+    justify-self: center;
+  }
+}
 .contenedor__envios .icono__consulta {
   grid-column: 1/2;
   grid-row: 2/3;
+  width: 100%;
   justify-self: center;
 }
 @media (min-width: 1000px) {
   .contenedor__envios .icono__consulta {
     grid-area: icono2;
+    width: 80%;
     align-self: end;
+    justify-self: end;
+  }
+}
+.contenedor__envios .consulta {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+@media (min-width: 768px) {
+  .contenedor__envios .consulta {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1000px) {
+  .contenedor__envios .consulta {
+    grid-area: consulta;
+    align-self: flex-end;
+    padding: 0;
   }
 }
 .contenedor__envios .consulta h5 {
-  grid-column: 1/2;
-  grid-row: 3/4;
   background-color: #5e0b15;
   border-radius: 0.3rem;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -1391,18 +1456,6 @@ footer .contenedor__redes ul .ired {
   font-size: 0.8rem;
   font-weight: 900;
   text-align: center;
-}
-@media (min-width: 768px) {
-  .contenedor__envios .consulta h5 {
-    padding: 0.8rem;
-    font-size: 1rem;
-  }
-}
-@media (min-width: 1000px) {
-  .contenedor__envios .consulta h5 {
-    grid-area: consulta;
-    align-self: flex-end;
-  }
 }
 .contenedor__envios .consulta h5:hover {
   background-color: #d9cab3;

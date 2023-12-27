@@ -9,13 +9,13 @@ body {
             url(../imagenes/image_index/portada.jpg);
 
         width: 100%;
-        min-height: 900px;
         padding-top: 2rem;
         border-radius: 0 0 15% 0;
 
         @include flexbox-column (center, center);
 
         overflow: hidden;
+        object-fit: cover;
 
         font-family: $principalfont;
         font-weight: 900;
