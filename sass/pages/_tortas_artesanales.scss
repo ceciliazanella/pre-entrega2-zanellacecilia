@@ -5,10 +5,14 @@
 
     text-align: center;
 
+    .font__detalle {
+        @extend %template__detalle;
+    }
+
     @include md-1024 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 450px 200px 450px 1350px 600px;
+        grid-template-rows: 450px 300px 450px 1450px 650px;
 
         width: 1024px;
         padding: 0;
@@ -17,7 +21,7 @@
         align-items: center;
         justify-content: center;
 
-        gap: 1rem;
+        gap: 0.8rem;
 
         //TEXTOS / PÁRRAFOS TORTAS ARTESANALES//
         .butter {

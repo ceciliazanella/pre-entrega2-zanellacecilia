@@ -1,6 +1,7 @@
-    //--- HEADER > H1 EN INDEX ---//
+    //--- HEADER > H1 / INDEX ---//
     .contenedor__h1 {
         background-color: #5e0b1593;
+        //Transparencia en base al $principalcolor//
         box-shadow: inset 0px 0px 10px 0 $principalcolor;
 
         width: 100%;
@@ -13,6 +14,7 @@
         flex-direction: column;
 
         text-align: center;
+
         line-height: 0.2;
 
         & h1 {
@@ -71,11 +73,12 @@
         margin: 0 auto;
 
         & h2 {
+            padding: 2rem 0 0 0;
+            margin: 0;
+
             -webkit-text-fill-color: rgba(255, 255, 255, 0);
             -webkit-text-stroke-color: $principalcolor;
             -webkit-text-stroke-width: 2px;
-            padding: 2rem 0 0 0;
-            margin: 0;
             letter-spacing: 0.6rem;
             font-size: 2rem;
             font-weight: 900;
@@ -267,159 +270,159 @@
                     padding: 0;
                 }
             }
-        }
-    }
 
-    //IMAGEN DE FONDO / SECCIÓN PRODUCTOS INDEX//
-    .enlace__tortas {
-        background-image: url(../imagenes/image_index/tortas_artesanales.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: contain;
-        border-bottom-left-radius: 50%;
+            //IMAGEN DE FONDO / SECCIÓN PRODUCTOS INDEX//
+            .enlace__tortas {
+                background-image: url(../imagenes/image_index/tortas_artesanales.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: contain;
+                border-bottom-left-radius: 50%;
 
-        overflow: hidden;
+                overflow: hidden;
 
-        min-height: 280px;
-        padding: 0 2rem 0.5rem 0;
+                min-height: 280px;
+                padding: 0 2rem 0.5rem 0;
 
-        @include flexbox-column(end, end);
-        align-items: end;
-        justify-content: space-between;
+                @include flexbox-column(end, end);
+                align-items: end;
+                justify-content: space-between;
 
-        @include md-1000 {
-            width: 100%;
-            max-height: 400px;
-            padding: 0 0 0;
+                @include md-1000 {
+                    width: 100%;
+                    max-height: 400px;
+                    padding: 0 0 0;
 
-            align-self: flex-end;
-        }
-    }
+                    align-self: flex-end;
+                }
+            }
 
-    .enlace__pasteleria {
-        background-image: url(../imagenes/image_index/pastelería_creativa.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: cover;
-        border-bottom-left-radius: 50%;
+            .enlace__pasteleria {
+                background-image: url(../imagenes/image_index/pastelería_creativa.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: cover;
+                border-bottom-left-radius: 50%;
 
-        overflow: hidden;
+                overflow: hidden;
 
-        min-height: 280px;
-        padding: 0 2rem 0.5rem 0;
+                min-height: 280px;
+                padding: 0 2rem 0.5rem 0;
 
-        @include flexbox-column (center, end);
-        align-items: end;
-        justify-content: space-between;
+                @include flexbox-column (center, end);
+                align-items: end;
+                justify-content: space-between;
 
-        @include md-1000 {
-            width: 100%;
-            max-height: 400px;
-            padding: 0 0 0;
+                @include md-1000 {
+                    width: 100%;
+                    max-height: 400px;
+                    padding: 0 0 0;
 
-            align-self: flex-end;
-        }
-    }
+                    align-self: flex-end;
+                }
+            }
 
-    .enlace__dulce {
-        background-image: url(../imagenes/image_index/mesa_dulce.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        border-radius: 10% 25%;
+            .enlace__dulce {
+                background-image: url(../imagenes/image_index/mesa_dulce.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom;
+                border-radius: 10% 25%;
 
-        overflow: hidden;
+                overflow: hidden;
 
-        min-height: 280px;
-        padding: 0 0 0.5rem 0;
+                min-height: 280px;
+                padding: 0 0 0.5rem 0;
 
-        @include flexbox-column (center, center);
-        align-items: center;
+                @include flexbox-column (center, center);
+                align-items: center;
 
-        @include md-768 {
-            min-height: 400px;
-        }
+                @include md-768 {
+                    min-height: 400px;
+                }
 
-        @include md-1000 {
-            width: 100%;
-            padding: 0;
+                @include md-1000 {
+                    width: 100%;
+                    padding: 0;
 
-            display: flex;
-            flex-direction: row;
+                    display: flex;
+                    flex-direction: row;
 
-            justify-content: space-between;
-            align-items: center;
+                    justify-content: space-between;
+                    align-items: center;
 
-            overflow: hidden;
-        }
+                    overflow: hidden;
+                }
 
-        @include md-1200 {
-            min-height: 350px;
+                @include md-1200 {
+                    min-height: 350px;
 
-            align-self: end;
-        }
-    }
+                    align-self: end;
+                }
+            }
 
-    .enlace__lunch {
-        background-image: url(../imagenes/image_index/servicio_de_luch.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        border-radius: 10% 25%;
+            .enlace__lunch {
+                background-image: url(../imagenes/image_index/servicio_de_luch.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: bottom;
+                border-radius: 10% 25%;
 
-        overflow: hidden;
+                overflow: hidden;
 
-        min-height: 280px;
-        padding: 0 0 0.5rem 0;
+                min-height: 280px;
+                padding: 0 0 0.5rem 0;
 
-        @include flexbox-column (center, center);
-        align-items: center;
+                @include flexbox-column (center, center);
+                align-items: center;
 
-        @include md-768 {
-            min-height: 400px;
-        }
+                @include md-768 {
+                    min-height: 400px;
+                }
 
-        @include md-1000 {
-            width: 100%;
-            height: 300px;
-            padding: 0;
+                @include md-1000 {
+                    width: 100%;
+                    height: 300px;
+                    padding: 0;
 
-            display: flex;
-            flex-direction: row;
+                    display: flex;
+                    flex-direction: row;
 
-            justify-content: space-between;
-            align-items: center;
+                    justify-content: space-between;
+                    align-items: center;
 
-            overflow: hidden;
-        }
+                    overflow: hidden;
+                }
 
-        @include md-1200 {
-            min-height: 350px;
+                @include md-1200 {
+                    min-height: 350px;
 
-            align-self: end;
-        }
-    }
+                    align-self: end;
+                }
+            }
 
-    //SUBTÍTULOS / SECCIÓN PRODUCTOS INDEX//
-    .subtitulo {
-        text-align: center;
+            //SUBTÍTULOS / SECCIÓN PRODUCTOS INDEX//
+            .subtitulo {
+                text-align: center;
 
-        & h2 {
-            margin: 0;
-            color: $secundarycolor;
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.486);
-            letter-spacing: 0.1rem;
-            font-size: 1.6rem;
-            font-weight: 700;
-        }
+                & h2 {
+                    margin: 0;
+                    color: $secundarycolor;
+                    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.486);
+                    letter-spacing: 0.1rem;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                }
 
-        & h3 {
-            margin: 0;
-            font-family: $decorativefont;
-            line-height: 1rem;
-            color: $terciarycolor;
-            font-size: 2.5rem;
-            font-style: italic;
+                & h3 {
+                    margin: 0;
+                    font-family: $decorativefont;
+                    line-height: 1rem;
+                    color: $terciarycolor;
+                    font-size: 2.5rem;
+                    font-style: italic;
+                }
+            }
         }
     }
 
@@ -651,61 +654,61 @@
                 text-transform: uppercase;
             }
         }
-    }
 
-    //BOTÓN//
-    .consultame {
-        grid-column: 2/3;
-        grid-row: 2/3;
-
-        align-self: end;
-        justify-self: start;
-
-        @include md-1000 {
-            grid-area: consulta;
+        //BOTÓN//
+        .consultame {
+            grid-column: 2/3;
+            grid-row: 2/3;
 
             align-self: end;
-            justify-self: center;
-        }
-
-        & h5 {
-            border: solid 0.2rem $ultraligthcolor;
-            border-radius: 0.3rem;
-            padding: 0.8rem 0.3rem;
-            margin: 0;
-
-            color: $ultraligthcolor;
-            box-shadow: 2px 2px 4px 0 rgba(20, 20, 20, 0.3);
-            font-size: 1rem;
-            font-weight: 900;
-            letter-spacing: 0.1rem;
-            text-align: center;
-
-            transition: all 0.8s ease-in-out;
-
-            @include md-768 {
-                font-size: 2rem;
-                padding: 1rem 1rem;
-            }
+            justify-self: start;
 
             @include md-1000 {
-                font-size: 1rem;
-                padding: 1rem 1rem;
-
                 grid-area: consulta;
 
-                align-self: flex-end;
+                align-self: end;
+                justify-self: center;
             }
-        }
 
-        & h5:hover {
-            border: solid 0.2rem $terciarycolor;
-            border-radius: 0.3rem;
+            & h5 {
+                border: solid 0.2rem $ultraligthcolor;
+                border-radius: 0.3rem;
+                padding: 0.8rem 0.3rem;
+                margin: 0;
 
-            color: $terciarycolor;
-            text-shadow: $terciarycolor;
+                color: $ultraligthcolor;
+                box-shadow: 2px 2px 4px 0 rgba(20, 20, 20, 0.3);
+                font-size: 1rem;
+                font-weight: 900;
+                letter-spacing: 0.1rem;
+                text-align: center;
 
-            transition: all 0.8s ease-in-out;
+                transition: all 0.8s ease-in-out;
+
+                @include md-768 {
+                    font-size: 2rem;
+                    padding: 1rem 1rem;
+                }
+
+                @include md-1000 {
+                    font-size: 1rem;
+                    padding: 1rem 1rem;
+
+                    grid-area: consulta;
+
+                    align-self: flex-end;
+                }
+
+                & h5:hover {
+                    border: solid 0.2rem $terciarycolor;
+                    border-radius: 0.3rem;
+
+                    color: $terciarycolor;
+                    text-shadow: $terciarycolor;
+
+                    transition: all 0.8s ease-in-out;
+                }
+            }
         }
     }
 

@@ -4,6 +4,10 @@
     flex-wrap: wrap;
     flex-direction: column;
 
+    .font__detalle {
+        @extend %template__detalle;
+    }
+
     @include md-1200 {
         display: grid;
         grid-template-columns: 1fr 1fr;
