@@ -247,181 +247,181 @@
                     padding: 0 0 5rem 0;
                 }
             }
+        }
+
+        @include md-1200 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 500px 500px;
+
+            max-width: 1200px;
+            margin: 0 auto;
+
+            align-items: start;
+            justify-content: center;
+
+            padding: 0 1rem 1rem 1rem;
+
+            gap: 1rem;
+
+            text-align: justify;
+            line-height: 1rem;
+
+            .parrafo h4 {
+                padding: 0;
+            }
+        }
+
+        //IMAGEN DE FONDO / SECCIÓN PRODUCTOS INDEX//
+        .enlace__tortas {
+            background-image: url(../imagenes/image_index/tortas_artesanales.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: contain;
+            border-bottom-left-radius: 50%;
+
+            overflow: hidden;
+
+            min-height: 280px;
+            padding: 0 2rem 0.5rem 0;
+
+            @include flexbox-column(end, end);
+            align-items: end;
+            justify-content: space-between;
+
+            @include md-1000 {
+                width: 100%;
+                max-height: 400px;
+                padding: 0 0 0;
+
+                align-self: flex-end;
+            }
+        }
+
+        .enlace__pasteleria {
+            background-image: url(../imagenes/image_index/pastelería_creativa.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: cover;
+            border-bottom-left-radius: 50%;
+
+            overflow: hidden;
+
+            min-height: 280px;
+            padding: 0 2rem 0.5rem 0;
+
+            @include flexbox-column (center, end);
+            align-items: end;
+            justify-content: space-between;
+
+            @include md-1000 {
+                width: 100%;
+                max-height: 400px;
+                padding: 0 0 0;
+
+                align-self: flex-end;
+            }
+        }
+
+        .enlace__dulce {
+            background-image: url(../imagenes/image_index/mesa_dulce.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            border-radius: 10% 25%;
+
+            overflow: hidden;
+
+            min-height: 280px;
+            padding: 0 0 0.5rem 0;
+
+            @include flexbox-column (center, center);
+            align-items: center;
+
+            @include md-768 {
+                min-height: 400px;
+            }
+
+            @include md-1000 {
+                width: 100%;
+                padding: 0;
+
+                display: flex;
+                flex-direction: row;
+
+                justify-content: space-between;
+                align-items: center;
+
+                overflow: hidden;
+            }
 
             @include md-1200 {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
-                grid-template-rows: 500px 500px;
+                min-height: 350px;
 
-                max-width: 1200px;
-                margin: 0 auto;
+                align-self: end;
+            }
+        }
 
-                align-items: start;
-                justify-content: center;
+        .enlace__lunch {
+            background-image: url(../imagenes/image_index/servicio_de_luch.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            border-radius: 10% 25%;
 
-                padding: 0 1rem 1rem 1rem;
+            overflow: hidden;
 
-                gap: 1rem;
+            min-height: 280px;
+            padding: 0 0 0.5rem 0;
 
-                text-align: justify;
+            @include flexbox-column (center, center);
+            align-items: center;
+
+            @include md-768 {
+                min-height: 400px;
+            }
+
+            @include md-1000 {
+                width: 100%;
+                height: 300px;
+                padding: 0;
+
+                display: flex;
+                flex-direction: row;
+
+                justify-content: space-between;
+                align-items: center;
+
+                overflow: hidden;
+            }
+
+            @include md-1200 {
+                min-height: 350px;
+
+                align-self: end;
+            }
+        }
+
+        //SUBTÍTULOS / SECCIÓN PRODUCTOS INDEX//
+        .subtitulo {
+            text-align: center;
+
+            & h2 {
+                margin: 0;
+                color: $secundarycolor;
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.486);
+                letter-spacing: 0.1rem;
+                font-size: 1.6rem;
+                font-weight: 700;
+            }
+
+            & h3 {
+                margin: 0;
+                font-family: $decorativefont;
                 line-height: 1rem;
-
-                .parrafo h4 {
-                    padding: 0;
-                }
-            }
-
-            //IMAGEN DE FONDO / SECCIÓN PRODUCTOS INDEX//
-            .enlace__tortas {
-                background-image: url(../imagenes/image_index/tortas_artesanales.png);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: contain;
-                border-bottom-left-radius: 50%;
-
-                overflow: hidden;
-
-                min-height: 280px;
-                padding: 0 2rem 0.5rem 0;
-
-                @include flexbox-column(end, end);
-                align-items: end;
-                justify-content: space-between;
-
-                @include md-1000 {
-                    width: 100%;
-                    max-height: 400px;
-                    padding: 0 0 0;
-
-                    align-self: flex-end;
-                }
-            }
-
-            .enlace__pasteleria {
-                background-image: url(../imagenes/image_index/pastelería_creativa.png);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: cover;
-                border-bottom-left-radius: 50%;
-
-                overflow: hidden;
-
-                min-height: 280px;
-                padding: 0 2rem 0.5rem 0;
-
-                @include flexbox-column (center, end);
-                align-items: end;
-                justify-content: space-between;
-
-                @include md-1000 {
-                    width: 100%;
-                    max-height: 400px;
-                    padding: 0 0 0;
-
-                    align-self: flex-end;
-                }
-            }
-
-            .enlace__dulce {
-                background-image: url(../imagenes/image_index/mesa_dulce.png);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: bottom;
-                border-radius: 10% 25%;
-
-                overflow: hidden;
-
-                min-height: 280px;
-                padding: 0 0 0.5rem 0;
-
-                @include flexbox-column (center, center);
-                align-items: center;
-
-                @include md-768 {
-                    min-height: 400px;
-                }
-
-                @include md-1000 {
-                    width: 100%;
-                    padding: 0;
-
-                    display: flex;
-                    flex-direction: row;
-
-                    justify-content: space-between;
-                    align-items: center;
-
-                    overflow: hidden;
-                }
-
-                @include md-1200 {
-                    min-height: 350px;
-
-                    align-self: end;
-                }
-            }
-
-            .enlace__lunch {
-                background-image: url(../imagenes/image_index/servicio_de_luch.png);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: bottom;
-                border-radius: 10% 25%;
-
-                overflow: hidden;
-
-                min-height: 280px;
-                padding: 0 0 0.5rem 0;
-
-                @include flexbox-column (center, center);
-                align-items: center;
-
-                @include md-768 {
-                    min-height: 400px;
-                }
-
-                @include md-1000 {
-                    width: 100%;
-                    height: 300px;
-                    padding: 0;
-
-                    display: flex;
-                    flex-direction: row;
-
-                    justify-content: space-between;
-                    align-items: center;
-
-                    overflow: hidden;
-                }
-
-                @include md-1200 {
-                    min-height: 350px;
-
-                    align-self: end;
-                }
-            }
-
-            //SUBTÍTULOS / SECCIÓN PRODUCTOS INDEX//
-            .subtitulo {
-                text-align: center;
-
-                & h2 {
-                    margin: 0;
-                    color: $secundarycolor;
-                    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.486);
-                    letter-spacing: 0.1rem;
-                    font-size: 1.6rem;
-                    font-weight: 700;
-                }
-
-                & h3 {
-                    margin: 0;
-                    font-family: $decorativefont;
-                    line-height: 1rem;
-                    color: $terciarycolor;
-                    font-size: 2.5rem;
-                    font-style: italic;
-                }
+                color: $terciarycolor;
+                font-size: 2.5rem;
+                font-style: italic;
             }
         }
     }

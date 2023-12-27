@@ -798,7 +798,7 @@ footer .contenedor__redes ul .ired {
     padding: 0 0 5rem 0;
   }
 }
-@media (min-width: 1000px) and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .contenedor__productos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -816,26 +816,24 @@ footer .contenedor__redes ul .ired {
     padding: 0;
   }
 }
-@media (min-width: 1000px) {
-  .contenedor__productos .enlace__tortas {
-    background-image: url(../imagenes/image_index/tortas_artesanales.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: contain;
-    border-bottom-left-radius: 50%;
-    overflow: hidden;
-    min-height: 280px;
-    padding: 0 2rem 0.5rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-items: end;
-    align-content: end;
-    align-items: end;
-    justify-content: space-between;
-  }
+.contenedor__productos .enlace__tortas {
+  background-image: url(../imagenes/image_index/tortas_artesanales.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: contain;
+  border-bottom-left-radius: 50%;
+  overflow: hidden;
+  min-height: 280px;
+  padding: 0 2rem 0.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-items: end;
+  align-content: end;
+  align-items: end;
+  justify-content: space-between;
 }
-@media (min-width: 1000px) and (min-width: 1000px) {
+@media (min-width: 1000px) {
   .contenedor__productos .enlace__tortas {
     width: 100%;
     max-height: 400px;
@@ -843,26 +841,24 @@ footer .contenedor__redes ul .ired {
     align-self: flex-end;
   }
 }
-@media (min-width: 1000px) {
-  .contenedor__productos .enlace__pasteleria {
-    background-image: url(../imagenes/image_index/pastelería_creativa.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: cover;
-    border-bottom-left-radius: 50%;
-    overflow: hidden;
-    min-height: 280px;
-    padding: 0 2rem 0.5rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-items: center;
-    align-content: end;
-    align-items: end;
-    justify-content: space-between;
-  }
+.contenedor__productos .enlace__pasteleria {
+  background-image: url(../imagenes/image_index/pastelería_creativa.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: cover;
+  border-bottom-left-radius: 50%;
+  overflow: hidden;
+  min-height: 280px;
+  padding: 0 2rem 0.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-items: center;
+  align-content: end;
+  align-items: end;
+  justify-content: space-between;
 }
-@media (min-width: 1000px) and (min-width: 1000px) {
+@media (min-width: 1000px) {
   .contenedor__productos .enlace__pasteleria {
     width: 100%;
     max-height: 400px;
@@ -870,30 +866,28 @@ footer .contenedor__redes ul .ired {
     align-self: flex-end;
   }
 }
-@media (min-width: 1000px) {
-  .contenedor__productos .enlace__dulce {
-    background-image: url(../imagenes/image_index/mesa_dulce.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    border-radius: 10% 25%;
-    overflow: hidden;
-    min-height: 280px;
-    padding: 0 0 0.5rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-items: center;
-    align-content: center;
-    align-items: center;
-  }
+.contenedor__productos .enlace__dulce {
+  background-image: url(../imagenes/image_index/mesa_dulce.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  border-radius: 10% 25%;
+  overflow: hidden;
+  min-height: 280px;
+  padding: 0 0 0.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
 }
-@media (min-width: 1000px) and (min-width: 768px) {
+@media (min-width: 768px) {
   .contenedor__productos .enlace__dulce {
     min-height: 400px;
   }
 }
-@media (min-width: 1000px) and (min-width: 1000px) {
+@media (min-width: 1000px) {
   .contenedor__productos .enlace__dulce {
     width: 100%;
     padding: 0;
@@ -904,36 +898,34 @@ footer .contenedor__redes ul .ired {
     overflow: hidden;
   }
 }
-@media (min-width: 1000px) and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .contenedor__productos .enlace__dulce {
     min-height: 350px;
     align-self: end;
   }
 }
-@media (min-width: 1000px) {
-  .contenedor__productos .enlace__lunch {
-    background-image: url(../imagenes/image_index/servicio_de_luch.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    border-radius: 10% 25%;
-    overflow: hidden;
-    min-height: 280px;
-    padding: 0 0 0.5rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-items: center;
-    align-content: center;
-    align-items: center;
-  }
+.contenedor__productos .enlace__lunch {
+  background-image: url(../imagenes/image_index/servicio_de_luch.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  border-radius: 10% 25%;
+  overflow: hidden;
+  min-height: 280px;
+  padding: 0 0 0.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
 }
-@media (min-width: 1000px) and (min-width: 768px) {
+@media (min-width: 768px) {
   .contenedor__productos .enlace__lunch {
     min-height: 400px;
   }
 }
-@media (min-width: 1000px) and (min-width: 1000px) {
+@media (min-width: 1000px) {
   .contenedor__productos .enlace__lunch {
     width: 100%;
     height: 300px;
@@ -945,32 +937,30 @@ footer .contenedor__redes ul .ired {
     overflow: hidden;
   }
 }
-@media (min-width: 1000px) and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .contenedor__productos .enlace__lunch {
     min-height: 350px;
     align-self: end;
   }
 }
-@media (min-width: 1000px) {
-  .contenedor__productos .subtitulo {
-    text-align: center;
-  }
-  .contenedor__productos .subtitulo h2 {
-    margin: 0;
-    color: #90323d;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.486);
-    letter-spacing: 0.1rem;
-    font-size: 1.6rem;
-    font-weight: 700;
-  }
-  .contenedor__productos .subtitulo h3 {
-    margin: 0;
-    font-family: "Corinthia", cursive;
-    line-height: 1rem;
-    color: #bc8034;
-    font-size: 2.5rem;
-    font-style: italic;
-  }
+.contenedor__productos .subtitulo {
+  text-align: center;
+}
+.contenedor__productos .subtitulo h2 {
+  margin: 0;
+  color: #90323d;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.486);
+  letter-spacing: 0.1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.contenedor__productos .subtitulo h3 {
+  margin: 0;
+  font-family: "Corinthia", cursive;
+  line-height: 1rem;
+  color: #bc8034;
+  font-size: 2.5rem;
+  font-style: italic;
 }
 
 .contenedor__promo {
