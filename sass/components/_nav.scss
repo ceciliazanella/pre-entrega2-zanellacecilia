@@ -5,6 +5,7 @@ header {
 
     z-index: 1;
 
+    //LOGO//
     .logo {
         max-width: 60%;
     }
@@ -12,6 +13,7 @@ header {
     //--- NAV ---//
     .navbar-nav {
         background-color: $principalcolor;
+        @include shadow (5px);
         border-radius: 0 0 15% 50%;
 
         padding: 2rem;
@@ -21,6 +23,7 @@ header {
 
         @include md-1000 {
             background-color: #00000000;
+            @include shadow (0px);
             margin-top: 0;
         }
     }
@@ -30,7 +33,7 @@ header {
     }
 
     .container {
-        @extend .navbar
+        @extend .navbar;
     }
 
     .navbar-toggler-icon {
@@ -52,13 +55,15 @@ header {
     .nav-link {
         background-color: rgba(0, 0, 0, 0);
         color: $ultraligthcolor;
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 900;
+
+        transition: 0.6s ease-in-out;
 
         &:hover {
             color: $terciarycolor;
-            text-shadow: 1px 1px 1px rgb(0, 0, 0);
-            font-size: 1.2rem;
+            @include text_shadow (1.5px);
+            font-size: 1.1rem;
 
             transition: 0.6s ease-in-out;
         }
@@ -70,8 +75,10 @@ header {
 
     .navbar-toggler {
         color: $ligthcolor;
-        border: solid 1px $ligthcolor;
-        box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.432);
+        border: solid 0.2px $ligthcolor;
+        @include shadow (3px);
+
+        transition: 0.6s ease-in-out;
     }
 
     [data-bs-theme="dark"] {
@@ -82,21 +89,19 @@ header {
     //--- NAV > MENU DESPLEGABLE ---//
     .dropdown-menu {
         background-color: #00000000;
-        box-shadow: inset 0px 0px 10px 0 #5e0b1593;
         border-radius: 50% 20% / 10% 40%;
         padding: 2rem;
 
-        font-size: 1rem;
+        transition: 0.6s ease-in-out;
 
         @include md-1000 {
             background-color: $principalcolor;
+            @include shadow (3px);
             border-radius: 5% 10% 40% 5%;
         }
 
         &:hover {
             color: $terciarycolor;
-
-            font-size: 1.2rem;
 
             transition: 0.6s ease-in-out;
         }
@@ -104,8 +109,10 @@ header {
 
     .dropdown-item {
         color: $ligthcolor;
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-align: right;
+
+        transition: 0.6s ease-in-out;
 
         @include md-1000 {
             padding: 0 1rem 0 0;
@@ -121,7 +128,7 @@ header {
         color: $terciarycolor;
         text-shadow: 1px 1px 1px 0, 0, 0, 0.3;
         font-style: italic;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 900;
         text-shadow: $principalcolor;
 

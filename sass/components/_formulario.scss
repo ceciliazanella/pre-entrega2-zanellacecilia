@@ -1,8 +1,6 @@
 //--- FORMULARIO ---//
 form {
-    @include flex-center;
-    flex-wrap: wrap;
-    flex-direction: column;
+    @include flexbox-column (center, center);
 
     gap: 1rem;
 
@@ -32,7 +30,7 @@ form {
     textarea {
         border: 0;
         border-radius: 0.8rem;
-        box-shadow: inset 3px 3px 4px 0 rgba(20, 20, 20, 0.5);
+        @include shadow_inset (2px);
 
         width: 320px;
         height: 300px;
@@ -71,8 +69,10 @@ form {
         }
     }
 
+    //BOTÓN//
     .boton_value {
         background-color: $principalcolor;
+        @include shadow (3px);
         border: 0;
         color: $ligthcolor;
         font-weight: 900;
@@ -88,9 +88,11 @@ form {
         }
 
         &:hover {
-            box-shadow: 2px 2px 4px 0 $principalcolor;
+            @include shadow_inset (2px);
+
             color: $terciarycolor;
-            text-shadow: $terciarycolor;
+            @include text_shadow (2px);
+            ;
 
             transition: all 0.8s ease-in-out;
             transform: scale(1.1);

@@ -1,8 +1,6 @@
-//SUBTÍTULO SOBRE MÍ//       
+//SECCIÓN SOBRE MÍ//       
 .contenedor__grilla {
-    @include flex-center;
-    flex-wrap: wrap;
-    flex-direction: column;
+    @include flexbox-column (center, center);
 
     .font__detalle {
         @extend %template__detalle;
@@ -23,8 +21,8 @@
             line-height: 1.8rem;
             text-align: right;
 
-            border-right: 3mm ridge $principalcolor;
-            padding-right: 0.5rem;
+            border-right: 2mm dotted $terciarycolor;
+            padding: 0 1.5rem;
         }
 
         .izquierda h4 {
@@ -33,16 +31,21 @@
             text-align: left;
         }
 
+        .parrafo {
+            padding: 0.5;
+        }
+
         .izquierda h5 {
             font-size: 1.2rem;
             line-height: 1.8rem;
             text-align: left;
 
-            border-left: 3mm ridge $principalcolor;
-            padding-left: 0.5rem;
+            border-left: 2mm dotted $terciarycolor;
+            padding: 0 1.5rem;
         }
     }
 
+    //--- SUBTÍTULO / SECCIÓN SOBRE MÍ ---//
     .subtitulo__sobremi {
         padding: 3rem;
         text-align: left;
@@ -51,7 +54,7 @@
             padding-top: 2rem;
             margin-bottom: 0;
             color: $principalcolor;
-            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.466);
+            @include text_shadow (2px);
             font-size: 2rem;
             font-weight: 700;
             letter-spacing: 0.3rem;
@@ -72,11 +75,15 @@
     }
 }
 
-//IMAGÉNES SOBRE MÍ//
+//--- IMAGÉNES / SECCIÓN SOBRE MÍ ---//
 .img {
     width: 100%;
     height: 100%;
     padding: 1rem;
+
+    @include md-1200 {
+        padding: 1rem 0;
+    }
 
     & .rigth {
         border-radius: 20% 10%;

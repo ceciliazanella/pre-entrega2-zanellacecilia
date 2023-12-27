@@ -13,12 +13,7 @@ body {
         padding-top: 2rem;
         border-radius: 0 0 15% 0;
 
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-
-        justify-items: center;
-        align-content: center;
+        @include flexbox-column (center, center);
 
         overflow: hidden;
 
@@ -34,7 +29,5 @@ body {
         padding-top: 2rem;
 
         @include flexbox-column (center, center);
-        flex-wrap: wrap;
-        flex-direction: column;
     }
 }

@@ -1,5 +1,5 @@
 //--- BOTONES ---//
-
+//BOTÓN SÓLO CONTORNO//
 .boton_outline {
     & h5 {
         color: $ligthcolor;
@@ -12,20 +12,23 @@
         margin-bottom: 0;
         border: 0.1rem;
         border-radius: 10px 100px / 120px;
-        box-shadow: 3px 3px 4px 0 rgba(20, 20, 20, 0.5);
+        @include shadow (4px);
 
         transition: all 0.6s ease-in-out;
 
         &:hover {
             background-color: $ligthcolor;
+            @include shadow_inset(2px);
 
             color: $ultraligthcolor;
+            @include text_shadow (1.5px);
 
             transition: all 0.6s ease-in-out;
         }
     }
 }
 
+//BOTÓN CON FONDO PLENO OSCURO//
 .boton {
     & h5 {
         color: $ligthcolor;
@@ -38,15 +41,16 @@
         margin-bottom: 0;
         background-color: $ultraligthcolor;
         border-radius: 10px 100px / 120px;
-        box-shadow: inset 0px 0px 8px 0 $principalcolor;
-        box-shadow: 4px 4px 8px 0 rgba(20, 20, 20, 0.39);
+        @include shadow (3px);
 
         transition: all 0.8s ease-in-out;
 
         &:hover {
             background-color: $principalcolor;
+            @include shadow_inset(2px);
 
             color: $terciarycolor;
+            @include text_shadow (1.5px);
 
             transform: scale(1.2);
             transition: all 0.8s ease-in-out;

@@ -7,14 +7,10 @@ $terciarycolor: #bc8034;
 $ligthcolor: #8c7a6b;
 $ultraligthcolor: #d9cab3;
 
-//TIPOGRAFÍAS//
+//--- TIPOGRAFÍAS ---//
 /*FONT FAMILIES*/
 $principalfont: "Lato", sans-serif;
 $decorativefont: "Corinthia", cursive;
-
-//DETALLES PARA TIPOGRAFIAS//
-/*SOMBRAS*/
-
 
 //--- TEMPLATES ---//
 //DETALLES PARA TIPOGRAFIAS//
@@ -29,25 +25,32 @@ $decorativefont: "Corinthia", cursive;
 }
 
 //--- elementos no infinitos ---//
+//CLASE CONTENEDOR//
 .contenedor {
     max-width: 1980px;
     margin: 0 auto;
 }
 
 //MIXINS Y MEDIA QUERIES//
-//H1//
-@mixin h1 {
-    padding: 0;
-    margin: 0;
-    letter-spacing: 0.3rem;
-    color: $principalcolor;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
-    font-size: 2rem;
-    font-weight: 900;
-    text-align: center;
+//SOMBRAS//
+@mixin shadow_inset ($px) {
+    box-shadow: inset $px $px $px rgba(0, 0, 0, 0.5);
 }
 
-//CENTRAR//
+@mixin shadow ($px) {
+    box-shadow: $px $px $px rgba(0, 0, 0, 0.5);
+}
+
+@mixin text_shadow ($px) {
+    text-shadow: $px $px $px rgba(0, 0, 0, 0.5);
+}
+
+@mixin text_shadow_clear {
+    text-shadow: 1.5px 2px 1.5px rgb(255, 255, 255);
+}
+
+//ALINEACIONES Y JUSTIFICACIONES//
+//CENTRAR TODO//
 @mixin flex-center {
     display: flex;
     flex-wrap: wrap;
@@ -55,7 +58,7 @@ $decorativefont: "Corinthia", cursive;
     align-items: center;
 }
 
-//CENTRAR EN COLUMNA//
+//EJE COLUMNA//
 @mixin flexbox-column($justify, $align) {
     display: flex;
     flex-wrap: wrap;
@@ -64,6 +67,19 @@ $decorativefont: "Corinthia", cursive;
     align-content: $align;
 }
 
+//H1//
+@mixin h1 {
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0.3rem;
+    color: $principalcolor;
+    @include text_shadow (2px);
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+//RESPONSIVES//
 //--- RESPONSIVE 720px ---//
 @mixin md-768 {
     @media(min-width: 768px) {
@@ -92,6 +108,7 @@ $decorativefont: "Corinthia", cursive;
     }
 }
 
+// --- --- --- //
 /* ------ RESET ------ */
 * {
     margin: 0;
@@ -139,18 +156,18 @@ main {
     background-color: #ffffff;
     max-width: 1980px;
     margin: 0 auto;
+
+    .contenedor_main {
+        max-width: 1200px;
+
+        @include flex-center;
+
+        align-items: center;
+    }
 }
 
-.contenedor_main {
-    max-width: 1200px;
-
-    @include flex-center;
-    flex-wrap: wrap;
-
-    align-items: center;
-}
-
-//--- TEXTOS / PÁRRAFOS ---//
+//--- CLASES QUE SE REUTILIZAN EN LAS DIFERENTES PAGES ---//
+//TEXTOS / PÁRRAFOS//
 .parrafo {
     padding: 1rem 2rem;
 
@@ -196,7 +213,7 @@ main {
     }
 }
 
-//--- DESCRIPCION DE CADA UNA DE LAS PAGES / SECCIONES ---//
+//HEADER PARA PAGES / SECCIONES//
 .contenedor__seccion {
     background-color: #ffffff;
     width: 100%;
@@ -204,7 +221,6 @@ main {
     padding: 0 2rem;
 
     @include flex-center;
-    flex-wrap: wrap;
     flex-direction: column;
 
     color: $principalcolor;
@@ -226,6 +242,7 @@ main {
     }
 }
 
+//DESCRIPCION DE CADA UNA DE LAS PAGES / SECCIONES//
 .descripcion__seccion {
     background-color: #ffffff;
     width: 100%;
@@ -233,8 +250,6 @@ main {
     padding: 0 4rem;
 
     @include flex-center;
-    flex-wrap: wrap;
-    flex-direction: column;
 
     line-height: 0.5rem;
 
