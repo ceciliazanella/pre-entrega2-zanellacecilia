@@ -12,6 +12,22 @@ $ultraligthcolor: #d9cab3;
 $principalfont: "Lato", sans-serif;
 $decorativefont: "Corinthia", cursive;
 
+//MAPS//
+$colores: (
+    canela: #5e0b15,
+    chocolate: #90323d,
+    miel:#bc8034,
+    anis: #8c7a6b,
+    azucar: #d9cab3,
+);
+
+//GENERACIÓN DE COLORES CON CICLOS DE REPETICIÓN//
+@each $ingrediente, $color in $colores {
+    .color-#{$ingrediente} {
+        color: #{$color};
+    }
+}
+
 //--- TEMPLATES ---//
 //DETALLES PARA TIPOGRAFIAS//
 %template__detalle {
@@ -79,7 +95,27 @@ $decorativefont: "Corinthia", cursive;
     text-align: center;
 }
 
+//TEXTOS SOBRE FONDOS ALTERNATIVOS//
+@mixin color-texto($bg) {
+    background-color: $bg;
+
+    @if (lightness($bg) > 50) {
+        color: $principalcolor;
+    }
+
+    @else {
+        color: $ultraligthcolor
+    }
+}
+
 //RESPONSIVES//
+//--- RESPONSIVE 420px ---//
+@mixin md-420 {
+    @media(min-width: 420px) {
+        @content;
+    }
+}
+
 //--- RESPONSIVE 480px ---//
 @mixin md-480 {
     @media(min-width: 480px) {
@@ -87,9 +123,30 @@ $decorativefont: "Corinthia", cursive;
     }
 }
 
+//--- RESPONSIVE 520px ---//
+@mixin md-520 {
+    @media(min-width: 520px) {
+        @content;
+    }
+}
+
+//--- RESPONSIVE 620px ---//
+@mixin md-620 {
+    @media(min-width: 620px) {
+        @content;
+    }
+}
+
 //--- RESPONSIVE 720px ---//
 @mixin md-768 {
     @media(min-width: 768px) {
+        @content;
+    }
+}
+
+//--- RESPONSIVE 820px ---//
+@mixin md-820 {
+    @media(min-width: 820px) {
         @content;
     }
 }
@@ -116,7 +173,17 @@ $decorativefont: "Corinthia", cursive;
 }
 
 //KEYFRAMES//
-@keyframes rebotar {
+@keyframes rebotarLugar {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(0%) translateY(15%);
+    }
+}
+
+@keyframes rebotarDesplazo {
     from {
         transform: translateX(0%);
     }
@@ -136,7 +203,7 @@ $decorativefont: "Corinthia", cursive;
     }
 }
 
-@keyframes cambioColor {
+@keyframes cambio__borde {
     0% {
         -webkit-text-stroke-color: #bc8034;
     }
@@ -147,6 +214,41 @@ $decorativefont: "Corinthia", cursive;
 
     100% {
         -webkit-text-stroke-color: #5e0b15;
+    }
+}
+
+@keyframes cambio__color {
+    0% {
+        color: #d9cab3;
+    }
+
+    50% {
+        color: #bc8034;
+    }
+
+    100% {
+        color: #90323d;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes cambiarUltraligth {
+    from {
+        color: #ffffff00;
+    }
+
+    to {
+        color: $ultraligthcolor;
+    }
+}
+
+@keyframes cambiarTerciary {
+    from {
+        color: #ffffff00;
+    }
+
+    to {
+        color: $terciarycolor;
     }
 }
 
@@ -191,6 +293,8 @@ body {
     background-color: #ffffff;
     max-width: 1980px;
     margin: 0 auto;
+
+    @include flex-center;
 }
 
 /* ------ MAIN ------ */
@@ -215,13 +319,19 @@ main {
 
     & h2 {
         color: $terciarycolor;
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-style: italic;
         font-weight: 600;
         line-height: 2rem;
         text-align: center;
 
         margin-bottom: 0;
+
+        @include color-texto($principalcolor);
+
+        @include md-1000 {
+            @include color-texto($ultraligthcolor);
+        }
     }
 
     & h3 {
@@ -310,4 +420,15 @@ main {
         font-style: italic;
         text-align: center;
     }
+}
+
+//ANIMACIONES PARA ÍCONOS DE SECCIONES//
+.animation__icon {
+    margin-bottom: 1rem;
+
+    animation-name: rebotarLugar;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
 }

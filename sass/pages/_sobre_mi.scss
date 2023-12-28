@@ -81,6 +81,9 @@
     height: 100%;
     padding: 1rem;
 
+    object-fit: cover;
+    overflow: hidden;
+
     @include md-1200 {
         padding: 1rem 0;
     }
