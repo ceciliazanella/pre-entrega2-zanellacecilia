@@ -81,6 +81,13 @@ footer {
 
             .ired {
                 width: 2.8em;
+
+                transition: all 0.4s ease-in-out;
+
+                &:hover {
+                    transition: all 0.4s ease-in-out;
+                    transform: rotate(360deg);
+                }
             }
         }
     }
