@@ -451,11 +451,11 @@ form .boton_value:hover {
 }
 
 body .header_wrapper {
-  background-image: url(../imagenes/image_index/portada.svg);
+  background-image: url(../imagenes/image_index/portada/portada_index.webp);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: linear-gradient(#5e0b15, rgba(94, 11, 21, 0.3019607843), rgba(94, 11, 21, 0.2549019608), rgba(94, 11, 21, 0)), url(../imagenes/image_index/portada.svg);
+  background-image: linear-gradient(#5e0b15, rgba(94, 11, 21, 0.3019607843), rgba(94, 11, 21, 0.2549019608), rgba(94, 11, 21, 0)), url(../imagenes/image_index/portada/portada_index.webp);
   width: 100%;
   padding-top: 2rem;
   border-radius: 0 0 15% 0;
@@ -680,7 +680,7 @@ footer .contenedor__redes ul .ired:hover {
 }
 
 .contenedor__h1 {
-  background-color: rgba(94, 11, 21, 0.3294117647);
+  background: radial-gradient(#5e0b15, rgba(94, 11, 21, 0.2470588235));
   border-radius: 5% 5% 15% 5%;
   min-width: 450px;
   padding: 2rem;
@@ -712,7 +712,7 @@ footer .contenedor__redes ul .ired:hover {
   font-size: 4.6rem;
   line-height: 0.8;
   animation-name: cambiarUltraligth;
-  animation-duration: 9s;
+  animation-duration: 2s;
 }
 .contenedor__h1 h3 {
   color: #bc8034;
@@ -720,7 +720,7 @@ footer .contenedor__redes ul .ired:hover {
   font-size: 2.6rem;
   font-weight: 700;
   animation-name: cambiarTerciary;
-  animation-duration: 12s;
+  animation-duration: 4s;
 }
 .contenedor__h1 h4 {
   color: #d9cab3;
@@ -728,7 +728,7 @@ footer .contenedor__redes ul .ired:hover {
   font-size: 1.6rem;
   font-weight: 900;
   animation-name: cambiarUltraligth;
-  animation-duration: 12s;
+  animation-duration: 2s;
 }
 
 .contenedor__destacado {

@@ -1,6 +1,6 @@
     //--- HEADER > H1 / INDEX ---//
     .contenedor__h1 {
-        background-color: #5e0b1554;
+        background: radial-gradient(#5e0b15, #5e0b153f);
         border-radius: 5% 5% 15% 5%;
 
         min-width: 450px;
@@ -31,7 +31,7 @@
             line-height: 0.8;
 
             animation-name: cambiarUltraligth;
-            animation-duration: 9s;
+            animation-duration: 2s;
         }
 
         & h3 {
@@ -41,7 +41,7 @@
             font-weight: 700;
 
             animation-name: cambiarTerciary;
-            animation-duration: 12s;
+            animation-duration: 4s;
         }
 
         & h4 {
@@ -51,7 +51,7 @@
             font-weight: 900;
 
             animation-name: cambiarUltraligth;
-            animation-duration: 12s;
+            animation-duration: 2s;
         }
     }
 
