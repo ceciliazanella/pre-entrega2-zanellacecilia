@@ -451,11 +451,11 @@ form .boton_value:hover {
 }
 
 body .header_wrapper {
-  background-image: url(../imagenes/image_index/portada/portada_index.webp);
+  background-image: url(../imagenes/images_index/portada/portada_index.webp);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: linear-gradient(#5e0b15, rgba(94, 11, 21, 0.3019607843), rgba(94, 11, 21, 0.2549019608), rgba(94, 11, 21, 0)), url(../imagenes/image_index/portada/portada_index.webp);
+  background-image: linear-gradient(#5e0b15, rgba(94, 11, 21, 0.3019607843), rgba(94, 11, 21, 0.2549019608), rgba(94, 11, 21, 0)), url(../imagenes/images_index/portada/portada_index.webp);
   width: 100%;
   padding-top: 2rem;
   border-radius: 0 0 15% 0;
@@ -952,7 +952,7 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 .contenedor__productos .enlace__tortas {
-  background-image: url(../imagenes/image_index/tortas_artesanales.svg);
+  background-image: url(../imagenes/images_index/tarjetas/tortas_artesanales.webp);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: contain;
@@ -977,7 +977,7 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 .contenedor__productos .enlace__pasteleria {
-  background-image: url(../imagenes/image_index/pastelería_creativa.svg);
+  background-image: url(../imagenes/images_index/tarjetas/pastelería_creativa.webp);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: cover;
@@ -1002,7 +1002,7 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 .contenedor__productos .enlace__dulce {
-  background-image: url(../imagenes/image_index/mesa_dulce.svg);
+  background-image: url(../imagenes/images_index/tarjetas/mesa_dulce.webp);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -1041,7 +1041,7 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 .contenedor__productos .enlace__lunch {
-  background-image: url(../imagenes/image_index/servicio_de_luch.svg);
+  background-image: url(../imagenes/images_index/tarjetas/servicio_lunch.webp);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
