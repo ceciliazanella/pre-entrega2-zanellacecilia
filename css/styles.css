@@ -1,11 +1,6 @@
 @charset "UTF-8";
-/*FONT FAMILIES*/
-:root {
-  --font-weight: 700;
-  --font-style: italic;
-  --color: #bc8034;
-}
-
+/*--- VARIABLES ---*/
+/*--- COLORES ---*/
 .color-canela {
   color: #5e0b15;
 }
@@ -26,6 +21,14 @@
   color: #d9cab3;
 }
 
+/*--- TIPOGRAFÍA ---*/
+:root {
+  --font-weight: 700;
+  --font-style: italic;
+  --color: #bc8034;
+}
+
+/*--- TEMPLATES ---*/
 .contenedor__menu .font__detalle, .grilla_tortas .font__detalle, .contenedor__grilla .font__detalle {
   font-style: italic;
   font-weight: 700;
@@ -36,11 +39,15 @@
   font-weight: 900;
 }
 
+/*--- elementos no infinitos ---*/
 .contenedor {
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/*--- MIXINS Y MEDIA QUERIES ---*/
+/*--- RESPONSIVES ---*/
+/*---KEYFRAMES ---*/
 @keyframes rebotarLugar {
   from {
     transform: translateX(0%);
@@ -104,7 +111,7 @@
     color: #bc8034;
   }
 }
-/* ------ RESET ------ */
+/*--- RESET ---*/
 * {
   margin: 0;
   padding: 0;
@@ -137,7 +144,7 @@ hr {
   z-index: 2;
 }
 
-/* ------ BODY ------ */
+/*--- BODY ---*/
 body {
   background-color: #ffffff;
   max-width: 1980px;
@@ -148,7 +155,7 @@ body {
   align-items: center;
 }
 
-/* ------ MAIN ------ */
+/*--- MAIN ---*/
 main {
   background-color: #ffffff;
   max-width: 1980px;
@@ -163,6 +170,7 @@ main .contenedor_main {
   align-items: center;
 }
 
+/*--- CLASES QUE SE REUTILIZAN EN LAS DIFERENTES PAGES ---*/
 .parrafo {
   padding: 1rem 2rem;
 }
@@ -326,6 +334,7 @@ main .contenedor_main {
   transition: all 0.8s ease-in-out;
 }
 
+/*--- CAROUSEL ---*/
 .carousel {
   width: 65%;
   margin: 0 auto;
@@ -356,6 +365,7 @@ main .contenedor_main {
   border-radius: 50% 20%/10% 40%;
 }
 
+/*--- FORMULARIO ---*/
 form {
   display: flex;
   flex-wrap: wrap;
@@ -450,7 +460,8 @@ form .boton_value:hover {
   transform: scale(1.1);
 }
 
-body .header_wrapper {
+/*--- HEADER INDEX ---*/
+.header_wrapper {
   background-image: url(../imagenes/images_index/portada/portada_index.webp);
   background-size: cover;
   background-position: center;
@@ -469,7 +480,9 @@ body .header_wrapper {
   font-family: "Lato", sans-serif;
   font-weight: 900;
 }
-body .header_seccion {
+
+/*--- HEADER PAGES / SECCIONES ---*/
+.header_seccion {
   background-color: #5e0b15;
   width: 100%;
   max-height: 240px;
@@ -481,11 +494,13 @@ body .header_seccion {
   align-content: center;
 }
 
-/* ------ BODY > HEADER > NAV ------ */
+/*--- HEADER ---*/
 header {
   max-width: 1980px;
   margin: 0 auto;
   z-index: 1;
+  /*--- LOGO ---*/
+  /*--- NAV ---*/
 }
 header .logo {
   max-width: 60%;
@@ -595,7 +610,7 @@ header .dropdown-item:hover {
   transform: scale 1.1;
 }
 
-/* ------ FOOTER ------ */
+/*--- FOOTER ---*/
 footer {
   background-color: #ffffff;
   padding: 4rem;
@@ -604,6 +619,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  /*--- REDES SOCIALES ---*/
 }
 @media (min-width: 1024px) {
   footer .contenedor__footer {

@@ -1,11 +1,11 @@
-/* ------ BODY > HEADER > NAV ------ */
+/*--- HEADER ---*/
 header {
     max-width: 1980px;
     margin: 0 auto;
 
     z-index: 1;
 
-    //LOGO//
+    /*--- LOGO ---*/
     .logo {
         max-width: 60%;
 
@@ -17,7 +17,7 @@ header {
         }
     }
 
-    //--- NAV ---//
+    /*--- NAV ---*/
     .navbar-nav {
         background: linear-gradient(#5e0b15, #90323d, #5e0b15b7, #5e0b15a4, #90323d, #5e0b15);
         @include shadow (5px);

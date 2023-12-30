@@ -1,33 +1,31 @@
-//--- HEADER PARA INDEX ---//
-body {
-    .header_wrapper {
-        background-image: url(../imagenes/images_index/portada/portada_index.webp);
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        background-image: linear-gradient(#5e0b15, #5e0b154d, #5e0b1541, #5e0b1500),
-            url(../imagenes/images_index/portada/portada_index.webp);
+/*--- HEADER INDEX ---*/
+.header_wrapper {
+    background-image: url(../imagenes/images_index/portada/portada_index.webp);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: linear-gradient(#5e0b15, #5e0b154d, #5e0b1541, #5e0b1500),
+        url(../imagenes/images_index/portada/portada_index.webp);
 
-        width: 100%;
-        padding-top: 2rem;
-        border-radius: 0 0 15% 0;
+    width: 100%;
+    padding-top: 2rem;
+    border-radius: 0 0 15% 0;
 
-        @include flexbox-column (center, center);
+    @include flexbox-column (center, center);
 
-        overflow: hidden;
-        object-fit: cover;
+    overflow: hidden;
+    object-fit: cover;
 
-        font-family: $principalfont;
-        font-weight: 900;
-    }
+    font-family: $principalfont;
+    font-weight: 900;
+}
 
-    //--- HEADER PARA PAGES / SECCIONES ---//
-    .header_seccion {
-        background-color: $principalcolor;
-        width: 100%;
-        max-height: 240px;
-        padding-top: 2rem;
+/*--- HEADER PAGES / SECCIONES ---*/
+.header_seccion {
+    background-color: $principalcolor;
+    width: 100%;
+    max-height: 240px;
+    padding-top: 2rem;
 
-        @include flexbox-column (center, center);
-    }
+    @include flexbox-column (center, center);
 }

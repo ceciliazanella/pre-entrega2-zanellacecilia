@@ -1,23 +1,11 @@
-//--- VARIABLES ---//
+/*--- VARIABLES ---*/
 
-//COLORES//
+/*--- COLORES ---*/
 $principalcolor: #5e0b15;
 $secundarycolor: #90323d;
 $terciarycolor: #bc8034;
 $ligthcolor: #8c7a6b;
 $ultraligthcolor: #d9cab3;
-
-//--- TIPOGRAFÍAS ---//
-/*FONT FAMILIES*/
-$principalfont: "Lato", sans-serif;
-$decorativefont: "Corinthia", cursive;
-
-//DESTACADOS TIPOGRAFÍAS//
-:root {
-    --font-weight: 700;
-    --font-style: italic;
-    --color: #bc8034;
-}
 
 //MAPS//
 $colores: (
@@ -35,7 +23,19 @@ $colores: (
     }
 }
 
-//--- TEMPLATES ---//
+/*--- TIPOGRAFÍA ---*/
+// FONT FAMILIES //
+$principalfont: "Lato", sans-serif;
+$decorativefont: "Corinthia", cursive;
+
+//DESTACADOS TIPOGRAFÍAS//
+:root {
+    --font-weight: 700;
+    --font-style: italic;
+    --color: #bc8034;
+}
+
+/*--- TEMPLATES ---*/
 //DETALLES PARA TIPOGRAFIAS//
 %template__detalle {
     font-style: italic;
@@ -47,14 +47,14 @@ $colores: (
     font-weight: 900;
 }
 
-//--- elementos no infinitos ---//
+/*--- elementos no infinitos ---*/
 //CLASE CONTENEDOR//
 .contenedor {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-//MIXINS Y MEDIA QUERIES//
+/*--- MIXINS Y MEDIA QUERIES ---*/
 //SOMBRAS//
 @mixin shadow_inset ($px) {
     box-shadow: inset $px $px $px rgba(0, 0, 0, 0.5);
@@ -115,7 +115,7 @@ $colores: (
     }
 }
 
-//RESPONSIVES//
+/*--- RESPONSIVES ---*/
 //--- RESPONSIVE 420px ---//
 @mixin md-420 {
     @media(min-width: 420px) {
@@ -179,7 +179,7 @@ $colores: (
     }
 }
 
-//KEYFRAMES//
+/*---KEYFRAMES ---*/
 @keyframes rebotarLugar {
     from {
         transform: translateX(0%);
@@ -260,7 +260,8 @@ $colores: (
 }
 
 // --- --- --- //
-/* ------ RESET ------ */
+
+/*--- RESET ---*/
 * {
     margin: 0;
     padding: 0;
@@ -295,7 +296,7 @@ hr {
     z-index: 2;
 }
 
-/* ------ BODY ------ */
+/*--- BODY ---*/
 body {
     background-color: #ffffff;
     max-width: 1980px;
@@ -304,7 +305,7 @@ body {
     @include flex-center;
 }
 
-/* ------ MAIN ------ */
+/*--- MAIN ---*/
 main {
     background-color: #ffffff;
     max-width: 1980px;
@@ -319,7 +320,7 @@ main {
     }
 }
 
-//--- CLASES QUE SE REUTILIZAN EN LAS DIFERENTES PAGES ---//
+/*--- CLASES QUE SE REUTILIZAN EN LAS DIFERENTES PAGES ---*/
 //TEXTOS / PÁRRAFOS//
 .parrafo {
     padding: 1rem 2rem;

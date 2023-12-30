@@ -1,4 +1,4 @@
-//--- FORMULARIO ---//
+/*--- FORMULARIO ---*/
 form {
     @include flexbox-column (center, center);
 
@@ -69,7 +69,7 @@ form {
         }
     }
 
-    //BOTÓN//
+    //BOTÓN VALUE//
     .boton_value {
         background-color: $principalcolor;
         @include shadow (3px);
