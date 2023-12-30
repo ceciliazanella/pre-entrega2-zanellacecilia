@@ -19,7 +19,7 @@ header {
 
     //--- NAV ---//
     .navbar-nav {
-        background-color: $principalcolor;
+        background: linear-gradient(#5e0b15, #90323d, #5e0b15b7, #5e0b15a4, #90323d, #5e0b15);
         @include shadow (5px);
         border-radius: 0 0 15% 50%;
 
@@ -29,7 +29,7 @@ header {
         gap: 1rem;
 
         @include md-1000 {
-            background-color: #00000000;
+            background: #00000000;
             @include shadow (0px);
             margin-top: 0;
         }
@@ -105,6 +105,7 @@ header {
             background-color: $principalcolor;
             @include shadow (3px);
             border-radius: 5% 10% 40% 5%;
+            width: 250px;
         }
 
         &:hover {

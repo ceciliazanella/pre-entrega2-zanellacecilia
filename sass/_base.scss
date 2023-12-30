@@ -12,6 +12,13 @@ $ultraligthcolor: #d9cab3;
 $principalfont: "Lato", sans-serif;
 $decorativefont: "Corinthia", cursive;
 
+//DESTACADOS TIPOGRAFÍAS//
+:root {
+    --font-weight: 700;
+    --font-style: italic;
+    --color: #bc8034;
+}
+
 //MAPS//
 $colores: (
     canela: #5e0b15,
@@ -43,7 +50,7 @@ $colores: (
 //--- elementos no infinitos ---//
 //CLASE CONTENEDOR//
 .contenedor {
-    max-width: 1980px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -321,13 +328,15 @@ main {
         color: $terciarycolor;
         font-size: 1rem;
         font-style: italic;
-        font-weight: 600;
+        font-weight: 500;
         line-height: 2rem;
         text-align: center;
 
+        padding: 0 1rem;
         margin-bottom: 0;
 
         @include color-texto($principalcolor);
+        border-radius: 20% 10%;
 
         @include md-1000 {
             @include color-texto($ultraligthcolor);
@@ -352,6 +361,12 @@ main {
         text-align: center;
 
         margin-bottom: 0;
+
+        .destacado {
+            font-weight: var(--font-weight);
+            font-style: var(--font-style);
+            color: var(--color);
+        }
     }
 
     & h5 {
@@ -401,7 +416,7 @@ main {
     height: 250px;
     padding: 0 4rem;
 
-    @include flex-center;
+    @include flexbox-column(center, center);
 
     line-height: 0.5rem;
 

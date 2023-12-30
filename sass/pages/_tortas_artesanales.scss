@@ -8,10 +8,26 @@
         @extend %template__detalle;
     }
 
+    .lista__butter {
+        @include color-texto($principalcolor);
+        padding: 2rem 1rem;
+
+        border-radius: 15% 10%;
+
+        @include md-1000 {
+            @include color-texto($ultraligthcolor);
+        }
+    }
+
+    .lista__fondant {
+        @extend .lista__butter;
+        border-radius: 5% 20%;
+    }
+
     @include md-1024 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 450px 300px 450px 1450px 650px;
+        grid-template-rows: 450px 350px 450px 1950px 650px;
 
         width: 1024px;
         padding: 0;
@@ -65,14 +81,8 @@
         transition: all 0.8s ease;
     }
 
-    li {
-        @include color-texto($principalcolor);
-        border-radius: 1.5rem;
-        padding: 1rem;
-
-        @include md-1000 {
-            @include color-texto($ultraligthcolor);
-        }
+    .parrafo li {
+        padding: 0.8rem 0;
     }
 }
 

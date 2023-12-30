@@ -4,55 +4,66 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
     <link rel="icon" type="image/jpg" href="imagenes/favicon/favicon.ico" />
+    <!-- Tipografías -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cssgram/0.1.10/cssgram.min.css">
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Corazón de Chocolate / HOME</title>
+    <!-- Title INDEX -->
+    <title>Corazón de Chocolate | Pastelería Creativa Artesanal</title>
+    <!-- Meta Descripción -->
+    <meta name="description" content="Fiel a mi vocación de Maestra Pastelera Profesional; mi Pastelería Creativa es totalmente Artesanal. 
+    Corazón de Chocolate nació en 2010 y desde entonces no dejo de cocinar y producir con toda mi alma creativa, amor y corazón. 
+    Me dedico a ofrecer pastelería netamente de calidad usando las mejores materias primas del mercado.">
+    <meta name="keywords" content="pastelería, chocolate, tortas, mesa dulce, servicio lunch">
+
 </head>
 
 <body>
 
     <div class="header_wrapper">
-
+        <!-- Bloque Contenedor / Elementos No Infinitos -->
         <header class="contenedor">
 
             <div class="navbar navbar-expand-lg" data-bs-theme="dark">
 
                 <div class="container">
-
-                    <a class="logo pull-left" href="./index.html"><img src="./imagenes/image_index/Logo.png"
+                    <!-- Logo -->
+                    <a class="logo pull-left" href="./index.html"><img src="./imagenes/image_index/Logo.svg"
                             alt="Logo Corazón de Chocolate"></a>
-
+                    <!-- Botón Menú Hamburguesa -->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
+                    <!-- Nav -->
                     <nav class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="./index.html">HOME</a>
-                            </li>
+                            </li> <!-- Esta es la Page Activa -->
                             <li class="nav-item">
                                 <a class="nav-link" href="./pages/sobre_mi.html">SOBRE MI</a>
                             </li>
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown"> <!-- Item que abre Menú Desplegable -->
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     PRODUCTOS
                                 </a>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu"> <!-- Menú Desplegable -->
                                     <li><a class="dropdown-item" href="./pages/tortas_artesanales.html">tortas
                                             artesanales</a></li>
-                                    <li><a class="dropdown-item" href="#pastelería-creativa">pastelería creativa</a>
+                                    <li><a class="dropdown-item" href="#pasteleria-creativa">pastelería creativa</a>
                                     </li>
                                     <li><a class="dropdown-item" href="#mesa-dulce">mesa dulce</a></li>
                                     <li><a class="dropdown-item" href="#servicio-lunch">servicio de lunch</a></li>
@@ -69,7 +80,7 @@
 
             </div>
 
-            <div class="contenedor__h1">
+            <div class="contenedor__h1"> <!-- Bloque Contenedor del H1 -->
                 <p>
                 <h1>Pastelería Creativa</h1>
                 <h3>100% Artesanal</h3>
@@ -83,12 +94,12 @@
 
     <main>
 
-        <section class="contenedor contenedor__destacado">
+        <section class="contenedor contenedor__destacado"> <!-- Bloque Destacado / Filosofía -->
 
             <div>
                 <p>
                 <h4>Mi filosofía parte del nutrir con amor los hogares de quienes eligen y
-                    confían en Corazón de Chocolate:</h4>
+                    confían en <span class="destacado">Corazón de Chocolate:</span></h4>
                 <h3>La mejor materia prima, producción artesanal; dedicación y amor por lo que
                     hago.</h3>
                 </p><br>
@@ -101,41 +112,38 @@
         </section>
 
         <section>
-
+            <!-- Carousel -->
             <article class="carousel slide" data-bs-ride="carousel">
 
                 <div class="carousel-item active">
-                    <img src="./imagenes/image_index/pexels-maddy-freddie-7816720.jpg" alt="Muffins" class="xpro2">
+                    <img src="./imagenes/image_index/397967342_256147633747832_6705351292942905358_n.svg"
+                        alt="Lemmon Pie" class="xpro2">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="./imagenes/image_index/pexels-dima-valkov-3734025.jpg" alt="Café con Brownies"
+                    <img src="./imagenes/image_index/397414034_3473181516344852_89354772055595499_n.svg"
+                        alt="Chocotorta de Feliz Cumpleaños" class="xpro2">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./imagenes/image_index/397920869_379192684546687_7141520103989563529_n.svg"
+                        alt="Torta Buttercream para Cumpleaños Número Ochenta" class="xpro2">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./imagenes/image_index/397985565_281500147622911_1373333761936157417_n.svg"
+                        alt="Torta de Chocolate" class="xpro2">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./imagenes/image_index/398017083_253150614082236_8651267590451095288_n.svg"
+                        alt="Cookies de Vainilla, Brownies de Chocolate y Alfajores de Maizena y Dulce de Leche"
                         class="xpro2">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="./imagenes/image_index/pexels-valeria-boltneva-7646670.jpg"
-                        alt="Tarteleta de Frutos Rojos" class="xpro2">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="./imagenes/image_index/pexels-marta-dzedyshko-7421263.jpg" alt="Crumble de Manzana"
-                        class="xpro2">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="./imagenes/image_index/pexels-valeria-boltneva-7646657.jpg" alt="Muffin Decorado"
-                        class="xpro2">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="./imagenes/image_index/pexels-milan-4639334.jpg"
-                        alt="Torta de tres pisos bañada en Chocolate" class="xpro2">
-                </div>
-
-                <div class="carousel-item">
-                    <img src="./imagenes/image_index/pexels-shvets-production-7525196.jpg"
-                        alt="Torta de Chocolate y Crema con Frutillas" class="xpro2">
+                    <img src="./imagenes/image_index/398024307_641045888238234_5262010220509904602_n.svg"
+                        alt="Mini Porción Chocotorta en Vasitos" class="xpro2">
                 </div>
 
             </article>
@@ -143,26 +151,27 @@
         </section>
 
         <section class="contenedor">
-
+            <!-- Bloque Tarjetas de Productos -->
             <div class="titulo__productos">
-                <h2>PRODUCTOS</h2>
+                <h2>MIS PRODUCTOS</h2>
             </div>
 
             <article class="contenedor__productos">
 
                 <div class="parrafo parrafo__tortas">
                     <p>
-                    <h4>Mis Tortas Artesanales tienen esa mezcla proveniente del estudio, la disciplina y la
-                        templanza
-                        paralela a la experiencia y la investigación autónoma.</h4><br>
-                    <h4>Elaboro cada una de ellas con materia prima de primera calidad; depositando el corazón y el
+                    <h4>Mis tortas artesanales tienen esa mezcla proveniente del estudio, la disciplina y la
+                        templanza;
+                        paralela a la experiencia y a la investigación autónoma.</h4><br>
+                    <h4>Elaboro cada una de mis tortas con materia prima de primera calidad; depositando el corazón y el
                         amor
                         en su preparación.</h4><br>
-                    <h4>El compromiso con mi vocación, la experiencia y el recorrido, me llevaron a desempeñarme
-                        creativa y originalmente en cada una de mis creaiones.
-                        Únicas y excéntricas; pero que se originan con la calidez y el cuidado propio de lo casero
-                        del
-                        hogar.</h4>
+                    <h4>El compromiso con mi vocación, mi experiencia y recorrido; me llevaron a desempeñarme
+                        creativa y originalmente en cada una de mis creaciones.</h4><br>
+                    <h4><span class="destacado">Únicas y excéntricas; que se originan con la cálidez y el cuidado
+                            artesanal propio de lo casero
+                            del
+                            hogar.</span></h4>
                     </p>
                 </div>
 
@@ -185,11 +194,15 @@
 
                 <div class="parrafo parrafo__pasteleria">
                     <p>
-                    <h4>Los diseños más originales me acompañan a festejos de grandes aniversarios, cumpleaños,
-                        celebraciones, reuniones.</h4><br>
-                    <h4>Cada temática tiene una impronta personal y particular que se lleva de mi accionar mucha
-                        dedicación y amor.</h4><br>
-                    <h4>Desde golosinas llenas de detalles hasta tortas de amplios pisos; todo puede tener el diseño
+                    <h4><span class="destacado">Los diseños de tortas, postres, cookies, muffins, golosinas, alfajores,
+                            dulces más originales me
+                            acompañan a festejos de grandes aniversarios, cumpleaños,
+                            celebraciones, reuniones donde se deposita todo el corazón.</span></h4><br>
+                    <h4>Cada temática tiene una impronta personal, única e inigualable; característica de su momento y
+                        persona, que se lleva de mi accionar mucha
+                        dedicación, creatividad y amor.</h4><br>
+                    <h4>Todo es artesanal. Desde las golosinas llenas de detalles, hasta las tortas de tres pisos; todo
+                        puede tener el diseño
                         de
                         tus sueños.</h4>
                     </p>
@@ -214,10 +227,15 @@
 
                 <div class="parrafo parrafo__dulce">
                     <p>
-                    <h4>Alternativas variadas y diseñadas especialmente para diversas ocasiones, de todos mis
-                        productos;
-                        seleccionadas para tu evento especial.</h4><br>
-                    <h4>Opciones idealmente pensadas para ocaciones en las que sólo resta compartir momentos felices
+                    <h4>Ofrezco varias alternativas cuando se trata de compartir momentos especiales. La cocina
+                        artesanal no deja de ser variada y personal.
+                        Las opciones siguen siendo diseñadas de forma exclusiva para diversas ocasiones en las que se
+                        requiere el gusto personal.</h4><br>
+                    <h4><span class="destacado">Cada uno de mis productos son seleccionados de corazón, con atención y
+                            cuidado para tu evento
+                            más especial.</span></h4><br>
+                    <h4>Las opciones son idealmente pensadas de forma individual para ocaciones en las que sólo resta
+                        celebrar momentos felices
                         sin
                         que nadie tenga que preocuparse por la comida.</h4>
                     </p>
@@ -242,8 +260,15 @@
 
                 <div class="parrafo parrafo__lunch">
                     <p>
-                    <h4>Un menú para nada informal, super elegante y exquisito, para enaltecer tu gusto.</h4><br>
-                    <h4>Para diferentes tipos de eventos sociales y empresariales.</h4>
+                    <h4>Un menú que para este corazón no es informal.</h4><br>
+                    <h4><span class="destacado">Super creativo, elegante y exquisito para enaltecer tu
+                            celebración.</span></h4><br>
+                    <h4>Lo podes elegir para diferentes tipos de eventos familiares, sociales, protocolares y
+                        empresariales.</h4><br>
+                    <h4>Es el servicio que no puede faltar en las reuniones, sumado a que nuestro <span
+                            class="destacado">Corazón de Chocolate</span>;
+                        te hace sentir como si estuvieses en casa; festejando con la cálidez y el amor de tu propio
+                        hogar.</h4>
                     </p>
                 </div>
 
@@ -269,11 +294,11 @@
         </section>
 
         <section class="contenedor">
-
-            <article class="contenedor__promo bg-canela">
+            <!-- Bloque Promoción -->
+            <article class="contenedor__promo">
 
                 <div class="icono__promo">
-                    <img src="./imagenes/icons/promo.png" alt="Ícono de Megáfono">
+                    <img src="./imagenes/icons/promo.svg" alt="Ícono Megáfono">
                 </div>
 
                 <div class="promo">
@@ -286,47 +311,46 @@
 
                 <div class="promo__lista">
                     <ul>
-                        <h4>PAN DULCE</h4><br>
                         <li>
-                            <h5>SOLO</h5>
+                            <h4>PAN DULCE</h4>
+                        </li><br>
+                        <li>
+                            <h5>Solo</h5>
                         </li>
                         <li>
-                            <h5>OREO RELLENO</h5>
+                            <h5>Oreo</h5>
                         </li>
                         <li>
-                            <h5>CHIPS DE CHOCOLATE</h5>
+                            <h5>Chips de Chocolate</h5>
                         </li>
                         <li>
-                            <h5>FRUTOS SECOS</h5>
+                            <h5>Frutos Secos</h5>
                         </li>
                         <li>
-                            <h5>FERRERO Y NUTELLA</h5>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="promo__listado">
-                    <ul>
-                        <h4>BUDÍN</h4><br>
-                        <li>
-                            <h5>DE AMAPOLAS Y LIMÓN</h5>
+                            <h5>Ferrero y Nutela</h5><br>
                         </li>
                         <li>
-                            <h5>DE CHOCOLATE</h5>
+                            <h4>BUDÍN</h4><br>
+                        </li>
+                        <li>
+                            <h5>Amapolas y Limón</h5>
+                        </li>
+                        <li>
+                            <h5>Chocolate</h5>
                         </li>
                     </ul>
                 </div>
 
                 <div class="promo__detalle">
-                    <h2>Las Fiestas con</h2>
-                    <h3>Corazón De Chocolate</h3>
+                    <h2>Las FIESTAS con</h2>
+                    <h3>Corazón de Chocolate</h3>
                     <h2>No te cuelgues!</h2>
                 </div>
 
                 <div class="ornamentos">
-                    <img src="./imagenes/icons/navidad.svg" alt="Ornamentos Navideños">
+                    <img src="./imagenes/icons/navidad.svg" alt="Ornamentos de Navidad">
                 </div>
-
+                <!-- Botón | Consultame -->
                 <span class="consultame"><a
                         href="https://api.whatsapp.com/send?phone=+5491165083824&text=Hola! Quería realizar un pedido ¿Me pasarías la información correspondiente para hacerlo? Gracias!"
                         target="_blank">
@@ -338,11 +362,11 @@
         </section>
 
         <section class="contenedor">
-
+            <!-- Bloque Envíos -->
             <article class="contenedor contenedor__envios">
 
                 <div class="icono__envios">
-                    <img src="./imagenes/icons/pedido.svg" alt="Ícono de Carrito de Compras">
+                    <img src="./imagenes/icons/pedido.svg" alt="Ícono Carrito de Compras">
                 </div>
 
                 <div class="envios">
@@ -356,7 +380,7 @@
                 <div class="icono__comprar">
                     <img src="./imagenes/icons/comprar.svg" alt="Corazón con Alas y Flecha">
                 </div>
-
+                <!-- Botón | Comprar -->
                 <span class="comprar"><a
                         href="https://api.whatsapp.com/send?phone=+5491165083824&text=Hola! Quería realizar un pedido ¿Me pasarías la información correspondiente para hacerlo? Gracias!"
                         target="_blank">
@@ -364,13 +388,13 @@
                     </a></span>
 
                 <div class="icono__consulta">
-                    <img src="./imagenes/icons/consulta.svg" alt="Ícono de Dialogo">
+                    <img src="./imagenes/icons/consulta.svg" alt="Ícono de Diálogo">
                 </div>
 
                 <div class="icono__sobre">
                     <img src="./imagenes/icons/consulta2.svg" alt="Sobre con Corazón">
                 </div>
-
+                <!-- Botón | Consulta -->
                 <span class="consulta"><a
                         href="https://api.whatsapp.com/send?phone=+5491165083824&text=Hola! ¿Me pasarías las opciones de envíos disponibles? Gracias!"
                         target="_blank">
@@ -431,7 +455,7 @@
             </div>
 
         </section>
-
+        <!-- Redes Sociales -->
         <section class="contenedor__redes">
             <ul>
                 <li><a href="https://www.instagram.com/corazon.de.chocolate.cz" target="_blank"><img
@@ -442,7 +466,7 @@
         </section>
 
     </footer>
-
+    <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>

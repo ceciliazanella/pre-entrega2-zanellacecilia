@@ -1,6 +1,42 @@
 //SECCIÓN SOBRE MÍ//       
 .contenedor__grilla {
     @include flexbox-column (center, center);
+    min-width: 380px;
+
+    img {
+        width: 380px;
+        height: auto;
+        margin: 0 auto;
+
+        @include md-620 {
+            min-width: 480px;
+        }
+
+        @include md-768 {
+            min-width: 580px;
+        }
+
+        @include md-1000 {
+            min-width: 680px;
+        }
+
+        @include md-1200 {
+            min-width: 580px;
+        }
+    }
+
+    @include md-620 {
+        min-width: 620px;
+    }
+
+    @include md-768 {
+        min-width: 768px;
+    }
+
+    @include md-1000 {
+        min-width: 1000px;
+    }
+
 
     .font__detalle {
         @extend %template__detalle;
@@ -11,7 +47,7 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 800px 800px 800px;
 
-        max-width: 1200px;
+        min-width: 1200px;
         padding: 6rem 0 6rem 0;
 
         justify-content: center;
@@ -83,6 +119,8 @@
 
     object-fit: cover;
     overflow: hidden;
+
+    @include flex-center;
 
     @include md-1200 {
         padding: 1rem 0;

@@ -1,12 +1,12 @@
-/* ------ BODY ------ */
+//--- HEADER PARA INDEX ---//
 body {
     .header_wrapper {
-        background-image: url(../imagenes/image_index/portada.jpg);
+        background-image: url(../imagenes/image_index/portada.svg);
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-        background-image: linear-gradient(#0000008e, rgba(94, 11, 21, 0.329)),
-            url(../imagenes/image_index/portada.jpg);
+        background-image: linear-gradient(#5e0b15, #5e0b154d, #5e0b1541, #5e0b1500),
+            url(../imagenes/image_index/portada.svg);
 
         width: 100%;
         padding-top: 2rem;

@@ -3,7 +3,7 @@
         background-color: #5e0b1554;
         border-radius: 5% 5% 15% 5%;
 
-        width: 450px;
+        min-width: 450px;
         padding: 2rem;
         margin: 8rem auto;
 
@@ -57,13 +57,17 @@
 
     //--- DESTACADO EN INDEX ---//
     .contenedor__destacado {
-        max-width: 750px;
+        min-width: 380px;
         @include flexbox-column (center, center);
 
         padding: 4rem;
 
         text-align: center;
         line-height: 3rem;
+
+        @include md-1000 {
+            max-width: 768px;
+        }
 
         & h3 {
             color: $secundarycolor;
@@ -77,12 +81,19 @@
             color: $terciarycolor;
             font-size: 1.2rem;
             line-height: 1.8rem;
+
+            .destacado {
+                font-weight: var(--font-weight);
+                font-style: var(--font-style);
+                color: var(--color);
+            }
         }
     }
 
     //--- SECCIÓN PRODUCTOS / INDEX ---//
     //TITULO PRODUCTOS//
     .titulo__productos {
+        min-width: 380px;
         padding: 2rem;
         margin: 0 auto;
 
@@ -104,7 +115,9 @@
     .contenedor__productos {
         @include flexbox-column(center, center);
 
-        padding: 0 0 3rem 0;
+        min-width: 380px;
+        padding: 0 2rem 2rem 2rem;
+        margin: 0 auto;
 
         & h4 {
             padding: 1rem 0;
@@ -120,11 +133,12 @@
         @include md-1000 {
             display: grid;
             grid-template-columns: 50% 50%;
-            grid-template-rows: 485px 450px 285px 450px;
+            grid-template-rows: 550px 450px 600px 450px;
 
             align-items: start;
             justify-content: center;
 
+            max-width: 1000px;
             padding: 0 4rem 0 4rem;
 
             gap: 2rem;
@@ -279,7 +293,7 @@
 
         //IMAGEN DE FONDO / SECCIÓN PRODUCTOS INDEX//
         .enlace__tortas {
-            background-image: url(../imagenes/image_index/tortas_artesanales.png);
+            background-image: url(../imagenes/image_index/tortas_artesanales.svg);
             background-size: contain;
             background-repeat: no-repeat;
             background-position: contain;
@@ -305,7 +319,7 @@
         }
 
         .enlace__pasteleria {
-            background-image: url(../imagenes/image_index/pastelería_creativa.png);
+            background-image: url(../imagenes/image_index/pastelería_creativa.svg);
             background-size: contain;
             background-repeat: no-repeat;
             background-position: cover;
@@ -331,7 +345,7 @@
         }
 
         .enlace__dulce {
-            background-image: url(../imagenes/image_index/mesa_dulce.png);
+            background-image: url(../imagenes/image_index/mesa_dulce.svg);
             background-size: contain;
             background-repeat: no-repeat;
             background-position: bottom;
@@ -366,7 +380,7 @@
         }
 
         .enlace__lunch {
-            background-image: url(../imagenes/image_index/servicio_de_luch.png);
+            background-image: url(../imagenes/image_index/servicio_de_luch.svg);
             background-size: contain;
             background-repeat: no-repeat;
             background-position: bottom;
@@ -429,8 +443,10 @@
     //--- BLOQUE PROMOCIÓN / INDEX ---//
     .contenedor__promo {
         background-color: $principalcolor;
-        border-radius: 20% 0 10% 0;
-        padding: 2rem 1.5rem;
+        border-radius: 20% 0 15% 0;
+        min-width: 380px;
+        padding: 0 4rem;
+        padding-bottom: 2rem;
         margin: 0 auto;
 
         gap: 1rem;
@@ -445,13 +461,18 @@
         justify-items: center;
 
         @include md-768 {
-            padding: 4rem 2rem;
+            padding: 4rem;
+            padding-bottom: 6rem;
+
             grid-template-rows: 400px 150px;
+
+            gap: 1rem;
         }
 
         @include md-1000 {
             max-width: 1200px;
-            padding: 4rem;
+            padding-top: 2rem;
+            padding-bottom: 5rem;
             margin: 0 auto;
             border-radius: 20% 0 20% 0;
 
@@ -495,7 +516,8 @@
 
         //ÍCONO DE PROMOCIÓN//
         .icono__promo {
-            width: 150px;
+            width: 100px;
+            padding-top: 4rem;
 
             grid-column: 1/2;
             grid-row: 1/2;
@@ -515,8 +537,27 @@
                 }
             }
 
+            @include md-768 {
+                width: 180px;
+                padding: 1rem;
+            }
+
             @include md-1000 {
                 grid-area: promo;
+
+                align-self: start;
+
+                width: 150px;
+                padding-top: 5rem;
+            }
+
+            @include md-1200 {
+                grid-area: promo;
+
+                align-self: start;
+
+                width: 180px;
+                padding-top: 1rem;
             }
         }
 
@@ -530,7 +571,8 @@
             align-self: end;
 
             text-align: center;
-            letter-spacing: 0.3rem;
+
+            gap: 1.8rem;
 
             & h2 {
                 align-self: center;
@@ -570,7 +612,7 @@
 
                 color: $ultraligthcolor;
                 @include text_shadow (4px);
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 font-weight: 700;
                 line-height: 1.4rem;
                 font-style: italic;
@@ -592,6 +634,7 @@
                 font-family: $decorativefont;
                 font-size: 3.8rem;
                 font-weight: 800;
+                line-height: 1.5rem;
 
                 @include md-768 {
                     font-size: 4.8rem;
@@ -611,23 +654,7 @@
             grid-column: 2/3;
             grid-row: 1/2;
 
-            align-self: flex-start;
-
-            @include md-1000 {
-                grid-area: lista;
-
-                align-self: start;
-            }
-        }
-
-        .promo__listado {
-            padding-top: 8rem;
-            margin: 0;
-
-            grid-column: 2/3;
-            grid-row: 1/2;
-
-            align-self: center;
+            align-self: end;
 
             @include md-1000 {
                 grid-area: lista;
@@ -663,7 +690,7 @@
                 font-size: 1.8rem;
                 font-weight: 700;
                 letter-spacing: 0.22rem;
-                line-height: 2rem;
+                line-height: 1.8rem;
                 text-align: center;
             }
 
@@ -673,10 +700,10 @@
 
                 color: $terciarycolor;
                 @include text_shadow_clear;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 font-weight: 900;
                 letter-spacing: 0.22rem;
-                line-height: 2rem;
+                line-height: 1.2rem;
                 text-align: center;
                 text-transform: uppercase;
 
@@ -685,6 +712,10 @@
                 animation-iteration-count: infinite;
                 animation-direction: alternate;
                 animation-timing-function: ease-in-out;
+
+                @include md-1000 {
+                    font-size: 1.5rem;
+                }
             }
         }
 
@@ -695,6 +726,8 @@
             @include md-1000 {
                 display: block;
                 grid-area: consulta;
+
+                padding-top: 4rem;
 
                 align-self: start;
             }
@@ -716,7 +749,7 @@
             justify-self: center;
 
             @include md-1000 {
-                grid-area: consulta;
+                grid-area: fiesta;
 
                 align-self: end;
                 justify-self: center;
@@ -744,16 +777,38 @@
 
                 transition: all 0.8s ease-in-out;
 
-                @include md-768 {
-                    font-size: 2rem;
-                    padding: 1rem 1rem;
-                }
-
-                @include md-1000 {
-                    font-size: 1rem;
+                @include md-620 {
+                    font-size: 1.2rem;
                     padding: 1rem 1rem;
 
                     grid-area: consulta;
+
+                    align-self: flex-end;
+                }
+
+                @include md-768 {
+                    font-size: 1.5rem;
+                    padding: 1rem 1rem;
+
+                    grid-area: consulta;
+
+                    align-self: flex-end;
+                }
+
+                @include md-1000 {
+                    font-size: 1.2rem;
+                    padding: 1rem 1rem;
+
+                    grid-area: fiesta;
+
+                    align-self: flex-end;
+                }
+
+                @include md-1200 {
+                    font-size: 1.5rem;
+                    padding: 1rem 1rem;
+
+                    grid-area: fiesta;
 
                     align-self: flex-end;
                 }
@@ -774,8 +829,9 @@
     //--- SECTOR ENVÍOS / INDEX ---//
     .contenedor__envios {
         background-color: $ligthcolor;
-        border-radius: 0 20% 0 20%;
+        border-radius: 0 20% 0 25%;
         padding: 4rem;
+        min-width: 380px;
 
         color: $secundarycolor;
 
@@ -789,6 +845,10 @@
         overflow: hidden;
 
         gap: 1rem;
+
+        @include md-620 {
+            gap: 2rem;
+        }
 
         @include md-768 {
             padding: 5rem;
@@ -806,10 +866,10 @@
             grid-template-areas:
                 "icono pedido comprar icono2 consulta";
 
-            padding: 2rem 4rem 3rem 2rem;
+            padding: 4rem;
             margin: 0 auto;
 
-            gap: 1rem;
+            gap: 2rem;
         }
 
         //ÍCONOS BLOQUE ENVÍOS//
@@ -911,7 +971,7 @@
         //ÍCONO PRINCIPAL ENVÍOS / carrito//
         .icono__envios {
             width: 80%;
-     
+
             grid-column: 2/3;
             grid-row: 1/2;
 
@@ -934,7 +994,7 @@
             }
 
             @include md-620 {
-                width: 45%;
+                width: 50%;
             }
 
             @include md-768 {
@@ -965,10 +1025,11 @@
                 display: block;
 
                 width: 70%;
+                margin-bottom: 8rem;
 
                 grid-area: comprar;
 
-                align-self: start;
+                align-self: end;
                 justify-self: start;
 
                 animation-name: rebotarDesplazo;
@@ -1003,6 +1064,31 @@
                 text-align: center;
                 transition: all 0.4s;
 
+                @include md-480 {
+                    padding: 1.5rem 0.8rem;
+                    font-size: 1.5rem;
+                }
+
+                @include md-520 {
+                    padding: 1.5rem 1.8rem;
+                    font-size: 1.8rem;
+                }
+
+                @include md-620 {
+                    padding: 1.5rem 2rem;
+                    font-size: 2rem;
+                }
+
+                @include md-820 {
+                    padding: 1.8rem 2.2rem;
+                    font-size: 2.5rem;
+                }
+
+                @include md-1000 {
+                    padding: 1.2rem 0.5rem;
+                    font-size: 1.2rem;
+                }
+
                 &:hover {
                     background-color: $ultraligthcolor;
                     border-radius: 0.3rem;
@@ -1024,11 +1110,11 @@
                 display: block;
 
                 width: 50%;
-                padding-bottom: 4rem;
+                padding-bottom: 0;
 
                 grid-area: consulta;
 
-                align-self: end;
+                align-self: center;
                 justify-self: center;
 
                 transition: all 0.4s ease-in-out;
@@ -1058,22 +1144,15 @@
 
             @include md-480 {
                 width: 70%;
-                padding-top: 1.2rem;
             }
 
             @include md-520 {
-                width: 60%;
-                padding-top: 1.5rem;
-            }
-
-            @include md-620 {
-                width: 55%;
-                padding-bottom: 1rem;
+                width: 70%;
             }
 
             @include md-768 {
                 width: 70%;
-                padding-top: 3.5rem;
+                padding-top: 2rem;
             }
 
             @include md-820 {
@@ -1098,7 +1177,6 @@
 
             @include md-768 {
                 padding: 0.8rem;
-                font-size: 1rem;
             }
 
             @include md-1000 {
@@ -1120,6 +1198,26 @@
                 font-size: 0.8rem;
                 font-weight: 900;
                 text-align: center;
+
+                @include md-480 {
+                    font-size: 1rem;
+                    padding: 0.8rem;
+                }
+
+                @include md-768 {
+                    font-size: 1.5rem;
+                    padding: 1rem;
+                }
+
+                @include md-1000 {
+                    font-size: 1rem;
+                    padding: 1rem;
+                }
+
+                @include md-1200 {
+                    font-size: 1rem;
+                    padding: 1rem;
+                }
 
                 &:hover {
                     background-color: $ultraligthcolor;
