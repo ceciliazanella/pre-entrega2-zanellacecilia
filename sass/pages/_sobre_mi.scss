@@ -8,6 +8,9 @@
         height: auto;
         margin: 0 auto;
 
+        object-fit: cover;
+        overflow: hidden;
+
         @include md-620 {
             min-width: 480px;
         }
@@ -21,7 +24,7 @@
         }
 
         @include md-1200 {
-            min-width: 580px;
+            min-width: 540px;
         }
     }
 
@@ -45,12 +48,15 @@
     @include md-1200 {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 800px 800px 800px;
+        grid-template-rows: 850px 880px 880px;
 
         min-width: 1200px;
-        padding: 6rem 0 6rem 0;
+        padding: 2rem 0 2rem 0;
 
         justify-content: center;
+        align-items: center;
+
+        gap: 1rem;
 
         .derecha h5 {
             font-size: 1.2rem;
