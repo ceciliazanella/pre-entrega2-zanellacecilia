@@ -111,6 +111,37 @@
     color: #bc8034;
   }
 }
+@keyframes shake-vertical {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  10%, 30%, 50%, 70% {
+    transform: translateY(-8px);
+  }
+  20%, 40%, 60% {
+    transform: translateY(8px);
+  }
+  80% {
+    transform: translateY(6.4px);
+  }
+  90% {
+    transform: translateY(-6.4px);
+  }
+}
+@keyframes tilt-in-right-1 {
+  0% {
+    transform: rotateX(-15deg) translateX(1500px) skewX(15deg);
+    opacity: 0;
+  }
+  50% {
+    transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(15deg) translateX(-150px) skewX(-15deg);
+    opacity: 0;
+  }
+}
 /*--- RESET ---*/
 * {
   margin: 0;
@@ -241,7 +272,7 @@ main .contenedor_main {
   margin: 0;
   letter-spacing: 0.3rem;
   color: #5e0b15;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0, 0, 0, 0.15);
   font-size: 2rem;
   font-weight: 900;
   text-align: center;
@@ -293,6 +324,8 @@ main .contenedor_main {
 
 .boton_outline h5 {
   color: #8c7a6b;
+  background: transparent;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5);
   font-size: 1rem;
   font-weight: 900;
   letter-spacing: 0.2rem;
@@ -301,68 +334,74 @@ main .contenedor_main {
   margin-bottom: 0;
   border: 0.1rem;
   border-radius: 10px 100px/120px;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-  transition: all 0.6s ease-in-out;
+  box-shadow: 0px 5px 10px -5px #000000, -25px 10px 15px 5px rgba(0, 0, 0, 0);
+  transition-property: background-color color 0.8s ease-in-out;
 }
 .boton_outline h5:hover {
-  background-color: #8c7a6b;
-  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.5);
-  color: #d9cab3;
-  text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
-  transition: all 0.6s ease-in-out;
+  color: rgba(0, 0, 0, 0.6);
+  background: #8c7a6b;
+  text-shadow: 3px 2px 3px rgba(255, 255, 255, 0.2);
+  transition-property: background-color color 0.8s ease-in-out;
 }
 
 .boton h5 {
   color: #8c7a6b;
+  text-shadow: 2px 2px 2px #ffffff;
   font-size: 1rem;
   font-weight: 900;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.16rem;
   text-align: center;
-  padding: 1rem 1.3rem;
+  padding: 1rem 0.6rem;
   margin-bottom: 0;
-  background-color: #d9cab3;
+  background: #d9cab3;
   border-radius: 10px 100px/120px;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-  transition: all 0.8s ease-in-out;
+  box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
+  transition: background-color color 0.4s ease-in-out;
 }
 .boton h5:hover {
-  background-color: #5e0b15;
-  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.5);
-  color: #bc8034;
-  text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
-  transform: scale(1.1);
-  transition: all 0.8s ease-in-out;
+  background: #5e0b15;
+  box-shadow: -2px -2px 2px #000000;
+  color: #d9cab3;
+  text-shadow: 1px 1px 1px #000000;
+  transition: background-color color 0.6s ease-in-out;
+  animation: shake-vertical 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 
 /*--- CAROUSEL ---*/
 .carousel {
-  width: 65%;
-  margin: 0 auto;
+  width: 70%;
   border-radius: 50% 20%/10% 40%;
+  padding: 0;
+  margin: 0 auto;
   object-fit: cover;
   overflow: hidden;
-  transition: 0.6s ease-out;
 }
 @media (min-width: 1200px) {
   .carousel {
-    width: 40%;
-    padding: 4rem;
-    margin: 0 auto;
+    width: 70%;
   }
 }
 .carousel .carousel-item {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: 0.8s ease-out;
+  transition: width height 0.4s ease-out;
 }
 .carousel .carousel-item:hover {
   cursor: pointer;
   transform: scale(1.4);
-  transition: 0.8s ease-in;
+  transition: width height 0.8s ease-in;
 }
 .carousel img {
+  width: 100%;
+  margin: 0 auto;
   border-radius: 50% 20%/10% 40%;
+  object-fit: cover;
+}
+@media (min-width: 1200px) {
+  .carousel img {
+    width: 70%;
+  }
 }
 
 /*--- FORMULARIO ---*/
@@ -397,7 +436,7 @@ form {
 form textarea, form input {
   border: 0;
   border-radius: 0.8rem;
-  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
   width: 320px;
   height: 300px;
   padding: 0.8rem;
@@ -438,7 +477,7 @@ form input {
 }
 form .boton_value {
   background-color: #5e0b15;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
   border: 0;
   color: #8c7a6b;
   font-weight: 900;
@@ -453,7 +492,7 @@ form .boton_value {
   }
 }
 form .boton_value:hover {
-  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
   color: #bc8034;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
   transition: all 0.8s ease-in-out;
@@ -504,15 +543,15 @@ header {
 }
 header .logo {
   max-width: 60%;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease;
 }
 header .logo:hover {
-  transition: all 0.4s ease-in-out;
+  transition: all 0.6s ease;
   transform: rotate(360deg);
 }
 header .navbar-nav {
   background: linear-gradient(#5e0b15, #90323d, rgba(94, 11, 21, 0.7176470588), rgba(94, 11, 21, 0.6431372549), #90323d, #5e0b15);
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
   border-radius: 0 0 15% 50%;
   padding: 2rem;
   margin-top: 2rem;
@@ -521,7 +560,7 @@ header .navbar-nav {
 @media (min-width: 1000px) {
   header .navbar-nav {
     background: rgba(0, 0, 0, 0);
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
     margin-top: 0;
   }
 }
@@ -544,14 +583,15 @@ header .nav-link {
   background-color: rgba(0, 0, 0, 0);
   color: #d9cab3;
   font-size: 1rem;
-  font-weight: 900;
-  transition: 0.6s ease-in-out;
+  font-weight: 700;
+  transition: color font-size font-weight 0.6s ease;
 }
 header .nav-link:hover {
   color: #bc8034;
-  text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
   font-size: 1.1rem;
-  transition: 0.6s ease-in-out;
+  font-weight: 700;
+  text-shadow: 3px 3px 2px #000000;
+  transition: color font-size font-weight 1s ease;
 }
 header .navbar .a, header .container .a {
   color: #8c7a6b;
@@ -559,7 +599,7 @@ header .navbar .a, header .container .a {
 header .navbar-toggler {
   color: #8c7a6b;
   border: solid 0.2px #8c7a6b;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
   transition: 0.6s ease-in-out;
 }
 header [data-bs-theme=dark] {
@@ -570,25 +610,26 @@ header .dropdown-menu {
   background-color: rgba(0, 0, 0, 0);
   border-radius: 50% 20%/10% 40%;
   padding: 2rem;
-  transition: 0.6s ease-in-out;
+  transition: background-color 0.6s ease-in-out;
 }
 @media (min-width: 1000px) {
   header .dropdown-menu {
     background-color: #5e0b15;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
     border-radius: 5% 10% 40% 5%;
     width: 250px;
   }
 }
 header .dropdown-menu:hover {
   color: #bc8034;
-  transition: 0.6s ease-in-out;
+  transition: background-color 0.8s ease-in-out;
 }
 header .dropdown-item {
   color: #8c7a6b;
   font-size: 1rem;
+  font-weight: 700;
   text-align: right;
-  transition: 0.6s ease-in-out;
+  transition: color font-weight 0.6s ease;
 }
 @media (min-width: 1000px) {
   header .dropdown-item {
@@ -601,13 +642,10 @@ header .dropdown-item:hover {
   background-color: rgba(0, 0, 0, 0);
   border-radius: 50% 20%/10% 40%;
   color: #bc8034;
-  text-shadow: 1px 1px 1px 0, 0, 0, 0.3;
+  text-shadow: 1px 1px 1px #000000;
   font-style: italic;
-  font-size: 1.2rem;
   font-weight: 900;
-  text-shadow: #5e0b15;
-  transition: all 1s ease;
-  transform: scale 1.1;
+  transition: color font-weight 1s ease;
 }
 
 /*--- FOOTER ---*/
@@ -1403,7 +1441,7 @@ footer .contenedor__redes ul .ired:hover {
   padding: 0.8rem 0.3rem;
   margin: 0;
   color: #d9cab3;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
   font-size: 1rem;
   font-weight: 900;
   letter-spacing: 0.1rem;
@@ -1655,7 +1693,7 @@ footer .contenedor__redes ul .ired:hover {
 .contenedor__envios .comprar h5 {
   background-color: #5e0b15;
   border-radius: 0.3rem;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
   padding: 1.2rem 0.5rem;
   margin: 0;
   color: #8c7a6b;
@@ -1780,7 +1818,7 @@ footer .contenedor__redes ul .ired:hover {
 .contenedor__envios .consulta h5 {
   background-color: #5e0b15;
   border-radius: 0.3rem;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
   padding: 0.5rem;
   margin: 0;
   color: #8c7a6b;
@@ -2022,7 +2060,7 @@ footer .contenedor__redes ul .ired:hover {
   width: 350px;
   height: 450px;
   border-radius: 50% 20%/10% 40%;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
   object-fit: cover;
   transition: all 0.8s ease;
 }
@@ -2044,7 +2082,7 @@ footer .contenedor__redes ul .ired:hover {
 }
 .titulo__butter h2, .titulo__letter h2, .titulo__fondant h2 {
   color: #bc8034;
-  text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5);
   font-size: 1.6rem;
   font-weight: 700;
   font-style: italic;
@@ -2178,11 +2216,14 @@ footer .contenedor__redes ul .ired:hover {
 }
 .contenedor__menu .titulo__menu h4 {
   color: #90323d;
-  text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5);
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: 0.1rem;
   text-align: left;
+}
+.contenedor__menu .titulo__menu h4 .enfasis {
+  text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0, 0, 0, 0.15);
 }
 .contenedor__menu .texto__menu h5 {
   color: #8c7a6b;
@@ -2213,14 +2254,15 @@ footer .contenedor__redes ul .ired:hover {
     width: 180px;
     height: 180px;
     object-fit: cover;
-    transition: 0.4s ease-in-out;
+    overflow: hidden;
+    transition: width height 0.4s ease-in-out;
     z-index: 1;
   }
   .contenedor__menu .img__menu:hover {
     display: flex;
     cursor: pointer;
     transform: scale(1.5);
-    transition: 0.4s ease-in-out;
+    transition: width height 0.8s ease-in-out;
     z-index: 1;
   }
 }

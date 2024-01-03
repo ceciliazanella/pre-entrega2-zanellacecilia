@@ -57,11 +57,11 @@ $decorativefont: "Corinthia", cursive;
 /*--- MIXINS Y MEDIA QUERIES ---*/
 //SOMBRAS//
 @mixin shadow_inset ($px) {
-    box-shadow: inset $px $px $px rgba(0, 0, 0, 0.5);
+    box-shadow: inset $px $px $px $px rgba(0, 0, 0, 0.5);
 }
 
 @mixin shadow ($px) {
-    box-shadow: $px $px $px rgba(0, 0, 0, 0.5);
+    box-shadow: $px $px $px $px rgba(0, 0, 0, 0.5);
 }
 
 @mixin text_shadow ($px) {
@@ -96,7 +96,7 @@ $decorativefont: "Corinthia", cursive;
     margin: 0;
     letter-spacing: 0.3rem;
     color: $principalcolor;
-    @include text_shadow (2px);
+    text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0, 0, 0, 0.15);
     font-size: 2rem;
     font-weight: 900;
     text-align: center;
@@ -257,6 +257,55 @@ $decorativefont: "Corinthia", cursive;
     to {
         color: $terciarycolor;
     }
+}
+
+//PARA BOTÓN//
+@keyframes shake-vertical {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70% {
+        transform: translateY(-8px);
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: translateY(8px);
+    }
+
+    80% {
+        transform: translateY(6.4px);
+    }
+
+    90% {
+        transform: translateY(-6.4px);
+    }
+}
+
+//PARA IMÁGENES CAROUSEL//
+@keyframes tilt-in-right-1 {
+    0% {
+        transform: rotateX(-15deg) translateX(1500px) skewX(15deg);
+        opacity: 0;
+    }
+
+    50% {
+        transform: rotateX(0deg) translateX(0) skewX(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotateX(15deg) translateX(-150px) skewX(-15deg);
+        opacity: 0;
+    }
+
 }
 
 // --- --- --- //

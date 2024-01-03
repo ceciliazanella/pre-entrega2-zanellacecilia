@@ -3,6 +3,8 @@
 .boton_outline {
     & h5 {
         color: $ligthcolor;
+        background: transparent;
+        text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
         font-size: 1rem;
         font-weight: 900;
         letter-spacing: 0.2rem;
@@ -12,18 +14,16 @@
         margin-bottom: 0;
         border: 0.1rem;
         border-radius: 10px 100px / 120px;
-        @include shadow (4px);
+        box-shadow: 0px 5px 10px -5px #000000, -25px 10px 15px 5px rgba(0, 0, 0, 0);
 
-        transition: all 0.6s ease-in-out;
+        transition-property: background-color color 0.8s ease-in-out;
 
         &:hover {
-            background-color: $ligthcolor;
-            @include shadow_inset(2px);
+            color: rgba(0, 0, 0, .6);
+            background: $ligthcolor;
+            text-shadow: 3px 2px 3px rgba(255, 255, 255, .2);
 
-            color: $ultraligthcolor;
-            @include text_shadow (1.5px);
-
-            transition: all 0.6s ease-in-out;
+            transition-property: background-color color 0.8s ease-in-out;
         }
     }
 }
@@ -32,28 +32,28 @@
 .boton {
     & h5 {
         color: $ligthcolor;
+        text-shadow: 2px 2px 2px #ffffff;
         font-size: 1rem;
         font-weight: 900;
-        letter-spacing: 0.2rem;
+        letter-spacing: 0.16rem;
         text-align: center;
 
-        padding: 1rem 1.3rem;
+        padding: 1rem 0.6rem;
         margin-bottom: 0;
-        background-color: $ultraligthcolor;
+        background: $ultraligthcolor;
         border-radius: 10px 100px / 120px;
-        @include shadow (3px);
+        @include shadow (1.5px);
 
-        transition: all 0.8s ease-in-out;
-
+        transition: background-color color 0.4s ease-in-out;
+       
         &:hover {
-            background-color: $principalcolor;
-            @include shadow_inset(2px);
-
-            color: $terciarycolor;
-            @include text_shadow (1.5px);
-
-            transform: scale(1.1);
-            transition: all 0.8s ease-in-out;
+            background: $principalcolor;
+            box-shadow: -2px -2px 2px #000000;
+            color: $ultraligthcolor;
+            text-shadow: 1px 1px 1px #000000;
+           
+            transition: background-color color 0.6s ease-in-out;
+            animation: shake-vertical 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
         }
     }
 }
