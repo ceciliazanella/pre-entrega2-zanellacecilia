@@ -260,7 +260,7 @@ $decorativefont: "Corinthia", cursive;
 }
 
 //PARA BOTÓN//
-@keyframes shake-vertical {
+@keyframes sacudir__vertical {
 
     0%,
     100% {
@@ -289,7 +289,78 @@ $decorativefont: "Corinthia", cursive;
     }
 }
 
+@keyframes sacudir__horizontal {
+
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+
+    80% {
+        -webkit-transform: translateX(8px);
+        transform: translateX(8px);
+    }
+
+    90% {
+        -webkit-transform: translateX(-8px);
+        transform: translateX(-8px);
+    }
+}
+
+@keyframes latido {
+    from {
+        transform: scale(1);
+        transform-origin: center center;
+        animation-timing-function: ease-out;
+    }
+
+    10% {
+        transform: scale(0.91);
+        animation-timing-function: ease-in;
+    }
+
+    17% {
+        transform: scale(0.98);
+        animation-timing-function: ease-out;
+    }
+
+    33% {
+        transform: scale(0.87);
+        animation-timing-function: ease-in;
+    }
+
+    45% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+}
+
 //PARA IMÁGENES CAROUSEL//
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 // --- --- --- //
 
@@ -356,7 +427,7 @@ main {
 //TEXTOS / PÁRRAFOS//
 .parrafo {
     padding: 1rem 2rem;
-
+ 
     & h2 {
         color: $terciarycolor;
         font-size: 1rem;
@@ -395,6 +466,10 @@ main {
 
         margin-bottom: 0;
 
+        @include md-1200 {
+            text-align: left;
+        }
+
         .destacado {
             font-weight: var(--font-weight);
             font-style: var(--font-style);
@@ -402,81 +477,81 @@ main {
         }
     }
 
-    & h5 {
-        color: $secundarycolor;
-        font-size: 1.1rem;
-        font-weight: 400;
-        line-height: 1.5rem;
-        text-align: center;
+        & h5 {
+            color: $secundarycolor;
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.5rem;
+            text-align: center;
 
-        margin-bottom: 0;
-    }
-}
-
-//HEADER PARA PAGES / SECCIONES//
-.contenedor__seccion {
-    background-color: #ffffff;
-    width: 100%;
-    height: 200px;
-    padding: 0 2rem;
-
-    @include flex-center;
-    flex-direction: column;
-
-    color: $principalcolor;
-    text-align: center;
-
-    & h1 {
-        @include h1;
+            margin-bottom: 0;
+        }
     }
 
-    & h2 {
+    //HEADER PARA PAGES / SECCIONES//
+    .contenedor__seccion {
+        background-color: #ffffff;
+        width: 100%;
+        height: 200px;
+        padding: 0 2rem;
+
+        @include flex-center;
+        flex-direction: column;
+
         color: $principalcolor;
-        font-size: 1.3rem;
-        font-weight: 900;
         text-align: center;
+
+        & h1 {
+            @include h1;
+        }
+
+        & h2 {
+            color: $principalcolor;
+            font-size: 1.3rem;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        & img {
+            width: 50px;
+        }
     }
 
-    & img {
-        width: 50px;
+    //DESCRIPCION DE CADA UNA DE LAS PAGES / SECCIONES//
+    .descripcion__seccion {
+        background-color: #ffffff;
+        width: 100%;
+        height: 250px;
+        padding: 0 4rem;
+
+        @include flexbox-column(center, center);
+
+        line-height: 0.5rem;
+
+        gap: 1rem;
+
+        & h3 {
+            color: $secundarycolor;
+            font-size: 1.5rem;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        & h4 {
+            color: $terciarycolor;
+            font-size: 1.2rem;
+            font-style: italic;
+            text-align: center;
+        }
     }
-}
 
-//DESCRIPCION DE CADA UNA DE LAS PAGES / SECCIONES//
-.descripcion__seccion {
-    background-color: #ffffff;
-    width: 100%;
-    height: 250px;
-    padding: 0 4rem;
+    //ANIMACIONES PARA ÍCONOS DE SECCIONES//
+    .animation__icon {
+        margin-bottom: 1rem;
 
-    @include flexbox-column(center, center);
-
-    line-height: 0.5rem;
-
-    gap: 1rem;
-
-    & h3 {
-        color: $secundarycolor;
-        font-size: 1.5rem;
-        font-weight: 900;
-        text-align: center;
+        animation-name: rebotarLugar;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
     }
-
-    & h4 {
-        color: $terciarycolor;
-        font-size: 1.2rem;
-        font-style: italic;
-        text-align: center;
-    }
-}
-
-//ANIMACIONES PARA ÍCONOS DE SECCIONES//
-.animation__icon {
-    margin-bottom: 1rem;
-
-    animation-name: rebotarLugar;
-    animation-duration: 0.5s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-}
