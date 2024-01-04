@@ -2,7 +2,9 @@
 .carousel {
     width: 280px;
     height: 320px;
-    border-radius: 2rem;
+    border-radius: 6rem 1rem;
+    border-top: solid 4px $ligthcolor;
+    border-bottom: double 8px $principalcolor;
     padding: 0;
     margin: 0 auto;
 
@@ -16,20 +18,24 @@
     .carousel-item {
         width: 100%;
         height: 100%;
-        border-radius: 2rem;
+        border-radius: 6rem 1rem;
         object-fit: cover;
         overflow: hidden;
 
         object-fit: cover;
 
         overflow: hidden;
+
+        filter: sepia(50%), contrast(80%);
     }
 }
 
 .carousel__sobre {
-    width: 320px;
+    width: 360px;
     height: 200px;
-    border-radius: 2rem 2rem 4rem 4rem;
+    border-radius: 1rem;
+    border-top: double 6px $principalcolor;
+    border-bottom: solid 8px $principalcolor;
     padding: 0;
     margin: 0 auto;
 
@@ -43,12 +49,14 @@
     .carousel-item {
         width: 100%;
         height: 100%;
-        border-radius: 2rem 2rem 4rem 4rem;
+        border-radius: 1rem;
         object-fit: cover;
         overflow: hidden;
 
         object-fit: cover;
 
         overflow: hidden;
+
+        filter: sepia(50%), contrast(30%);
     }
 }

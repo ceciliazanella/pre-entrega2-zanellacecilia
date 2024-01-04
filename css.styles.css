@@ -357,9 +357,7 @@ main .contenedor_main {
 .carousel {
   width: 280px;
   height: 320px;
-  border-radius: 6rem 1rem;
-  border-top: solid 4px #8c7a6b;
-  border-bottom: double 8px #5e0b15;
+  border-radius: 2rem;
   padding: 0;
   margin: 0 auto;
   object-fit: cover;
@@ -370,20 +368,18 @@ main .contenedor_main {
 .carousel .carousel-item {
   width: 100%;
   height: 100%;
-  border-radius: 6rem 1rem;
+  border-radius: 2rem;
   object-fit: cover;
   overflow: hidden;
   object-fit: cover;
   overflow: hidden;
-  filter: sepia(50%), contrast(80%);
 }
 
 .carousel__sobre {
-  width: 360px;
+  width: 320px;
   height: 200px;
-  border-radius: 1rem;
-  border-top: double 6px #5e0b15;
-  border-bottom: solid 8px #5e0b15;
+  border-radius: 2rem 2rem 4rem 4rem;
+  border-bottom: solid 2px #5e0b15;
   padding: 0;
   margin: 0 auto;
   object-fit: cover;
@@ -394,12 +390,11 @@ main .contenedor_main {
 .carousel__sobre .carousel-item {
   width: 100%;
   height: 100%;
-  border-radius: 1rem;
+  border-radius: 2rem 2rem 4rem 4rem;
   object-fit: cover;
   overflow: hidden;
   object-fit: cover;
   overflow: hidden;
-  filter: sepia(50%), contrast(30%);
 }
 
 /*--- FORMULARIO ---*/
@@ -1137,7 +1132,7 @@ footer .contenedor__redes ul .ired:hover {
 .contenedor__productos .subtitulo h2 {
   margin: 0;
   color: #90323d;
-  text-shadow: 1px 1px 0 #7A7A7A;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   letter-spacing: 0.1rem;
   font-size: 1.6rem;
   font-weight: 700;
@@ -1439,12 +1434,12 @@ footer .contenedor__redes ul .ired:hover {
   padding: 0.8rem 0.3rem;
   margin: 0;
   color: #d9cab3;
-  box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
   font-size: 1rem;
   font-weight: 900;
   letter-spacing: 0.1rem;
   text-align: center;
-  transition: border color font-weight shadow 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 @media (min-width: 620px) {
   .contenedor__promo .consultame h5 {
@@ -1482,9 +1477,8 @@ footer .contenedor__redes ul .ired:hover {
   border: solid 0.2rem #bc8034;
   border-radius: 0.3rem;
   color: #bc8034;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-  transition: border color font-weight shadow 1s ease-in-out;
-  scale: 1.2;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  transition: all 0.8s ease-in-out;
 }
 
 .contenedor__envios {
@@ -1692,14 +1686,14 @@ footer .contenedor__redes ul .ired:hover {
 .contenedor__envios .comprar h5 {
   background-color: #5e0b15;
   border-radius: 0.3rem;
-  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
   padding: 1.2rem 0.5rem;
   margin: 0;
   color: #8c7a6b;
   font-size: 1.2rem;
   font-weight: 900;
   text-align: center;
-  transition: color 0.8s ease-in-out;
+  transition: all 0.4s;
 }
 @media (min-width: 480px) {
   .contenedor__envios .comprar h5 {
@@ -1735,8 +1729,8 @@ footer .contenedor__redes ul .ired:hover {
   background-color: #d9cab3;
   border-radius: 0.3rem;
   color: #bc8034;
-  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-  transition: color 0.4s ease-in-out;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s;
   transform: scale(1.2);
 }
 .contenedor__envios .icono__sobre {
@@ -1817,14 +1811,13 @@ footer .contenedor__redes ul .ired:hover {
 .contenedor__envios .consulta h5 {
   background-color: #5e0b15;
   border-radius: 0.3rem;
-  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
   padding: 0.5rem;
   margin: 0;
   color: #8c7a6b;
   font-size: 0.8rem;
   font-weight: 900;
   text-align: center;
-  transition: color 0.8s ease-in-out;
 }
 @media (min-width: 480px) {
   .contenedor__envios .consulta h5 {
@@ -1853,9 +1846,8 @@ footer .contenedor__redes ul .ired:hover {
 .contenedor__envios .consulta h5:hover {
   background-color: #d9cab3;
   border-radius: 0.3rem;
-  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
   color: #8c7a6b;
-  transition: color 1.5s ease-in-out;
+  transition: 1.5s;
 }
 
 .contenedor__grilla {
@@ -2274,4 +2266,4 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=css.styles.css.map */

@@ -422,7 +422,7 @@
                 margin: 0;
 
                 color: $secundarycolor;
-                @include text_shadow (1px);
+                text-shadow: 1px 1px 0 #7A7A7A;
                 letter-spacing: 0.1rem;
                 font-size: 1.6rem;
                 font-weight: 700;
@@ -769,13 +769,13 @@
                 margin: 0;
 
                 color: $ultraligthcolor;
-                @include shadow (2px);
+                @include shadow (1.5px);
                 font-size: 1rem;
                 font-weight: 900;
                 letter-spacing: 0.1rem;
                 text-align: center;
 
-                transition: all 0.8s ease-in-out;
+                transition: border color font-weight shadow 0.8s ease-in-out;
 
                 @include md-620 {
                     font-size: 1.2rem;
@@ -818,9 +818,10 @@
                     border-radius: 0.3rem;
 
                     color: $terciarycolor;
-                    @include text_shadow (2px);
+                    @include shadow(2px);
 
-                    transition: all 0.8s ease-in-out;
+                    transition: border color font-weight shadow 1s ease-in-out;
+                    scale: (1.2);
                 }
             }
         }
@@ -1054,7 +1055,7 @@
             & h5 {
                 background-color: $principalcolor;
                 border-radius: 0.3rem;
-                @include shadow (3px);
+                box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
                 padding: 1.2rem 0.5rem;
                 margin: 0;
 
@@ -1062,7 +1063,7 @@
                 font-size: 1.2rem;
                 font-weight: 900;
                 text-align: center;
-                transition: all 0.4s;
+                transition: color 0.8s ease-in-out;
 
                 @include md-480 {
                     padding: 1.5rem 0.8rem;
@@ -1094,9 +1095,9 @@
                     border-radius: 0.3rem;
 
                     color: $terciarycolor;
-                    @include text_shadow (0.5px);
+                    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 
-                    transition: all 0.4s;
+                    transition: color 0.4s ease-in-out;
                     transform: scale(1.2);
                 }
             }
@@ -1190,7 +1191,7 @@
             & h5 {
                 background-color: $principalcolor;
                 border-radius: 0.3rem;
-                @include shadow (2px);
+                box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
                 padding: 0.5rem;
                 margin: 0;
 
@@ -1198,6 +1199,8 @@
                 font-size: 0.8rem;
                 font-weight: 900;
                 text-align: center;
+
+                transition: color 0.8s ease-in-out;
 
                 @include md-480 {
                     font-size: 1rem;
@@ -1222,10 +1225,11 @@
                 &:hover {
                     background-color: $ultraligthcolor;
                     border-radius: 0.3rem;
+                    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
 
                     color: $ligthcolor;
 
-                    transition: 1.5s;
+                    transition: color 1.5s ease-in-out;
                 }
             }
         }
