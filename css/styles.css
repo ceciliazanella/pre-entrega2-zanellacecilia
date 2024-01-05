@@ -668,14 +668,14 @@ header .nav-link {
   color: #d9cab3;
   font-size: 1rem;
   font-weight: 700;
-  transition: color font-size font-weight 0.6s ease;
+  transition-property: color font-weight 0.4s ease;
 }
 header .nav-link:hover {
   color: #bc8034;
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 900;
   text-shadow: 3px 3px 2px #000000;
-  transition: color font-size font-weight 1s ease;
+  transition-property: color font-weight 1s ease;
+  transition-duration: 0.6s;
 }
 header .navbar .a, header .container .a {
   color: #8c7a6b;
@@ -683,7 +683,7 @@ header .navbar .a, header .container .a {
 header .navbar-toggler {
   color: #8c7a6b;
   box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-  transition: color 0.4s ease-in-out;
+  transition-property: color 0.4s ease-in-out;
 }
 header [data-bs-theme=dark] {
   --bs-body-bg: none;
@@ -693,7 +693,7 @@ header .dropdown-menu {
   background-color: rgba(0, 0, 0, 0);
   border-radius: 50% 20%/10% 40%;
   padding: 2rem;
-  transition: background-color 0.6s ease-in-out;
+  transition-property: background-color 0.6s ease-in-out;
 }
 @media (min-width: 1000px) {
   header .dropdown-menu {
@@ -705,14 +705,15 @@ header .dropdown-menu {
 }
 header .dropdown-menu:hover {
   color: #bc8034;
-  transition: background-color 0.8s ease-in-out;
+  transition-property: background-color 0.8s ease-in-out;
+  transition-duration: 6s;
 }
 header .dropdown-item {
   color: #8c7a6b;
   font-size: 1rem;
   font-weight: 700;
   text-align: right;
-  transition: color font-weight 0.6s ease;
+  transition-property: color font-weight 0.6s ease;
 }
 @media (min-width: 1000px) {
   header .dropdown-item {
@@ -728,7 +729,7 @@ header .dropdown-item:hover {
   text-shadow: 1px 1px 1px #000000;
   font-style: italic;
   font-weight: 900;
-  transition: color font-weight 1s ease;
+  transition-property: color font-weight text-shadow 1s ease;
 }
 
 /*--- FOOTER ---*/
