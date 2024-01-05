@@ -1,9 +1,8 @@
-    //--- HEADER > H1 / INDEX ---//
+    /*--- HEADER > H1 / INDEX ---*/
     .contenedor__h1 {
-        background: radial-gradient(#5e0b15, #5e0b1500 );
+        background: radial-gradient(#5e0b15, #5e0b1548);
         border-radius: 5% 5% 15% 5%;
-        box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-
+        box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px #00000000;
         min-width: 450px;
         padding: 2rem;
         margin: 8rem auto;
@@ -11,7 +10,6 @@
         @include flexbox-column (center, center);
 
         text-align: center;
-
         line-height: 0.2;
 
         @include md-1000 {
@@ -25,24 +23,23 @@
         }
 
         & h1 {
-            color: $ultraligthcolor;
-            @include text_shadow (5px);
             font-family: $decorativefont;
             font-size: 4.6rem;
-            line-height: 0.8;
+            color: $ultraligthcolor;
+            @include text_shadow (4px);
+            line-height: 0.7;
 
-            animation-name: cambiarUltraligth;
-            animation-duration: 2s;
+            animation: cambiarUltraligth 2s ease-in-out;
         }
 
         & h3 {
-            color: $terciarycolor;
             font-family: $decorativefont;
+            color: $terciarycolor;
             font-size: 2.6rem;
             font-weight: 700;
+            text-shadow: 0 -1px 3px #ffffff59, -2px -2px 1px rgba(255, 255, 255, .1), 2px 2px 2px rgba(0, 0, 0, .5);
 
-            animation-name: cambiarTerciary;
-            animation-duration: 4s;
+            animation: cambiarTerciary 3s ease-in-out;
         }
 
         & h4 {
@@ -51,20 +48,19 @@
             font-size: 1.6rem;
             font-weight: 900;
 
-            animation-name: cambiarUltraligth;
-            animation-duration: 2s;
+            animation: cambiarUltraligth 2s ease-in-out;
         }
     }
 
     //--- DESTACADO EN INDEX ---//
     .contenedor__destacado {
         min-width: 380px;
-        @include flexbox-column (center, center);
-
         padding: 4rem;
 
-        text-align: center;
+        @include flexbox-column (center, center);
+
         line-height: 3rem;
+        text-align: center;
 
         @include md-1000 {
             max-width: 768px;
@@ -91,7 +87,7 @@
         }
     }
 
-    //--- SECCIÓN PRODUCTOS / INDEX ---//
+    /*--- SECCIÓN PRODUCTOS / INDEX ---*/
     //TITULO PRODUCTOS//
     .titulo__productos {
         min-width: 380px;
@@ -114,11 +110,11 @@
 
     //CUERPO PRODUCTOS//
     .contenedor__productos {
-        @include flexbox-column(center, center);
-
         min-width: 380px;
         padding: 0 2rem 2rem 2rem;
         margin: 0 auto;
+
+        @include flexbox-column(center, center);
 
         & h4 {
             padding: 1rem 0;
@@ -132,15 +128,15 @@
         }
 
         @include md-1000 {
+            max-width: 1000px;
+            padding: 0 4rem 0 4rem;
+
             display: grid;
             grid-template-columns: 50% 50%;
             grid-template-rows: 550px 450px 600px 450px;
 
             align-items: start;
             justify-content: center;
-
-            max-width: 1000px;
-            padding: 0 4rem 0 4rem;
 
             gap: 2rem;
 
@@ -270,17 +266,16 @@
         }
 
         @include md-1200 {
+            max-width: 1200px;
+            padding: 0 2rem 2rem 2rem;
+            margin: 0 auto;
+
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-rows: 580px 500px;
 
-            max-width: 1200px;
-            margin: 0 auto;
-
             align-items: start;
             justify-content: center;
-
-            padding: 0 2rem 2rem 2rem;
 
             gap: 1rem;
 
@@ -288,7 +283,7 @@
             line-height: 1rem;
 
             .parrafo h4 {
-                padding:0;
+                padding: 0;
             }
         }
 
@@ -386,7 +381,7 @@
             background-repeat: no-repeat;
             background-position: bottom;
             border-radius: 10% 25%;
-         
+
             overflow: hidden;
 
             min-height: 280px;
@@ -423,25 +418,25 @@
                 margin: 0;
 
                 color: $secundarycolor;
-                text-shadow: 1px 1px 0 #7A7A7A;
-                letter-spacing: 0.1rem;
                 font-size: 1.6rem;
                 font-weight: 700;
+                letter-spacing: 0.1rem;
+                text-shadow: 1px 1px 0 #7A7A7A;
             }
 
             & h3 {
                 margin: 0;
 
                 font-family: $decorativefont;
-                line-height: 1rem;
                 color: $terciarycolor;
                 font-size: 2.5rem;
                 font-style: italic;
+                line-height: 1rem;
             }
         }
     }
 
-    //--- BLOQUE PROMOCIÓN / INDEX ---//
+    /*--- BLOQUE PROMOCIÓN / INDEX ---*/
     .contenedor__promo {
         background-color: $principalcolor;
         border-radius: 20% 0 15% 0;
@@ -526,17 +521,7 @@
             align-self: start;
             justify-self: center;
 
-            animation: rotate 4s infinite linear;
-
-            @keyframes rotate {
-                0% {
-                    transform: rotate(0);
-                }
-
-                100% {
-                    transform: rotate(360deg);
-                }
-            }
+            animation: rotar 4s infinite linear;
 
             @include md-768 {
                 width: 180px;
@@ -605,11 +590,7 @@
                 padding: 0;
                 margin: 0;
 
-                animation-name: cambio__color;
-                animation-duration: 2s;
-                animation-iteration-count: infinite;
-                animation-direction: alternate;
-                animation-timing-function: ease-in-out;
+                animation: cambio__color 1s infinite alternate ease-in-out;
 
                 color: $ultraligthcolor;
                 @include text_shadow (4px);
@@ -686,19 +667,6 @@
                 padding: 0;
                 margin: 0;
 
-                color: $ultraligthcolor;
-                @include text_shadow (3px);
-                font-size: 1.8rem;
-                font-weight: 700;
-                letter-spacing: 0.22rem;
-                line-height: 1.8rem;
-                text-align: center;
-            }
-
-            & h3 {
-                padding: 0;
-                margin: 0;
-
                 color: $terciarycolor;
                 @include text_shadow_clear;
                 font-size: 1.2rem;
@@ -708,15 +676,24 @@
                 text-align: center;
                 text-transform: uppercase;
 
-                animation-name: cambio__color;
-                animation-duration: 2s;
-                animation-iteration-count: infinite;
-                animation-direction: alternate;
-                animation-timing-function: ease-in-out;
+                animation: cambio__color 1s infinite alternate ease-in-out;
 
                 @include md-1000 {
                     font-size: 1.5rem;
                 }
+            }
+
+            & h3 {
+                padding: 0;
+                margin: 0;
+
+                color: $ultraligthcolor;
+                @include text_shadow (3px);
+                font-size: 1.8rem;
+                font-weight: 700;
+                letter-spacing: 0.22rem;
+                line-height: 1.8rem;
+                text-align: center;
             }
         }
 
@@ -748,7 +725,7 @@
 
             align-self: start;
             justify-self: center;
-            
+
             @include md-1000 {
                 grid-area: fiesta;
 
@@ -777,7 +754,7 @@
                 text-align: center;
 
                 transition: border color font-weight shadow 0.8s ease-in-out;
-               
+
                 @include md-620 {
                     font-size: 1.2rem;
                     padding: 1rem 1rem;
@@ -821,19 +798,19 @@
                     color: $terciarycolor;
                     @include shadow(2px);
 
-                    transition: border color font-weight shadow 1s ease-in-out;
+                    transition: border color font-weight shadow 1.2s ease-in-out;
                     animation: latido 1.5s ease-in-out infinite both;
                 }
             }
         }
     }
 
-    //--- SECTOR ENVÍOS / INDEX ---//
+    /*--- SECTOR ENVÍOS / INDEX ---*/
     .contenedor__envios {
         background-color: $ligthcolor;
         border-radius: 0 20% 0 25%;
-        padding: 4rem;
         min-width: 380px;
+        padding: 4rem;
 
         color: $secundarycolor;
 
@@ -853,9 +830,9 @@
         }
 
         @include md-768 {
-            padding: 5rem;
-
             grid-template-rows: 220px 140px 80px;
+
+            padding: 5rem;
         }
 
         @include md-1000 {
@@ -910,11 +887,7 @@
                 letter-spacing: 0.25rem;
                 line-height: 2.2rem;
 
-                animation-name: cambio__borde;
-                animation-duration: 2s;
-                animation-iteration-count: infinite;
-                animation-direction: alternate;
-                animation-timing-function: ease-in-out;
+                animation: cambio__borde 2s infinite alternate ease-in-out;
 
                 @include md-768 {
                     font-size: 3rem;
@@ -979,11 +952,7 @@
 
             justify-self: center;
 
-            animation-name: ampliar;
-            animation-duration: 2s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-            animation-timing-function: ease-in-out;
+            animation: sacudir__vertical 3s infinite alternate ease-in-out;
 
             @include md-420 {
                 width: 70%;
@@ -1016,6 +985,8 @@
                 grid-area: icono;
 
                 align-self: center;
+
+                animation: sacudir__horizontal 3s infinite alternate ease-in-out;
             }
         }
 
@@ -1034,11 +1005,7 @@
                 align-self: end;
                 justify-self: start;
 
-                animation-name: rebotarDesplazo;
-                animation-duration: 1s;
-                animation-iteration-count: infinite;
-                animation-direction: alternate;
-                animation-timing-function: ease-in-out;
+                animation: rebotarDesplazo 0.6s infinite alternate ease-in-out;
             }
         }
 
@@ -1056,7 +1023,7 @@
             & h5 {
                 background-color: $principalcolor;
                 border-radius: 0.3rem;
-                box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+                box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
                 padding: 1.2rem 0.5rem;
                 margin: 0;
 
@@ -1065,7 +1032,7 @@
                 font-weight: 900;
                 text-align: center;
 
-                transition: color 0.8s ease-in-out;
+                transition: background-color color font-size font-weight 0.8s ease-in-out;
 
                 @include md-480 {
                     padding: 1.5rem 0.8rem;
@@ -1097,9 +1064,10 @@
                     border-radius: 0.3rem;
 
                     color: $terciarycolor;
-                    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+                    text-shadow: 3px 2px 3px rgba(255, 255, 255, .2);
+                    box-shadow: none;
 
-                    transition: color 0.4s ease-in-out;
+                    transition: background-color color font-size font-weight 0.8s ease-in-out;
                     animation: latido 1.5s ease-in-out infinite both;
                 }
             }
@@ -1120,11 +1088,11 @@
                 align-self: center;
                 justify-self: center;
 
-                transition: all 0.4s ease-in-out;
+                transition: width 0.2s ease-in-out;
 
                 &:hover {
-                    transition: all 0.4s ease-in-out;
-                    transform: rotateX(70deg);
+                    transition: width 0.6s ease-in-out;
+                    transform: rotateX(180deg);
                 }
             }
         }
@@ -1138,10 +1106,10 @@
 
             justify-self: center;
 
-            transition: all 0.4s ease-in-out;
+            transition: 0.2s ease-in-out;
 
             &:hover {
-                transition: all 0.4s ease-in-out;
+                transition: 0.4s ease-in-out;
                 transform: rotate(360deg);
             }
 
@@ -1193,16 +1161,16 @@
             & h5 {
                 background-color: $principalcolor;
                 border-radius: 0.3rem;
-                box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+                box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
                 padding: 0.5rem;
                 margin: 0;
 
                 color: $ligthcolor;
                 font-size: 0.8rem;
-                font-weight: 900;
+                font-weight: 700;
                 text-align: center;
 
-                transition: color 0.8s ease-in-out;
+                transition: background-color color font-weight 0.6s ease-in-out;
 
                 @include md-480 {
                     font-size: 1rem;
@@ -1227,11 +1195,13 @@
                 &:hover {
                     background-color: $ultraligthcolor;
                     border-radius: 0.3rem;
-                    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+                    box-shadow: none;
 
                     color: $ligthcolor;
+                    text-shadow: 3px 2px 3px rgba(255, 255, 255, .2);
+                    font-weight: 900;
 
-                    transition: color 1.5s ease-in-out;
+                    transition: background-color color font-weight 1s ease-in-out;
                 }
             }
         }

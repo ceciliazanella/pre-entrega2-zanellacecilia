@@ -173,6 +173,14 @@
     animation-timing-function: ease-out;
   }
 }
+@keyframes rotar {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes aparecer {
   0% {
     opacity: 0;
@@ -281,6 +289,7 @@ main .contenedor_main {
 }
 @media (min-width: 1200px) {
   .parrafo h4 {
+    padding-top: 0;
     text-align: left;
   }
 }
@@ -445,7 +454,7 @@ main .contenedor_main {
 }
 
 .carousel__sobre {
-  width: 360px;
+  width: 320px;
   height: 200px;
   border-radius: 1rem;
   border-top: double 6px #5e0b15;
@@ -458,10 +467,22 @@ main .contenedor_main {
   overflow: hidden;
   animation: aparecer 1s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
-@media (min-width: 768px) {
+@media (min-width: 480px) {
+  .carousel__sobre {
+    width: 400px;
+    height: 250px;
+  }
+}
+@media (min-width: 620px) {
   .carousel__sobre {
     width: 460px;
     height: 250px;
+  }
+}
+@media (min-width: 768px) {
+  .carousel__sobre {
+    width: 500px;
+    height: 280px;
   }
 }
 @media (min-width: 1024px) {
@@ -587,6 +608,7 @@ form .boton_value:hover {
   background-attachment: fixed;
   background-image: linear-gradient(#5e0b15, rgba(94, 11, 21, 0.3019607843), rgba(94, 11, 21, 0.2549019608), rgba(94, 11, 21, 0)), url(../imagenes/images_index/portada/portada_index.webp);
   width: 100%;
+  max-height: 900px;
   padding-top: 2rem;
   border-radius: 0 0 15% 0;
   display: flex;
@@ -817,8 +839,9 @@ footer .contenedor__redes ul .ired:hover {
   transform: rotate(360deg);
 }
 
+/*--- HEADER > H1 / INDEX ---*/
 .contenedor__h1 {
-  background: radial-gradient(#5e0b15, rgba(94, 11, 21, 0));
+  background: radial-gradient(#5e0b15, rgba(94, 11, 21, 0.2823529412));
   border-radius: 5% 5% 15% 5%;
   box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
   min-width: 450px;
@@ -845,41 +868,39 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 .contenedor__h1 h1 {
-  color: #d9cab3;
-  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   font-family: "Corinthia", cursive;
   font-size: 4.6rem;
-  line-height: 0.8;
-  animation-name: cambiarUltraligth;
-  animation-duration: 2s;
+  color: #d9cab3;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+  line-height: 0.7;
+  animation: cambiarUltraligth 2s ease-in-out;
 }
 .contenedor__h1 h3 {
-  color: #bc8034;
   font-family: "Corinthia", cursive;
+  color: #bc8034;
   font-size: 2.6rem;
   font-weight: 700;
-  animation-name: cambiarTerciary;
-  animation-duration: 4s;
+  text-shadow: 0 -1px 3px rgba(255, 255, 255, 0.3490196078), -2px -2px 1px rgba(255, 255, 255, 0.1), 2px 2px 2px rgba(0, 0, 0, 0.5);
+  animation: cambiarTerciary 3s ease-in-out;
 }
 .contenedor__h1 h4 {
   color: #d9cab3;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
   font-size: 1.6rem;
   font-weight: 900;
-  animation-name: cambiarUltraligth;
-  animation-duration: 2s;
+  animation: cambiarUltraligth 2s ease-in-out;
 }
 
 .contenedor__destacado {
   min-width: 380px;
+  padding: 4rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-items: center;
   align-content: center;
-  padding: 4rem;
-  text-align: center;
   line-height: 3rem;
+  text-align: center;
 }
 @media (min-width: 1000px) {
   .contenedor__destacado {
@@ -904,6 +925,7 @@ footer .contenedor__redes ul .ired:hover {
   color: var(--color);
 }
 
+/*--- SECCIÓN PRODUCTOS / INDEX ---*/
 .titulo__productos {
   min-width: 380px;
   padding: 2rem;
@@ -922,14 +944,14 @@ footer .contenedor__redes ul .ired:hover {
 }
 
 .contenedor__productos {
+  min-width: 380px;
+  padding: 0 2rem 2rem 2rem;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-items: center;
   align-content: center;
-  min-width: 380px;
-  padding: 0 2rem 2rem 2rem;
-  margin: 0 auto;
 }
 .contenedor__productos h4 {
   padding: 1rem 0;
@@ -942,13 +964,13 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 1000px) {
   .contenedor__productos {
+    max-width: 1000px;
+    padding: 0 4rem 0 4rem;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 550px 450px 600px 450px;
     align-items: start;
     justify-content: center;
-    max-width: 1000px;
-    padding: 0 4rem 0 4rem;
     gap: 2rem;
   }
   .contenedor__productos .parrafo__tortas {
@@ -1074,14 +1096,14 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 1200px) {
   .contenedor__productos {
+    max-width: 1200px;
+    padding: 0 2rem 2rem 2rem;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 580px 500px;
-    max-width: 1200px;
-    margin: 0 auto;
     align-items: start;
     justify-content: center;
-    padding: 0 2rem 2rem 2rem;
     gap: 1rem;
     text-align: justify;
     line-height: 1rem;
@@ -1224,20 +1246,21 @@ footer .contenedor__redes ul .ired:hover {
 .contenedor__productos .subtitulo h2 {
   margin: 0;
   color: #90323d;
-  text-shadow: 1px 1px 0 #7A7A7A;
-  letter-spacing: 0.1rem;
   font-size: 1.6rem;
   font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-shadow: 1px 1px 0 #7A7A7A;
 }
 .contenedor__productos .subtitulo h3 {
   margin: 0;
   font-family: "Corinthia", cursive;
-  line-height: 1rem;
   color: #bc8034;
   font-size: 2.5rem;
   font-style: italic;
+  line-height: 1rem;
 }
 
+/*--- BLOQUE PROMOCIÓN / INDEX ---*/
 .contenedor__promo {
   background-color: #5e0b15;
   border-radius: 20% 0 15% 0;
@@ -1308,15 +1331,7 @@ footer .contenedor__redes ul .ired:hover {
   grid-row: 1/2;
   align-self: start;
   justify-self: center;
-  animation: rotate 4s infinite linear;
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  animation: rotar 4s infinite linear;
 }
 @media (min-width: 768px) {
   .contenedor__promo .icono__promo {
@@ -1379,11 +1394,7 @@ footer .contenedor__redes ul .ired:hover {
   justify-self: end;
   padding: 0;
   margin: 0;
-  animation-name: cambio__color;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
+  animation: cambio__color 1s infinite alternate ease-in-out;
   color: #d9cab3;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
   font-size: 1.2rem;
@@ -1452,17 +1463,6 @@ footer .contenedor__redes ul .ired:hover {
 .contenedor__promo .promo__detalle h2 {
   padding: 0;
   margin: 0;
-  color: #d9cab3;
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 0.22rem;
-  line-height: 1.8rem;
-  text-align: center;
-}
-.contenedor__promo .promo__detalle h3 {
-  padding: 0;
-  margin: 0;
   color: #bc8034;
   text-shadow: 1.5px 2px 1.5px rgb(255, 255, 255);
   font-size: 1.2rem;
@@ -1471,16 +1471,23 @@ footer .contenedor__redes ul .ired:hover {
   line-height: 1.2rem;
   text-align: center;
   text-transform: uppercase;
-  animation-name: cambio__color;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
+  animation: cambio__color 1s infinite alternate ease-in-out;
 }
 @media (min-width: 1000px) {
-  .contenedor__promo .promo__detalle h3 {
+  .contenedor__promo .promo__detalle h2 {
     font-size: 1.5rem;
   }
+}
+.contenedor__promo .promo__detalle h3 {
+  padding: 0;
+  margin: 0;
+  color: #d9cab3;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.22rem;
+  line-height: 1.8rem;
+  text-align: center;
 }
 .contenedor__promo .ornamentos {
   display: none;
@@ -1570,15 +1577,16 @@ footer .contenedor__redes ul .ired:hover {
   border-radius: 0.3rem;
   color: #bc8034;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-  transition: border color font-weight shadow 1s ease-in-out;
+  transition: border color font-weight shadow 1.2s ease-in-out;
   animation: latido 1.5s ease-in-out infinite both;
 }
 
+/*--- SECTOR ENVÍOS / INDEX ---*/
 .contenedor__envios {
   background-color: #8c7a6b;
   border-radius: 0 20% 0 25%;
-  padding: 4rem;
   min-width: 380px;
+  padding: 4rem;
   color: #90323d;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1595,8 +1603,8 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 768px) {
   .contenedor__envios {
-    padding: 5rem;
     grid-template-rows: 220px 140px 80px;
+    padding: 5rem;
   }
 }
 @media (min-width: 1000px) {
@@ -1640,11 +1648,7 @@ footer .contenedor__redes ul .ired:hover {
   font-weight: 900;
   letter-spacing: 0.25rem;
   line-height: 2.2rem;
-  animation-name: cambio__borde;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
+  animation: cambio__borde 2s infinite alternate ease-in-out;
 }
 @media (min-width: 768px) {
   .contenedor__envios .envios h2 {
@@ -1705,11 +1709,7 @@ footer .contenedor__redes ul .ired:hover {
   grid-column: 2/3;
   grid-row: 1/2;
   justify-self: center;
-  animation-name: ampliar;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
+  animation: sacudir__vertical 3s infinite alternate ease-in-out;
 }
 @media (min-width: 420px) {
   .contenedor__envios .icono__envios {
@@ -1746,6 +1746,7 @@ footer .contenedor__redes ul .ired:hover {
     margin-top: 0;
     grid-area: icono;
     align-self: center;
+    animation: sacudir__horizontal 3s infinite alternate ease-in-out;
   }
 }
 .contenedor__envios .icono__comprar {
@@ -1759,11 +1760,7 @@ footer .contenedor__redes ul .ired:hover {
     grid-area: comprar;
     align-self: end;
     justify-self: start;
-    animation-name: rebotarDesplazo;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
+    animation: rebotarDesplazo 0.6s infinite alternate ease-in-out;
   }
 }
 .contenedor__envios .comprar {
@@ -1786,7 +1783,7 @@ footer .contenedor__redes ul .ired:hover {
   font-size: 1.2rem;
   font-weight: 900;
   text-align: center;
-  transition: color 0.8s ease-in-out;
+  transition: background-color color font-size font-weight 0.8s ease-in-out;
 }
 @media (min-width: 480px) {
   .contenedor__envios .comprar h5 {
@@ -1822,8 +1819,9 @@ footer .contenedor__redes ul .ired:hover {
   background-color: #d9cab3;
   border-radius: 0.3rem;
   color: #bc8034;
-  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-  transition: color 0.4s ease-in-out;
+  text-shadow: 3px 2px 3px rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+  transition: background-color color font-size font-weight 0.8s ease-in-out;
   animation: latido 1.5s ease-in-out infinite both;
 }
 .contenedor__envios .icono__sobre {
@@ -1837,11 +1835,11 @@ footer .contenedor__redes ul .ired:hover {
     grid-area: consulta;
     align-self: center;
     justify-self: center;
-    transition: all 0.4s ease-in-out;
+    transition: width 0.2s ease-in-out;
   }
   .contenedor__envios .icono__sobre:hover {
-    transition: all 0.4s ease-in-out;
-    transform: rotateX(70deg);
+    transition: width 0.6s ease-in-out;
+    transform: rotateX(180deg);
   }
 }
 .contenedor__envios .icono__consulta {
@@ -1849,10 +1847,10 @@ footer .contenedor__redes ul .ired:hover {
   grid-row: 2/3;
   width: 80%;
   justify-self: center;
-  transition: all 0.4s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .contenedor__envios .icono__consulta:hover {
-  transition: all 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
   transform: rotate(360deg);
 }
 @media (min-width: 480px) {
@@ -1909,9 +1907,9 @@ footer .contenedor__redes ul .ired:hover {
   margin: 0;
   color: #8c7a6b;
   font-size: 0.8rem;
-  font-weight: 900;
+  font-weight: 700;
   text-align: center;
-  transition: color 0.8s ease-in-out;
+  transition: background-color color font-weight 0.6s ease-in-out;
 }
 @media (min-width: 480px) {
   .contenedor__envios .consulta h5 {
@@ -1940,25 +1938,35 @@ footer .contenedor__redes ul .ired:hover {
 .contenedor__envios .consulta h5:hover {
   background-color: #d9cab3;
   border-radius: 0.3rem;
-  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: none;
   color: #8c7a6b;
-  transition: color 1.5s ease-in-out;
+  text-shadow: 3px 2px 3px rgba(255, 255, 255, 0.2);
+  font-weight: 900;
+  transition: background-color color font-weight 1s ease-in-out;
 }
 
+/*--- PAGE / SECCIÓN SOBRE MÍ ---*/
 .contenedor__grilla {
+  min-width: 365px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-items: center;
   align-content: center;
-  min-width: 380px;
 }
 .contenedor__grilla img {
-  width: 380px;
-  height: auto;
+  width: 350px;
+  height: 400px;
   margin: 0 auto;
   object-fit: cover;
+  object-position: top;
   overflow: hidden;
+}
+@media (min-width: 520px) {
+  .contenedor__grilla img {
+    min-width: 400px;
+    height: 400px;
+  }
 }
 @media (min-width: 620px) {
   .contenedor__grilla img {
@@ -1968,43 +1976,68 @@ footer .contenedor__redes ul .ired:hover {
 @media (min-width: 768px) {
   .contenedor__grilla img {
     min-width: 580px;
+    height: 480px;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
   .contenedor__grilla img {
-    min-width: 680px;
+    min-width: 580px;
   }
 }
 @media (min-width: 1200px) {
   .contenedor__grilla img {
     min-width: 540px;
+    height: 800px;
+    padding: 0;
+    align-self: start;
+    justify-self: start;
+  }
+}
+@media (min-width: 480px) {
+  .contenedor__grilla {
+    min-width: 480px;
+    padding: 2rem 2rem 0 2rem;
   }
 }
 @media (min-width: 620px) {
   .contenedor__grilla {
     min-width: 620px;
+    padding: 3rem 3rem 0 3rem;
   }
 }
 @media (min-width: 768px) {
   .contenedor__grilla {
     min-width: 768px;
+    padding: 4rem 4rem 0 4rem;
+  }
+}
+@media (min-width: 820px) {
+  .contenedor__grilla {
+    min-width: 820px;
+    padding: 4rem 6rem 0 6rem;
   }
 }
 @media (min-width: 1000px) {
   .contenedor__grilla {
     min-width: 1000px;
+    padding: 4rem 8rem 0 8rem;
+  }
+}
+@media (min-width: 1024px) {
+  .contenedor__grilla {
+    min-width: 1024px;
+    padding: 4rem 10rem 0 10rem;
   }
 }
 @media (min-width: 1200px) {
   .contenedor__grilla {
+    min-width: 1200px;
+    padding: 4rem 0 1rem 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 850px 880px 880px;
-    min-width: 1200px;
-    padding: 2rem 0 2rem 0;
+    grid-template-rows: 920px 880px 880px;
     justify-content: center;
-    align-items: center;
-    gap: 1rem;
+    align-items: start;
   }
   .contenedor__grilla .derecha h5 {
     font-size: 1.2rem;
@@ -2013,13 +2046,17 @@ footer .contenedor__redes ul .ired:hover {
     border-right: 2mm dotted #bc8034;
     padding: 0 1.5rem;
   }
-  .contenedor__grilla .izquierda h4 {
-    font-size: 1.3rem;
-    line-height: 1.8rem;
-    text-align: left;
-  }
   .contenedor__grilla .parrafo {
-    padding: 0.5;
+    padding: 0;
+  }
+  .contenedor__grilla .izquierda {
+    padding: 0 2rem 0 0;
+    line-height: 0.55rem;
+  }
+  .contenedor__grilla .izquierda h4 {
+    padding: 0 2rem 0 1rem;
+    font-size: 1.3rem;
+    text-align: left;
   }
   .contenedor__grilla .izquierda h5 {
     font-size: 1.2rem;
@@ -2033,7 +2070,30 @@ footer .contenedor__redes ul .ired:hover {
   padding: 3rem;
   text-align: left;
 }
+@media (min-width: 1200px) {
+  .contenedor__grilla .subtitulo__sobremi {
+    padding: 0 2rem;
+    align-self: start;
+    justify-self: center;
+  }
+}
 .contenedor__grilla .subtitulo__sobremi h2 {
+  padding-top: 0.8rem;
+  margin-bottom: 0;
+  color: #bc8034;
+  font-family: "Corinthia", cursive;
+  font-size: 3rem;
+  font-style: italic;
+  line-height: 2.2rem;
+}
+@media (min-width: 1200px) {
+  .contenedor__grilla .subtitulo__sobremi h2 {
+    padding: 0.8rem 0;
+    align-self: start;
+    justify-self: center;
+  }
+}
+.contenedor__grilla .subtitulo__sobremi h3 {
   padding-top: 2rem;
   margin-bottom: 0;
   color: #5e0b15;
@@ -2041,52 +2101,63 @@ footer .contenedor__redes ul .ired:hover {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0.3rem;
+  line-height: 1.6rem;
 }
 @media (min-width: 1200px) {
-  .contenedor__grilla .subtitulo__sobremi h2 {
-    padding-top: 0;
+  .contenedor__grilla .subtitulo__sobremi h3 {
+    padding: 0;
+    align-self: start;
+    justify-self: start;
   }
-}
-.contenedor__grilla .subtitulo__sobremi h3 {
-  margin-bottom: 0;
-  color: #bc8034;
-  font-family: "Corinthia", cursive;
-  font-size: 3rem;
-  font-style: italic;
-  line-height: 2.5rem;
 }
 
 .img {
   width: 100%;
   height: 100%;
-  padding: 1rem;
+  padding: 2rem;
   object-fit: cover;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  transition: all 0.8s ease;
+  justify-content: center;
+  align-items: start;
+  transition: width height 0.4s ease;
 }
 @media (min-width: 1200px) {
   .img {
-    padding: 1rem 0;
+    padding: 0;
   }
 }
 .img .rigth {
-  border-radius: 20% 10%;
+  border-radius: 20% 2%;
+}
+@media (min-width: 1200px) {
+  .img .rigth {
+    border-radius: 10% 2%;
+  }
 }
 .img.center {
-  border-radius: 20% 30% 50% 70%;
+  padding: 1rem;
+  border-radius: 3.5% 3.5% 50% 80%;
+  border-top: solid 5px #8c7a6b;
+  border-bottom: double 8px #5e0b15;
 }
 .img .left {
-  border-radius: 10% 20%;
+  border-radius: 2% 20%;
+}
+@media (min-width: 1200px) {
+  .img .left {
+    border-radius: 2% 10%;
+  }
 }
 .img:hover {
-  transition: all 0.8s ease;
+  transition: width height 0.8s ease;
   filter: brightness(60%);
 }
 
+/*--- PAGE / SECCIÓN TORTAS ARETESANALES - PRESENTACIÓN ---*/
 .grilla_tortas {
   display: flex;
   flex-wrap: wrap;
@@ -2154,10 +2225,12 @@ footer .contenedor__redes ul .ired:hover {
 .grilla_tortas img {
   width: 350px;
   height: 450px;
+  border-top: double 8px #bc8034;
   border-radius: 50% 20%/10% 40%;
   box-shadow: 0px 8px 10px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
   object-fit: cover;
-  transition: width height 1s ease ease-in-out;
+  filter: sepia(40%) brightness(90%);
+  transition: width height 0.8s ease ease-in-out;
 }
 .grilla_tortas .parrafo li {
   padding: 0.8rem 0;
@@ -2202,11 +2275,7 @@ footer .contenedor__redes ul .ired:hover {
   font-family: "Corinthia", cursive;
   font-size: 4.5rem;
   line-height: 2rem;
-  animation-name: ampliar;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
+  animation: ampliar 1s infinite alternate ease-in-out;
 }
 @media (min-width: 1024px) {
   .acentuado h3 {
@@ -2237,7 +2306,7 @@ footer .contenedor__redes ul .ired:hover {
   padding: 1rem;
   margin: 3rem auto;
   object-fit: cover;
-  transition: width height 1s ease ease-in-out;
+  transition: width height 1.2s ease-in-out;
   z-index: 3;
 }
 @media (min-width: 1024px) {
@@ -2247,9 +2316,10 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 .foto__butter :hover, .foto__letter :hover, .foto__number :hover, .foto__fon :hover, .foto__fondant :hover, .foto__cream :hover {
+  border-top: none;
   box-shadow: none;
   cursor: pointer;
-  transition: width height 0.4s ease ease-in-out;
+  transition: width height 2s ease ease-in-out;
   transform: scale(1.2);
 }
 

@@ -1,15 +1,26 @@
-//SECCIÓN SOBRE MÍ//       
+/*--- PAGE / SECCIÓN SOBRE MÍ ---*/
 .contenedor__grilla {
+    min-width: 365px;
     @include flexbox-column (center, center);
-    min-width: 380px;
+
+    .font__detalle {
+        @extend %template__detalle;
+    }
 
     img {
-        width: 380px;
-        height: auto;
+        width: 350px;
+        height: 400px;
         margin: 0 auto;
 
         object-fit: cover;
+        object-position: top;
+
         overflow: hidden;
+
+        @include md-520 {
+            min-width: 400px;
+            height: 400px;
+        }
 
         @include md-620 {
             min-width: 480px;
@@ -17,46 +28,63 @@
 
         @include md-768 {
             min-width: 580px;
+            height: 480px;
         }
 
-        @include md-1000 {
-            min-width: 680px;
+        @include md-1024 {
+            min-width: 580px;
         }
 
         @include md-1200 {
             min-width: 540px;
+            height: 800px;
+            padding: 0;
+
+            align-self: start;
+            justify-self: start;
         }
+    }
+
+    @include md-480 {
+        min-width: 480px;
+        padding: 2rem 2rem 0 2rem;
     }
 
     @include md-620 {
         min-width: 620px;
+        padding: 3rem 3rem 0 3rem;
     }
 
     @include md-768 {
         min-width: 768px;
+        padding: 4rem 4rem 0 4rem;
+    }
+
+    @include md-820 {
+        min-width: 820px;
+        padding: 4rem 6rem 0 6rem;
     }
 
     @include md-1000 {
         min-width: 1000px;
+        padding: 4rem 8rem 0 8rem;
     }
 
-
-    .font__detalle {
-        @extend %template__detalle;
+    @include md-1024 {
+        min-width: 1024px;
+        padding: 4rem 10rem 0 10rem;
     }
 
     @include md-1200 {
+        min-width: 1200px;
+        padding: 4rem 0 1rem 0;
+
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 850px 880px 880px;
-
-        min-width: 1200px;
-        padding: 2rem 0 2rem 0;
+        grid-template-rows: 920px 880px 880px;
 
         justify-content: center;
-        align-items: center;
-
-        gap: 1rem;
+        align-items: start;
 
         .derecha h5 {
             font-size: 1.2rem;
@@ -67,14 +95,21 @@
             padding: 0 1.5rem;
         }
 
-        .izquierda h4 {
-            font-size: 1.3rem;
-            line-height: 1.8rem;
-            text-align: left;
+        .parrafo {
+            padding: 0;
         }
 
-        .parrafo {
-            padding: 0.5;
+        .izquierda {
+            padding: 0 2rem 0 0;
+
+            line-height: 0.55rem;
+
+            & h4 {
+                padding: 0 2rem 0 1rem;
+
+                font-size: 1.3rem;
+                text-align: left;
+            }
         }
 
         .izquierda h5 {
@@ -92,27 +127,48 @@
         padding: 3rem;
         text-align: left;
 
+        @include md-1200 {
+            padding: 0 2rem;
+
+            align-self: start;
+            justify-self: center;
+        }
+
         & h2 {
+            padding-top: 0.8rem;
+            margin-bottom: 0;
+
+            color: $terciarycolor;
+            font-family: $decorativefont;
+            font-size: 3rem;
+            font-style: italic;
+            line-height: 2.2rem;
+
+            @include md-1200 {
+                padding: 0.8rem 0;
+
+                align-self: start;
+                justify-self: center;
+            }
+        }
+
+        & h3 {
             padding-top: 2rem;
             margin-bottom: 0;
+
             color: $principalcolor;
             @include text_shadow (2px);
             font-size: 2rem;
             font-weight: 700;
             letter-spacing: 0.3rem;
+            line-height: 1.6rem;
 
             @include md-1200 {
-                padding-top: 0;
-            }
-        }
+                padding: 0;
 
-        & h3 {
-            margin-bottom: 0;
-            color: $terciarycolor;
-            font-family: $decorativefont;
-            font-size: 3rem;
-            font-style: italic;
-            line-height: 2.5rem;
+                align-self: start;
+                justify-self: start;
+            }
         }
     }
 }
@@ -121,33 +177,47 @@
 .img {
     width: 100%;
     height: 100%;
-    padding: 1rem;
+    padding: 2rem;
 
     object-fit: cover;
     overflow: hidden;
 
     @include flex-center;
 
+    justify-content: center;
+    align-items: start;
+
+    transition: width height 0.4s ease;
+
     @include md-1200 {
-        padding: 1rem 0;
+        padding: 0;
     }
 
     & .rigth {
-        border-radius: 20% 10%;
+        border-radius: 20% 2%;
+
+        @include md-1200 {
+            border-radius: 10% 2%;
+        }
     }
 
     &.center {
-        border-radius: 20% 30% 50% 70%;
+        padding: 1rem;
+        border-radius: 3.5% 3.5% 50% 80%;
+        border-top: solid 5px $ligthcolor;
+        border-bottom: double 8px $principalcolor;
     }
 
     & .left {
-        border-radius: 10% 20%;
+        border-radius: 2% 20%;
+
+        @include md-1200 {
+            border-radius: 2% 10%;
+        }
     }
 
-    transition: all 0.8s ease;
-
     &:hover {
-        transition: all 0.8s ease;
+        transition: width height 0.8s ease;
         filter: brightness(60%);
     }
 }

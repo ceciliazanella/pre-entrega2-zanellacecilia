@@ -1,4 +1,4 @@
-//--- SECCIÓN TORTAS ARETESANALES - PRESENTACIÓN ---//
+/*--- PAGE / SECCIÓN TORTAS ARETESANALES - PRESENTACIÓN ---*/
 .grilla_tortas {
     @include flexbox-column (center, center);
 
@@ -79,12 +79,15 @@
     & img {
         width: 350px;
         height: 450px;
+        border-top: double 8px $terciarycolor;
         border-radius: 50% 20% / 10% 40%;
         box-shadow: 0px 8px 10px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-
+  
         object-fit: cover;
 
-        transition: width height 1s ease ease-in-out;
+        filter: sepia(40%) brightness(90%);
+
+        transition: width height 0.8s ease ease-in-out;
     }
 
     .parrafo li {
@@ -130,11 +133,7 @@
     font-size: 4.5rem;
     line-height: 2rem;
 
-    animation-name: ampliar;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
+    animation: ampliar 1s infinite alternate ease-in-out;
 
     @include md-1024 {
         line-height: 3rem;
@@ -173,7 +172,7 @@
 
     object-fit: cover;
 
-    transition: width height 1s ease ease-in-out;
+    transition: width height 1.2s ease-in-out;
 
     z-index: 3;
 
@@ -183,10 +182,11 @@
     }
 
     & :hover {
+        border-top: none;
         box-shadow: none;
         cursor: pointer;
 
-        transition: width height 0.4s ease ease-in-out;
+        transition: width height 2s ease ease-in-out;
         transform: scale(1.2);
     }
 }
