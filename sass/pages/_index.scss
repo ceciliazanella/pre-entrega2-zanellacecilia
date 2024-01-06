@@ -512,8 +512,8 @@
 
         //ÍCONO DE PROMOCIÓN//
         .icono__promo {
-            width: 100px;
-            padding-top: 4rem;
+            width: 120px;
+            padding-top: 3rem;
 
             grid-column: 1/2;
             grid-row: 1/2;
@@ -521,7 +521,13 @@
             align-self: start;
             justify-self: center;
 
-            animation: rotar 4s infinite linear;
+            animation: none;
+
+            @include md-520 {
+                padding-bottom: 2rem;
+
+                animation: rotar 4s infinite ease-in-out;
+            }
 
             @include md-768 {
                 width: 180px;

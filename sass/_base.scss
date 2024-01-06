@@ -450,8 +450,7 @@ main {
         margin-bottom: 0;
 
         @include color-texto($principalcolor);
-        border-radius: 20% 10%;
-
+   
         @include md-1000 {
             @include color-texto($ultraligthcolor);
         }
@@ -477,7 +476,6 @@ main {
         margin-bottom: 0;
 
         @include md-1200 {
-            padding-top: 0;
             text-align: left;
         }
 
@@ -514,13 +512,16 @@ main {
 
     & h1 {
         @include h1;
+        padding-top: 3rem;
     }
 
     & h2 {
         color: $principalcolor;
-        font-size: 1.3rem;
+        font-size: 1.8rem;
         font-weight: 900;
         text-align: center;
+
+        padding-top: 1rem;
     }
 
     & img {
@@ -532,7 +533,7 @@ main {
 .descripcion__seccion {
     background-color: #ffffff;
     width: 100%;
-    height: 250px;
+    height: 300px;
     padding: 0 4rem;
 
     @include flexbox-column(center, center);
@@ -541,7 +542,7 @@ main {
 
     gap: 1rem;
 
-    & h3 {
+    & h3 {  
         color: $secundarycolor;
         font-size: 1.5rem;
         font-weight: 900;
@@ -550,19 +551,8 @@ main {
 
     & h4 {
         color: $terciarycolor;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-style: italic;
         text-align: center;
     }
-}
-
-//ANIMACIONES PARA ÍCONOS DE SECCIONES//
-.animation__icon {
-    margin-bottom: 1rem;
-
-    animation-name: rebotarLugar;
-    animation-duration: 0.5s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
 }

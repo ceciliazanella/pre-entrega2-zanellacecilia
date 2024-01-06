@@ -1,5 +1,7 @@
 /*--- FORMULARIO ---*/
 form {
+    padding: 4rem 0;
+    
     @include flexbox-column (center, center);
 
     gap: 1rem;
@@ -27,6 +29,7 @@ form {
         gap: 2rem;
     }
 
+    //TEXTAREA//
     textarea {
         border: 0;
         border-radius: 0.8rem;
@@ -38,6 +41,7 @@ form {
 
         color: $ligthcolor;
         font-size: 1rem;
+        font-style: italic;
         font-weight: 700;
 
         @include md-768 {
@@ -53,51 +57,22 @@ form {
         }
     }
 
+    //INPUT//
     input {
         @extend textarea;
         height: 50px;
 
         @include md-1024 {
-            justify-self: center;
             width: 400px;
             height: 80px;
+
+            justify-self: center;
         }
 
         @include md-1200 {
-            justify-self: center;
             width: 450px;
-        }
-    }
 
-    //BOTÓN VALUE//
-    .boton_value {
-        background-color: $principalcolor;
-        box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
-        border: 0;
-        color: $ligthcolor;
-        text-shadow: 3px 2px 3px rgba(255,255,255,.2);
-        font-size: 1rem;
-        font-weight: 900;
-        letter-spacing: 0.3rem;
-
-        transition: background-color color font-weight 0.8s ease-in-out;
-       
-        @include md-1024 {
-            grid-column: 2/3;
-            grid-row: 3/4;
-
-            align-self: center;
-        }
-
-        &:hover {
-            @include shadow_inset (2px);
-
-            color: $terciarycolor;
-            @include text_shadow (2px);
-            ;
-
-            transition: background-color color font-weight 0.8s ease-in-out;
-            animation: sacudir__horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+            justify-self: center;
         }
     }
 }

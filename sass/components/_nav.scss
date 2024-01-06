@@ -1,4 +1,4 @@
-/*--- HEADER ---*/
+/*--- HEADER > LOGO > NAV ---*/
 header {
     max-width: 1980px;
     margin: 0 auto;
@@ -9,19 +9,19 @@ header {
     .logo {
         max-width: 60%;
 
-        transition: all 0.4s ease;
+        transition: 0.4s ease;
 
         &:hover {
-            transition: all 0.6s ease;
+            transition: 0.6s ease;
             transform: rotate(360deg);
         }
     }
 
     /*--- NAV ---*/
     .navbar-nav {
-        background: rgb(94, 11, 21);
+        background: $principalcolor;
         background: radial-gradient(circle, rgba(94, 11, 21, 1) 0%, rgba(94, 11, 21, 0.7287289915966386) 100%);
-        box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+        box-shadow: 0px 10px 10px -5px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
         border-radius: 0 0 15% 50%;
 
         padding: 2rem;
@@ -67,19 +67,19 @@ header {
 
     .nav-link {
         background-color: rgba(0, 0, 0, 0);
+
         color: $ultraligthcolor;
         font-size: 1rem;
         font-weight: 700;
 
-        transition-property: color font-weight 0.4s ease;
+        transition: color font-size font-weight 0.4s ease-in-out;
 
         &:hover {
             color: $terciarycolor;
             font-weight: 900;
             text-shadow: 3px 3px 2px #000000;
 
-            transition-property: color font-weight 1s ease;
-            transition-duration: 0.6s;
+            transition: color font-size font-weight 0.1s ease-in-out;
         }
     }
 
@@ -89,9 +89,9 @@ header {
 
     .navbar-toggler {
         color: $ligthcolor;
-        box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+        @include shadow(2px);
 
-        transition-property: color 0.4s ease-in-out;
+        transition: color 0.4s ease-in-out;
     }
 
     [data-bs-theme="dark"] {
@@ -105,11 +105,11 @@ header {
         border-radius: 50% 20% / 10% 40%;
         padding: 2rem;
 
-        transition-property: background-color 0.6s ease-in-out;
-        
+        transition: background-color 0.6s ease-in-out;
+
         @include md-1000 {
             background-color: $principalcolor;
-            @include shadow (3px);
+            box-shadow: 0px 5px 5px -5px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
             border-radius: 5% 10% 40% 5%;
             width: 250px;
         }
@@ -117,8 +117,7 @@ header {
         &:hover {
             color: $terciarycolor;
 
-            transition-property: background-color 0.8s ease-in-out;
-            transition-duration: 6s;
+            transition: background-color 1s ease-in-out;
         }
     }
 
@@ -128,7 +127,7 @@ header {
         font-weight: 700;
         text-align: right;
 
-        transition-property: color font-weight 0.6s ease;
+        transition: color font-size font-weight 0.6s ease;
 
         @include md-1000 {
             padding: 0 1rem 0 0;
@@ -146,6 +145,6 @@ header {
         font-style: italic;
         font-weight: 900;
 
-        transition-property: color font-weight text-shadow 1s ease;
+        transition: color font-style font-weight text-shadow 1s ease;
     }
 }

@@ -1,16 +1,16 @@
 /*--- FOOTER ---*/
 footer {
     background-color: #ffffff;
-    padding: 4rem;
+    padding: 4rem 0 6rem 0;
 
     @include flex-center;
     flex-direction: column;
-
 
     @include md-1024 {
         .contenedor__footer {
             max-width: 1200px;
             height: 200px;
+
             @include flex-center;
             flex-direction: row;
 
@@ -24,9 +24,9 @@ footer {
     & h6 {
         color: $terciarycolor;
         font-weight: 700;
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         letter-spacing: 0.2rem;
-        line-height: 0.2rem;
+        line-height: 0.4rem;
         text-align: center;
     }
 
@@ -34,12 +34,12 @@ footer {
         color: $secundarycolor;
         font-style: italic;
         font-size: 0.9rem;
-        line-height: 0.8rem;
+        line-height: 0.6rem;
         text-align: center;
     }
 
     & ul {
-        padding: 0.6rem 0;
+        padding: 1rem 0;
         justify-self: center;
     }
 
@@ -52,11 +52,12 @@ footer {
         justify-content: center;
     }
 
-    //ÍCONOS//
+    //ÍCONOS DEL FOOTER//
     & .icon {
-        display: flex;
         width: 1.8em;
         height: 1.8em;
+
+        display: flex;
 
         align-items: center;
         justify-content: center;
@@ -82,10 +83,10 @@ footer {
             .ired {
                 width: 2.8em;
 
-                transition: all 0.4s ease-in-out;
+                transition: 0.4s ease-in-out;
 
                 &:hover {
-                    transition: all 0.4s ease-in-out;
+                    transition: 0.8s ease-in-out;
                     transform: rotate(360deg);
                 }
             }

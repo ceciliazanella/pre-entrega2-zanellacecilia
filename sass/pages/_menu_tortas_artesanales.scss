@@ -1,13 +1,13 @@
-//--- LISTA / MENÚ / SECCIÓN TORTAS ARTESANALES ---//
+/*--- LISTA / MENÚ / SECCIÓN TORTAS ARTESANALES ---*/
 .contenedor__menu {
-    @include flexbox-column (start, space-between);
-
     width: 100%;
     padding: 2rem;
 
+    @include flexbox-column (start, space-between);
+
     @include md-1024 {
-        flex-direction: row;
         @include flex-center;
+        flex-direction: row;
     }
 
     & li {
@@ -18,7 +18,7 @@
     //TÍTULO MENÚ / SECCIÓN TORTAS ARTESANALES//
     .titulo__menu h4 {
         color: $secundarycolor;
-        text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+        text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
         font-size: 1.4rem;
         font-weight: 700;
         letter-spacing: 0.1rem;
@@ -26,7 +26,7 @@
 
         .enfasis {
             @extend %template__enfasis;
-            text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0,0,0,0.15);
+            text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0, 0, 0, 0.15);
         }
     }
 
@@ -67,6 +67,8 @@
             object-fit: cover;
             overflow: hidden;
 
+            filter: sepia(20%) contrast(100%);
+
             transition: width height 0.4s ease-in-out;
 
             z-index: 1;
@@ -76,8 +78,8 @@
 
                 cursor: pointer;
 
-                transform: scale(1.5);
                 transition: width height 0.8s ease-in-out;
+                transform: scale(1.5);
 
                 z-index: 1;
             }

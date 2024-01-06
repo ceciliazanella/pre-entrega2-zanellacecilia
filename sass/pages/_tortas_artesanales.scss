@@ -1,8 +1,37 @@
 /*--- PAGE / SECCIÓN TORTAS ARETESANALES - PRESENTACIÓN ---*/
+
+//ÍCONO DE SECCIÓN / TORTAS ARTESANALES//
+
+.animation__icon {
+    padding-top: 1rem;
+
+    animation: rebotarLugar 0.5s infinite alternate ease-in-out;
+
+    @include md-768 {
+        padding-top: 2rem;
+    }
+}
+
+//CUERPO CENTRAL / SECCIÓN TORTAS ARTESANALES//
 .grilla_tortas {
+    min-height: 360px;
     @include flexbox-column (center, center);
 
+    padding: 1rem;
+   
     text-align: center;
+
+    @include md-480 {
+        padding: 2rem;
+    }
+
+    @include md-768 {
+        padding: 4rem;
+    }
+
+    @include md-1000 {
+        padding: 6rem;
+    }
 
     .font__detalle {
         @extend %template__detalle;
@@ -10,9 +39,8 @@
 
     .lista__butter {
         @include color-texto($principalcolor);
+        border-radius: 0 1rem;
         padding: 2rem 1rem;
-
-        border-radius: 15% 10%;
 
         @include md-1000 {
             @include color-texto($ultraligthcolor);
@@ -21,13 +49,13 @@
 
     .lista__fondant {
         @extend .lista__butter;
-        border-radius: 5% 20%;
+        border-radius: 2rem 0;
     }
 
     @include md-1024 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 450px 350px 450px 1890px 650px;
+        grid-template-rows: 450px 350px 450px 1880px 650px;
 
         width: 1024px;
         padding: 1.5rem;
@@ -37,6 +65,11 @@
         justify-content: center;
 
         gap: 1rem;
+
+        @include md-1200 {
+            grid-template-rows: 450px 350px 450px 1750px 650px;
+            padding: 1rem 0;
+        }
 
         //TEXTOS / PÁRRAFOS / SECCIÓN TORTAS ARTESANALES//
         .butter {
@@ -70,11 +103,6 @@
         }
     }
 
-    @include md-1200{
-        grid-template-rows: 450px 350px 450px 1800px 650px;
-        padding: 0;
-    }
-
     //IMÁGENES / SECCIÓN TORTAS ARTESANALES//
     & img {
         width: 350px;
@@ -82,7 +110,7 @@
         border-top: double 8px $terciarycolor;
         border-radius: 50% 20% / 10% 40%;
         box-shadow: 0px 8px 10px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-  
+
         object-fit: cover;
 
         filter: sepia(40%) brightness(90%);
@@ -126,21 +154,6 @@
     }
 }
 
-.acentuado h3 {
-    color: $secundarycolor;
-    text-shadow: none;
-    font-family: $decorativefont;
-    font-size: 4.5rem;
-    line-height: 2rem;
-
-    animation: ampliar 1s infinite alternate ease-in-out;
-
-    @include md-1024 {
-        line-height: 3rem;
-        text-align: center;
-    }
-}
-
 .titulo__fondant {
     @extend .titulo__butter;
 
@@ -160,6 +173,22 @@
         grid-row: 2/3;
 
         align-self: center;
+    }
+}
+
+//DESTACADO EN TÍTULOS / SECCIÓN TORTAS ARTESANALES//
+.acentuado h3 {
+    color: $secundarycolor;
+    text-shadow: none;
+    font-family: $decorativefont;
+    font-size: 4.5rem;
+    line-height: 2rem;
+
+    animation: ampliar 1s infinite alternate ease-in-out;
+
+    @include md-1024 {
+        line-height: 3rem;
+        text-align: center;
     }
 }
 

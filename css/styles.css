@@ -263,7 +263,6 @@ main .contenedor_main {
   margin-bottom: 0;
   background-color: #5e0b15;
   color: #d9cab3;
-  border-radius: 20% 10%;
 }
 @media (min-width: 1000px) {
   .parrafo h2 {
@@ -289,7 +288,6 @@ main .contenedor_main {
 }
 @media (min-width: 1200px) {
   .parrafo h4 {
-    padding-top: 0;
     text-align: left;
   }
 }
@@ -329,12 +327,14 @@ main .contenedor_main {
   font-size: 2rem;
   font-weight: 900;
   text-align: center;
+  padding-top: 3rem;
 }
 .contenedor__seccion h2 {
   color: #5e0b15;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-weight: 900;
   text-align: center;
+  padding-top: 1rem;
 }
 .contenedor__seccion img {
   width: 50px;
@@ -343,7 +343,7 @@ main .contenedor_main {
 .descripcion__seccion {
   background-color: #ffffff;
   width: 100%;
-  height: 250px;
+  height: 300px;
   padding: 0 4rem;
   display: flex;
   flex-wrap: wrap;
@@ -361,40 +361,32 @@ main .contenedor_main {
 }
 .descripcion__seccion h4 {
   color: #bc8034;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-style: italic;
   text-align: center;
 }
 
-.animation__icon {
-  margin-bottom: 1rem;
-  animation-name: rebotarLugar;
-  animation-duration: 0.5s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
-}
-
+/*--- BOTONES ---*/
 .boton_outline h5 {
   color: #8c7a6b;
-  background: transparent;
   text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5);
   font-size: 1rem;
   font-weight: 900;
   letter-spacing: 0.2rem;
   text-align: center;
+  background: transparent;
   padding: 1rem 1.3rem;
   margin-bottom: 0;
   border: 0.1rem;
   border-radius: 10px 100px/120px;
   box-shadow: 0px 5px 10px -5px #000000, -25px 10px 15px 5px rgba(0, 0, 0, 0);
-  transition-property: background-color color 0.8s ease-in-out;
+  transition: background-color color 0.4s ease-in-out;
 }
 .boton_outline h5:hover {
-  color: rgba(0, 0, 0, 0.6);
   background: #8c7a6b;
+  color: rgba(0, 0, 0, 0.6);
   text-shadow: 3px 2px 3px rgba(255, 255, 255, 0.2);
-  transition-property: background-color color 0.8s ease-in-out;
+  transition: background-color color 0.8s ease-in-out;
 }
 
 .boton h5 {
@@ -404,12 +396,12 @@ main .contenedor_main {
   font-weight: 900;
   letter-spacing: 0.16rem;
   text-align: center;
-  padding: 1rem 0.6rem;
+  padding: 1rem 0.5rem;
   margin-bottom: 0;
   background: #d9cab3;
   border-radius: 10px 100px/120px;
   box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
-  transition: background-color color 0.4s ease-in-out;
+  transition: background-color color 0.2s ease-in-out;
 }
 .boton h5:hover {
   background: #5e0b15;
@@ -417,7 +409,7 @@ main .contenedor_main {
   color: #d9cab3;
   text-shadow: 1px 1px 1px #000000;
   transition: background-color color 0.6s ease-in-out;
-  animation: sacudir__vertical 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: sacudir__vertical 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 
 /*--- CAROUSEL ---*/
@@ -429,8 +421,6 @@ main .contenedor_main {
   border-bottom: double 8px #5e0b15;
   padding: 0;
   margin: 0 auto;
-  object-fit: cover;
-  overflow: hidden;
   object-fit: cover;
   overflow: hidden;
   animation: aparecer 1s cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -447,8 +437,6 @@ main .contenedor_main {
   border-radius: 6rem 1rem;
   object-fit: cover;
   overflow: hidden;
-  object-fit: cover;
-  overflow: hidden;
   filter: sepia(50%), contrast(80%);
   animation: aparecer 2s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
@@ -461,8 +449,6 @@ main .contenedor_main {
   border-bottom: solid 8px #5e0b15;
   padding: 0;
   margin: 0 auto;
-  object-fit: cover;
-  overflow: hidden;
   object-fit: cover;
   overflow: hidden;
   animation: aparecer 1s cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -497,14 +483,13 @@ main .contenedor_main {
   border-radius: 1rem;
   object-fit: cover;
   overflow: hidden;
-  object-fit: cover;
-  overflow: hidden;
   filter: sepia(50%), contrast(30%);
   animation: aparecer 2s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 /*--- FORMULARIO ---*/
 form {
+  padding: 4rem 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -541,6 +526,7 @@ form textarea, form input {
   padding: 0.8rem;
   color: #8c7a6b;
   font-size: 1rem;
+  font-style: italic;
   font-weight: 700;
 }
 @media (min-width: 768px) {
@@ -563,41 +549,16 @@ form input {
 }
 @media (min-width: 1024px) {
   form input {
-    justify-self: center;
     width: 400px;
     height: 80px;
+    justify-self: center;
   }
 }
 @media (min-width: 1200px) {
   form input {
-    justify-self: center;
     width: 450px;
+    justify-self: center;
   }
-}
-form .boton_value {
-  background-color: #5e0b15;
-  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-  border: 0;
-  color: #8c7a6b;
-  text-shadow: 3px 2px 3px rgba(255, 255, 255, 0.2);
-  font-size: 1rem;
-  font-weight: 900;
-  letter-spacing: 0.3rem;
-  transition: background-color color font-weight 0.8s ease-in-out;
-}
-@media (min-width: 1024px) {
-  form .boton_value {
-    grid-column: 2/3;
-    grid-row: 3/4;
-    align-self: center;
-  }
-}
-form .boton_value:hover {
-  box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-  color: #bc8034;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-  transition: background-color color font-weight 0.8s ease-in-out;
-  animation: sacudir__horizontal 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 
 /*--- HEADER INDEX ---*/
@@ -606,7 +567,7 @@ form .boton_value:hover {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: linear-gradient(#5e0b15, rgba(94, 11, 21, 0.3019607843), rgba(94, 11, 21, 0.2549019608), rgba(94, 11, 21, 0)), url(../imagenes/images_index/portada/portada_index.webp);
+  background-image: linear-gradient(#5e0b15 1%, rgba(207, 164, 169, 0) 99%), url(../imagenes/images_index/portada/portada_index.webp);
   width: 100%;
   max-height: 900px;
   padding-top: 2rem;
@@ -635,7 +596,7 @@ form .boton_value:hover {
   align-content: center;
 }
 
-/*--- HEADER ---*/
+/*--- HEADER > LOGO > NAV ---*/
 header {
   max-width: 1980px;
   margin: 0 auto;
@@ -645,16 +606,16 @@ header {
 }
 header .logo {
   max-width: 60%;
-  transition: all 0.4s ease;
+  transition: 0.4s ease;
 }
 header .logo:hover {
-  transition: all 0.6s ease;
+  transition: 0.6s ease;
   transform: rotate(360deg);
 }
 header .navbar-nav, header .navbar-seccion {
-  background: rgb(94, 11, 21);
+  background: #5e0b15;
   background: radial-gradient(circle, rgb(94, 11, 21) 0%, rgba(94, 11, 21, 0.7287289916) 100%);
-  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 10px -5px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
   border-radius: 0 0 15% 50%;
   padding: 2rem;
   margin-top: 2rem;
@@ -690,22 +651,21 @@ header .nav-link {
   color: #d9cab3;
   font-size: 1rem;
   font-weight: 700;
-  transition-property: color font-weight 0.4s ease;
+  transition: color font-size font-weight 0.4s ease-in-out;
 }
 header .nav-link:hover {
   color: #bc8034;
   font-weight: 900;
   text-shadow: 3px 3px 2px #000000;
-  transition-property: color font-weight 1s ease;
-  transition-duration: 0.6s;
+  transition: color font-size font-weight 0.1s ease-in-out;
 }
 header .navbar .a, header .container .a {
   color: #8c7a6b;
 }
 header .navbar-toggler {
   color: #8c7a6b;
-  box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-  transition-property: color 0.4s ease-in-out;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  transition: color 0.4s ease-in-out;
 }
 header [data-bs-theme=dark] {
   --bs-body-bg: none;
@@ -715,27 +675,26 @@ header .dropdown-menu {
   background-color: rgba(0, 0, 0, 0);
   border-radius: 50% 20%/10% 40%;
   padding: 2rem;
-  transition-property: background-color 0.6s ease-in-out;
+  transition: background-color 0.6s ease-in-out;
 }
 @media (min-width: 1000px) {
   header .dropdown-menu {
     background-color: #5e0b15;
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 5px -5px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
     border-radius: 5% 10% 40% 5%;
     width: 250px;
   }
 }
 header .dropdown-menu:hover {
   color: #bc8034;
-  transition-property: background-color 0.8s ease-in-out;
-  transition-duration: 6s;
+  transition: background-color 1s ease-in-out;
 }
 header .dropdown-item {
   color: #8c7a6b;
   font-size: 1rem;
   font-weight: 700;
   text-align: right;
-  transition-property: color font-weight 0.6s ease;
+  transition: color font-size font-weight 0.6s ease;
 }
 @media (min-width: 1000px) {
   header .dropdown-item {
@@ -751,13 +710,13 @@ header .dropdown-item:hover {
   text-shadow: 1px 1px 1px #000000;
   font-style: italic;
   font-weight: 900;
-  transition-property: color font-weight text-shadow 1s ease;
+  transition: color font-style font-weight text-shadow 1s ease;
 }
 
 /*--- FOOTER ---*/
 footer {
   background-color: #ffffff;
-  padding: 4rem;
+  padding: 4rem 0 6rem 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -782,20 +741,20 @@ footer {
 footer h6 {
   color: #bc8034;
   font-weight: 700;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   letter-spacing: 0.2rem;
-  line-height: 0.2rem;
+  line-height: 0.4rem;
   text-align: center;
 }
 footer h5 {
   color: #90323d;
   font-style: italic;
   font-size: 0.9rem;
-  line-height: 0.8rem;
+  line-height: 0.6rem;
   text-align: center;
 }
 footer ul {
-  padding: 0.6rem 0;
+  padding: 1rem 0;
   justify-self: center;
 }
 footer li {
@@ -809,9 +768,9 @@ footer li {
   justify-content: center;
 }
 footer .icon {
-  display: flex;
   width: 1.8em;
   height: 1.8em;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -832,10 +791,10 @@ footer .contenedor__redes ul {
 }
 footer .contenedor__redes ul .ired {
   width: 2.8em;
-  transition: all 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 footer .contenedor__redes ul .ired:hover {
-  transition: all 0.4s ease-in-out;
+  transition: 0.8s ease-in-out;
   transform: rotate(360deg);
 }
 
@@ -1325,13 +1284,19 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 .contenedor__promo .icono__promo {
-  width: 100px;
-  padding-top: 4rem;
+  width: 120px;
+  padding-top: 3rem;
   grid-column: 1/2;
   grid-row: 1/2;
   align-self: start;
   justify-self: center;
-  animation: rotar 4s infinite linear;
+  animation: none;
+}
+@media (min-width: 520px) {
+  .contenedor__promo .icono__promo {
+    padding-bottom: 2rem;
+    animation: rotar 4s infinite ease-in-out;
+  }
 }
 @media (min-width: 768px) {
   .contenedor__promo .icono__promo {
@@ -2158,19 +2123,46 @@ footer .contenedor__redes ul .ired:hover {
 }
 
 /*--- PAGE / SECCIÓN TORTAS ARETESANALES - PRESENTACIÓN ---*/
+.animation__icon {
+  padding-top: 1rem;
+  animation: rebotarLugar 0.5s infinite alternate ease-in-out;
+}
+@media (min-width: 768px) {
+  .animation__icon {
+    padding-top: 2rem;
+  }
+}
+
 .grilla_tortas {
+  min-height: 360px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-items: center;
   align-content: center;
+  padding: 1rem;
   text-align: center;
+}
+@media (min-width: 480px) {
+  .grilla_tortas {
+    padding: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .grilla_tortas {
+    padding: 4rem;
+  }
+}
+@media (min-width: 1000px) {
+  .grilla_tortas {
+    padding: 6rem;
+  }
 }
 .grilla_tortas .lista__butter, .grilla_tortas .lista__fondant {
   background-color: #5e0b15;
   color: #d9cab3;
+  border-radius: 0 1rem;
   padding: 2rem 1rem;
-  border-radius: 15% 10%;
 }
 @media (min-width: 1000px) {
   .grilla_tortas .lista__butter, .grilla_tortas .lista__fondant {
@@ -2179,13 +2171,13 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 .grilla_tortas .lista__fondant {
-  border-radius: 5% 20%;
+  border-radius: 2rem 0;
 }
 @media (min-width: 1024px) {
   .grilla_tortas {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 450px 350px 450px 1890px 650px;
+    grid-template-rows: 450px 350px 450px 1880px 650px;
     width: 1024px;
     padding: 1.5rem;
     margin: 0 auto;
@@ -2193,6 +2185,14 @@ footer .contenedor__redes ul .ired:hover {
     justify-content: center;
     gap: 1rem;
   }
+}
+@media (min-width: 1024px) and (min-width: 1200px) {
+  .grilla_tortas {
+    grid-template-rows: 450px 350px 450px 1750px 650px;
+    padding: 1rem 0;
+  }
+}
+@media (min-width: 1024px) {
   .grilla_tortas .butter {
     grid-column: 1/2;
     grid-row: 4/5;
@@ -2214,12 +2214,6 @@ footer .contenedor__redes ul .ired:hover {
   }
   .grilla_tortas .parrafo h2 {
     text-align: left;
-  }
-}
-@media (min-width: 1200px) {
-  .grilla_tortas {
-    grid-template-rows: 450px 350px 450px 1800px 650px;
-    padding: 0;
   }
 }
 .grilla_tortas img {
@@ -2269,21 +2263,6 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 
-.acentuado h3 {
-  color: #90323d;
-  text-shadow: none;
-  font-family: "Corinthia", cursive;
-  font-size: 4.5rem;
-  line-height: 2rem;
-  animation: ampliar 1s infinite alternate ease-in-out;
-}
-@media (min-width: 1024px) {
-  .acentuado h3 {
-    line-height: 3rem;
-    text-align: center;
-  }
-}
-
 @media (min-width: 1024px) {
   .titulo__fondant {
     grid-column: 2/3;
@@ -2297,6 +2276,21 @@ footer .contenedor__redes ul .ired:hover {
     grid-column: 3/4;
     grid-row: 2/3;
     align-self: center;
+  }
+}
+
+.acentuado h3 {
+  color: #90323d;
+  text-shadow: none;
+  font-family: "Corinthia", cursive;
+  font-size: 4.5rem;
+  line-height: 2rem;
+  animation: ampliar 1s infinite alternate ease-in-out;
+}
+@media (min-width: 1024px) {
+  .acentuado h3 {
+    line-height: 3rem;
+    text-align: center;
   }
 }
 
@@ -2358,22 +2352,23 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 
+/*--- LISTA / MENÚ / SECCIÓN TORTAS ARTESANALES ---*/
 .contenedor__menu {
+  width: 100%;
+  padding: 2rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-items: start;
   align-content: space-between;
-  width: 100%;
-  padding: 2rem;
 }
 @media (min-width: 1024px) {
   .contenedor__menu {
-    flex-direction: row;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
   }
 }
 .contenedor__menu li {
@@ -2421,14 +2416,15 @@ footer .contenedor__redes ul .ired:hover {
     height: 180px;
     object-fit: cover;
     overflow: hidden;
+    filter: sepia(20%) contrast(100%);
     transition: width height 0.4s ease-in-out;
     z-index: 1;
   }
   .contenedor__menu .img__menu:hover {
     display: flex;
     cursor: pointer;
-    transform: scale(1.5);
     transition: width height 0.8s ease-in-out;
+    transform: scale(1.5);
     z-index: 1;
   }
 }
@@ -2437,6 +2433,34 @@ footer .contenedor__redes ul .ired:hover {
     width: 220px;
     height: 220px;
   }
+}
+
+/*--- LISTA / MENÚ / SECCIÓN TORTAS ARTESANALES ---*/
+.boton_value {
+  background-color: #5e0b15;
+  box-shadow: 0px 10px 10px -5px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  border: 0;
+  color: #8c7a6b;
+  text-shadow: 3px 2px 3px rgba(255, 255, 255, 0.2);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 0.3rem;
+  transition: background-color color font-weight 0.6s ease-in-out;
+}
+@media (min-width: 1024px) {
+  .boton_value {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    align-self: center;
+  }
+}
+.boton_value:hover {
+  box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  color: #bc8034;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  transition: background-color color font-weight 1s ease-in-out;
+  animation: sacudir__horizontal 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 
 /*# sourceMappingURL=styles.css.map */
