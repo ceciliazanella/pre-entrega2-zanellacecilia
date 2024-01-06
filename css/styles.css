@@ -547,13 +547,14 @@ main .contenedor_main {
 
 /*--- FORMULARIO ---*/
 form {
+  width: 1200px;
   padding: 4rem 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-items: center;
   align-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 @media (min-width: 1000px) {
   form {
@@ -566,7 +567,7 @@ form {
     text-align: center;
     align-items: start;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
   }
 }
 @media (min-width: 1024px) {
@@ -580,7 +581,7 @@ form {
     text-align: center;
     align-items: start;
     justify-content: center;
-    gap: 1.8rem;
+    gap: 2rem;
   }
 }
 @media (min-width: 1200px) {
@@ -611,17 +612,17 @@ form textarea:focus, form input:focus {
 }
 @media (min-width: 1000px) {
   form textarea, form input {
-    max-width: 350px;
+    max-width: 450px;
   }
 }
 @media (min-width: 1024px) {
   form textarea, form input {
-    width: 400px;
+    width: 500px;
   }
 }
 @media (min-width: 1200px) {
   form textarea, form input {
-    width: 450px;
+    width: 550px;
   }
 }
 form input {
@@ -629,19 +630,19 @@ form input {
 }
 @media (min-width: 1000px) {
   form input {
-    max-width: 350px;
+    max-width: 450px;
   }
 }
 @media (min-width: 1024px) {
   form input {
-    width: 400px;
+    width: 500px;
     height: 80px;
     justify-self: center;
   }
 }
 @media (min-width: 1200px) {
   form input {
-    width: 450px;
+    width: 550px;
     justify-self: center;
   }
 }
