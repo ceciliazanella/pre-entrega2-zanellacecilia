@@ -34,7 +34,7 @@
   font-weight: 700;
 }
 
-.contenedor__menu .titulo__menu h4 .enfasis {
+.contenedor__menu .titulo__menu h2 .enfasis {
   color: #bc8034;
   font-weight: 900;
 }
@@ -261,14 +261,6 @@ main .contenedor_main {
   text-align: center;
   padding: 0 1rem;
   margin-bottom: 0;
-  background-color: #5e0b15;
-  color: #d9cab3;
-}
-@media (min-width: 1000px) {
-  .parrafo h2 {
-    background-color: #d9cab3;
-    color: #5e0b15;
-  }
 }
 .parrafo h3 {
   color: #5e0b15;
@@ -280,9 +272,9 @@ main .contenedor_main {
 }
 .parrafo h4 {
   color: #8c7a6b;
-  font-size: 1.2rem;
+  font-size: 1.13rem;
   font-weight: 400;
-  line-height: 2rem;
+  line-height: 1.6rem;
   text-align: center;
   margin-bottom: 0;
 }
@@ -298,7 +290,7 @@ main .contenedor_main {
 }
 .parrafo h5 {
   color: #90323d;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5rem;
   text-align: center;
@@ -308,15 +300,15 @@ main .contenedor_main {
 .contenedor__seccion {
   background-color: #ffffff;
   width: 100%;
-  height: 200px;
-  padding: 0 2rem;
+  height: 350px;
+  padding: 2rem 2rem 0 2rem;
+  color: #5e0b15;
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: #5e0b15;
-  text-align: center;
 }
 .contenedor__seccion h1 {
   padding: 0;
@@ -331,10 +323,17 @@ main .contenedor_main {
 }
 .contenedor__seccion h2 {
   color: #5e0b15;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 900;
   text-align: center;
-  padding-top: 1rem;
+  padding-top: 2rem;
+}
+.contenedor__seccion h3 {
+  color: #90323d;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 0.8rem;
 }
 .contenedor__seccion img {
   width: 50px;
@@ -342,15 +341,15 @@ main .contenedor_main {
 
 .descripcion__seccion {
   background-color: #ffffff;
-  width: 100%;
-  height: 300px;
-  padding: 0 4rem;
+  max-width: 1200px;
+  height: 280px;
+  padding: 0 2rem 2rem 2rem;
+  line-height: 1rem;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  justify-items: center;
-  align-content: center;
-  line-height: 0.5rem;
   gap: 1rem;
 }
 .descripcion__seccion h3 {
@@ -358,18 +357,34 @@ main .contenedor_main {
   font-size: 1.5rem;
   font-weight: 900;
   text-align: center;
+  line-height: 1.4rem;
 }
 .descripcion__seccion h4 {
   color: #bc8034;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
   font-style: italic;
   text-align: center;
 }
 
+/*--- ÍCONO DE SECCIONES ---*/
+.animation__icon {
+  padding-top: 1rem;
+  animation: rebotarLugar 0.5s infinite alternate ease-in-out;
+}
+.animation__icon:hover {
+  animation: sacudir__horizontal 1.2s infinite alternate ease-in-out;
+}
+@media (min-width: 768px) {
+  .animation__icon {
+    padding-top: 2rem;
+  }
+}
+
 /*--- BOTONES ---*/
-.boton_outline h5 {
+.boton_outline h4 {
   color: #8c7a6b;
-  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5);
+  text-shadow: -1px -1px 2px rgba(255, 255, 255, 0.747), -1px -1px 1.5px rgba(0, 0, 0, 0.767);
   font-size: 1rem;
   font-weight: 900;
   letter-spacing: 0.2rem;
@@ -382,34 +397,77 @@ main .contenedor_main {
   box-shadow: 0px 5px 10px -5px #000000, -25px 10px 15px 5px rgba(0, 0, 0, 0);
   transition: background-color color 0.4s ease-in-out;
 }
-.boton_outline h5:hover {
+.boton_outline h4:hover {
   background: #8c7a6b;
+  box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.3843137255);
   color: rgba(0, 0, 0, 0.6);
-  text-shadow: 3px 2px 3px rgba(255, 255, 255, 0.2);
+  text-shadow: 1.5px 1.5px 1.8px rgba(255, 255, 255, 0.452);
   transition: background-color color 0.8s ease-in-out;
 }
 
-.boton h5 {
-  color: #8c7a6b;
-  text-shadow: 2px 2px 2px #ffffff;
-  font-size: 1rem;
-  font-weight: 900;
-  letter-spacing: 0.16rem;
-  text-align: center;
-  padding: 1rem 0.5rem;
+.boton {
+  padding: 0 0.8rem;
   margin-bottom: 0;
-  background: #d9cab3;
+  background-color: #d9cab3;
   border-radius: 10px 100px/120px;
   box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
-  transition: background-color color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
-.boton h5:hover {
-  background: #5e0b15;
-  box-shadow: -2px -2px 2px #000000;
+.boton:hover {
+  background-color: #5e0b15;
+  box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.3843137255);
+  box-shadow: inset 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
   color: #d9cab3;
-  text-shadow: 1px 1px 1px #000000;
-  transition: background-color color 0.6s ease-in-out;
+  transition: background-color 0.6s ease-in-out;
   animation: sacudir__vertical 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+.boton h4 {
+  color: #8c7a6b;
+  text-shadow: -1px 1px 1.5px #ffffff;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  transition: color 0.2s ease-in-out;
+}
+.boton h4:hover {
+  color: #d9cab3;
+  text-shadow: 1px 1px 2px #000000;
+  transition: color text-shadow 0.6s ease-in-out;
+}
+
+.boton_value {
+  background-color: #5e0b15;
+  box-shadow: 0px 8px 8px -2px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  border: 0;
+  color: #8c7a6b;
+  text-shadow: 0px -1px 2px rgba(255, 255, 255, 0.267);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 0.3rem;
+  transition: background-color color font-weight 0.6s ease-in-out;
+}
+@media (min-width: 1000px) {
+  .boton_value {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    align-self: center;
+  }
+}
+@media (min-width: 1024px) {
+  .boton_value {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    align-self: center;
+  }
+}
+.boton_value:hover {
+  box-shadow: inset 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
+  color: #bc8034;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  transition: background-color color font-weight 1s ease-in-out;
+  animation: sacudir__horizontal 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 
 /*--- CAROUSEL ---*/
@@ -448,7 +506,7 @@ main .contenedor_main {
   border-top: double 6px #5e0b15;
   border-bottom: solid 8px #5e0b15;
   padding: 0;
-  margin: 0 auto;
+  margin: 4rem auto;
   object-fit: cover;
   overflow: hidden;
   animation: aparecer 1s cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -497,6 +555,20 @@ form {
   align-content: center;
   gap: 1rem;
 }
+@media (min-width: 1000px) {
+  form {
+    max-width: 950px;
+    padding: 2rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 70px 300px 90px;
+    text-align: center;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
 @media (min-width: 1024px) {
   form {
     max-width: 1000px;
@@ -504,7 +576,7 @@ form {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 70px 300px 70px;
+    grid-template-rows: 70px 300px 100px;
     text-align: center;
     align-items: start;
     justify-content: center;
@@ -529,23 +601,36 @@ form textarea, form input {
   font-style: italic;
   font-weight: 700;
 }
+form textarea:focus, form input:focus {
+  outline: 1px solid #bc8034;
+}
 @media (min-width: 768px) {
   form textarea, form input {
     width: 700px;
   }
 }
+@media (min-width: 1000px) {
+  form textarea, form input {
+    max-width: 350px;
+  }
+}
 @media (min-width: 1024px) {
   form textarea, form input {
-    max-width: 400px;
+    width: 400px;
   }
 }
 @media (min-width: 1200px) {
   form textarea, form input {
-    max-width: 450px;
+    width: 450px;
   }
 }
 form input {
   height: 50px;
+}
+@media (min-width: 1000px) {
+  form input {
+    max-width: 350px;
+  }
 }
 @media (min-width: 1024px) {
   form input {
@@ -656,7 +741,7 @@ header .nav-link {
 header .nav-link:hover {
   color: #bc8034;
   font-weight: 900;
-  text-shadow: 3px 3px 2px #000000;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6117647059);
   transition: color font-size font-weight 0.1s ease-in-out;
 }
 header .navbar .a, header .container .a {
@@ -724,10 +809,26 @@ footer {
   flex-direction: column;
   /*--- REDES SOCIALES ---*/
 }
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
   footer .contenedor__footer {
-    max-width: 1200px;
+    max-width: 980px;
     height: 200px;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    align-items: first baseline;
+    justify-content: space-evenly;
+    gap: 4rem;
+  }
+}
+@media (min-width: 1200px) {
+  footer .contenedor__footer {
+    max-width: 1024px;
+    height: 200px;
+    padding: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -738,23 +839,26 @@ footer {
     gap: 6rem;
   }
 }
-footer h6 {
+footer h2 {
+  padding-bottom: 0.2rem;
   color: #bc8034;
   font-weight: 700;
-  font-size: 0.6rem;
-  letter-spacing: 0.2rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
   line-height: 0.4rem;
   text-align: center;
 }
-footer h5 {
+footer h3 {
   color: #90323d;
   font-style: italic;
-  font-size: 0.9rem;
-  line-height: 0.6rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  line-height: 0.2rem;
   text-align: center;
 }
 footer ul {
-  padding: 1rem 0;
+  padding: 0.8rem 0;
   justify-self: center;
 }
 footer li {
@@ -834,7 +938,7 @@ footer .contenedor__redes ul .ired:hover {
   line-height: 0.7;
   animation: cambiarUltraligth 2s ease-in-out;
 }
-.contenedor__h1 h3 {
+.contenedor__h1 h2 {
   font-family: "Corinthia", cursive;
   color: #bc8034;
   font-size: 2.6rem;
@@ -842,7 +946,7 @@ footer .contenedor__redes ul .ired:hover {
   text-shadow: 0 -1px 3px rgba(255, 255, 255, 0.3490196078), -2px -2px 1px rgba(255, 255, 255, 0.1), 2px 2px 2px rgba(0, 0, 0, 0.5);
   animation: cambiarTerciary 3s ease-in-out;
 }
-.contenedor__h1 h4 {
+.contenedor__h1 h3 {
   color: #d9cab3;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
   font-size: 1.6rem;
@@ -866,22 +970,22 @@ footer .contenedor__redes ul .ired:hover {
     max-width: 768px;
   }
 }
-.contenedor__destacado h3 {
-  color: #90323d;
-  font-size: 1.5rem;
-  font-style: italic;
-  font-weight: 700;
-  line-height: 2rem;
-}
-.contenedor__destacado h4 {
+.contenedor__destacado h2 {
   color: #bc8034;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.8rem;
 }
-.contenedor__destacado h4 .destacado {
+.contenedor__destacado h2 .destacado {
   font-weight: var(--font-weight);
   font-style: var(--font-style);
   color: var(--color);
+}
+.contenedor__destacado h3 {
+  color: #90323d;
+  font-size: 1.13rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 2rem;
 }
 
 /*--- SECCIÓN PRODUCTOS / INDEX ---*/
@@ -927,7 +1031,7 @@ footer .contenedor__redes ul .ired:hover {
     padding: 0 4rem 0 4rem;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 550px 450px 600px 450px;
+    grid-template-rows: 250px 450px 350px 450px;
     align-items: start;
     justify-content: center;
     gap: 2rem;
@@ -1060,7 +1164,7 @@ footer .contenedor__redes ul .ired:hover {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 580px 500px;
+    grid-template-rows: 400px 500px;
     align-items: start;
     justify-content: center;
     gap: 1rem;
@@ -1204,19 +1308,19 @@ footer .contenedor__redes ul .ired:hover {
 }
 .contenedor__productos .subtitulo h2 {
   margin: 0;
-  color: #90323d;
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: 0.1rem;
-  text-shadow: 1px 1px 0 #7A7A7A;
+  font-family: "Corinthia", cursive;
+  color: #bc8034;
+  font-size: 2rem;
+  font-style: italic;
+  line-height: 1rem;
 }
 .contenedor__productos .subtitulo h3 {
   margin: 0;
-  font-family: "Corinthia", cursive;
-  color: #bc8034;
-  font-size: 2.5rem;
-  font-style: italic;
-  line-height: 1rem;
+  color: #90323d;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-shadow: 1px 1px 0 #7A7A7A;
 }
 
 /*--- BLOQUE PROMOCIÓN / INDEX ---*/
@@ -1429,11 +1533,11 @@ footer .contenedor__redes ul .ired:hover {
   padding: 0;
   margin: 0;
   color: #bc8034;
-  text-shadow: 1.5px 2px 1.5px rgb(255, 255, 255);
+  text-shadow: 1px 1px 1.5px rgba(255, 255, 255, 0.651);
   font-size: 1.2rem;
   font-weight: 900;
   letter-spacing: 0.22rem;
-  line-height: 1.2rem;
+  line-height: 1.6rem;
   text-align: center;
   text-transform: uppercase;
   animation: cambio__color 1s infinite alternate ease-in-out;
@@ -1447,11 +1551,11 @@ footer .contenedor__redes ul .ired:hover {
   padding: 0;
   margin: 0;
   color: #d9cab3;
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
   font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: 0.22rem;
-  line-height: 1.8rem;
+  line-height: 1.6rem;
   text-align: center;
 }
 .contenedor__promo .ornamentos {
@@ -1492,21 +1596,22 @@ footer .contenedor__redes ul .ired:hover {
     justify-self: center;
   }
 }
-.contenedor__promo .consultame h5 {
+.contenedor__promo .consultame h4 {
   border: solid 0.2rem #d9cab3;
   border-radius: 0.3rem;
+  box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
   padding: 0.8rem 0.3rem;
   margin: 0;
   color: #d9cab3;
-  box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
   font-size: 1rem;
   font-weight: 900;
   letter-spacing: 0.1rem;
   text-align: center;
-  transition: border color font-weight shadow 0.8s ease-in-out;
+  transition: border color font-weight 0.8s ease-in-out;
 }
 @media (min-width: 620px) {
-  .contenedor__promo .consultame h5 {
+  .contenedor__promo .consultame h4 {
     font-size: 1.2rem;
     padding: 1rem 1rem;
     grid-area: consulta;
@@ -1514,7 +1619,7 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 @media (min-width: 768px) {
-  .contenedor__promo .consultame h5 {
+  .contenedor__promo .consultame h4 {
     font-size: 1.5rem;
     padding: 1rem 1rem;
     grid-area: consulta;
@@ -1522,7 +1627,7 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 @media (min-width: 1000px) {
-  .contenedor__promo .consultame h5 {
+  .contenedor__promo .consultame h4 {
     font-size: 1.2rem;
     padding: 1rem 1rem;
     grid-area: fiesta;
@@ -1530,19 +1635,20 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 @media (min-width: 1200px) {
-  .contenedor__promo .consultame h5 {
+  .contenedor__promo .consultame h4 {
     font-size: 1.5rem;
     padding: 1rem 1rem;
     grid-area: fiesta;
     align-self: flex-end;
   }
 }
-.contenedor__promo .consultame h5:hover {
+.contenedor__promo .consultame h4:hover {
   border: solid 0.2rem #bc8034;
   border-radius: 0.3rem;
-  color: #bc8034;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-  transition: border color font-weight shadow 1.2s ease-in-out;
+  color: #bc8034;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  transition: border color font-weight 1.2s ease-in-out;
   animation: latido 1.5s ease-in-out infinite both;
 }
 
@@ -1633,7 +1739,7 @@ footer .contenedor__redes ul .ired:hover {
   padding: 0;
   margin: 0;
   color: #90323d;
-  text-shadow: 1.5px 2px 1.5px rgb(255, 255, 255);
+  text-shadow: 1px 1px 1.5px rgba(255, 255, 255, 0.651);
   font-size: 1.4rem;
   font-weight: 900;
 }
@@ -1741,7 +1847,7 @@ footer .contenedor__redes ul .ired:hover {
 .contenedor__envios .comprar h5 {
   background-color: #5e0b15;
   border-radius: 0.3rem;
-  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: -5px 0px 6px -2px rgba(0, 0, 0, 0.5215686275), 5px 0px 6px -2px rgba(0, 0, 0, 0.5215686275);
   padding: 1.2rem 0.5rem;
   margin: 0;
   color: #8c7a6b;
@@ -1784,7 +1890,7 @@ footer .contenedor__redes ul .ired:hover {
   background-color: #d9cab3;
   border-radius: 0.3rem;
   color: #bc8034;
-  text-shadow: 3px 2px 3px rgba(255, 255, 255, 0.2);
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.425);
   box-shadow: none;
   transition: background-color color font-size font-weight 0.8s ease-in-out;
   animation: latido 1.5s ease-in-out infinite both;
@@ -1867,7 +1973,7 @@ footer .contenedor__redes ul .ired:hover {
 .contenedor__envios .consulta h5 {
   background-color: #5e0b15;
   border-radius: 0.3rem;
-  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 8px 10px -7px #000000;
   padding: 0.5rem;
   margin: 0;
   color: #8c7a6b;
@@ -1905,7 +2011,7 @@ footer .contenedor__redes ul .ired:hover {
   border-radius: 0.3rem;
   box-shadow: none;
   color: #8c7a6b;
-  text-shadow: 3px 2px 3px rgba(255, 255, 255, 0.2);
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.37);
   font-weight: 900;
   transition: background-color color font-weight 1s ease-in-out;
 }
@@ -1997,7 +2103,7 @@ footer .contenedor__redes ul .ired:hover {
 @media (min-width: 1200px) {
   .contenedor__grilla {
     min-width: 1200px;
-    padding: 4rem 0 1rem 0;
+    padding: 4rem 1rem 1rem 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 920px 880px 880px;
@@ -2042,22 +2148,6 @@ footer .contenedor__redes ul .ired:hover {
     justify-self: center;
   }
 }
-.contenedor__grilla .subtitulo__sobremi h2 {
-  padding-top: 0.8rem;
-  margin-bottom: 0;
-  color: #bc8034;
-  font-family: "Corinthia", cursive;
-  font-size: 3rem;
-  font-style: italic;
-  line-height: 2.2rem;
-}
-@media (min-width: 1200px) {
-  .contenedor__grilla .subtitulo__sobremi h2 {
-    padding: 0.8rem 0;
-    align-self: start;
-    justify-self: center;
-  }
-}
 .contenedor__grilla .subtitulo__sobremi h3 {
   padding-top: 2rem;
   margin-bottom: 0;
@@ -2073,6 +2163,22 @@ footer .contenedor__redes ul .ired:hover {
     padding: 0;
     align-self: start;
     justify-self: start;
+  }
+}
+.contenedor__grilla .subtitulo__sobremi h4 {
+  padding-top: 0.8rem;
+  margin-bottom: 0;
+  color: #bc8034;
+  font-family: "Corinthia", cursive;
+  font-size: 3rem;
+  font-style: italic;
+  line-height: 2.2rem;
+}
+@media (min-width: 1200px) {
+  .contenedor__grilla .subtitulo__sobremi h4 {
+    padding: 0.8rem 0;
+    align-self: start;
+    justify-self: center;
   }
 }
 
@@ -2123,16 +2229,6 @@ footer .contenedor__redes ul .ired:hover {
 }
 
 /*--- PAGE / SECCIÓN TORTAS ARETESANALES - PRESENTACIÓN ---*/
-.animation__icon {
-  padding-top: 1rem;
-  animation: rebotarLugar 0.5s infinite alternate ease-in-out;
-}
-@media (min-width: 768px) {
-  .animation__icon {
-    padding-top: 2rem;
-  }
-}
-
 .grilla_tortas {
   min-height: 360px;
   display: flex;
@@ -2142,6 +2238,19 @@ footer .contenedor__redes ul .ired:hover {
   align-content: center;
   padding: 1rem;
   text-align: center;
+}
+.grilla_tortas .parrafo h4 {
+  padding: 0 2rem;
+  font-style: italic;
+  font-weight: 700;
+  background-color: #5e0b15;
+  color: #d9cab3;
+}
+@media (min-width: 1000px) {
+  .grilla_tortas .parrafo h4 {
+    background-color: #d9cab3;
+    color: #5e0b15;
+  }
 }
 @media (min-width: 480px) {
   .grilla_tortas {
@@ -2177,7 +2286,7 @@ footer .contenedor__redes ul .ired:hover {
   .grilla_tortas {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 450px 350px 450px 1880px 650px;
+    grid-template-rows: 450px 350px 450px 1750px 650px;
     width: 1024px;
     padding: 1.5rem;
     margin: 0 auto;
@@ -2188,7 +2297,7 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 1024px) and (min-width: 1200px) {
   .grilla_tortas {
-    grid-template-rows: 450px 350px 450px 1750px 650px;
+    grid-template-rows: 450px 350px 450px 1650px 650px;
     padding: 1rem 0;
   }
 }
@@ -2279,7 +2388,7 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 
-.acentuado h3 {
+.acentuado {
   color: #90323d;
   text-shadow: none;
   font-family: "Corinthia", cursive;
@@ -2288,7 +2397,7 @@ footer .contenedor__redes ul .ired:hover {
   animation: ampliar 1s infinite alternate ease-in-out;
 }
 @media (min-width: 1024px) {
-  .acentuado h3 {
+  .acentuado {
     line-height: 3rem;
     text-align: center;
   }
@@ -2375,7 +2484,7 @@ footer .contenedor__redes ul .ired:hover {
   display: flex;
   flex-wrap: wrap;
 }
-.contenedor__menu .titulo__menu h4 {
+.contenedor__menu .titulo__menu h2 {
   color: #90323d;
   text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5);
   font-size: 1.4rem;
@@ -2383,10 +2492,10 @@ footer .contenedor__redes ul .ired:hover {
   letter-spacing: 0.1rem;
   text-align: left;
 }
-.contenedor__menu .titulo__menu h4 .enfasis {
+.contenedor__menu .titulo__menu h2 .enfasis {
   text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0, 0, 0, 0.15);
 }
-.contenedor__menu .texto__menu h5 {
+.contenedor__menu .texto__menu h3 {
   color: #8c7a6b;
   font-size: 1.2rem;
   font-weight: 400;
@@ -2395,13 +2504,13 @@ footer .contenedor__redes ul .ired:hover {
   text-align: inherit;
 }
 @media (min-width: 1024px) {
-  .contenedor__menu .texto__menu h5 {
+  .contenedor__menu .texto__menu h3 {
     width: 700px;
     padding-right: 2rem;
   }
 }
 @media (min-width: 1200px) {
-  .contenedor__menu .texto__menu h5 {
+  .contenedor__menu .texto__menu h3 {
     width: 800px;
     padding-right: 4rem;
   }
@@ -2433,34 +2542,6 @@ footer .contenedor__redes ul .ired:hover {
     width: 220px;
     height: 220px;
   }
-}
-
-/*--- LISTA / MENÚ / SECCIÓN TORTAS ARTESANALES ---*/
-.boton_value {
-  background-color: #5e0b15;
-  box-shadow: 0px 10px 10px -5px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-  border: 0;
-  color: #8c7a6b;
-  text-shadow: 3px 2px 3px rgba(255, 255, 255, 0.2);
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 900;
-  letter-spacing: 0.3rem;
-  transition: background-color color font-weight 0.6s ease-in-out;
-}
-@media (min-width: 1024px) {
-  .boton_value {
-    grid-column: 2/3;
-    grid-row: 3/4;
-    align-self: center;
-  }
-}
-.boton_value:hover {
-  box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-  color: #bc8034;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-  transition: background-color color font-weight 1s ease-in-out;
-  animation: sacudir__horizontal 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 
 /*# sourceMappingURL=styles.css.map */

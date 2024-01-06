@@ -32,7 +32,7 @@
             animation: cambiarUltraligth 2s ease-in-out;
         }
 
-        & h3 {
+        & h2 {
             font-family: $decorativefont;
             color: $terciarycolor;
             font-size: 2.6rem;
@@ -42,7 +42,7 @@
             animation: cambiarTerciary 3s ease-in-out;
         }
 
-        & h4 {
+        & h3 {
             color: $ultraligthcolor;
             @include text_shadow (3px);
             font-size: 1.6rem;
@@ -66,17 +66,9 @@
             max-width: 768px;
         }
 
-        & h3 {
-            color: $secundarycolor;
-            font-size: 1.5rem;
-            font-style: italic;
-            font-weight: 700;
-            line-height: 2rem;
-        }
-
-        & h4 {
+        & h2 {
             color: $terciarycolor;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             line-height: 1.8rem;
 
             .destacado {
@@ -84,6 +76,14 @@
                 font-style: var(--font-style);
                 color: var(--color);
             }
+        }
+
+        & h3 {
+            color: $secundarycolor;
+            font-size: 1.13rem;
+            font-style: italic;
+            font-weight: 700;
+            line-height: 2rem;
         }
     }
 
@@ -133,7 +133,7 @@
 
             display: grid;
             grid-template-columns: 50% 50%;
-            grid-template-rows: 550px 450px 600px 450px;
+            grid-template-rows: 250px 450px 350px 450px;
 
             align-items: start;
             justify-content: center;
@@ -272,7 +272,7 @@
 
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 580px 500px;
+            grid-template-rows: 400px 500px;
 
             align-items: start;
             justify-content: center;
@@ -417,21 +417,21 @@
             & h2 {
                 margin: 0;
 
-                color: $secundarycolor;
-                font-size: 1.6rem;
-                font-weight: 700;
-                letter-spacing: 0.1rem;
-                text-shadow: 1px 1px 0 #7A7A7A;
+                font-family: $decorativefont;
+                color: $terciarycolor;
+                font-size: 2rem;
+                font-style: italic;
+                line-height: 1rem;
             }
 
             & h3 {
                 margin: 0;
 
-                font-family: $decorativefont;
-                color: $terciarycolor;
-                font-size: 2.5rem;
-                font-style: italic;
-                line-height: 1rem;
+                color: $secundarycolor;
+                font-size: 1.2rem;
+                font-weight: 700;
+                letter-spacing: 0.1rem;
+                text-shadow: 1px 1px 0 #7A7A7A;
             }
         }
     }
@@ -678,7 +678,7 @@
                 font-size: 1.2rem;
                 font-weight: 900;
                 letter-spacing: 0.22rem;
-                line-height: 1.2rem;
+                line-height: 1.6rem;
                 text-align: center;
                 text-transform: uppercase;
 
@@ -694,11 +694,11 @@
                 margin: 0;
 
                 color: $ultraligthcolor;
-                @include text_shadow (3px);
+                @include text_shadow (2px);
                 font-size: 1.8rem;
                 font-weight: 700;
                 letter-spacing: 0.22rem;
-                line-height: 1.8rem;
+                line-height: 1.6rem;
                 text-align: center;
             }
         }
@@ -746,20 +746,21 @@
                 justify-self: center;
             }
 
-            & h5 {
+            & h4 {
                 border: solid 0.2rem $ultraligthcolor;
                 border-radius: 0.3rem;
+                @include shadow (1.5px);
                 padding: 0.8rem 0.3rem;
                 margin: 0;
 
                 color: $ultraligthcolor;
-                @include shadow (1.5px);
+                @include text_shadow (3px);
                 font-size: 1rem;
                 font-weight: 900;
                 letter-spacing: 0.1rem;
                 text-align: center;
 
-                transition: border color font-weight shadow 0.8s ease-in-out;
+                transition: border color font-weight 0.8s ease-in-out;
 
                 @include md-620 {
                     font-size: 1.2rem;
@@ -800,11 +801,12 @@
                 &:hover {
                     border: solid 0.2rem $terciarycolor;
                     border-radius: 0.3rem;
-
-                    color: $terciarycolor;
                     @include shadow(2px);
 
-                    transition: border color font-weight shadow 1.2s ease-in-out;
+                    color: $terciarycolor;
+                    @include text_shadow (1px);
+
+                    transition: border color font-weight 1.2s ease-in-out;
                     animation: latido 1.5s ease-in-out infinite both;
                 }
             }
@@ -1029,7 +1031,7 @@
             & h5 {
                 background-color: $principalcolor;
                 border-radius: 0.3rem;
-                box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+                box-shadow: -5px 0px 6px -2px #00000085, 5px 0px 6px -2px #00000085;
                 padding: 1.2rem 0.5rem;
                 margin: 0;
 
@@ -1070,7 +1072,7 @@
                     border-radius: 0.3rem;
 
                     color: $terciarycolor;
-                    text-shadow: 3px 2px 3px rgba(255, 255, 255, .2);
+                    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.425);
                     box-shadow: none;
 
                     transition: background-color color font-size font-weight 0.8s ease-in-out;
@@ -1167,7 +1169,7 @@
             & h5 {
                 background-color: $principalcolor;
                 border-radius: 0.3rem;
-                box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+                box-shadow: 0px 8px 10px -7px #000000;
                 padding: 0.5rem;
                 margin: 0;
 
@@ -1204,7 +1206,7 @@
                     box-shadow: none;
 
                     color: $ligthcolor;
-                    text-shadow: 3px 2px 3px rgba(255, 255, 255, .2);
+                    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.37);
                     font-weight: 900;
 
                     transition: background-color color font-weight 1s ease-in-out;

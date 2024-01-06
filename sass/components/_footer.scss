@@ -6,10 +6,27 @@ footer {
     @include flex-center;
     flex-direction: column;
 
-    @include md-1024 {
+    @include md-1000 {
         .contenedor__footer {
-            max-width: 1200px;
+            max-width: 980px;
             height: 200px;
+            padding: 2rem;
+
+            @include flex-center;
+            flex-direction: row;
+
+            align-items: first baseline;
+            justify-content: space-evenly;
+
+            gap: 4rem;
+        }
+    }
+
+    @include md-1200 {
+        .contenedor__footer {
+            max-width: 1024px;
+            height: 200px;
+            padding: 2rem;
 
             @include flex-center;
             flex-direction: row;
@@ -21,25 +38,29 @@ footer {
         }
     }
 
-    & h6 {
+    & h2 {
+        padding-bottom: 0.2rem;
+        
         color: $terciarycolor;
         font-weight: 700;
-        font-size: 0.6rem;
-        letter-spacing: 0.2rem;
+        font-size: 0.7rem;
+        letter-spacing: 0.1rem;
         line-height: 0.4rem;
         text-align: center;
     }
 
-    & h5 {
+    & h3 {
         color: $secundarycolor;
         font-style: italic;
-        font-size: 0.9rem;
-        line-height: 0.6rem;
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.05rem;
+        line-height: 0.2rem;
         text-align: center;
     }
 
     & ul {
-        padding: 1rem 0;
+        padding: 0.8rem 0;
         justify-self: center;
     }
 

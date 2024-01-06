@@ -2,9 +2,9 @@
 
 //BOTÓN SÓLO CONTORNO//
 .boton_outline {
-    & h5 {
+    & h4 {
         color: $ligthcolor;
-        text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
+        text-shadow: -1px -1px 2px rgba(255, 255, 255, 0.747), -1px -1px 1.5px rgba(0, 0, 0, 0.767);
         font-size: 1rem;
         font-weight: 900;
         letter-spacing: 0.2rem;
@@ -21,9 +21,10 @@
 
         &:hover {
             background: $ligthcolor;
+            box-shadow: -1px -1px 2px #00000062;
 
             color: rgba(0, 0, 0, .6);
-            text-shadow: 3px 2px 3px rgba(255, 255, 255, .2);
+            text-shadow: 1.5px 1.5px 1.8px rgba(255, 255, 255, 0.452);
 
             transition: background-color color 0.8s ease-in-out;
         }
@@ -32,31 +33,80 @@
 
 //BOTÓN CON FONDO PLENO OSCURO//
 .boton {
-    & h5 {
+    padding: 0 0.8rem;
+    margin-bottom: 0;
+    background-color: $ultraligthcolor;
+    border-radius: 10px 100px / 120px;
+    @include shadow (1.5px);
+
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+        background-color: $principalcolor;
+        box-shadow: -1px -1px 2px #00000062;
+        @include shadow_inset (1.5px);
+
+        color: $ultraligthcolor;
+
+        transition: background-color 0.6s ease-in-out;
+        animation: sacudir__vertical 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    }
+
+    & h4 {
         color: $ligthcolor;
-        text-shadow: 2px 2px 2px #ffffff;
+        text-shadow: -1px 1px 1.5px #ffffff;
         font-size: 1rem;
         font-weight: 900;
-        letter-spacing: 0.16rem;
+        letter-spacing: 0.1rem;
         text-align: center;
 
-        padding: 1rem 0.5rem;
-        margin-bottom: 0;
-        background: $ultraligthcolor;
-        border-radius: 10px 100px / 120px;
-        @include shadow (1.5px);
-
-        transition: background-color color 0.2s ease-in-out;
+        transition: color 0.2s ease-in-out;
 
         &:hover {
-            background: $principalcolor;
-            box-shadow: -2px -2px 2px #000000;
-
             color: $ultraligthcolor;
-            text-shadow: 1px 1px 1px #000000;
+            text-shadow: 1px 1px 2px #000000;
 
-            transition: background-color color 0.6s ease-in-out;
-            animation: sacudir__vertical 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+            transition: color text-shadow 0.6s ease-in-out;
         }
+    }
+}
+
+//BOTÓN VALUE//
+.boton_value {
+    background-color: $principalcolor;
+    box-shadow: 0px 8px 8px -2px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    border: 0;
+
+    color: $ligthcolor;
+    text-shadow: 0px -1px 2px rgba(255, 255, 255, 0.267);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 0.3rem;
+
+    transition: background-color color font-weight 0.6s ease-in-out;
+
+    @include md-1000 {
+        grid-column: 2/3;
+        grid-row: 3/4;
+
+        align-self: center;
+    }
+
+    @include md-1024 {
+        grid-column: 2/3;
+        grid-row: 3/4;
+
+        align-self: center;
+    }
+
+    &:hover {
+        @include shadow_inset (1.5px);
+
+        color: $terciarycolor;
+        @include text_shadow (2px);
+
+        transition: background-color color font-weight 1s ease-in-out;
+        animation: sacudir__horizontal 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
     }
 }
