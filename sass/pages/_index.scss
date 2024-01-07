@@ -315,7 +315,7 @@
         }
 
         .enlace__pasteleria {
-            background-image: url(../imagenes/images_index/tarjetas/pastelería_creativa.webp);
+            background-image: url(../imagenes/images_index/tarjetas/pasteleria_creativa.webp);
             background-size: contain;
             background-repeat: no-repeat;
             background-position: cover;
@@ -353,6 +353,7 @@
             padding: 0 0 0.5rem 0;
 
             @include flexbox-column (center, center);
+
             align-items: center;
 
             @include md-768 {
@@ -388,6 +389,7 @@
             padding: 0 0 0.5rem 0;
 
             @include flexbox-column (center, center);
+
             align-items: center;
 
             @include md-768 {

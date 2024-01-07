@@ -3,10 +3,10 @@
 //CUERPO CENTRAL / SECCIÓN TORTAS ARTESANALES//
 .grilla_tortas {
     min-height: 360px;
+    padding: 1rem;
+
     @include flexbox-column (center, center);
 
-    padding: 1rem;
-   
     text-align: center;
 
     .parrafo h4 {
@@ -39,9 +39,10 @@
     }
 
     .lista__butter {
-        @include color-texto($principalcolor);
         border-radius: 0 1rem;
         padding: 2rem 1rem;
+
+        @include color-texto($principalcolor);
 
         @include md-1000 {
             @include color-texto($ultraligthcolor);
@@ -49,8 +50,9 @@
     }
 
     .lista__fondant {
-        @extend .lista__butter;
         border-radius: 2rem 0;
+
+        @extend .lista__butter;
     }
 
     @include md-1024 {

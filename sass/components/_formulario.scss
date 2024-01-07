@@ -49,13 +49,12 @@ form {
 
     //TEXTAREA//
     textarea {
-        border: 0;
-        border-radius: 0.8rem;
-        @include shadow_inset (2px);
-
         width: 320px;
         height: 300px;
         padding: 0.8rem;
+        border: 0;
+        border-radius: 0.8rem;
+        @include shadow_inset (2px);
 
         color: $ligthcolor;
         font-size: 1rem;
@@ -89,7 +88,7 @@ form {
         height: 50px;
 
         @include md-1000 {
-            max-width: 450px;
+            width: 450px;
         }
 
         @include md-1024 {
