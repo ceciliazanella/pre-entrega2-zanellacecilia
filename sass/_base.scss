@@ -410,6 +410,7 @@ main {
 /*--- elementos no infinitos ---*/
 //CLASE CONTENEDOR//
 .contenedor {
+    min-width: 360px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -423,10 +424,10 @@ main {
         margin-bottom: 0;
 
         color: $terciarycolor;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-style: italic;
         font-weight: 500;
-        line-height: 2rem;
+        line-height: 2.1rem;
         text-align: center;
 
     }
@@ -435,9 +436,9 @@ main {
         margin-bottom: 0;
 
         color: $principalcolor;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: 400;
-        line-height: 2.2;
+        line-height: 2rem;
         text-align: initial;
     }
 
@@ -445,7 +446,7 @@ main {
         margin-bottom: 0;
 
         color: $ligthcolor;
-        font-size: 1.13rem;
+        font-size: 1rem;
         font-weight: 400;
         line-height: 1.7rem;
         text-align: center;
@@ -465,7 +466,7 @@ main {
         margin-bottom: 0;
 
         color: $secundarycolor;
-        font-size: 1rem;
+        font-size: 0.8rem;
         font-weight: 400;
         line-height: 1.5rem;
         text-align: center;

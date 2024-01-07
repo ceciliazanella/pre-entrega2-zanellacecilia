@@ -2,12 +2,12 @@
 
 //CAROUSEL INDEX//
 .carousel {
-    width: 280px;
-    height: 320px;
+    width: 260px;
+    height: 300px;
     border-radius: 6rem 1rem;
-    border-top: solid 4px $ligthcolor;
-    border-bottom: double 8px $principalcolor;
-    padding: 0;
+    border-top: solid 2px $ligthcolor;
+    border-bottom: double 4px $principalcolor;
+    padding: 0.5rem;
     margin: 0 auto;
 
     object-fit: cover;
@@ -37,11 +37,11 @@
 //CAROUSEL PAGE / SECCIÓN SOBRE MÍ//
 .carousel__sobre {
     width: 320px;
-    height: 200px;
+    height: 220px;
     border-radius: 1rem;
-    border-top: double 6px $principalcolor;
-    border-bottom: solid 8px $principalcolor;
-    padding: 0;
+    border-top: dotted 6px $terciarycolor;
+    border-bottom: solid 10px $principalcolor;
+    padding: 1rem 0 0 0;
     margin: 4rem auto;
 
     object-fit: cover;
@@ -61,12 +61,12 @@
 
     @include md-768 {
         width: 500px;
-        height: 280px;
+        height: 340px;
     }
 
     @include md-1024 {
         width: 560px;
-        height: 320px;
+        height: 380px;
     }
 
     .carousel-item {
