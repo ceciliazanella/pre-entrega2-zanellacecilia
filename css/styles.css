@@ -401,10 +401,10 @@ header {
 }
 header .logo {
   max-width: 60%;
-  transition: 0.4s ease;
+  transition: 0.8s ease;
 }
 header .logo:hover {
-  transition: 0.6s ease;
+  transition: 1.2s ease;
   transform: rotate(360deg);
 }
 header .navbar-nav, header .navbar-seccion {
@@ -819,7 +819,7 @@ footer h2 {
   padding-bottom: 0.2rem;
   color: #bc8034;
   font-weight: 700;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   letter-spacing: 0.1rem;
   line-height: 0.4rem;
   text-align: center;
@@ -827,10 +827,10 @@ footer h2 {
 footer h3 {
   color: #90323d;
   font-style: italic;
-  font-size: 0.65rem;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.05rem;
-  line-height: 0.2rem;
+  line-height: 0.5rem;
   text-align: center;
 }
 footer ul {
@@ -2313,6 +2313,10 @@ footer .contenedor__redes ul .ired:hover {
   justify-items: center;
   align-content: center;
   text-align: center;
+}
+.grilla_tortas data-aos {
+  animation-duration: 6s;
+  animation-delay: 2s;
 }
 .grilla_tortas .parrafo h4 {
   padding: 0 2rem;
