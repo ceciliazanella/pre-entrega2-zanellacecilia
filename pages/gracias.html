@@ -33,7 +33,7 @@
 
 <!-- Body -->
 
-<body>
+<body class="flex-column">
 
     <div class="header_seccion">
         <!-- Bloque Contenedor / Elementos No Infinitos -->
@@ -95,16 +95,15 @@
 
         <section>
 
-            <article class="contenedor__seccion">
+            <article class="container contenedor__seccion">
                 <!-- Título de la Sección Contacto -->
                 <div>
-                    <h1>GRACIAS</h1>
+                    <h1>MUCHAS GRACIAS</h1>
                 </div>
                 <!-- Ícono de Whatsapp -->
                 <div>
-                    <a href="https://api.whatsapp.com/send?phone=+5491165083824&text=Hola! Quería realizar un pedido ¿Me pasarías la información correspondiente para hacerlo? Gracias!"
-                        title="Ir a Whatsapp" target="_blank"><img class="icon animation__icon"
-                            src="../imagenes/icons/whatsapp.svg" alt="Ícono de Whatsapp"></a>
+                    <img class="icon animation__icon" src="/imagenes/icons_gracias/mensaje_enviado.svg"
+                        alt="Ícono de Avión de Papel que termina con un Corazón">
                 </div>
                 <!-- Subtítulo de la Sección Contacto -->
                 <div>
@@ -114,11 +113,12 @@
 
             </article>
 
-            <article class="descripcion__seccion">
+            <article class="container descripcion__seccion">
                 <!-- Bloque Descripción de la Sección Contacto -->
                 <div>
                     <p>
-                    <h3>Te invito a seguir recorriendo</h3>
+                    <h3>Mientras tanto...</h3>
+                    <h3>te invito a seguir recorriendo</h3>
                     <h4>Corazón de Chocolate</h4>
                     </p>
                 </div>
@@ -201,6 +201,12 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+    <!-- Formulario -->
+    <script>
+        setTimeout(function () {
+            window.location.replace("../index.html");
+        }, 5000);
     </script>
 
 </body>
