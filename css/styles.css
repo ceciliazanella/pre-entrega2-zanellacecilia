@@ -2314,10 +2314,6 @@ footer .contenedor__redes ul .ired:hover {
   align-content: center;
   text-align: center;
 }
-.grilla_tortas data-aos {
-  animation-duration: 6s;
-  animation-delay: 2s;
-}
 .grilla_tortas .parrafo h4 {
   padding: 0 2rem;
   font-style: italic;
