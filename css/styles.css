@@ -354,6 +354,7 @@ main .contenedor_main {
   width: 50px;
 }
 .contenedor__seccion .icon {
+  width: 70px;
   padding-top: 2rem;
 }
 .contenedor__seccion .animation__icon {
@@ -401,10 +402,10 @@ header {
 }
 header .logo {
   max-width: 60%;
-  transition: 0.8s ease;
+  transition: 1s ease;
 }
 header .logo:hover {
-  transition: 1.2s ease;
+  transition: 1.6s ease-in-out;
   transform: rotate(360deg);
 }
 header .navbar-nav, header .navbar-seccion {
@@ -2601,13 +2602,14 @@ footer .contenedor__redes ul .ired:hover {
     object-fit: cover;
     overflow: hidden;
     filter: sepia(20%) contrast(100%);
-    transition: width height 0.4s ease-in-out;
+    transition: width height 0.8s ease-in-out;
     z-index: 1;
   }
   .contenedor__menu .img__menu:hover {
     display: flex;
     cursor: pointer;
-    transition: width height 0.8s ease-in-out;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.314);
+    transition: width height 1s ease-in-out;
     transform: scale(1.5);
     z-index: 1;
   }
