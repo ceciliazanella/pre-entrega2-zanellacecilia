@@ -1,5 +1,12 @@
 /*--- PAGE / SECCIÓN TORTAS ARETESANALES - PRESENTACIÓN ---*/
 
+//BOTÓN / SUBSECCIÓN - MENÚ TORTAS ARTESANALES//
+.boton_outline {
+    & h4 {
+        font-style: normal;
+    }
+}
+
 //CUERPO CENTRAL / SECCIÓN TORTAS ARTESANALES//
 .grilla_tortas {
     min-height: 360px;

@@ -70,8 +70,8 @@
 
         & h2 {
             color: $terciarycolor;
-            font-size: 1.2rem;
-            line-height: 1.8rem;
+            font-size: 1.3rem;
+            line-height: 2rem;
 
             .destacado {
                 font-weight: var(--font-weight);
@@ -82,10 +82,11 @@
 
         & h3 {
             color: $secundarycolor;
-            font-size: 1rem;
+            font-size: 1.2rem;
+            letter-spacing: 0.1rem;
             font-style: italic;
             font-weight: 700;
-            line-height: 2rem;
+            line-height: 1.5rem;
         }
     }
 

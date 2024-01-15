@@ -950,8 +950,8 @@ footer .contenedor__redes ul .ired:hover {
 }
 .contenedor__destacado h2 {
   color: #bc8034;
-  font-size: 1.2rem;
-  line-height: 1.8rem;
+  font-size: 1.3rem;
+  line-height: 2rem;
 }
 .contenedor__destacado h2 .destacado {
   font-weight: var(--font-weight);
@@ -960,10 +960,11 @@ footer .contenedor__redes ul .ired:hover {
 }
 .contenedor__destacado h3 {
   color: #90323d;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
   font-style: italic;
   font-weight: 700;
-  line-height: 2rem;
+  line-height: 1.5rem;
 }
 
 /*--- SECCIÓN PRODUCTOS / INDEX ---*/
@@ -2305,6 +2306,10 @@ footer .contenedor__redes ul .ired:hover {
 }
 
 /*--- PAGE / SECCIÓN TORTAS ARETESANALES - PRESENTACIÓN ---*/
+.boton_outline h4 {
+  font-style: normal;
+}
+
 .grilla_tortas {
   min-height: 360px;
   padding: 1rem;
