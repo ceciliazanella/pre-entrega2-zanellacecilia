@@ -1,60 +1,65 @@
-<font color="#d9cab3">
-
 ## **Hola❕** ❤️‍🔥
 #### *Este es el --->* 
+
 *<h1 align="center"><span style="color:#bc8034">/*--- README ---*/</span></h1>*<h2 align="center">de... 😲</h2>
 
-<p align="center"><img width="300" height="300" src="/imagenes/images_index/logo/logo.svg">®️</p>
+<div align="center"><img width="300" height="300" src="/imagenes/images_index/logo/logo.svg">®️</div>
 
-*<h2 align="center"><span style="color:#bc8034">mi Proyecto **Coder** para* 🤓👇</span></h2>
+**<h2 align="center"><span style="color:#bc8034">mi Proyecto *Coder* de** 🤓👇</span></h2>
 
 #### `DesarrolloWeb` 🖥️🚀🤩
-##### *`para emprendimiento de pastelería creativa artesanal`* 🥧
+##### *`para emprendimiento de pastelería creativa artesanal`* 🥧✨
 
-###### [Sitio Web de Corazón de Chocolate](https://corazondecocolate.netlify.app/)
+###### ➡️ [Sitio Web de Corazón de Chocolate](https://corazondecocolate.netlify.app/) ⭐
 
 <hr>
 
->
-###### El emprendimiento es de mi hermana,<br>
-###### que se dedica hace trece años,<br>
-###### a ponerle el corazón a lo que más le gusta hacer:<br>
-##### **Dar amor de la forma más dulce, a través de su talento y creatividad culinaria.** 
-<hr>
+###### El emprendimiento es de mi hermana;<br>
+###### que se dedica hace trece años<br>
+##### a ponerle el corazón a lo que más le gusta hacer ***vocacional y profesionalmente***:<br>
+#### **Dar amor a quienes recurren a sus servicios de la forma más dulce. Y lo hace a través de su talento y su creatividad culinaria.** 
 
+<hr>
 
 #### **OBJETIVOS 🔻 --->**<br>
-###### 🟤 *Que su impronta sea interactiva, vívida, cálida, divertida como su cocina.*<br>
-###### 🟤 *Que sus formas y movimientos remitan al latir y sacudir del pulso y el corazón.*<br>
-###### 🟤 *Que su contenido sea un acceso a la información sobre lo que se produce.*<br>
+###### 🟤 *Que su impronta sea interactiva, vívida, cálida, divertida tanto como su cocina.*<br>
+###### 🟤 *Que sus formas, recorridos y movimientos remitan al latir y sacudir del pulso y el corazón con el que trabaja día a día.*<br>
+###### 🟤 *Que su contenido sea un acceso a la información sobre lo que se produce y comercializa.*<br>
 
+<hr><br>
+
+<div align="center"><img width="250" src="https://img.shields.io/badge/ESTADO-en_continúo_DESAROLLO-5e0b15"></div><br>
 
 <hr>
-<p align="center"><img width="250" src="https://img.shields.io/badge/ESTADO-en_continúo_DESAROLLO-5e0b15"></p>
-<hr>
 
-> <h3><span style="color:#8c7a6b">¿Qué desarrollé hasta aquí? 💡⚡🔻</span></h3> 
-- [x] ✔️ <b>Portada Index / Presentación con **Tarjetas** *de sus Diversos Servicios*</b> 🎂
+<h3 align="center">¿Qué desarrollé hasta aquí? 💡⚡🔻</h3><br> 
+
+######
+- [x] ✔️ Portada Index / Presentación con **Tarjetas** de sus Diversos Servicios 🎂
 - [x] ✔️ *Historia del Emprendimiento y su Creadora* 🌈 **:)**
-- [x] ✔️ <b>Hay Pequeños **Carouseles**</b> **|** *Fotos con Productos Varios* 🍰
-- [x] ✔️ <b>Tarjetas de Productos *con sus Descripciones*</b> **|** *Link* **> Sub > Secciones Productos** 🧁 *para ir al detalle* **---> ;)**
-- [x] ✔️ <b>Un **Menú** dentro de una **SubSección** *para indagar en más detalles*</b> **:O**
-- [x] ✔️ Bloque <b>Promoción</b> 📢
-- [x] ✔️ Bloque <b>Envíos</b> 🛒
-- [x] ✔️ Datos de Contacto | **Formulario**</b> 🛒
+- [x] ✔️ Hay Pequeños **Carouseles**</b> **|** *Fotos que muestran Productos Varios y Escenas de Producción* 🍰
+- [x] ✔️ **Tarjetas de Productos** con sus *Descripciones* **> SubSección Productos** 🧁 **---> ;)**
+- [x] ✔️ Un **Menú** dentro de una **SubSección** **--->** *para indagar en más detalles de los productos* **:O** 🍩
+- [x] ✔️ Bloque *Promoción* **--->** *variable según el mes en curso* 📢
+- [x] ✔️ Bloque *Envíos* *variable según cambios de contenido* 🛒
+- [x] ✔️ Datos de *Contacto* | **Formulario** 📄
+- [x] ✔️ Utilización general de ***Animaciones*** 🎈
+- [x] ✔️ Implementación de **Seo** 📈
+- [x] ✔️ Diseño **Responsive** 💯 
+<br>
 
 <hr>
 
 <br>
-
-<img width="200" src="https://img.shields.io/badge/Recursos_que_utilicé🔻🛠️-5e0b15">
+<div align="center"><img width="200" src="https://img.shields.io/badge/RECURSOS_QUE_UTILICÉ🔻🛠️-5e0b15"></div>
 <img height="20" src="https://img.shields.io/badge/visual_studio_code-007ACC?logo=visualstudiocode">
 <img height="20" src="https://img.shields.io/badge/html5-181717?logo=html5">
 <img height="20" src="https://img.shields.io/badge/css3-1572B6?logo=css3">
 <img height="20" src="https://img.shields.io/badge/sass-181717?logo=sass">
 <img height="20" src="https://img.shields.io/badge/git-181717?logo=git">
 <img height="20" src="https://img.shields.io/badge/github-181717?logo=github">
-<br>
+
+<hr>
 <hr>
 
 
