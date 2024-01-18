@@ -264,8 +264,7 @@ a {
   color: #d9cab3;
 }
 
-ul,
-ol {
+ol, ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -451,6 +450,7 @@ main .contenedor_main {
   animation: sacudir__horizontal 1.2s infinite alternate ease-in-out;
 }
 
+/*--- DESCRIPCION DE CADA UNA DE LAS PAGES / SECCIONES ---*/
 .descripcion__seccion {
   background-color: #ffffff;
   max-width: 1200px;
@@ -486,6 +486,7 @@ header {
   z-index: 1;
   /*--- LOGO ---*/
   /*--- NAV ---*/
+  /*--- NAV > MENU DESPLEGABLE ---*/
 }
 header .logo {
   max-width: 60%;
@@ -577,7 +578,7 @@ header .dropdown-item {
   font-size: 1rem;
   font-weight: 700;
   text-align: right;
-  transition: color font-size font-weight 0.6s ease;
+  transition: color font-size font-weight 0.6s ease-in-out;
 }
 @media (min-width: 1000px) {
   header .dropdown-item {
@@ -593,7 +594,7 @@ header .dropdown-item:hover {
   text-shadow: 1px 1px 1px #000000;
   font-style: italic;
   font-weight: 900;
-  transition: color font-style font-weight text-shadow 1s ease;
+  transition: color font-style font-weight text-shadow 1s ease-in-out;
 }
 
 /*--- BOTONES ---*/
@@ -652,6 +653,7 @@ header .dropdown-item:hover {
 }
 
 /*--- CAROUSEL ---*/
+/*--- CAROUSEL INDEX ---*/
 .carousel {
   width: 260px;
   height: 300px;
@@ -680,6 +682,7 @@ header .dropdown-item:hover {
   animation: aparecer 2s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
+/*--- CAROUSEL PAGE / SECCIÓN SOBRE MÍ ---*/
 .carousel__sobre {
   width: 320px;
   height: 220px;
@@ -738,6 +741,8 @@ form {
   align-content: center;
   align-items: center;
   gap: 0.5rem;
+  /*--- TEXTAREA / Editor de Texto para el Textarea ---*/
+  /*--- INPUTS ---*/
 }
 @media (min-width: 1000px) {
   form {
@@ -869,6 +874,7 @@ form #nombre-usuario, form #asunto-usuario, form #localidad-usuario, form #email
   }
 }
 
+/*--- Íconos del Editor de Texto para el TEXTAREA ---*/
 .trix-button-row {
   width: 300px;
   margin: 1rem auto;
@@ -894,7 +900,7 @@ form #nombre-usuario, form #asunto-usuario, form #localidad-usuario, form #email
 @media (min-width: 1000px) {
   .trix-button-row {
     width: 380px;
-    height: 37px;
+    height: 100%;
     justify-self: center;
     align-self: center;
     grid-column: 2/2;
@@ -904,7 +910,7 @@ form #nombre-usuario, form #asunto-usuario, form #localidad-usuario, form #email
 @media (min-width: 1200px) {
   .trix-button-row {
     width: 450px;
-    height: 37px;
+    height: 100%;
   }
 }
 
@@ -931,7 +937,8 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /*--- REDES SOCIALES ---*/
+  /*--- ÍCONOS DEL FOOTER ---*/
+  /*--- REDES SOCIALES DEL FOOTER ---*/
 }
 @media (min-width: 1000px) {
   footer .contenedor__footer {
@@ -1078,6 +1085,7 @@ footer .contenedor__redes ul .ired:hover {
   animation: cambiarUltraligth 2s ease-in-out;
 }
 
+/*--- DESTACADO EN INDEX ---*/
 .contenedor__destacado {
   min-width: 350px;
   padding: 4rem;
@@ -1147,7 +1155,7 @@ footer .contenedor__redes ul .ired:hover {
   padding: 0;
   margin: 0;
 }
-.contenedor__productos ol {
+.contenedor__productos ol, .contenedor__productos ul {
   background-color: #d9cab3;
   padding: 1rem;
   margin: 1rem;
@@ -1641,7 +1649,7 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 520px) {
   .contenedor__promo {
-    grid-template-rows: 400px 150px;
+    grid-template-rows: 400px 200px;
   }
 }
 @media (min-width: 620px) {
@@ -1669,16 +1677,41 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 .contenedor__promo ul h4 {
-  padding: 0;
+  padding: 1.5rem 0;
   margin-bottom: 0;
   color: #8c7a6b;
   font-size: 1.2rem;
   font-style: normal;
   font-weight: 900;
 }
+@media (min-width: 480px) {
+  .contenedor__promo ul h4 {
+    padding: 1.1rem 0;
+  }
+}
+@media (min-width: 520px) {
+  .contenedor__promo ul h4 {
+    padding: 1.1rem 0;
+  }
+}
 @media (min-width: 768px) {
   .contenedor__promo ul h4 {
-    font-size: 1.3rem;
+    padding: 1.3rem 0;
+  }
+}
+@media (min-width: 820px) {
+  .contenedor__promo ul h4 {
+    padding: 1.6rem 0;
+  }
+}
+@media (min-width: 1000px) {
+  .contenedor__promo ul h4 {
+    padding: 0.1rem 0;
+  }
+}
+@media (min-width: 1200px) {
+  .contenedor__promo ul h4 {
+    padding: 1rem 0;
   }
 }
 .contenedor__promo li h5 {
@@ -1740,7 +1773,7 @@ footer .contenedor__redes ul .ired:hover {
   .contenedor__promo .icono__promo {
     grid-area: promo;
     align-self: start;
-    width: 160px;
+    width: 150px;
   }
 }
 @media (min-width: 1200px) {
@@ -1774,6 +1807,13 @@ footer .contenedor__redes ul .ired:hover {
     justify-self: end;
   }
 }
+@media (min-width: 520px) {
+  .contenedor__promo .promo h2 {
+    line-height: 2rem;
+    align-self: start;
+    justify-self: end;
+  }
+}
 @media (min-width: 768px) {
   .contenedor__promo .promo h2 {
     font-size: 2.5rem;
@@ -1798,10 +1838,10 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 480px) {
   .contenedor__promo .promo h4 {
-    align-self: center;
-    justify-self: end;
     padding: 0;
     margin: 0;
+    align-self: center;
+    justify-self: end;
   }
 }
 @media (min-width: 768px) {
@@ -1811,11 +1851,18 @@ footer .contenedor__redes ul .ired:hover {
     line-height: 2rem;
   }
 }
+@media (min-width: 768px) {
+  .contenedor__promo .promo h4 {
+    padding-bottom: 0.7rem;
+    font-size: 1.7rem;
+    line-height: 2rem;
+  }
+}
 .contenedor__promo .promo .resaltar h3 {
-  align-self: start;
-  justify-self: end;
   padding: 0;
   margin: 0;
+  align-self: start;
+  justify-self: end;
   color: #8c7a6b;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
   font-family: "Corinthia", cursive;
@@ -1988,11 +2035,11 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 .contenedor__promo .consultame h4 {
+  padding: 0.8rem 0.3rem;
+  margin: 0;
   border: solid 0.2rem #d9cab3;
   border-radius: 0.3rem;
   box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
-  padding: 0.8rem 0.3rem;
-  margin: 0;
   color: #d9cab3;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
   font-size: 1rem;
@@ -2108,6 +2155,7 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 1000px) {
   .contenedor__envios .envios h2 {
+    padding-bottom: 0.5rem;
     font-size: 3rem;
     letter-spacing: 0.3rem;
     line-height: 2.8rem;
@@ -2128,6 +2176,7 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 1000px) {
   .contenedor__envios .envios h3 {
+    padding-top: 0.5rem;
     font-size: 1.75rem;
   }
 }
@@ -2149,8 +2198,10 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 1000px) {
   .contenedor__envios .envios h4 {
+    padding-top: 1rem;
     font-size: 1.5rem;
-    line-height: 1.8rem;
+    letter-spacing: 0;
+    line-height: 2rem;
   }
 }
 .contenedor__envios .icono__envios {
@@ -2191,11 +2242,16 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 1000px) {
   .contenedor__envios .icono__envios {
-    width: 70%;
+    width: 68%;
     margin-top: 0;
     grid-area: icono;
-    align-self: center;
+    align-self: start;
     animation: sacudir__horizontal 4s infinite alternate ease-in-out;
+  }
+}
+@media (min-width: 1200px) {
+  .contenedor__envios .icono__envios {
+    width: 90%;
   }
 }
 .contenedor__envios .icono__comprar {
@@ -2328,6 +2384,7 @@ footer .contenedor__redes ul .ired:hover {
   .contenedor__envios .icono__consulta {
     grid-area: icono2;
     width: 80%;
+    padding: 0;
     align-self: end;
     justify-self: end;
   }
@@ -2413,7 +2470,7 @@ footer .contenedor__redes ul .ired:hover {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5rem;
-  text-align: center;
+  text-align: justify;
   hyphens: auto;
 }
 @media (min-width: 1200px) {
@@ -2588,7 +2645,7 @@ footer .contenedor__redes ul .ired:hover {
   align-items: center;
   justify-content: center;
   align-items: start;
-  transition: width height 0.4s ease;
+  transition: width height 0.4s ease-in-out;
 }
 @media (min-width: 1200px) {
   .img {
@@ -2618,7 +2675,7 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 .img:hover {
-  transition: width height 0.8s ease;
+  transition: width height 0.8s ease-in-out;
   filter: brightness(60%);
 }
 
@@ -2665,14 +2722,18 @@ footer .contenedor__redes ul .ired:hover {
     padding: 6rem;
   }
 }
-.grilla_tortas .lista__butter, .grilla_tortas .lista__fondant {
-  border-radius: 0 1rem;
-  padding: 2rem 1rem;
+.grilla_tortas .lista__butter, .grilla_tortas .lista__letter, .grilla_tortas .lista__fondant {
+  border-radius: 0 2rem 0 2rem;
+  padding: 2rem 0.2rem;
   background-color: #5e0b15;
   color: #d9cab3;
 }
+.grilla_tortas .lista__butter h4, .grilla_tortas .lista__letter h4, .grilla_tortas .lista__fondant h4 {
+  text-align: left;
+  hyphens: none;
+}
 @media (min-width: 1000px) {
-  .grilla_tortas .lista__butter, .grilla_tortas .lista__fondant {
+  .grilla_tortas .lista__butter, .grilla_tortas .lista__letter, .grilla_tortas .lista__fondant {
     background-color: #d9cab3;
     color: #5e0b15;
   }
@@ -2680,11 +2741,14 @@ footer .contenedor__redes ul .ired:hover {
 .grilla_tortas .lista__fondant {
   border-radius: 2rem 0;
 }
+.grilla_tortas .lista__letter {
+  border-radius: 0 0 2rem 0;
+}
 @media (min-width: 1024px) {
   .grilla_tortas {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 450px 350px 450px 1280px 650px;
+    grid-template-rows: 450px 350px 450px 1100px 580px;
     width: 1024px;
     padding: 2rem 2rem 0 2rem;
     margin: 0 auto;
@@ -2695,7 +2759,7 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 1024px) and (min-width: 1200px) {
   .grilla_tortas {
-    grid-template-rows: 450px 350px 450px 1280px 660px;
+    grid-template-rows: 450px 350px 450px 1100px 580px;
     padding: 2rem 2rem 0 2rem;
   }
 }
@@ -2731,7 +2795,7 @@ footer .contenedor__redes ul .ired:hover {
   box-shadow: 0px 8px 10px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
   object-fit: cover;
   filter: sepia(40%) brightness(90%);
-  transition: width height 0.8s ease ease-in-out;
+  transition: width height 0.8s ease-in-out;
 }
 .grilla_tortas .parrafo li {
   padding: 0.8rem 0;
@@ -2820,7 +2884,7 @@ footer .contenedor__redes ul .ired:hover {
   border-top: none;
   box-shadow: none;
   cursor: pointer;
-  transition: width height 2s ease ease-in-out;
+  transition: width height 2s ease-in-out;
   transform: scale(1.2);
 }
 
@@ -2859,7 +2923,8 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 
-/*--- ÍCONOS / MENÚ / SECCIÓN TORTAS ARTESANALES ---*/
+/*--- SUBSECCIÓN MENÚ TORTAS ARTESANALES / SECCIÓN TORTAS ARTESANALES ---*/
+/*--- ÍCONOS / SUBSECCIÓN MENÚ TORTAS ARTESANALES ---*/
 .iconos_tortas {
   display: none;
 }
@@ -2880,7 +2945,7 @@ footer .contenedor__redes ul .ired:hover {
   animation: caminarIzq 7.3s infinite linear;
 }
 
-/*--- LISTA / MENÚ / SECCIÓN TORTAS ARTESANALES ---*/
+/*--- LISTA MENÚ / SUBSECCIÓN MENÚ TORTAS ARTESANALES ---*/
 .contenedor__menu {
   width: 100%;
   padding: 2rem;
@@ -2964,6 +3029,7 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 
+/*--- PAGE / SECCIÓN CONTACTO ---*/
 .redes_dedo {
   display: none;
 }
@@ -2971,13 +3037,13 @@ footer .contenedor__redes ul .ired:hover {
   .redes_dedo {
     display: block;
     width: 80px;
-    margin-left: 80px;
-    animation: rebotarLugar 1.2s ease-in-out infinite;
+    margin-left: 60px;
+    animation: rebotarLugar 1.2s infinite ease-in-out;
   }
 }
 @media (min-width: 1200px) {
   .redes_dedo {
-    left: 670px;
+    margin-left: 80px;
   }
 }
 
@@ -2990,20 +3056,21 @@ footer .contenedor__redes ul .ired:hover {
     width: 80px;
     position: relative;
     bottom: -30px;
-    left: 570px;
+    left: 590px;
     z-index: 1;
-    animation: subir 1.2s infinite ease;
+    animation: subir 1.2s infinite ease-in-out;
   }
 }
 @media (min-width: 1200px) {
   .redes_mano {
-    left: 670px;
+    left: 690px;
   }
 }
 
+/*--- BLOQUE REDES SOCIALES | PAGE / SECCIÓN CONTACTO ---*/
 .redes_sociales {
-  max-width: 1200px;
   display: none;
+  max-width: 1200px;
 }
 @media (min-width: 1000px) {
   .redes_sociales {
@@ -3028,17 +3095,17 @@ footer .contenedor__redes ul .ired:hover {
     margin: 0 auto;
   }
 }
-.redes_sociales h2 {
-  padding: 0;
-  margin: 0;
+.redes_sociales .redes_titulo {
   color: #bc8034;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
 }
-.redes_sociales h2 .recalcar {
+.redes_sociales .redes_titulo .recalcar {
   color: #d9cab3;
   font-size: 2rem;
-  letter-spacing: 0.06rem;
-  font-weight: 700;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
   font-style: italic;
 }
 .redes_sociales .redes_iconos {
@@ -3051,7 +3118,7 @@ footer .contenedor__redes ul .ired:hover {
   width: 80px;
   margin: 0.5rem;
   transition: 1s ease-in-out;
-  animation: rotarDesplazoIzq 2s ease;
+  animation: rotarDesplazoIzq 2s ease-in-out;
   animation-delay: 5s;
 }
 .redes_sociales .ired:hover {
@@ -3064,7 +3131,7 @@ footer .contenedor__redes ul .ired:hover {
   width: 80px;
   margin: 0.5rem;
   transition: 1s ease-in-out;
-  animation: rotarDesplazoDer 2s ease;
+  animation: rotarDesplazoDer 2s ease-in-out;
   animation-delay: 5s;
 }
 .fred:hover {

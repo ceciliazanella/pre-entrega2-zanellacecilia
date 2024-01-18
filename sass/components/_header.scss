@@ -69,7 +69,7 @@
         width: 50px;
     }
 
-/*--- ÍCONO DE SECCIONES ---*/
+    /*--- ÍCONO DE SECCIONES ---*/
     & .icon {
         width: 70px;
         padding-top: 2rem;
@@ -77,14 +77,14 @@
 
     & .animation__icon {
         animation: rebotarLugar 0.5s infinite alternate ease-in-out;
-    
+
         &:hover {
             animation: sacudir__horizontal 1.2s infinite alternate ease-in-out;
         }
     }
 }
 
-//DESCRIPCION DE CADA UNA DE LAS PAGES / SECCIONES//
+/*--- DESCRIPCION DE CADA UNA DE LAS PAGES / SECCIONES ---*/
 .descripcion__seccion {
     background-color: #ffffff;
     max-width: 1200px;

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Meta Description -->
     <meta name="description"
-        content="Contactate con Corazón de Chocolate! 
+        content="Contactate con Corazón de Chocolate!
     Completá nuestro formulario y dejanos tu mensaje.
     Estamos para responder todas tus consultas y atender, resolviendo de la forma más creativa y artesanal, tus pedidos más dulces.">
     <!-- Favicon -->
@@ -103,7 +103,7 @@
                 <div>
                     <h1>CONTACTO</h1>
                 </div>
-                <!-- Ícono de Whatsapp -->
+                <!-- Ícono de Whatsapp que conlleva a abrir Whatsapp Web -->
                 <div>
                     <a href="https://api.whatsapp.com/send?phone=+5491165083824&text=Hola! Quería realizar un pedido ¿Me pasarías la información correspondiente para hacerlo? Gracias!"
                         title="Ir a Whatsapp" target="_blank"><img class="icon animation__icon"
@@ -136,12 +136,13 @@
         <section class="contenedor">
 
             <div class="redes_dedo">
-                <img src="../imagenes/icons_contacto/mano_indica.svg" alt="Ícono de mano con dedo indicando">
+                <img src="../imagenes/icons_contacto/mano_indica.svg" alt="Ícono de mano con dedo índice indicando">
             </div>
             <!-- Formulario de Contacto -->
-            <form class="contenedor form" name="Formulario de Contacto" action="/pages/gracias.html" netlify>
-
-                <input id="x" type="hidden" name="content">
+            <form class="contenedor form" name="Formulario de Contacto" action="./gracias.html" netlify>
+                <!-- Una vez que el Usuario envía el Formulario se lo remite a la Page #gracias.html -->
+                <!-- La Page #gracias.html, después de unos segundos, se redirije automáticamente al INDEX -->
+                <input id="x" type="hidden" name="content"><!-- Editor para el Textarea del Formulario -->
 
                 <div>
                     <label for="nombre-usuario"></label>
@@ -162,7 +163,7 @@
                     <label for="asunto-usuario"></label>
                     <input type="text" name="Asunto" id="asunto-usuario" placeholder="Asunto">
                 </div>
-
+                <!-- Editor para el Textarea del Formulario -->
                 <div>
                     <label for="mensaje-usuario"></label>
                     <trix-editor class="trix-content" name="Mensaje" id="mensaje-usuario"
@@ -172,16 +173,19 @@
                 <input class="boton_value" type="submit" value="ENVIAR MENSAJE">
 
             </form>
-            <!-- Redes Sociales -->
+
             <article>
 
                 <div class="redes_mano">
                     <img src="../imagenes/icons_contacto/mano_saluda.svg" alt="Ícono de mano saludando">
                 </div>
-
+                <!-- Redes Sociales -->
                 <div class="redes_sociales">
 
-                    <h2>Seguinos en nuestras<br> <span class="recalcar">Redes Sociales!</span></h2>
+                    <div class="redes_titulo">
+                        <h3>Seguinos en nuestras</h3>
+                        <h2><span class="recalcar">Redes Sociales!</span></h2>
+                    </div>
 
                     <ul class="redes_iconos">
                         <li><a href="https://www.instagram.com/corazon.de.chocolate.cz" target="_blank"><img

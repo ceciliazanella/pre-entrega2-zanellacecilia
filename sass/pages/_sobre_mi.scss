@@ -19,7 +19,7 @@
             font-size: 1rem;
             font-weight: 400;
             line-height: 1.5rem;
-            text-align: center;
+            text-align: justify;
             hyphens: auto;
 
             @include md-1200 {
@@ -206,7 +206,7 @@
     justify-content: center;
     align-items: start;
 
-    transition: width height 0.4s ease;
+    transition: width height 0.4s ease-in-out;
 
     @include md-1200 {
         padding: 0;
@@ -236,7 +236,8 @@
     }
 
     &:hover {
-        transition: width height 0.8s ease;
+        transition: width height 0.8s ease-in-out;
+
         filter: brightness(60%);
     }
 }

@@ -1,16 +1,19 @@
+/*--- PAGE / SECCIÓN CONTACTO ---*/
+//ÍCONOS PAGE / SECCIÓN CONTACTO//
 .redes_dedo {
     display: none;
 
     @include md-1000 {
         display: block;
-        width: 80px;
-        margin-left: 80px;
 
-        animation: rebotarLugar 1.2s ease-in-out infinite ;
+        width: 80px;
+        margin-left: 60px;
+
+        animation: rebotarLugar 1.2s infinite ease-in-out;
     }
 
     @include md-1200 {
-        left: 670px;
+        margin-left: 80px;
     }
 }
 
@@ -19,25 +22,28 @@
 
     @include md-1000 {
         display: block;
+
         width: 80px;
 
         position: relative;
         bottom: -30px;
-        left: 570px;
+        left: 590px;
 
         z-index: 1;
 
-        animation: subir 1.2s infinite ease;
+        animation: subir 1.2s infinite ease-in-out;
     }
 
     @include md-1200 {
-        left: 670px;
+        left: 690px;
     }
 }
 
+/*--- BLOQUE REDES SOCIALES | PAGE / SECCIÓN CONTACTO ---*/
 .redes_sociales {
-    max-width: 1200px;
     display: none;
+
+    max-width: 1200px;
 
     @include md-1000 {
         background-color: $principalcolor;
@@ -61,17 +67,17 @@
         margin: 0 auto;
     }
 
-    h2 {
-        padding: 0;
-        margin: 0;
+    .redes_titulo {
         color: $terciarycolor;
-        font-size: 1.5rem;
+        font-size: 1rem;
+        font-weight: 700;
+        text-align: center;
 
         .recalcar {
             color: $ultraligthcolor;
             font-size: 2rem;
-            letter-spacing: 0.06rem;
-            font-weight: 700;
+            font-weight: 900;
+            letter-spacing: 0.2rem;
             font-style: italic;
         }
     }
@@ -85,12 +91,15 @@
         margin: 0.5rem;
 
         transition: 1s ease-in-out;
-        animation: rotarDesplazoIzq 2s ease;
+
+        animation: rotarDesplazoIzq 2s ease-in-out;
         animation-delay: 5s;
 
         &:hover {
             animation-play-state: paused;
+
             transform: scale(1.2);
+
             filter: drop-shadow(-2px 2px 1px #bc8034);
         }
     }
@@ -101,12 +110,15 @@
     margin: 0.5rem;
 
     transition: 1s ease-in-out;
-    animation: rotarDesplazoDer 2s ease;
+
+    animation: rotarDesplazoDer 2s ease-in-out;
     animation-delay: 5s;
 
     &:hover {
         animation-play-state: paused;
+
         transform: scale(1.2);
+
         filter: drop-shadow(2px -1px 1px #bc8034);
     }
 }
@@ -164,6 +176,7 @@
         @include text_shadow (2px);
 
         transition: background-color color font-weight 1s ease-in-out;
+
         animation: sacudir__horizontal 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
     }
 }

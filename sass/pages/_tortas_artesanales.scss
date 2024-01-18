@@ -1,5 +1,4 @@
 /*--- PAGE / SECCIÓN TORTAS ARETESANALES - PRESENTACIÓN ---*/
-
 //BOTÓN / SUBSECCIÓN - MENÚ TORTAS ARTESANALES//
 .boton_outline {
     & h4 {
@@ -46,10 +45,15 @@
     }
 
     .lista__butter {
-        border-radius: 0 1rem;
-        padding: 2rem 1rem;
+        border-radius: 0 2rem 0 2rem;
+        padding: 2rem 0.2rem;
 
         @include color-texto($principalcolor);
+
+        & h4 {
+            text-align: left;
+            hyphens: none;
+        }
 
         @include md-1000 {
             @include color-texto($ultraligthcolor);
@@ -62,10 +66,16 @@
         @extend .lista__butter;
     }
 
+    .lista__letter {
+        border-radius: 0 0 2rem 0;
+
+        @extend .lista__butter;
+    }
+
     @include md-1024 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 450px 350px 450px 1280px 650px;
+        grid-template-rows: 450px 350px 450px 1100px 580px;
 
         width: 1024px;
         padding: 2rem 2rem 0 2rem;
@@ -77,7 +87,7 @@
         gap: 1rem;
 
         @include md-1200 {
-            grid-template-rows: 450px 350px 450px 1280px 660px;
+            grid-template-rows: 450px 350px 450px 1100px 580px;
             padding: 2rem 2rem 0 2rem;
         }
 
@@ -125,7 +135,7 @@
 
         filter: sepia(40%) brightness(90%);
 
-        transition: width height 0.8s ease ease-in-out;
+        transition: width height 0.8s ease-in-out;
     }
 
     .parrafo li {
@@ -225,7 +235,8 @@
         box-shadow: none;
         cursor: pointer;
 
-        transition: width height 2s ease ease-in-out;
+        transition: width height 2s ease-in-out;
+
         transform: scale(1.2);
     }
 }

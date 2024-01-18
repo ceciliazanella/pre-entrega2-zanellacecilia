@@ -2,11 +2,12 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Meta Description -->
-    <meta name="description"
-        content="Descubrí y adentrate a la deliciosa y creativa Pastelería de Corazón de Chocolate! Producción totalmente Artesanal; realizada con la mejor materia prima del mercado.">
+    <meta name="description" content="Descubrí y adentrate a la deliciosa y creativa Pastelería de Corazón de Chocolate! 
+        Producción totalmente Artesanal; realizada con la mejor materia prima del mercado.">
     <!-- Favicon -->
     <link rel="icon" type="image/jpg" href="./imagenes/favicon/favicon.ico" />
     <!-- Tipografías -->
@@ -21,6 +22,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cssgram/0.1.10/cssgram.min.css">
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Editor para Formulario -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="./css/styles.css">
     <!-- Title INDEX -->
@@ -61,10 +65,11 @@
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     PRODUCTOS
-                                </a>
-                                <ul class="dropdown-menu"> <!-- Menú Desplegable -->
+                                </a> <!-- Sección Productos -->
+                                <ul class="dropdown-menu"> <!-- Menú Desplegable | Subsecciones -->
                                     <li><a class="dropdown-item" href="./pages/tortas_artesanales.html">tortas
                                             artesanales</a></li>
+                                    <!-- Subsección Tortas Artesanales / Dentro está Menú Tortas Artesanales -->
                                     <li><a class="dropdown-item" href="#pasteleria-creativa">pastelería creativa</a>
                                     </li>
                                     <li><a class="dropdown-item" href="#mesa-dulce">mesa dulce</a></li>
@@ -75,14 +80,13 @@
                             </li>
                             </li>
                         </ul>
-
                     </nav>
 
                 </div>
 
             </div>
-
-            <div class="container contenedor__h1"> <!-- Bloque Contenedor del H1 -->
+            <!-- Bloque Contenedor del H1 -->
+            <div class="container contenedor__h1">
                 <p>
                 <h1>Pastelería Creativa</h1>
                 <h2>100% Artesanal</h2>
@@ -106,9 +110,9 @@
                     confían en <span class="destacado">Corazón de Chocolate:</span></h2>
                 <h3>La mejor materia prima, producción artesanal; dedicación y amor por lo que
                     hago.</h3>
-                </p><br>
+                </p>
             </div>
-
+            <!-- Botón que conduce a la Page / Sección Sobre Mí -->
             <span><a class="boton_outline" href="./pages/sobre_mi.html">
                     <h4>CONOCEME</h4>
                 </a></span>
@@ -187,7 +191,7 @@
                         <h3>artesanales</h3>
                         </p>
                     </div>
-
+                    <!-- Botón que conduce a la Page / SubSección Tortas Artesanales (SubSección de la Sección Productos) -->
                     <div class="boton">
                         <a href="./pages/tortas_artesanales.html">
                             <h4>Conocelas</h4>
@@ -311,7 +315,7 @@
                     <ul>
                         <li>
                             <h4>PAN DULCE</h4>
-                        </li><br>
+                        </li>
                         <li>
                             <h5>Solo</h5>
                         </li>
@@ -325,10 +329,10 @@
                             <h5>Frutos Secos</h5>
                         </li>
                         <li>
-                            <h5>Ferrero y Nutela</h5><br>
+                            <h5>Ferrero y Nutela</h5>
                         </li>
                         <li>
-                            <h4>BUDÍN</h4><br>
+                            <h4>BUDÍN</h4>
                         </li>
                         <li>
                             <h5>Amapolas y Limón</h5>
@@ -348,7 +352,7 @@
                 <div class="ornamentos">
                     <img src="./imagenes/icons/navidad.svg" alt="Ornamentos de Navidad">
                 </div>
-                <!-- Botón | Consultame -->
+                <!-- Botón Consultame que lleva a que se abra Whatsapp Web -->
                 <span class="consultame"><a
                         href="https://api.whatsapp.com/send?phone=+5491165083824&text=Hola! Quería realizar un pedido ¿Me pasarías la información correspondiente para hacerlo? Gracias!"
                         target="_blank">
@@ -379,7 +383,7 @@
                 <div class="icono__comprar">
                     <img src="./imagenes/icons/comprar.svg" alt="Corazón con Alas y Flecha">
                 </div>
-                <!-- Botón | Comprar -->
+                <!-- Botón Comprar que lleva a que se abra Whatsapp Web -->
                 <span class="comprar"><a
                         href="https://api.whatsapp.com/send?phone=+5491165083824&text=Hola! Quería realizar un pedido ¿Me pasarías la información correspondiente para hacerlo? Gracias!"
                         target="_blank">
@@ -393,7 +397,7 @@
                 <div class="icono__sobre">
                     <img src="./imagenes/icons/sobre.svg" alt="Sobre con Corazón">
                 </div>
-                <!-- Botón | Consulta -->
+                <!-- Botón Consulta que lleva a que se abra Whatsapp Web -->
                 <span class="consulta"><a
                         href="https://api.whatsapp.com/send?phone=+5491165083824&text=Hola! ¿Me pasarías las opciones de envíos disponibles? Gracias!"
                         target="_blank">

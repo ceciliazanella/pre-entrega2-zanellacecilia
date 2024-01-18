@@ -90,7 +90,7 @@ $decorativefont: "Corinthia", cursive;
     }
 
     @else {
-        color: $ultraligthcolor
+        color: $ultraligthcolor;
     }
 }
 
@@ -123,7 +123,7 @@ $decorativefont: "Corinthia", cursive;
     }
 }
 
-//--- RESPONSIVE 720px ---//
+//--- RESPONSIVE 768px ---//
 @mixin md-768 {
     @media(min-width: 768px) {
         @content;
@@ -477,11 +477,14 @@ a {
     color: $ultraligthcolor;
 }
 
-ul,
 ol {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+ul {
+    @extend ol;
 }
 
 img {
@@ -533,7 +536,7 @@ main {
 //TEXTOS / PÁRRAFOS//
 .parrafo {
     padding: 1rem 2rem;
-    
+
     & h2 {
         padding: 0 1rem;
         margin-bottom: 0;
@@ -545,7 +548,6 @@ main {
         line-height: 2.1rem;
         text-align: center;
         hyphens: auto;
-
     }
 
     & h3 {
@@ -568,7 +570,7 @@ main {
         line-height: 1.7rem;
         text-align: justify;
         hyphens: auto;
-  
+
         .destacado {
             font-weight: var(--font-weight);
             font-style: var(--font-style);

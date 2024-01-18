@@ -99,7 +99,7 @@ header {
         --bs-border-color-translucent: none;
     }
 
-    //--- NAV > MENU DESPLEGABLE ---//
+    /*--- NAV > MENU DESPLEGABLE ---*/
     .dropdown-menu {
         background-color: #00000000;
         border-radius: 50% 20% / 10% 40%;
@@ -127,7 +127,7 @@ header {
         font-weight: 700;
         text-align: right;
 
-        transition: color font-size font-weight 0.6s ease;
+        transition: color font-size font-weight 0.6s ease-in-out;
 
         @include md-1000 {
             padding: 0 1rem 0 0;
@@ -145,6 +145,6 @@ header {
         font-style: italic;
         font-weight: 900;
 
-        transition: color font-style font-weight text-shadow 1s ease;
+        transition: color font-style font-weight text-shadow 1s ease-in-out;
     }
 }

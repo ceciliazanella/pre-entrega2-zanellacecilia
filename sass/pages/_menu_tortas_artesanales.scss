@@ -1,5 +1,5 @@
-/*--- ÍCONOS / MENÚ / SECCIÓN TORTAS ARTESANALES ---*/
-
+/*--- SUBSECCIÓN MENÚ TORTAS ARTESANALES / SECCIÓN TORTAS ARTESANALES ---*/
+/*--- ÍCONOS / SUBSECCIÓN MENÚ TORTAS ARTESANALES ---*/
 .iconos_tortas {
     display: none;
 
@@ -23,7 +23,7 @@
     }
 }
 
-/*--- LISTA / MENÚ / SECCIÓN TORTAS ARTESANALES ---*/
+/*--- LISTA MENÚ / SUBSECCIÓN MENÚ TORTAS ARTESANALES ---*/
 .contenedor__menu {
     width: 100%;
     padding: 2rem;
@@ -40,7 +40,7 @@
         flex-wrap: wrap;
     }
 
-    //TÍTULO MENÚ / SECCIÓN TORTAS ARTESANALES//
+    //TÍTULO MENÚ / SUBSECCIÓN MENÚ TORTAS ARTESANALES//
     .titulo__menu h2 {
         color: $secundarycolor;
         text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
@@ -55,7 +55,7 @@
         }
     }
 
-    //TEXTO MENÚ / SECCIÓN TORTAS ARTESANALES//
+    //TEXTO MENÚ / SUBSECCIÓN MENÚ TORTAS ARTESANALES//
     .texto__menu h3 {
         color: $ligthcolor;
         font-size: 1.2rem;
@@ -79,7 +79,7 @@
         @extend %template__detalle;
     }
 
-    //IMÁGENES MENÚ / SECCIÓN TORTAS ARTESANALES//
+    //IMÁGENES MENÚ / SUBSECCIÓN MENÚ TORTAS ARTESANALES//
     .img__menu {
         display: none;
 
@@ -106,6 +106,7 @@
                 box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.314);
 
                 transition: width height 1s ease-in-out;
+
                 transform: scale(1.5);
 
                 z-index: 1;
