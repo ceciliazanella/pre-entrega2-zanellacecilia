@@ -1,4 +1,4 @@
-//ÍCONOS / MENÚ / SECCIÓN TORTAS ARTESANALES
+/*--- ÍCONOS / MENÚ / SECCIÓN TORTAS ARTESANALES ---*/
 
 .iconos_tortas {
     display: none;
@@ -8,8 +8,6 @@
 
         width: 1000px;
         padding: 0 4rem;
-
-        @include flexbox-column (center, start);
 
         gap: 1rem;
     }

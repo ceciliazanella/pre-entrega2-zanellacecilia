@@ -90,13 +90,13 @@
     transform: translateX(-1000%);
   }
   25% {
-    transform: translateX(100%) rotate(360deg);
+    transform: translateX(900%) rotate(360deg);
   }
   50% {
-    transform: translateX(50%) rotate(-360deg);
+    transform: translateX(500%) rotate(-360deg);
   }
   75% {
-    transform: translateX(0%) rotate(360deg);
+    transform: translateX(900%) rotate(360deg);
   }
   100% {
     transform: translateX(3000%);
@@ -747,7 +747,7 @@ form {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 70px 70px 360px;
+    grid-template-rows: 70px 70px 460px;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -872,8 +872,8 @@ form #nombre-usuario, form #asunto-usuario, form #localidad-usuario, form #email
 
 .trix-button-row {
   width: 300px;
-  margin: 0 auto;
-  overflow: scroll;
+  margin: 1rem auto;
+  overflow: hidden;
   grid-column: 2/3;
   grid-area: 3/4;
 }
@@ -895,9 +895,9 @@ form #nombre-usuario, form #asunto-usuario, form #localidad-usuario, form #email
 @media (min-width: 1000px) {
   .trix-button-row {
     width: 380px;
-    height: 40px;
+    height: 37px;
     justify-self: center;
-    align-self: start;
+    align-self: center;
     grid-column: 2/2;
     grid-row: 3/4;
   }
@@ -905,14 +905,13 @@ form #nombre-usuario, form #asunto-usuario, form #localidad-usuario, form #email
 @media (min-width: 1200px) {
   .trix-button-row {
     width: 450px;
-    height: 40px;
+    height: 37px;
   }
 }
 
 @media (min-width: 1000px) {
   #trix-toolbar {
     width: 380px;
-    height: 40px;
     justify-self: center;
     grid-column: 2/2;
     grid-row: 3/4;
@@ -2691,6 +2690,7 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 
+/*--- ÍCONOS / MENÚ / SECCIÓN TORTAS ARTESANALES ---*/
 .iconos_tortas {
   display: none;
 }
@@ -2699,11 +2699,6 @@ footer .contenedor__redes ul .ired:hover {
     display: flex;
     width: 1000px;
     padding: 0 4rem;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-items: center;
-    align-content: start;
     gap: 1rem;
   }
 }
@@ -2943,7 +2938,7 @@ footer .contenedor__redes ul .ired:hover {
 @media (min-width: 1000px) {
   .boton_value {
     max-width: 380px;
-    margin: 3rem 0;
+    margin: 7.5rem 0;
     grid-column: 2/3;
     grid-row: 3/4;
     align-self: start;

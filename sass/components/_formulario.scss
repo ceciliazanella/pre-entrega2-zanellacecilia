@@ -17,7 +17,7 @@ form {
 
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 70px 70px 360px;
+        grid-template-rows: 70px 70px 460px;
 
         text-align: center;
 
@@ -156,9 +156,9 @@ form {
 
 .trix-button-row {
     width: 300px;
-    margin: 0 auto;
+    margin: 1rem auto;
 
-    overflow: scroll;
+    overflow: hidden;
 
     grid-column: 2/3;
     grid-area: 3/4;
@@ -177,10 +177,10 @@ form {
 
     @include md-1000 {
         width: 380px;
-        height: 40px;
+        height: 37px;
 
         justify-self: center;
-        align-self: start;
+        align-self: center;
 
         grid-column: 2/2;
         grid-row: 3/4;
@@ -188,14 +188,13 @@ form {
 
     @include md-1200 {
         width: 450px;
-        height: 40px;
+        height: 37px;
     }
 }
 
 #trix-toolbar {
     @include md-1000 {
         width: 380px;
-        height: 40px;
 
         justify-self: center;
 
