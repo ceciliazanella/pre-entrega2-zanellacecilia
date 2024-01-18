@@ -2,7 +2,7 @@
 .contenedor__grilla {
     min-width: 360px;
     padding: 1rem;
-    
+
     @include flexbox-column (center, center);
 
     .font__detalle {
@@ -20,6 +20,11 @@
             font-weight: 400;
             line-height: 1.5rem;
             text-align: center;
+            hyphens: auto;
+
+            @include md-1200 {
+                hyphens: none;
+            }
         }
     }
 
@@ -108,11 +113,12 @@
             padding: 0 2rem 0 0;
 
             & h4 {
-                padding: 0 2rem 0 1rem;
+                padding: 0 2rem;
 
                 font-size: 1.2rem;
                 line-height: 2.1rem;
-                text-align: left;
+                text-align: justify;
+                hyphens: auto;
             }
         }
 

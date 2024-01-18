@@ -329,6 +329,7 @@ main .contenedor_main {
   font-weight: 500;
   line-height: 2.1rem;
   text-align: center;
+  hyphens: auto;
 }
 .parrafo h3 {
   margin-bottom: 0;
@@ -336,7 +337,8 @@ main .contenedor_main {
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 2rem;
-  text-align: initial;
+  text-align: justify;
+  hyphens: auto;
 }
 .parrafo h4 {
   margin-bottom: 0;
@@ -344,12 +346,8 @@ main .contenedor_main {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.7rem;
-  text-align: center;
-}
-@media (min-width: 1200px) {
-  .parrafo h4 {
-    text-align: left;
-  }
+  text-align: justify;
+  hyphens: auto;
 }
 .parrafo h4 .destacado {
   font-weight: var(--font-weight);
@@ -363,6 +361,7 @@ main .contenedor_main {
   font-weight: 400;
   line-height: 1.5rem;
   text-align: center;
+  hyphens: auto;
 }
 
 /*--- HEADER INDEX ---*/
@@ -622,7 +621,7 @@ header .dropdown-item:hover {
 }
 
 .boton {
-  padding: 0 0.8rem;
+  padding: 1rem;
   margin-bottom: 0;
   background-color: #d9cab3;
   border-radius: 10px 100px/120px;
@@ -1136,7 +1135,7 @@ footer .contenedor__redes ul .ired:hover {
 }
 
 .contenedor__productos {
-  padding: 0 1rem 2rem 1rem;
+  padding: 1rem 0 2rem 0;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -1145,7 +1144,7 @@ footer .contenedor__redes ul .ired:hover {
   align-content: center;
 }
 .contenedor__productos h4 {
-  padding: 1rem 0;
+  padding: 0;
   margin: 0;
 }
 .contenedor__productos ol {
@@ -1156,17 +1155,24 @@ footer .contenedor__redes ul .ired:hover {
 @media (min-width: 1000px) {
   .contenedor__productos {
     max-width: 1000px;
-    padding: 0 4rem 0 4rem;
+    padding: 2rem 4rem 0 4rem;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 250px 450px 350px 450px;
+    grid-template-rows: 180px 450px 180px 450px;
     align-items: start;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
   }
   .contenedor__productos .parrafo__tortas {
     grid-column: 1/2;
     grid-row: 1/2;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media (min-width: 1000px) and (min-width: 1000px) {
+  .contenedor__productos .parrafo__tortas {
+    padding: 0;
     margin: 0;
   }
 }
@@ -1174,7 +1180,7 @@ footer .contenedor__redes ul .ired:hover {
   .contenedor__productos .parrafo__tortas {
     grid-column: 1/2;
     grid-row: 1/2;
-    padding: 0 1rem 0 1rem;
+    padding: 0 1rem 0 0;
     margin: 0;
   }
 }
@@ -1182,7 +1188,6 @@ footer .contenedor__redes ul .ired:hover {
   .contenedor__productos .links__tortas {
     grid-column: 1/2;
     grid-row: 2/3;
-    padding: 0 2rem 0 0;
   }
 }
 @media (min-width: 1000px) and (min-width: 1000px) {
@@ -1200,6 +1205,13 @@ footer .contenedor__redes ul .ired:hover {
   .contenedor__productos .parrafo__pasteleria {
     grid-column: 2/3;
     grid-row: 1/2;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media (min-width: 1000px) and (min-width: 1000px) {
+  .contenedor__productos .parrafo__pasteleria {
+    padding: 0;
     margin: 0;
   }
 }
@@ -1207,7 +1219,7 @@ footer .contenedor__redes ul .ired:hover {
   .contenedor__productos .parrafo__pasteleria {
     grid-column: 2/3;
     grid-row: 1/2;
-    padding: 0 1rem 0 1rem;
+    padding: 0 0.5rem 0 0.5rem;
     margin: 0;
   }
 }
@@ -1233,6 +1245,13 @@ footer .contenedor__redes ul .ired:hover {
   .contenedor__productos .parrafo__dulce {
     grid-column: 1/2;
     grid-row: 3/4;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media (min-width: 1000px) and (min-width: 1000px) {
+  .contenedor__productos .parrafo__dulce {
+    padding: 0;
     margin: 0;
   }
 }
@@ -1240,7 +1259,7 @@ footer .contenedor__redes ul .ired:hover {
   .contenedor__productos .parrafo__dulce {
     grid-column: 3/4;
     grid-row: 1/2;
-    padding: 0 1rem 0 1rem;
+    padding: 0 0.5rem 0 0.5rem;
     margin: 0;
   }
 }
@@ -1261,6 +1280,13 @@ footer .contenedor__redes ul .ired:hover {
   .contenedor__productos .parrafo__lunch {
     grid-column: 2/3;
     grid-row: 3/4;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media (min-width: 1000px) and (min-width: 1000px) {
+  .contenedor__productos .parrafo__lunch {
+    padding: 0;
     margin: 0;
   }
 }
@@ -1268,7 +1294,7 @@ footer .contenedor__redes ul .ired:hover {
   .contenedor__productos .parrafo__lunch {
     grid-column: 4/5;
     grid-row: 1/2;
-    padding: 0 1rem 0 1rem;
+    padding: 0 0 0 1rem;
     margin: 0;
   }
 }
@@ -1288,14 +1314,14 @@ footer .contenedor__redes ul .ired:hover {
 @media (min-width: 1200px) {
   .contenedor__productos {
     max-width: 1200px;
-    padding: 0 2rem 2rem 2rem;
+    padding: 0 2rem 3rem 2rem;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 400px 500px;
+    grid-template-rows: 240px 500px;
     align-items: start;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     text-align: justify;
     line-height: 1rem;
   }
@@ -1310,8 +1336,9 @@ footer .contenedor__redes ul .ired:hover {
   background-position: contain;
   border-bottom-left-radius: 50%;
   overflow: hidden;
-  min-height: 280px;
-  padding: 0 2rem 0.5rem 0;
+  width: 260px;
+  min-height: 180px;
+  padding: 0 0.5rem 2rem 1rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -1319,13 +1346,51 @@ footer .contenedor__redes ul .ired:hover {
   align-content: end;
   align-items: end;
   justify-content: space-between;
+  align-self: center;
+}
+@media (min-width: 420px) {
+  .contenedor__productos .enlace__tortas {
+    width: 340px;
+  }
+}
+@media (min-width: 480px) {
+  .contenedor__productos .enlace__tortas {
+    width: 400px;
+  }
+}
+@media (min-width: 520px) {
+  .contenedor__productos .enlace__tortas {
+    width: 430px;
+  }
+}
+@media (min-width: 620px) {
+  .contenedor__productos .enlace__tortas {
+    width: 460px;
+  }
+}
+@media (min-width: 768px) {
+  .contenedor__productos .enlace__tortas {
+    width: 630px;
+  }
+}
+@media (min-width: 820px) {
+  .contenedor__productos .enlace__tortas {
+    min-height: 300px;
+  }
 }
 @media (min-width: 1000px) {
   .contenedor__productos .enlace__tortas {
     width: 100%;
-    max-height: 400px;
+    min-height: 280px;
     padding: 0 0.5rem 1rem 0;
-    align-self: flex-end;
+    align-self: end;
+  }
+}
+@media (min-width: 1200px) {
+  .contenedor__productos .enlace__tortas {
+    width: 100%;
+    min-height: 210px;
+    align-self: end;
   }
 }
 .contenedor__productos .enlace__pasteleria {
@@ -1335,8 +1400,9 @@ footer .contenedor__redes ul .ired:hover {
   background-position: cover;
   border-bottom-left-radius: 50%;
   overflow: hidden;
-  min-height: 280px;
-  padding: 0 2rem 0.5rem 0;
+  width: 260px;
+  min-height: 180px;
+  padding: 0 0.5rem 2rem 1rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -1344,13 +1410,51 @@ footer .contenedor__redes ul .ired:hover {
   align-content: end;
   align-items: end;
   justify-content: space-between;
+  align-self: center;
+}
+@media (min-width: 420px) {
+  .contenedor__productos .enlace__pasteleria {
+    width: 340px;
+  }
+}
+@media (min-width: 480px) {
+  .contenedor__productos .enlace__pasteleria {
+    width: 400px;
+  }
+}
+@media (min-width: 520px) {
+  .contenedor__productos .enlace__pasteleria {
+    width: 430px;
+  }
+}
+@media (min-width: 620px) {
+  .contenedor__productos .enlace__pasteleria {
+    width: 460px;
+  }
+}
+@media (min-width: 768px) {
+  .contenedor__productos .enlace__pasteleria {
+    width: 630px;
+  }
+}
+@media (min-width: 820px) {
+  .contenedor__productos .enlace__pasteleria {
+    min-height: 300px;
+  }
 }
 @media (min-width: 1000px) {
   .contenedor__productos .enlace__pasteleria {
     width: 100%;
-    max-height: 400px;
+    min-height: 280px;
     padding: 0 0.5rem 1rem 0;
     align-self: flex-end;
+  }
+}
+@media (min-width: 1200px) {
+  .contenedor__productos .enlace__pasteleria {
+    width: 100%;
+    min-height: 210px;
+    align-self: end;
   }
 }
 .contenedor__productos .enlace__dulce {
@@ -1360,6 +1464,7 @@ footer .contenedor__redes ul .ired:hover {
   background-position: bottom;
   border-radius: 10% 25%;
   overflow: hidden;
+  width: 260px;
   min-height: 280px;
   padding: 0 0 1rem 0;
   display: flex;
@@ -1368,15 +1473,42 @@ footer .contenedor__redes ul .ired:hover {
   justify-items: center;
   align-content: center;
   align-items: center;
+  align-self: center;
+}
+@media (min-width: 420px) {
+  .contenedor__productos .enlace__dulce {
+    width: 340px;
+  }
+}
+@media (min-width: 480px) {
+  .contenedor__productos .enlace__dulce {
+    width: 400px;
+  }
+}
+@media (min-width: 520px) {
+  .contenedor__productos .enlace__dulce {
+    width: 430px;
+  }
+}
+@media (min-width: 620px) {
+  .contenedor__productos .enlace__dulce {
+    width: 460px;
+  }
 }
 @media (min-width: 768px) {
   .contenedor__productos .enlace__dulce {
-    min-height: 400px;
+    width: 630px;
+  }
+}
+@media (min-width: 820px) {
+  .contenedor__productos .enlace__dulce {
+    min-height: 300px;
   }
 }
 @media (min-width: 1000px) {
   .contenedor__productos .enlace__dulce {
     width: 100%;
+    min-height: 350px;
     padding-top: 4.4rem;
     display: flex;
     flex-wrap: wrap;
@@ -1388,7 +1520,8 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 1200px) {
   .contenedor__productos .enlace__dulce {
-    min-height: 350px;
+    width: 100%;
+    min-height: 280px;
     align-self: end;
   }
 }
@@ -1399,6 +1532,7 @@ footer .contenedor__redes ul .ired:hover {
   background-position: bottom;
   border-radius: 10% 25%;
   overflow: hidden;
+  width: 260px;
   min-height: 280px;
   padding: 0 0 1rem 0;
   display: flex;
@@ -1407,15 +1541,42 @@ footer .contenedor__redes ul .ired:hover {
   justify-items: center;
   align-content: center;
   align-items: center;
+  align-self: center;
+}
+@media (min-width: 420px) {
+  .contenedor__productos .enlace__lunch {
+    width: 340px;
+  }
+}
+@media (min-width: 480px) {
+  .contenedor__productos .enlace__lunch {
+    width: 400px;
+  }
+}
+@media (min-width: 520px) {
+  .contenedor__productos .enlace__lunch {
+    width: 430px;
+  }
+}
+@media (min-width: 620px) {
+  .contenedor__productos .enlace__lunch {
+    width: 460px;
+  }
 }
 @media (min-width: 768px) {
   .contenedor__productos .enlace__lunch {
-    min-height: 400px;
+    width: 630px;
+  }
+}
+@media (min-width: 820px) {
+  .contenedor__productos .enlace__lunch {
+    min-height: 300px;
   }
 }
 @media (min-width: 1000px) {
   .contenedor__productos .enlace__lunch {
     width: 100%;
+    min-height: 350px;
     padding-top: 4.4rem;
     display: flex;
     flex-wrap: wrap;
@@ -1427,7 +1588,8 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 1200px) {
   .contenedor__productos .enlace__lunch {
-    min-height: 350px;
+    width: 100%;
+    min-height: 280px;
     align-self: end;
   }
 }
@@ -2252,6 +2414,12 @@ footer .contenedor__redes ul .ired:hover {
   font-weight: 400;
   line-height: 1.5rem;
   text-align: center;
+  hyphens: auto;
+}
+@media (min-width: 1200px) {
+  .contenedor__grilla .parrafo__sobremi h4 {
+    hyphens: none;
+  }
 }
 .contenedor__grilla img {
   width: 350px;
@@ -2342,10 +2510,11 @@ footer .contenedor__redes ul .ired:hover {
     padding: 0 2rem 0 0;
   }
   .contenedor__grilla .izquierda h4 {
-    padding: 0 2rem 0 1rem;
+    padding: 0 2rem;
     font-size: 1.2rem;
     line-height: 2.1rem;
-    text-align: left;
+    text-align: justify;
+    hyphens: auto;
   }
   .contenedor__grilla .der h4 {
     font-size: 1.2rem;
