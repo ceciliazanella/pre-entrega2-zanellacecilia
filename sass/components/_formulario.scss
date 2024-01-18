@@ -1,107 +1,209 @@
 /*--- FORMULARIO ---*/
 form {
-    min-width: 360px;
-    padding: 4rem 0;
+    min-width: 350px;
+    max-width: 1200px;
+    margin: 0 auto;
 
     @include flexbox-column(center, center);
 
-    gap: 1.5rem;
+    align-items: center;
+
+    gap: 0.5rem;
 
     @include md-1000 {
-        max-width: 950px;
-        padding: 2rem;
+        width: 1000px;
+        padding: 1.5rem;
         margin: 0 auto;
 
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 70px 300px 90px;
+        grid-template-rows: 70px 70px 360px;
 
         text-align: center;
 
-        align-items: start;
+        align-items: center;
         justify-content: center;
 
-        gap: 2rem;
-    }
-
-    @include md-1024 {
-        max-width: 1000px;
-        padding: 4rem;
-        margin: 0 auto;
-
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 70px 300px 100px;
-
-        text-align: center;
-
-        align-items: start;
-        justify-content: center;
-
-        gap: 2rem;
+        gap: 1rem;
     }
 
     @include md-1200 {
-        width: 1100px;
-
-        gap: 2rem;
+        width: 1200px;
+        padding: 1rem;
     }
 
     //TEXTAREA//
-    textarea {
-        width: 320px;
+    .trix-content {
+        width: 300px;
         height: 300px;
-        padding: 0.8rem;
+        padding: 1rem;
+        margin: 0 auto;
         border: 0;
-        border-radius: 0.8rem;
+        border-radius: 0.3rem;
         @include shadow_inset (2px);
 
         color: $ligthcolor;
         font-size: 1rem;
-        font-style: italic;
-        font-weight: 700;
+        font-style: normal;
+        font-weight: 600;
+        text-align: left;
+
+        @include flexbox-column(center, center);
+
+        align-items: center;
 
         &:focus {
-            outline: 1px solid $terciarycolor;
+            cursor: text;
+            outline: 2px solid $terciarycolor;
         }
 
-        @include md-768 {
-            width: 700px;
+        @include md-480 {
+            width: 400px;
         }
 
-        @include md-1000 {
-            max-width: 450px;
-        }
-
-        @include md-1024 {
-            width: 500px;
-        }
-
-        @include md-1200 {
-            width: 550px;
-        }
-    }
-
-    //INPUT//
-    input {
-        @extend textarea;
-        height: 50px;
-
-        @include md-1000 {
+        @include md-620 {
             width: 450px;
         }
 
-        @include md-1024 {
-            width: 500px;
-            height: 80px;
+        @include md-768 {
+            width: 650px;
+        }
 
-            justify-self: center;
+        @include md-1000 {
+            max-width: 380px;
+            height: 300px;
+
+            grid-column: 1/2;
+            grid-row: 3/4;
+
+            align-self: start;
         }
 
         @include md-1200 {
-            width: 550px;
+            max-width: 450px;
+            height: 300px;
+        }
+    }
+
+    //INPUTS//
+    #nombre-usuario {
+        @extend .trix-content;
+        height: 35px;
+
+        font-style: italic;
+        font-weight: 900;
+
+        @include md-480 {
+            width: 400px;
+        }
+
+        @include md-620 {
+            width: 450px;
+        }
+
+        @include md-768 {
+            width: 650px;
+        }
+
+        @include md-1000 {
+            max-width: 380px;
+            height: 40px;
 
             justify-self: center;
+
+            grid-column: 1/2;
+            grid-area: 1/2;
         }
+
+        @include md-1200 {
+            max-width: 450px;
+        }
+    }
+
+    #email-usuario {
+        @extend #nombre-usuario;
+
+        @include md-1000 {
+            height: 40px;
+
+            grid-column: 2/3;
+            grid-area: 1/2;
+        }
+    }
+
+    #localidad-usuario {
+        @extend #nombre-usuario;
+
+        @include md-1000 {
+            height: 40px;
+
+            grid-column: 1/2;
+            grid-area: 2/3;
+        }
+    }
+
+    #asunto-usuario {
+        @extend #nombre-usuario;
+
+        @include md-1000 {
+            height: 40px;
+
+            grid-column: 2/3;
+            grid-area: 2/3;
+        }
+    }
+}
+
+.trix-button-row {
+    width: 300px;
+    margin: 0 auto;
+
+    overflow: scroll;
+
+    grid-column: 2/3;
+    grid-area: 3/4;
+
+    @include md-480 {
+        width: 400px;
+    }
+
+    @include md-620 {
+        width: 450px;
+    }
+
+    @include md-768 {
+        width: 650px;
+    }
+
+    @include md-1000 {
+        width: 380px;
+        height: 40px;
+
+        justify-self: center;
+        align-self: start;
+
+        grid-column: 2/2;
+        grid-row: 3/4;
+    }
+
+    @include md-1200 {
+        width: 450px;
+        height: 40px;
+    }
+}
+
+#trix-toolbar {
+    @include md-1000 {
+        width: 380px;
+        height: 40px;
+
+        justify-self: center;
+
+        grid-column: 2/2;
+        grid-row: 3/4;
+    }
+
+    @include md-1200 {
+        width: 450px;
     }
 }

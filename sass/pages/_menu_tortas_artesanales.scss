@@ -1,3 +1,30 @@
+//ÍCONOS / MENÚ / SECCIÓN TORTAS ARTESANALES
+
+.iconos_tortas {
+    display: none;
+
+    @include md-1000 {
+        display: flex;
+
+        width: 1000px;
+        padding: 0 4rem;
+
+        @include flexbox-column (center, start);
+
+        gap: 1rem;
+    }
+
+    .icono__torta {
+        width: 80px;
+        animation: caminar 7.3s infinite linear;
+    }
+
+    .icono__corazon {
+        width: 30px;
+        animation: caminarIzq 7.3s infinite linear;
+    }
+}
+
 /*--- LISTA / MENÚ / SECCIÓN TORTAS ARTESANALES ---*/
 .contenedor__menu {
     width: 100%;

@@ -160,22 +160,137 @@ $decorativefont: "Corinthia", cursive;
 
 /*---KEYFRAMES ---*/
 @keyframes rebotarLugar {
-    from {
+    0% {
         transform: translateX(0%);
     }
 
-    to {
+    50% {
         transform: translateX(0%) translateY(15%);
+    }
+
+    100% {
+        transform: translateX(0%);
     }
 }
 
 @keyframes rebotarDesplazo {
-    from {
+    0% {
         transform: translateX(0%);
     }
 
-    to {
+    50% {
         transform: translateX(10%) translateY(70%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes subir {
+    0% {
+        transform: translateY(0%);
+    }
+
+    15% {
+        transform: translateY(10%);
+    }
+
+    25% {
+        transform: rotate(35deg);
+    }
+
+    50% {
+        transform: rotate(-35deg);
+    }
+
+    75% {
+        transform: translateY(-10%);
+    }
+
+    50% {
+        transform: rotate(35deg);
+    }
+
+    25% {
+        transform: rotate(-35deg);
+    }
+
+    15% {
+        transform: translateY(-10%);
+    }
+
+    0% {
+        transform: translateY(0%);
+    }
+
+}
+
+@keyframes caminar {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(1000%);
+    }
+}
+
+@keyframes caminarIzq {
+    0% {
+        transform: translateX(-1000%);
+    }
+
+    25% {
+        transform: translateX(100%) rotate(360deg);
+    }
+
+    50% {
+        transform: translateX(50%) rotate(-360deg);
+    }
+
+    75% {
+        transform: translateX(0%) rotate(360deg);
+    }
+
+    100% {
+        transform: translateX(3000%);
+    }
+}
+
+@keyframes rotarDesplazoIzq {
+    0% {
+        transform: translateX(-1000%);
+    }
+
+    25% {
+        transform: translateX(100%) rotate(360deg);
+    }
+
+    50% {
+        transform: translateX(50%) rotate(-360deg);
+    }
+
+    100% {
+        transform: translateX(0%) rotate(360deg);
+    }
+}
+
+@keyframes rotarDesplazoDer {
+    0% {
+        transform: translateX(1000%);
+    }
+
+    25% {
+        transform: translateX(-100%) rotate(-360deg);
+    }
+
+    50% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+
+    100% {
+        transform: translateX(0%) rotate(-360deg);
     }
 }
 
@@ -377,7 +492,7 @@ hr {
     border: solid 1.5px $principalcolor;
     border-radius: 0.3rem;
     width: 95%;
-    margin: 2rem auto;
+    margin: 3rem auto;
 
     z-index: 2;
 }
@@ -410,7 +525,7 @@ main {
 /*--- elementos no infinitos ---*/
 //CLASE CONTENEDOR//
 .contenedor {
-    min-width: 360px;
+    min-width: 350px;
     max-width: 1200px;
     margin: 0 auto;
 }

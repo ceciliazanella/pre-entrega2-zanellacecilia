@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cssgram/0.1.10/cssgram.min.css">
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Editor para Formulario -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="../css/styles.css">
     <!-- Title | Page / Sección Contacto -->
@@ -91,7 +94,7 @@
 
     <!-- Main -->
 
-    <main>
+    <main class="contenedor_main">
 
         <section>
 
@@ -131,8 +134,14 @@
         <hr>
 
         <section class="contenedor">
+
+            <div class="redes_dedo">
+                <img src="../imagenes/icons_contacto/mano_indica.svg" alt="Ícono de mano con dedo indicando">
+            </div>
             <!-- Formulario de Contacto -->
-            <form class="contenedor form" name="contact" action="/pages/gracias.html" netlify>
+            <form class="contenedor form" name="Formulario de Contacto" action="/pages/gracias.html" netlify>
+
+                <input id="x" type="hidden" name="content">
 
                 <div>
                     <label for="nombre-usuario"></label>
@@ -150,14 +159,43 @@
                 </div>
 
                 <div>
+                    <label for="asunto-usuario"></label>
+                    <input type="text" name="Asunto" id="asunto-usuario" placeholder="Asunto">
+                </div>
+
+                <div>
                     <label for="mensaje-usuario"></label>
-                    <textarea name="Mensaje" id="mensaje-usuario" placeholder="Escribí tu mensaje..." cols="22"
-                        rows="10"></textarea>
+                    <trix-editor class="trix-content" name="Mensaje" id="mensaje-usuario"
+                        placeholder="Escribí tu mensaje..." cols="22" rows="13"></trix-editor>
                 </div>
                 <!-- Botón Value -->
                 <input class="boton_value" type="submit" value="ENVIAR MENSAJE">
 
             </form>
+            <!-- Redes Sociales -->
+            <article>
+
+                <div class="redes_mano">
+                    <img src="../imagenes/icons_contacto/mano_saluda.svg" alt="Ícono de mano saludando">
+                </div>
+
+                <div class="redes_sociales">
+
+                    <h2>Seguinos en nuestras<br> <span class="recalcar">Redes Sociales!</span></h2>
+
+                    <ul class="redes_iconos">
+                        <li><a href="https://www.instagram.com/corazon.de.chocolate.cz" target="_blank"><img
+                                    src="../imagenes/icons_contacto/ig_claro.svg" alt="Ícono de Instagram"
+                                    class="ired"></a>
+                        </li>
+                        <li><a href="https://www.facebook.com/CZ.corazon.de.chocolate" target="_blank"><img
+                                    src="../imagenes/icons_contacto/fb_claro.svg" alt="Ícono de Facebook"
+                                    class="fred"></a></li>
+                    </ul>
+
+                </div>
+
+            </article>
 
         </section>
 

@@ -1,0 +1,169 @@
+.redes_dedo {
+    display: none;
+
+    @include md-1000 {
+        display: block;
+        width: 80px;
+        margin-left: 80px;
+
+        animation: rebotarLugar 1.2s ease-in-out infinite ;
+    }
+
+    @include md-1200 {
+        left: 670px;
+    }
+}
+
+.redes_mano {
+    display: none;
+
+    @include md-1000 {
+        display: block;
+        width: 80px;
+
+        position: relative;
+        bottom: -30px;
+        left: 570px;
+
+        z-index: 1;
+
+        animation: subir 1.2s infinite ease;
+    }
+
+    @include md-1200 {
+        left: 670px;
+    }
+}
+
+.redes_sociales {
+    max-width: 1200px;
+    display: none;
+
+    @include md-1000 {
+        background-color: $principalcolor;
+        border-radius: 0.2rem 0.2rem 4rem 0.2rem;
+        width: 880px;
+        padding: 2rem;
+        margin: 0 auto;
+
+        position: relative;
+
+        z-index: 2;
+
+        gap: 1rem;
+
+        @include flex-center;
+    }
+
+    @include md-1200 {
+        width: 1050px;
+        padding: 2rem;
+        margin: 0 auto;
+    }
+
+    h2 {
+        padding: 0;
+        margin: 0;
+        color: $terciarycolor;
+        font-size: 1.5rem;
+
+        .recalcar {
+            color: $ultraligthcolor;
+            font-size: 2rem;
+            letter-spacing: 0.06rem;
+            font-weight: 700;
+            font-style: italic;
+        }
+    }
+
+    .redes_iconos {
+        @include flex-center;
+    }
+
+    .ired {
+        width: 80px;
+        margin: 0.5rem;
+
+        transition: 1s ease-in-out;
+        animation: rotarDesplazoIzq 2s ease;
+        animation-delay: 5s;
+
+        &:hover {
+            animation-play-state: paused;
+            transform: scale(1.2);
+            filter: drop-shadow(-2px 2px 1px #bc8034);
+        }
+    }
+}
+
+.fred {
+    width: 80px;
+    margin: 0.5rem;
+
+    transition: 1s ease-in-out;
+    animation: rotarDesplazoDer 2s ease;
+    animation-delay: 5s;
+
+    &:hover {
+        animation-play-state: paused;
+        transform: scale(1.2);
+        filter: drop-shadow(2px -1px 1px #bc8034);
+    }
+}
+
+//BOTÓN VALUE//
+.boton_value {
+    background-color: $principalcolor;
+    box-shadow: 0px 8px 8px -2px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    border-radius: 0.5rem;
+    min-width: 300px;
+    height: 50px;
+    margin: 1rem 0;
+
+    color: $ligthcolor;
+    text-shadow: 0px -1px 2px rgba(255, 255, 255, 0.267);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 0.3rem;
+
+    transition: background-color color font-weight 0.6s ease-in-out;
+
+    align-self: center;
+
+    @include md-480 {
+        width: 400px;
+    }
+
+    @include md-620 {
+        width: 450px;
+    }
+
+    @include md-768 {
+        max-width: 650px;
+    }
+
+    @include md-1000 {
+        max-width: 380px;
+        margin: 3rem 0;
+
+        grid-column: 2/3;
+        grid-row: 3/4;
+
+        align-self: start;
+    }
+
+    @include md-1200 {
+        max-width: 450px;
+    }
+
+    &:hover {
+        @include shadow_inset (1.5px);
+
+        color: $terciarycolor;
+        @include text_shadow (2px);
+
+        transition: background-color color font-weight 1s ease-in-out;
+        animation: sacudir__horizontal 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    }
+}

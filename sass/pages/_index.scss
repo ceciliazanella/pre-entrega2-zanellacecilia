@@ -3,7 +3,7 @@
         background: radial-gradient(#5e0b15, #5e0b1548);
         border-radius: 5% 5% 15% 5%;
         box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px #00000000;
-        min-width: 360px;
+        min-width: 350px;
         padding: 2rem;
         margin: 8rem auto;
 
@@ -54,7 +54,7 @@
 
     //--- DESTACADO EN INDEX ---//
     .contenedor__destacado {
-        min-width: 360px;
+        min-width: 350px;
         padding: 4rem;
 
         overflow: hidden;
@@ -884,8 +884,8 @@
     /*--- SECTOR ENVÍOS / INDEX ---*/
     .contenedor__envios {
         background-color: $ligthcolor;
-        border-radius: 0 20% 0 25%;
-        padding: 4rem;
+        border-radius: 0 15% 0 20%;
+        padding: 4rem 5rem;
 
         color: $secundarycolor;
 
@@ -1027,7 +1027,7 @@
 
             justify-self: center;
 
-            animation: sacudir__vertical 3s infinite alternate ease-in-out;
+            animation: sacudir__vertical 4s infinite alternate ease-in-out;
 
             @include md-420 {
                 width: 70%;
@@ -1061,7 +1061,7 @@
 
                 align-self: center;
 
-                animation: sacudir__horizontal 3s infinite alternate ease-in-out;
+                animation: sacudir__horizontal 4s infinite alternate ease-in-out;
             }
         }
 
@@ -1080,7 +1080,7 @@
                 align-self: end;
                 justify-self: start;
 
-                animation: rebotarDesplazo 0.6s infinite alternate ease-in-out;
+                animation: rebotarDesplazo 1.2s infinite alternate ease-in-out;
             }
         }
 
