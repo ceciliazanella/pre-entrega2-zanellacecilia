@@ -6,10 +6,10 @@
     @include md-1000 {
         display: block;
 
-        width: 80px;
+        width: 70px;
         margin-left: 60px;
 
-        animation: rebotarLugar 1.2s infinite ease-in-out;
+        animation: rebotarLugar 1s infinite ease-in-out;
     }
 
     @include md-1200 {
@@ -73,11 +73,19 @@
         font-weight: 700;
         text-align: center;
 
+        & h3 {
+            margin-bottom: 0;
+
+            animation: sacudir__vertical 6s alternate infinite ease-in-out;
+        }
+
         .recalcar {
             color: $ultraligthcolor;
             font-size: 2rem;
-            letter-spacing: 0.2rem;
+            letter-spacing: 0.25rem;
             font-style: italic;
+
+            animation: cambio__color 2s alternate infinite ease-in-out;
         }
     }
 
@@ -92,7 +100,7 @@
         transition: 1s ease-in-out;
 
         animation: rotarDesplazoIzq 2s ease-in-out;
-        animation-delay: 5s;
+        animation-delay: 6s;
 
         &:hover {
             animation-play-state: paused;
@@ -156,9 +164,9 @@
 
     @include md-1000 {
         max-width: 380px;
-     
-        grid-column: 2/3;
-        grid-row: 3/4;
+
+        grid-column: 1/2;
+        grid-row: 4/5;
 
         align-self: end;
     }

@@ -140,39 +140,37 @@
             <!-- Formulario de Contacto -->
             <form class="contenedor form" name="Formulario de Contacto" action="/pages/gracias.html" method="POST"
                 data-netlify-recaptcha="true" netlify>
-                <!-- Según Documentación de Netlify la ruta de action debe ser relativa a la raíz del sitio y comenzar con / -->
+                <!-- Aclaración: Según Documentación de Netlify la ruta para action debe ser relativa a la raíz y comenzar directamente con una / 
+                No funciona con ./gracias.html -->
                 <!-- Una vez que el Usuario envía el Formulario se lo remite a la Page #gracias.html -->
-                <!-- La Page #gracias.html, después de unos segundos, se redirije automáticamente al INDEX -->
+                <!-- La Page #gracias.html, después de unos segundos, lo redirije automáticamente al INDEX -->
                 <!-- Campo de Nombre -->
                 <div>
                     <label for="nombre-usuario"></label>
-                    <input type="text" name="Nombre" id="nombre-usuario" placeholder="Nombre">
+                    <input type="text" name="Nombre" id="nombre-usuario" placeholder="Nombre" required>
                 </div>
                 <!-- Campo de Email -->
                 <div>
                     <label for="email-usuario"></label>
-                    <input type="email" name="Email" id="email-usuario" placeholder="Email">
-                </div>
-                <!-- Campo de Localidad -->
-                <div>
-                    <label for="localidad-usuario"></label>
-                    <input type="search" name="Localidad" id="localidad-usuario" placeholder="Localidad">
+                    <input type="email" name="Email" id="email-usuario" placeholder="Email" required>
                 </div>
                 <!-- Campo de Asunto -->
                 <div>
                     <label for="asunto-usuario"></label>
-                    <input type="text" name="Asunto" id="asunto-usuario" placeholder="Asunto">
+                    <input type="text" name="Asunto" id="asunto-usuario" placeholder="Asunto" required>
                 </div>
-                <!-- Editor para el Textarea del Formulario -->
+                <!-- Campo de Localidad -->
+                <div>
+                    <label for="localidad-usuario"></label>
+                    <input type="search" name="Localidad" id="localidad-usuario" placeholder="Localidad" required>
+                </div>
+                <!-- Campo del Textarea -->
                 <div>
                     <label for="mensaje-usuario"></label>
-                    <!-- Campo del Editor Trix -->
-                    <input id="mensaje-usuario" type="hidden" name="Mensaje">
-                    <!-- Editor Trix -->
-                    <trix-editor class="trix-content" input="mensaje-usuario" name="Mensaje" id="mensaje-usuario"
-                        placeholder="Escribí tu mensaje..." cols="22" rows="13"></trix-editor>
+                    <textarea class="text-content" name="Mensaje" id="mensaje-usuario"
+                        placeholder="Escribí tu mensaje..." cols="22" rows="22" required></textarea>
                 </div>
-
+                <!-- Captcha Anti Span -->
                 <div data-netlify-recaptcha="true"></div>
                 <!-- Botón Value -->
                 <input class="boton_value" type="submit" value="ENVIAR MENSAJE">
@@ -281,8 +279,6 @@
     <script>
         AOS.init();
     </script>
-    <!-- Trix -->
-    <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
 
 </body>
 
