@@ -756,7 +756,7 @@ form {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 70px 70px 380px 70px;
+    grid-template-rows: 70px 70px 480px 80px;
     text-align: center;
     align-items: start;
     justify-content: center;
@@ -3094,7 +3094,7 @@ footer .contenedor__redes ul .ired:hover {
   margin: 0.5rem;
   transition: 1s ease-in-out;
   animation: rotarDesplazoDer 2s ease-in-out;
-  animation-delay: 5s;
+  animation-delay: 6s;
 }
 .fred:hover {
   animation-play-state: paused;
@@ -3108,7 +3108,7 @@ footer .contenedor__redes ul .ired:hover {
   border-radius: 0.5rem;
   min-width: 300px;
   height: 50px;
-  margin: 1rem 0;
+  margin: 0 auto;
   color: #8c7a6b;
   text-shadow: 0px -1px 2px rgba(255, 255, 255, 0.267);
   font-size: 1rem;
@@ -3116,7 +3116,6 @@ footer .contenedor__redes ul .ired:hover {
   font-weight: 900;
   letter-spacing: 0.3rem;
   transition: background-color color font-weight 0.6s ease-in-out;
-  align-self: center;
 }
 @media (min-width: 480px) {
   .boton_value {
