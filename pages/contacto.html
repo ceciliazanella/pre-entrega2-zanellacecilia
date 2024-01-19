@@ -142,8 +142,6 @@
             <form class="contenedor form" name="Formulario de Contacto" action="/pages/gracias.html" netlify>
                 <!-- Una vez que el Usuario envía el Formulario se lo remite a la Page #gracias.html -->
                 <!-- La Page #gracias.html, después de unos segundos, se redirije automáticamente al INDEX -->
-                <input id="x" type="hidden" name="content"><!-- Editor para el Textarea del Formulario -->
-
                 <div>
                     <label for="nombre-usuario"></label>
                     <input type="text" name="Nombre" id="nombre-usuario" placeholder="Nombre">
@@ -166,7 +164,8 @@
                 <!-- Editor para el Textarea del Formulario -->
                 <div>
                     <label for="mensaje-usuario"></label>
-                    <trix-editor class="trix-content" name="Mensaje" id="mensaje-usuario"
+                    <input id="x" type="hidden" name="Mensaje">
+                    <trix-editor class="trix-content" input="x" name="Mensaje" id="mensaje-usuario"
                         placeholder="Escribí tu mensaje..." cols="22" rows="13"></trix-editor>
                 </div>
                 <!-- Botón Value -->
