@@ -537,6 +537,10 @@ main {
 .parrafo {
     padding: 1rem 2rem;
 
+    @include md-1000 {
+        padding: 0;
+    }
+
     & h2 {
         padding: 0 1rem;
         margin-bottom: 0;

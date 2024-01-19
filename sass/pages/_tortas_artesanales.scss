@@ -9,17 +9,17 @@
 //CUERPO CENTRAL / SECCIÓN TORTAS ARTESANALES//
 .grilla_tortas {
     min-height: 360px;
-    padding: 1rem;
+    padding: 0 2rem;
 
     @include flexbox-column (center, center);
 
     text-align: center;
 
     .parrafo h4 {
-        padding: 0 2rem;
-
+        padding: 0 1.5rem;
         font-style: italic;
         font-weight: 700;
+        hyphens: none;
 
         @include color-texto($principalcolor);
 
@@ -29,15 +29,15 @@
     }
 
     @include md-480 {
-        padding: 2rem;
+        padding: 0 2rem;
     }
 
     @include md-768 {
-        padding: 4rem;
+        padding: 0 4rem;
     }
 
     @include md-1000 {
-        padding: 6rem;
+        padding: 0 6rem;
     }
 
     .font__detalle {
@@ -75,10 +75,10 @@
     @include md-1024 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 450px 350px 450px 1100px 580px;
+        grid-template-rows: 450px 200px 450px 1100px 550px;
 
         width: 1024px;
-        padding: 2rem 2rem 0 2rem;
+        padding: 0 2rem 0 2rem;
         margin: 0 auto;
 
         align-items: center;
@@ -86,9 +86,15 @@
 
         gap: 1rem;
 
+        .parrafo h3 {
+            padding: 1.5rem;
+        }
+
         @include md-1200 {
-            grid-template-rows: 450px 350px 450px 1100px 580px;
-            padding: 2rem 2rem 0 2rem;
+            grid-template-rows: 450px 200px 450px 980px 460px;
+
+            width: 1200px;
+            padding-top: 2rem;
         }
 
         //TEXTOS / PÁRRAFOS / SECCIÓN TORTAS ARTESANALES//
@@ -130,6 +136,9 @@
         border-top: double 8px $terciarycolor;
         border-radius: 50% 20% / 10% 40%;
         box-shadow: 0px 8px 10px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+
+        align-self: center;
+        justify-self: center;
 
         object-fit: cover;
 
@@ -182,6 +191,7 @@
         grid-row: 2/3;
 
         align-self: center;
+        justify-self: center;
     }
 }
 

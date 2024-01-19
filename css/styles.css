@@ -319,6 +319,11 @@ main .contenedor_main {
 .parrafo {
   padding: 1rem 2rem;
 }
+@media (min-width: 1000px) {
+  .parrafo {
+    padding: 0;
+  }
+}
 .parrafo h2 {
   padding: 0 1rem;
   margin-bottom: 0;
@@ -806,7 +811,7 @@ form .trix-content:focus, form #nombre-usuario:focus, form #asunto-usuario:focus
 @media (min-width: 1000px) {
   form .trix-content, form #nombre-usuario, form #asunto-usuario, form #localidad-usuario, form #email-usuario {
     max-width: 380px;
-    height: 300px;
+    height: 340px;
     grid-column: 1/2;
     grid-row: 3/4;
     align-self: start;
@@ -815,7 +820,7 @@ form .trix-content:focus, form #nombre-usuario:focus, form #asunto-usuario:focus
 @media (min-width: 1200px) {
   form .trix-content, form #nombre-usuario, form #asunto-usuario, form #localidad-usuario, form #email-usuario {
     max-width: 450px;
-    height: 300px;
+    height: 340px;
   }
 }
 form #nombre-usuario, form #asunto-usuario, form #localidad-usuario, form #email-usuario {
@@ -2686,7 +2691,7 @@ footer .contenedor__redes ul .ired:hover {
 
 .grilla_tortas {
   min-height: 360px;
-  padding: 1rem;
+  padding: 0 2rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -2695,9 +2700,10 @@ footer .contenedor__redes ul .ired:hover {
   text-align: center;
 }
 .grilla_tortas .parrafo h4 {
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   font-style: italic;
   font-weight: 700;
+  hyphens: none;
   background-color: #5e0b15;
   color: #d9cab3;
 }
@@ -2709,17 +2715,17 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 480px) {
   .grilla_tortas {
-    padding: 2rem;
+    padding: 0 2rem;
   }
 }
 @media (min-width: 768px) {
   .grilla_tortas {
-    padding: 4rem;
+    padding: 0 4rem;
   }
 }
 @media (min-width: 1000px) {
   .grilla_tortas {
-    padding: 6rem;
+    padding: 0 6rem;
   }
 }
 .grilla_tortas .lista__butter, .grilla_tortas .lista__letter, .grilla_tortas .lista__fondant {
@@ -2748,19 +2754,23 @@ footer .contenedor__redes ul .ired:hover {
   .grilla_tortas {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 450px 350px 450px 1100px 580px;
+    grid-template-rows: 450px 200px 450px 1100px 550px;
     width: 1024px;
-    padding: 2rem 2rem 0 2rem;
+    padding: 0 2rem 0 2rem;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
     gap: 1rem;
   }
+  .grilla_tortas .parrafo h3 {
+    padding: 1.5rem;
+  }
 }
 @media (min-width: 1024px) and (min-width: 1200px) {
   .grilla_tortas {
-    grid-template-rows: 450px 350px 450px 1100px 580px;
-    padding: 2rem 2rem 0 2rem;
+    grid-template-rows: 450px 200px 450px 980px 460px;
+    width: 1200px;
+    padding-top: 2rem;
   }
 }
 @media (min-width: 1024px) {
@@ -2793,6 +2803,8 @@ footer .contenedor__redes ul .ired:hover {
   border-top: double 8px #bc8034;
   border-radius: 50% 20%/10% 40%;
   box-shadow: 0px 8px 10px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  align-self: center;
+  justify-self: center;
   object-fit: cover;
   filter: sepia(40%) brightness(90%);
   transition: width height 0.8s ease-in-out;
@@ -2839,6 +2851,7 @@ footer .contenedor__redes ul .ired:hover {
     grid-column: 2/3;
     grid-row: 2/3;
     align-self: center;
+    justify-self: center;
   }
 }
 
@@ -3174,10 +3187,9 @@ footer .contenedor__redes ul .ired:hover {
 @media (min-width: 1000px) {
   .boton_value {
     max-width: 380px;
-    margin: 7.5rem 0;
     grid-column: 2/3;
     grid-row: 3/4;
-    align-self: start;
+    align-self: end;
   }
 }
 @media (min-width: 1200px) {

@@ -157,12 +157,11 @@
 
     @include md-1000 {
         max-width: 380px;
-        margin: 7.5rem 0;
-
+     
         grid-column: 2/3;
         grid-row: 3/4;
 
-        align-self: start;
+        align-self: end;
     }
 
     @include md-1200 {
