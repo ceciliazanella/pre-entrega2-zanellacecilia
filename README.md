@@ -10,7 +10,9 @@
 #### `DesarrolloWeb` 🖥️🚀🤩
 ##### *`para emprendimiento de pastelería creativa artesanal`* 🥧✨
 
-###### ➡️ [Sitio Web de Corazón de Chocolate](https://corazondecocolate.netlify.app/) ⭐
+###### ➡️ [Sitio Web de Corazón de Chocolate](https://corazondechocolate.netlify.app/) ⭐
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/06f0ba70-0f86-419f-abd1-c389b7b62572/deploy-status)](https://app.netlify.com/sites/corazondechocolate/deploys)
 
 <hr>
 
