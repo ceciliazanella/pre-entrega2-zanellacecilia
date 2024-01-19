@@ -2,13 +2,18 @@
 form {
     min-width: 350px;
     max-width: 1200px;
+    padding: 2rem;
     margin: 0 auto;
 
     @include flexbox-column(center, center);
 
     align-items: center;
 
-    gap: 0.5rem;
+    gap: 1rem;
+
+    & div {
+        @include flex-center;
+    }
 
     @include md-1000 {
         width: 1000px;
@@ -17,14 +22,14 @@ form {
 
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 70px 70px 480px 80px;
+        grid-template-rows: 40px 40px 300px 55px;
 
         text-align: center;
 
         align-items: start;
         justify-content: center;
 
-        gap: 1rem;
+        gap: 1.5rem;
     }
 
     @include md-1200 {
@@ -35,12 +40,12 @@ form {
     /*--- TEXTAREA / Editor de Texto para el Textarea ---*/
     .text-content {
         width: 300px;
-        height: 300px;
+        height: 330px;
         padding: 1rem;
         margin: 0 auto;
         border: 0;
-        border-radius: 0.3rem;
-        @include shadow_inset (2px);
+        border-radius: 0.15rem;
+        @include shadow_inset (1.1px);
 
         color: $ligthcolor;
         font-size: 1rem;
@@ -72,7 +77,7 @@ form {
 
         @include md-1000 {
             max-width: 380px;
-            height: 320px;
+            height: 300px;
 
             grid-column: 2/3;
             grid-row: 3/4;
@@ -80,7 +85,7 @@ form {
 
         @include md-1200 {
             max-width: 450px;
-            height: 320px;
+            height: 300px;
         }
     }
 

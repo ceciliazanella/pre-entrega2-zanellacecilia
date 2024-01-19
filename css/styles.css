@@ -285,6 +285,7 @@ hr {
 /*--- BODY ---*/
 body {
   background-color: #ffffff;
+  min-width: 350px;
   max-width: 1980px;
   margin: 0 auto;
   display: flex;
@@ -296,10 +297,12 @@ body {
 /*--- MAIN ---*/
 main {
   background-color: #ffffff;
+  min-width: 350px;
   max-width: 1980px;
   margin: 0 auto;
 }
 main .contenedor_main {
+  min-width: 350px;
   max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
@@ -738,6 +741,7 @@ header .dropdown-item:hover {
 form {
   min-width: 350px;
   max-width: 1200px;
+  padding: 2rem;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -745,9 +749,15 @@ form {
   justify-items: center;
   align-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   /*--- TEXTAREA / Editor de Texto para el Textarea ---*/
   /*--- INPUTS ---*/
+}
+form div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 @media (min-width: 1000px) {
   form {
@@ -756,11 +766,11 @@ form {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 70px 70px 480px 80px;
+    grid-template-rows: 40px 40px 300px 55px;
     text-align: center;
     align-items: start;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 }
 @media (min-width: 1200px) {
@@ -771,12 +781,12 @@ form {
 }
 form .text-content, form #nombre-usuario, form #asunto-usuario, form #localidad-usuario, form #email-usuario {
   width: 300px;
-  height: 300px;
+  height: 330px;
   padding: 1rem;
   margin: 0 auto;
   border: 0;
-  border-radius: 0.3rem;
-  box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 0.15rem;
+  box-shadow: inset 1.1px 1.1px 1.1px 1.1px rgba(0, 0, 0, 0.5);
   color: #8c7a6b;
   font-size: 1rem;
   font-style: italic;
@@ -811,7 +821,7 @@ form .text-content:focus, form #nombre-usuario:focus, form #asunto-usuario:focus
 @media (min-width: 1000px) {
   form .text-content, form #nombre-usuario, form #asunto-usuario, form #localidad-usuario, form #email-usuario {
     max-width: 380px;
-    height: 320px;
+    height: 300px;
     grid-column: 2/3;
     grid-row: 3/4;
   }
@@ -819,7 +829,7 @@ form .text-content:focus, form #nombre-usuario:focus, form #asunto-usuario:focus
 @media (min-width: 1200px) {
   form .text-content, form #nombre-usuario, form #asunto-usuario, form #localidad-usuario, form #email-usuario {
     max-width: 450px;
-    height: 320px;
+    height: 300px;
   }
 }
 form #nombre-usuario, form #asunto-usuario, form #localidad-usuario, form #email-usuario {
@@ -1690,7 +1700,7 @@ footer .contenedor__redes ul .ired:hover {
 }
 .contenedor__promo .icono__promo {
   width: 120px;
-  animation: rotar 4s infinite ease-in-out;
+  animation: rotar 4s alternate infinite ease-in-out;
 }
 @media (min-width: 480px) {
   .contenedor__promo .icono__promo {
@@ -1704,7 +1714,7 @@ footer .contenedor__redes ul .ired:hover {
 @media (min-width: 520px) {
   .contenedor__promo .icono__promo {
     padding-bottom: 2rem;
-    animation: rotar 4s infinite ease-in-out;
+    animation: rotar 4s alternate infinite ease-in-out;
   }
 }
 @media (min-width: 620px) {
@@ -2403,7 +2413,7 @@ footer .contenedor__redes ul .ired:hover {
 
 /*--- PAGE / SECCIÓN SOBRE MÍ ---*/
 .contenedor__grilla {
-  min-width: 360px;
+  min-width: 350px;
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -2900,7 +2910,7 @@ footer .contenedor__redes ul .ired:hover {
 }
 .iconos_tortas .icono__corazon {
   width: 30px;
-  animation: caminarIzq 7.3s infinite linear;
+  animation: caminarIzq 7.3s alternate infinite linear;
 }
 
 /*--- LISTA MENÚ / SUBSECCIÓN MENÚ TORTAS ARTESANALES ---*/
@@ -2988,40 +2998,68 @@ footer .contenedor__redes ul .ired:hover {
 }
 
 /*--- PAGE / SECCIÓN CONTACTO ---*/
-.redes_dedo {
+.iconos_contacto {
   display: none;
+  margin-left: 3.5rem;
+  margin-bottom: 2rem;
 }
 @media (min-width: 1000px) {
-  .redes_dedo {
+  .iconos_contacto {
     display: block;
-    width: 70px;
-    margin-left: 60px;
-    animation: rebotarLugar 1s infinite ease-in-out;
+  }
+  .iconos_contacto .icono_dialogo {
+    width: 50px;
+    animation: latido 5s alternate infinite ease-in-out;
+  }
+  .iconos_contacto .icono_sobre {
+    width: 90px;
+    animation: caminarIzq 10s alternate infinite ease-in-out;
   }
 }
 @media (min-width: 1200px) {
-  .redes_dedo {
-    margin-left: 80px;
+  .iconos_contacto {
+    margin-left: 4.5rem;
   }
 }
 
-.redes_mano {
+.redes {
+  display: flex;
+}
+.redes .redes_mano {
   display: none;
 }
 @media (min-width: 1000px) {
-  .redes_mano {
+  .redes .redes_mano {
     display: block;
     width: 80px;
     position: relative;
     bottom: -30px;
-    left: 590px;
+    left: 550px;
     z-index: 1;
-    animation: subir 1.2s infinite ease-in-out;
+    animation: subir 1.2s infinite ease-out;
   }
 }
 @media (min-width: 1200px) {
-  .redes_mano {
-    left: 690px;
+  .redes .redes_mano {
+    left: 650px;
+  }
+}
+.redes .redes_dedo {
+  display: none;
+}
+@media (min-width: 1000px) {
+  .redes .redes_dedo {
+    display: block;
+    width: 65px;
+    position: relative;
+    bottom: 25px;
+    left: 580px;
+    animation: rebotarLugar 1s alternate infinite ease-in-out;
+  }
+}
+@media (min-width: 1200px) {
+  .redes .redes_dedo {
+    left: 680px;
   }
 }
 
@@ -3061,7 +3099,9 @@ footer .contenedor__redes ul .ired:hover {
 }
 .redes_sociales .redes_titulo h3 {
   margin-bottom: 0;
-  animation: sacudir__vertical 6s alternate infinite ease-in-out;
+}
+.redes_sociales .redes_titulo h3:hover {
+  animation: sacudir__vertical 7s alternate-reverse infinite ease-in-out;
 }
 .redes_sociales .redes_titulo .recalcar {
   color: #d9cab3;
@@ -3137,7 +3177,7 @@ footer .contenedor__redes ul .ired:hover {
     max-width: 380px;
     grid-column: 1/2;
     grid-row: 4/5;
-    align-self: end;
+    align-self: center;
   }
 }
 @media (min-width: 1200px) {

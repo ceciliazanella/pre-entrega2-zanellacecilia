@@ -24,8 +24,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cssgram/0.1.10/cssgram.min.css">
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Editor para Formulario -->
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
     <!-- CSS -->
     <link rel="stylesheet" href="../css/styles.css">
     <!-- Title | Page / Sección Contacto -->
@@ -134,9 +132,19 @@
 
         <section class="contenedor">
 
-            <div class="redes_dedo">
-                <img src="../imagenes/icons_contacto/mano_indica.svg" alt="Ícono de mano con dedo índice indicando">
-            </div>
+            <article class="iconos_contacto">
+
+                <div class="icono_dialogo">
+                    <img src="../imagenes/icons_contacto/dialogo_corazon.svg"
+                        alt="Ícono de diálogo con un corazón en su interior">
+                </div>
+
+                <div class="icono_sobre">
+                    <img src="../imagenes/icons_contacto/sobre_alas.svg"
+                        alt="Ícono de sobre con alas y un corazón en su centro">
+                </div>
+
+            </article>
             <!-- Formulario de Contacto -->
             <form class="contenedor form" name="Formulario de Contacto" action="/pages/gracias.html" method="POST"
                 data-netlify-recaptcha="true" netlify>
@@ -179,8 +187,17 @@
 
             <article>
 
-                <div class="redes_mano">
-                    <img src="../imagenes/icons_contacto/mano_saluda.svg" alt="Ícono de mano saludando">
+                <div class="redes">
+
+                    <div class="redes_mano">
+                        <img src="../imagenes/icons_contacto/mano_saluda.svg" alt="Ícono de mano saludando">
+                    </div>
+
+                    <div class="redes_dedo">
+                        <img src="../imagenes/icons_contacto/mano_indica.svg"
+                            alt="Ícono de mano con dedo índice indicando">
+                    </div>
+
                 </div>
                 <!-- Redes Sociales -->
                 <div class="redes_sociales">
@@ -197,7 +214,8 @@
                         </li>
                         <li><a href="https://www.facebook.com/CZ.corazon.de.chocolate" target="_blank"><img
                                     src="../imagenes/icons_contacto/fb_claro.svg" alt="Ícono de Facebook"
-                                    class="fred"></a></li>
+                                    class="fred"></a>
+                        </li>
                     </ul>
 
                 </div>

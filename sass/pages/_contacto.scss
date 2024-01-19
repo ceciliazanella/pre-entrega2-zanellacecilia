@@ -1,41 +1,76 @@
 /*--- PAGE / SECCIÓN CONTACTO ---*/
-//ÍCONOS PAGE / SECCIÓN CONTACTO//
-.redes_dedo {
+//ÍCONOS PARA FORMULARIO | PAGE / SECCIÓN CONTACTO//
+.iconos_contacto {
     display: none;
+
+    margin-left: 3.5rem;
+    margin-bottom: 2rem;
 
     @include md-1000 {
         display: block;
 
-        width: 70px;
-        margin-left: 60px;
+        .icono_dialogo {
+            width: 50px;
 
-        animation: rebotarLugar 1s infinite ease-in-out;
+            animation: latido 5s alternate infinite ease-in-out;
+        }
+
+        .icono_sobre {
+            width: 90px;
+
+            animation: caminarIzq 10s alternate infinite ease-in-out;
+        }
     }
 
     @include md-1200 {
-        margin-left: 80px;
+        margin-left: 4.5rem;
     }
 }
 
-.redes_mano {
-    display: none;
+//ÍCONOS PARA REDES SOCIALES | PAGE / SECCIÓN CONTACTO//
+.redes {
+    display: flex;
 
-    @include md-1000 {
-        display: block;
+    .redes_mano {
+        display: none;
 
-        width: 80px;
+        @include md-1000 {
+            display: block;
 
-        position: relative;
-        bottom: -30px;
-        left: 590px;
+            width: 80px;
 
-        z-index: 1;
+            position: relative;
+            bottom: -30px;
+            left: 550px;
 
-        animation: subir 1.2s infinite ease-in-out;
+            z-index: 1;
+
+            animation: subir 1.2s infinite ease-out;
+        }
+
+        @include md-1200 {
+            left: 650px;
+        }
     }
 
-    @include md-1200 {
-        left: 690px;
+    .redes_dedo {
+        display: none;
+
+        @include md-1000 {
+            display: block;
+
+            width: 65px;
+
+            position: relative;
+            bottom: 25px;
+            left: 580px;
+
+            animation: rebotarLugar 1s alternate infinite ease-in-out;
+        }
+
+        @include md-1200 {
+            left: 680px;
+        }
     }
 }
 
@@ -76,7 +111,9 @@
         & h3 {
             margin-bottom: 0;
 
-            animation: sacudir__vertical 6s alternate infinite ease-in-out;
+            &:hover {
+                animation: sacudir__vertical 7s alternate-reverse infinite ease-in-out;
+            }
         }
 
         .recalcar {
@@ -166,7 +203,7 @@
         grid-column: 1/2;
         grid-row: 4/5;
 
-        align-self: end;
+        align-self: center;
     }
 
     @include md-1200 {

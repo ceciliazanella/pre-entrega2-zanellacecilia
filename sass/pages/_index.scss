@@ -701,7 +701,7 @@
         .icono__promo {
             width: 120px;
 
-            animation: rotar 4s infinite ease-in-out;
+            animation: rotar 4s alternate infinite ease-in-out;
 
             @include md-480 {
                 grid-column: 1/2;
@@ -716,7 +716,7 @@
             @include md-520 {
                 padding-bottom: 2rem;
 
-                animation: rotar 4s infinite ease-in-out;
+                animation: rotar 4s alternate infinite ease-in-out;
             }
 
             @include md-620 {

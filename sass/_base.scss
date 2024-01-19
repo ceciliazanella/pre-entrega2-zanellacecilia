@@ -503,6 +503,7 @@ hr {
 /*--- BODY ---*/
 body {
     background-color: #ffffff;
+    min-width: 350px;
     max-width: 1980px;
     margin: 0 auto;
 
@@ -512,10 +513,12 @@ body {
 /*--- MAIN ---*/
 main {
     background-color: #ffffff;
+    min-width: 350px;
     max-width: 1980px;
     margin: 0 auto;
 
     .contenedor_main {
+        min-width: 350px;
         max-width: 1200px;
 
         @include flex-center;
