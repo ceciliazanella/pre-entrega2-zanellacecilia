@@ -72,7 +72,7 @@ form {
 
         @include md-1000 {
             max-width: 380px;
-            height: 340px;
+            height: 320px;
 
             grid-column: 1/2;
             grid-row: 3/4;
@@ -82,7 +82,7 @@ form {
 
         @include md-1200 {
             max-width: 450px;
-            height: 340px;
+            height: 320px;
         }
     }
 

@@ -811,7 +811,7 @@ form .trix-content:focus, form #nombre-usuario:focus, form #asunto-usuario:focus
 @media (min-width: 1000px) {
   form .trix-content, form #nombre-usuario, form #asunto-usuario, form #localidad-usuario, form #email-usuario {
     max-width: 380px;
-    height: 340px;
+    height: 320px;
     grid-column: 1/2;
     grid-row: 3/4;
     align-self: start;
@@ -820,7 +820,7 @@ form .trix-content:focus, form #nombre-usuario:focus, form #asunto-usuario:focus
 @media (min-width: 1200px) {
   form .trix-content, form #nombre-usuario, form #asunto-usuario, form #localidad-usuario, form #email-usuario {
     max-width: 450px;
-    height: 340px;
+    height: 320px;
   }
 }
 form #nombre-usuario, form #asunto-usuario, form #localidad-usuario, form #email-usuario {
