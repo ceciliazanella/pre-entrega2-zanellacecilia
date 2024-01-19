@@ -138,9 +138,9 @@
                 <img src="../imagenes/icons_contacto/mano_indica.svg" alt="Ícono de mano con dedo índice indicando">
             </div>
             <!-- Formulario de Contacto -->
-            <form class="contenedor form" name="Formulario de Contacto" method="POST" data-netlify-recaptcha="true"
-                data-netlify="true" action="/pages/gracias.html">
-                <!-- Según Documentación de Netlify la ruta de action debe ser relativa -->
+            <form class="contenedor form" name="Formulario de Contacto" action="/pages/gracias.html" method="POST"
+                data-netlify-recaptcha="true" netlify>
+                <!-- Según Documentación de Netlify la ruta de action debe ser relativa a la raíz del sitio y comenzar con / -->
                 <!-- Una vez que el Usuario envía el Formulario se lo remite a la Page #gracias.html -->
                 <!-- La Page #gracias.html, después de unos segundos, se redirije automáticamente al INDEX -->
                 <!-- Campo de Nombre -->
@@ -282,11 +282,6 @@
         AOS.init();
     </script>
     <!-- Trix -->
-    <script>
-        document.addEventListener("trix-change"), function (event) {
-            document.getElementById("mensaje-usuario"), value = event.target.innerHTML;
-        }
-    </script>
     <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
 
 </body>
