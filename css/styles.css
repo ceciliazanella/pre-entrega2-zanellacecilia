@@ -336,7 +336,6 @@ main .contenedor_main {
   font-weight: 500;
   line-height: 2.1rem;
   text-align: center;
-  hyphens: auto;
 }
 .parrafo h3 {
   margin-bottom: 0;
@@ -344,17 +343,16 @@ main .contenedor_main {
   font-size: 1.1rem;
   font-weight: 400;
   line-height: 2rem;
-  text-align: justify;
-  hyphens: auto;
+  text-align: left;
 }
 .parrafo h4 {
+  padding: 0.1rem;
   margin-bottom: 0;
   color: #8c7a6b;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.7rem;
-  text-align: justify;
-  hyphens: auto;
+  line-height: 1.5rem;
+  text-align: left;
 }
 .parrafo h4 .destacado {
   font-weight: var(--font-weight);
@@ -368,7 +366,6 @@ main .contenedor_main {
   font-weight: 400;
   line-height: 1.5rem;
   text-align: center;
-  hyphens: auto;
 }
 
 /*--- HEADER INDEX ---*/
@@ -642,7 +639,7 @@ header .dropdown-item:hover {
   box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.3843137255);
   box-shadow: inset 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
   color: #d9cab3;
-  transition: background-color 0.6s ease-in-out;
+  transition: background-color color 0.6s ease-in-out;
   animation: sacudir__vertical 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 .boton h4 {
@@ -657,7 +654,7 @@ header .dropdown-item:hover {
 .boton h4:hover {
   color: #d9cab3;
   text-shadow: 1px 1px 2px #000000;
-  transition: color text-shadow 0.6s ease-in-out;
+  transition: color 0.6s ease-in-out;
 }
 
 /*--- CAROUSEL ---*/
@@ -1065,7 +1062,7 @@ footer .contenedor__redes ul .ired:hover {
 }
 .contenedor__destacado h2 {
   color: #bc8034;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 2rem;
 }
 .contenedor__destacado h2 .destacado {
@@ -1074,9 +1071,9 @@ footer .contenedor__redes ul .ired:hover {
   color: var(--color);
 }
 .contenedor__destacado h3 {
+  padding-bottom: 2rem;
   color: #90323d;
-  font-size: 1.2rem;
-  letter-spacing: 0.1rem;
+  font-size: 1.17rem;
   font-style: italic;
   font-weight: 700;
   line-height: 1.5rem;
@@ -2422,21 +2419,14 @@ footer .contenedor__redes ul .ired:hover {
   align-content: center;
 }
 .contenedor__grilla .parrafo__sobremi {
-  padding: 2rem;
+  padding: 1rem;
   margin-bottom: 0;
 }
 .contenedor__grilla .parrafo__sobremi h4 {
   color: #90323d;
-  font-size: 1rem;
+  font-size: 1.08rem;
   font-weight: 400;
-  line-height: 1.5rem;
-  text-align: justify;
-  hyphens: auto;
-}
-@media (min-width: 1200px) {
-  .contenedor__grilla .parrafo__sobremi h4 {
-    hyphens: none;
-  }
+  line-height: 1.7rem;
 }
 .contenedor__grilla img {
   width: 350px;
@@ -2523,26 +2513,19 @@ footer .contenedor__redes ul .ired:hover {
     justify-content: center;
     align-items: start;
   }
-  .contenedor__grilla .izquierda {
-    padding: 0 2rem 0 0;
-  }
   .contenedor__grilla .izquierda h4 {
-    padding: 0 2rem;
-    font-size: 1.2rem;
-    line-height: 2.1rem;
-    text-align: justify;
-    hyphens: auto;
+    padding: 0 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    text-align: left;
   }
   .contenedor__grilla .der h4 {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
     text-align: right;
     border-right: 2mm dotted #bc8034;
     padding: 0 1.5rem;
   }
   .contenedor__grilla .izq h4 {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
     text-align: left;
     border-left: 2mm dotted #bc8034;
     padding: 0 1.5rem;
@@ -2646,7 +2629,6 @@ footer .contenedor__redes ul .ired:hover {
 
 .grilla_tortas {
   min-height: 360px;
-  padding: 0 2rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -2654,11 +2636,20 @@ footer .contenedor__redes ul .ired:hover {
   align-content: center;
   text-align: center;
 }
+.grilla_tortas .parrafo {
+  padding: 0 3rem;
+}
+@media (min-width: 1024px) {
+  .grilla_tortas .parrafo {
+    padding: 0;
+  }
+}
 .grilla_tortas .parrafo h4 {
   padding: 0 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.8rem;
   font-style: italic;
   font-weight: 700;
-  hyphens: none;
   background-color: #5e0b15;
   color: #d9cab3;
 }
@@ -2709,23 +2700,21 @@ footer .contenedor__redes ul .ired:hover {
   .grilla_tortas {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 450px 200px 450px 1100px 550px;
+    grid-template-rows: 450px 200px 450px 1030px 600px;
     width: 1024px;
     padding: 0 2rem 0 2rem;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-  }
-  .grilla_tortas .parrafo h3 {
-    padding: 1.5rem;
+    gap: 1.5rem;
   }
 }
 @media (min-width: 1024px) and (min-width: 1200px) {
   .grilla_tortas {
-    grid-template-rows: 450px 200px 450px 980px 460px;
+    grid-template-rows: 450px 200px 450px 940px 570px;
     width: 1200px;
-    padding-top: 2rem;
+    padding: 2rem 3rem 0 3rem;
+    gap: 2.5rem;
   }
 }
 @media (min-width: 1024px) {
@@ -2771,14 +2760,11 @@ footer .contenedor__redes ul .ired:hover {
 .titulo__butter, .titulo__letter, .titulo__fondant {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
   padding: 4rem;
-}
-@media (min-width: 1024px) {
-  .titulo__butter, .titulo__letter, .titulo__fondant {
-    text-align: center;
-  }
+  text-align: center;
 }
 .titulo__butter h2, .titulo__letter h2, .titulo__fondant h2 {
   color: #bc8034;
@@ -2787,11 +2773,7 @@ footer .contenedor__redes ul .ired:hover {
   font-weight: 700;
   font-style: italic;
   letter-spacing: 0.4rem;
-}
-@media (min-width: 1024px) {
-  .titulo__butter h2, .titulo__letter h2, .titulo__fondant h2 {
-    text-align: center;
-  }
+  text-align: center;
 }
 @media (min-width: 1024px) {
   .titulo__butter, .titulo__letter, .titulo__fondant {

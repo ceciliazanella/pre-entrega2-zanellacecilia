@@ -554,7 +554,6 @@ main {
         font-weight: 500;
         line-height: 2.1rem;
         text-align: center;
-        hyphens: auto;
     }
 
     & h3 {
@@ -564,19 +563,18 @@ main {
         font-size: 1.1rem;
         font-weight: 400;
         line-height: 2rem;
-        text-align: justify;
-        hyphens: auto;
+        text-align: left;
     }
 
     & h4 {
+        padding: 0.1rem;
         margin-bottom: 0;
 
         color: $ligthcolor;
         font-size: 1rem;
         font-weight: 400;
-        line-height: 1.7rem;
-        text-align: justify;
-        hyphens: auto;
+        line-height: 1.5rem;
+        text-align: left;
 
         .destacado {
             font-weight: var(--font-weight);
@@ -593,6 +591,5 @@ main {
         font-weight: 400;
         line-height: 1.5rem;
         text-align: center;
-        hyphens: auto;
     }
 }

@@ -47,7 +47,7 @@
 
         color: $ultraligthcolor;
 
-        transition: background-color 0.6s ease-in-out;
+        transition: background-color color 0.6s ease-in-out;
         animation: sacudir__vertical 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
     }
 
@@ -65,7 +65,7 @@
             color: $ultraligthcolor;
             text-shadow: 1px 1px 2px #000000;
 
-            transition: color text-shadow 0.6s ease-in-out;
+            transition: color 0.6s ease-in-out;
         }
     }
 }
