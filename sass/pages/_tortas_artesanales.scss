@@ -8,17 +8,22 @@
 
 //CUERPO CENTRAL / SECCIÓN TORTAS ARTESANALES//
 .grilla_tortas {
-    min-height: 360px;
+    min-width: 350px;
+    max-width: 1200px;
+    padding: 0 1rem;
+    margin: 0 auto;
 
     @include flexbox-column (center, center);
 
-    text-align: center;
-
     .parrafo {
-        padding: 0 3rem;
+        padding: 0 1rem;
 
         @include md-1024 {
             padding: 0;
+
+            & h3 {
+                padding-bottom: 1rem;
+            }
         }
     }
 
@@ -60,7 +65,6 @@
 
         & h4 {
             text-align: left;
-            hyphens: none;
         }
 
         @include md-1000 {
@@ -83,24 +87,22 @@
     @include md-1024 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 450px 200px 450px 1030px 600px;
+        grid-template-rows: 400px 200px 400px 1200px 550px;
 
-        width: 1024px;
-        padding: 0 2rem 0 2rem;
-        margin: 0 auto;
+        width: 1000px;
+        padding: 0 1.5rem;
 
-        align-items: center;
-        justify-content: center;
+        place-content: center;
 
-        gap: 1.5rem;
+        gap: 2rem;
 
         @include md-1200 {
-            grid-template-rows: 450px 200px 450px 940px 570px;
+            grid-template-rows: 400px 200px 400px 1200px 600px;
 
-            width: 1200px;
+            width: 1024px;
             padding: 2rem 3rem 0 3rem;
 
-            gap: 2.5rem;
+            gap: 2rem;
         }
 
         //TEXTOS / PÁRRAFOS / SECCIÓN TORTAS ARTESANALES//
@@ -129,170 +131,182 @@
             align-self: start;
             padding-top: 2rem;
 
+            @include md-1024 {
+                padding-top: 0;
+            }
+
             & h2 {
                 text-align: left;
             }
         }
     }
 
+    .parrafo li {
+        padding: 0.8rem 0;
+
+        @include md-1024 {
+            padding: 1.5rem 0 0 0;
+        }
+    }
+
+    //TÍTULOS / SECCIÓN TORTAS ARTESANALES//
+    .titulo__butter {
+        @include flexbox-column (center, center);
+
+        padding: 4rem;
+
+        text-align: center;
+
+        & h2 {
+            color: $terciarycolor;
+            text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
+            font-size: 1.6rem;
+            font-weight: 700;
+            font-style: italic;
+            text-align: center;
+        }
+
+        @include md-1024 {
+            grid-column: 1/2;
+            grid-row: 2/3;
+
+            align-self: center;
+        }
+    }
+
+    .titulo__fondant {
+        @extend .titulo__butter;
+
+        @include md-1024 {
+            grid-column: 2/3;
+            grid-row: 2/3;
+
+            align-self: center;
+            justify-self: center;
+        }
+    }
+
+    .titulo__letter {
+        @extend .titulo__butter;
+
+        @include md-1024 {
+            grid-column: 3/4;
+            grid-row: 2/3;
+
+            align-self: center;
+        }
+    }
+
+    //DESTACADO EN TÍTULOS / SECCIÓN TORTAS ARTESANALES//
+    .acentuado {
+        color: $secundarycolor;
+        text-shadow: none;
+        font-family: $decorativefont;
+        font-size: 4.5rem;
+        line-height: 2rem;
+
+        animation: ampliar 1s infinite alternate ease-in-out;
+
+        @include md-1024 {
+            line-height: 3rem;
+            text-align: center;
+        }
+    }
+
     //IMÁGENES / SECCIÓN TORTAS ARTESANALES//
     & img {
-        width: 350px;
-        height: 450px;
+        width: 100%;
+        height: 100%;
         border-top: double 8px $terciarycolor;
-        border-radius: 50% 20% / 10% 40%;
+        border-radius: 10% 40% / 50% 20%;
         box-shadow: 0px 8px 10px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 
-        align-self: center;
-        justify-self: center;
-
         object-fit: cover;
+        overflow: hidden;
+
+        align-self: center;
 
         filter: sepia(40%) brightness(90%);
 
         transition: width height 0.8s ease-in-out;
     }
 
-    .parrafo li {
-        padding: 0.8rem 0;
-    }
-}
+    //DETALLES PARA FOTOS / SECCIÓN TORTAS ARTESANALES//
+    .foto__butter {
+        width: 260px;
+        height: 320px;
+        padding: 1rem;
+        margin: 3rem auto;
 
-//TÍTULOS / SECCIÓN TORTAS ARTESANALES//
-.titulo__butter {
-    @include flexbox-column (center, center);
+        transition: width height 1.2s ease-in-out;
 
-    padding: 4rem;
-
-    text-align: center;
-
-    & h2 {
-        color: $terciarycolor;
-        text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
-        font-size: 1.6rem;
-        font-weight: 700;
-        font-style: italic;
-        letter-spacing: 0.4rem;
-        text-align: center;
-    }
-
-    @include md-1024 {
-        grid-column: 1/2;
-        grid-row: 2/3;
+        z-index: 3;
 
         align-self: center;
-    }
-}
 
-.titulo__fondant {
-    @extend .titulo__butter;
+        @include md-1024 {
+            grid-column: 1/2;
+            grid-row: 1/2;
 
-    @include md-1024 {
-        grid-column: 2/3;
-        grid-row: 2/3;
+            padding: 0;
+            margin: 0;
 
-        align-self: center;
-        justify-self: center;
-    }
-}
+            align-self: center;
+        }
 
-.titulo__letter {
-    @extend .titulo__butter;
+        & :hover {
+            border-top: none;
+            box-shadow: none;
+            cursor: pointer;
 
-    @include md-1024 {
-        grid-column: 3/4;
-        grid-row: 2/3;
+            transition: width height 2s ease-in-out;
 
-        align-self: center;
-    }
-}
-
-//DESTACADO EN TÍTULOS / SECCIÓN TORTAS ARTESANALES//
-.acentuado {
-    color: $secundarycolor;
-    text-shadow: none;
-    font-family: $decorativefont;
-    font-size: 4.5rem;
-    line-height: 2rem;
-
-    animation: ampliar 1s infinite alternate ease-in-out;
-
-    @include md-1024 {
-        line-height: 3rem;
-        text-align: center;
-    }
-}
-
-//DETALLES PARA FOTOS / SECCIÓN TORTAS ARTESANALES//
-.foto__butter {
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-    margin: 3rem auto;
-
-    object-fit: cover;
-
-    transition: width height 1.2s ease-in-out;
-
-    z-index: 3;
-
-    @include md-1024 {
-        grid-column: 1/2;
-        grid-row: 1/2;
+            animation: escalar 2s alternate ease-in-out;
+        }
     }
 
-    & :hover {
-        border-top: none;
-        box-shadow: none;
-        cursor: pointer;
+    .foto__cream {
+        @extend .foto__butter;
 
-        transition: width height 2s ease-in-out;
-
-        transform: scale(1.2);
+        @include md-1024 {
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
     }
-}
 
-.foto__cream {
-    @extend .foto__butter;
+    .foto__fondant {
+        @extend .foto__butter;
 
-    @include md-1024 {
-        grid-column: 1/2;
-        grid-row: 3/4;
+        @include md-1024 {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
     }
-}
 
-.foto__fondant {
-    @extend .foto__butter;
+    .foto__fon {
+        @extend .foto__butter;
 
-    @include md-1024 {
-        grid-column: 2/3;
-        grid-row: 1/2;
+        @include md-1024 {
+            grid-column: 2/3;
+            grid-row: 3/4;
+        }
     }
-}
 
-.foto__fon {
-    @extend .foto__butter;
+    .foto__number {
+        @extend .foto__butter;
 
-    @include md-1024 {
-        grid-column: 2/3;
-        grid-row: 3/4;
+        @include md-1024 {
+            grid-column: 3/4;
+            grid-row: 3/4;
+        }
     }
-}
 
-.foto__number {
-    @extend .foto__butter;
+    .foto__letter {
+        @extend .foto__butter;
 
-    @include md-1024 {
-        grid-column: 3/4;
-        grid-row: 3/4;
-    }
-}
-
-.foto__letter {
-    @extend .foto__butter;
-
-    @include md-1024 {
-        grid-column: 3/4;
-        grid-row: 1/2;
+        @include md-1024 {
+            grid-column: 3/4;
+            grid-row: 1/2;
+        }
     }
 }

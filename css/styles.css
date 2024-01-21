@@ -9,12 +9,12 @@
 }
 
 /*--- TEMPLATES ---*/
-.contenedor__menu .font__detalle, .grilla_tortas .font__detalle, .contenedor__grilla .font__detalle {
+.grilla_lunch .font__detalle, .contenedor__menu .font__detalle, .grilla_tortas .font__detalle, .contenedor__grilla .font__detalle {
   font-style: italic;
   font-weight: 700;
 }
 
-.contenedor__menu .titulo__menu h2 .enfasis {
+.contenedor__adicional .enfasis, .contenedor__adicionales .enfasis, .contenedor__box .enfasis, .contenedor__menu .titulo__menu h2 .enfasis {
   color: #bc8034;
   font-weight: 900;
 }
@@ -250,6 +250,17 @@
     opacity: 1;
   }
 }
+@keyframes escalar {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
 /*--- RESET ---*/
 * {
   margin: 0;
@@ -474,13 +485,14 @@ main .contenedor_main {
   font-size: 1.5rem;
   font-weight: 900;
   text-align: center;
-  line-height: 1.4rem;
+  line-height: 1.8rem;
 }
 .descripcion__seccion h4 {
   color: #bc8034;
   font-size: 1.3rem;
   font-weight: 600;
   font-style: italic;
+  line-height: 1.3rem;
   text-align: center;
 }
 
@@ -643,6 +655,7 @@ header .dropdown-item:hover {
   animation: sacudir__vertical 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 .boton h4 {
+  margin-bottom: 0;
   color: #8c7a6b;
   text-shadow: -1px 1px 1.5px #ffffff;
   font-size: 1rem;
@@ -1315,12 +1328,12 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 420px) {
   .contenedor__productos .enlace__tortas {
-    width: 340px;
+    width: 330px;
   }
 }
 @media (min-width: 480px) {
   .contenedor__productos .enlace__tortas {
-    width: 400px;
+    width: 390px;
   }
 }
 @media (min-width: 520px) {
@@ -1330,17 +1343,18 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 620px) {
   .contenedor__productos .enlace__tortas {
-    width: 460px;
+    width: 450px;
   }
 }
 @media (min-width: 768px) {
   .contenedor__productos .enlace__tortas {
     width: 630px;
+    min-height: 320px;
   }
 }
 @media (min-width: 820px) {
   .contenedor__productos .enlace__tortas {
-    min-height: 300px;
+    min-height: 320px;
   }
 }
 @media (min-width: 1000px) {
@@ -1379,12 +1393,12 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 420px) {
   .contenedor__productos .enlace__pasteleria {
-    width: 340px;
+    width: 330px;
   }
 }
 @media (min-width: 480px) {
   .contenedor__productos .enlace__pasteleria {
-    width: 400px;
+    width: 390px;
   }
 }
 @media (min-width: 520px) {
@@ -1394,17 +1408,18 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 620px) {
   .contenedor__productos .enlace__pasteleria {
-    width: 460px;
+    width: 450px;
   }
 }
 @media (min-width: 768px) {
   .contenedor__productos .enlace__pasteleria {
     width: 630px;
+    min-height: 320px;
   }
 }
 @media (min-width: 820px) {
   .contenedor__productos .enlace__pasteleria {
-    min-height: 300px;
+    min-height: 320px;
   }
 }
 @media (min-width: 1000px) {
@@ -1442,12 +1457,12 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 420px) {
   .contenedor__productos .enlace__dulce {
-    width: 340px;
+    width: 330px;
   }
 }
 @media (min-width: 480px) {
   .contenedor__productos .enlace__dulce {
-    width: 400px;
+    width: 390px;
   }
 }
 @media (min-width: 520px) {
@@ -1457,17 +1472,18 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 620px) {
   .contenedor__productos .enlace__dulce {
-    width: 460px;
+    width: 450px;
   }
 }
 @media (min-width: 768px) {
   .contenedor__productos .enlace__dulce {
     width: 630px;
+    min-height: 320px;
   }
 }
 @media (min-width: 820px) {
   .contenedor__productos .enlace__dulce {
-    min-height: 300px;
+    min-height: 320px;
   }
 }
 @media (min-width: 1000px) {
@@ -1510,12 +1526,12 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 420px) {
   .contenedor__productos .enlace__lunch {
-    width: 340px;
+    width: 330px;
   }
 }
 @media (min-width: 480px) {
   .contenedor__productos .enlace__lunch {
-    width: 400px;
+    width: 390px;
   }
 }
 @media (min-width: 520px) {
@@ -1525,17 +1541,18 @@ footer .contenedor__redes ul .ired:hover {
 }
 @media (min-width: 620px) {
   .contenedor__productos .enlace__lunch {
-    width: 460px;
+    width: 450px;
   }
 }
 @media (min-width: 768px) {
   .contenedor__productos .enlace__lunch {
     width: 630px;
+    min-height: 320px;
   }
 }
 @media (min-width: 820px) {
   .contenedor__productos .enlace__lunch {
-    min-height: 300px;
+    min-height: 320px;
   }
 }
 @media (min-width: 1000px) {
@@ -1664,6 +1681,11 @@ footer .contenedor__redes ul .ired:hover {
 @media (min-width: 1000px) {
   .contenedor__promo ul h4 {
     padding: 0.1rem 0;
+  }
+}
+@media (min-width: 1024px) {
+  .contenedor__promo ul h4 {
+    padding: 1rem 0;
   }
 }
 @media (min-width: 1200px) {
@@ -2418,6 +2440,14 @@ footer .contenedor__redes ul .ired:hover {
   justify-items: center;
   align-content: center;
 }
+.contenedor__grilla .parrafo {
+  padding: 2rem 1rem 0 1rem;
+}
+@media (min-width: 1200px) {
+  .contenedor__grilla .parrafo {
+    padding: 0 1rem 0 1rem;
+  }
+}
 .contenedor__grilla .parrafo__sobremi {
   padding: 1rem;
   margin-bottom: 0;
@@ -2532,7 +2562,7 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 .contenedor__grilla .subtitulo__sobremi {
-  padding: 3rem;
+  padding: 1rem;
   text-align: left;
 }
 @media (min-width: 1200px) {
@@ -2628,20 +2658,25 @@ footer .contenedor__redes ul .ired:hover {
 }
 
 .grilla_tortas {
-  min-height: 360px;
+  min-width: 350px;
+  max-width: 1200px;
+  padding: 0 1rem;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-items: center;
   align-content: center;
-  text-align: center;
 }
 .grilla_tortas .parrafo {
-  padding: 0 3rem;
+  padding: 0 1rem;
 }
 @media (min-width: 1024px) {
   .grilla_tortas .parrafo {
     padding: 0;
+  }
+  .grilla_tortas .parrafo h3 {
+    padding-bottom: 1rem;
   }
 }
 .grilla_tortas .parrafo h4 {
@@ -2682,7 +2717,6 @@ footer .contenedor__redes ul .ired:hover {
 }
 .grilla_tortas .lista__butter h4, .grilla_tortas .lista__letter h4, .grilla_tortas .lista__fondant h4 {
   text-align: left;
-  hyphens: none;
 }
 @media (min-width: 1000px) {
   .grilla_tortas .lista__butter, .grilla_tortas .lista__letter, .grilla_tortas .lista__fondant {
@@ -2700,21 +2734,19 @@ footer .contenedor__redes ul .ired:hover {
   .grilla_tortas {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 450px 200px 450px 1030px 600px;
-    width: 1024px;
-    padding: 0 2rem 0 2rem;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
+    grid-template-rows: 400px 200px 400px 1200px 550px;
+    width: 1000px;
+    padding: 0 1.5rem;
+    place-content: center;
+    gap: 2rem;
   }
 }
 @media (min-width: 1024px) and (min-width: 1200px) {
   .grilla_tortas {
-    grid-template-rows: 450px 200px 450px 940px 570px;
-    width: 1200px;
+    grid-template-rows: 400px 200px 400px 1200px 600px;
+    width: 1024px;
     padding: 2rem 3rem 0 3rem;
-    gap: 2.5rem;
+    gap: 2rem;
   }
 }
 @media (min-width: 1024px) {
@@ -2737,27 +2769,26 @@ footer .contenedor__redes ul .ired:hover {
     align-self: start;
     padding-top: 2rem;
   }
+}
+@media (min-width: 1024px) and (min-width: 1024px) {
+  .grilla_tortas .parrafo {
+    padding-top: 0;
+  }
+}
+@media (min-width: 1024px) {
   .grilla_tortas .parrafo h2 {
     text-align: left;
   }
 }
-.grilla_tortas img {
-  width: 350px;
-  height: 450px;
-  border-top: double 8px #bc8034;
-  border-radius: 50% 20%/10% 40%;
-  box-shadow: 0px 8px 10px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-  align-self: center;
-  justify-self: center;
-  object-fit: cover;
-  filter: sepia(40%) brightness(90%);
-  transition: width height 0.8s ease-in-out;
-}
 .grilla_tortas .parrafo li {
   padding: 0.8rem 0;
 }
-
-.titulo__butter, .titulo__letter, .titulo__fondant {
+@media (min-width: 1024px) {
+  .grilla_tortas .parrafo li {
+    padding: 1.5rem 0 0 0;
+  }
+}
+.grilla_tortas .titulo__butter, .grilla_tortas .titulo__letter, .grilla_tortas .titulo__fondant {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -2766,41 +2797,37 @@ footer .contenedor__redes ul .ired:hover {
   padding: 4rem;
   text-align: center;
 }
-.titulo__butter h2, .titulo__letter h2, .titulo__fondant h2 {
+.grilla_tortas .titulo__butter h2, .grilla_tortas .titulo__letter h2, .grilla_tortas .titulo__fondant h2 {
   color: #bc8034;
   text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5);
   font-size: 1.6rem;
   font-weight: 700;
   font-style: italic;
-  letter-spacing: 0.4rem;
   text-align: center;
 }
 @media (min-width: 1024px) {
-  .titulo__butter, .titulo__letter, .titulo__fondant {
+  .grilla_tortas .titulo__butter, .grilla_tortas .titulo__letter, .grilla_tortas .titulo__fondant {
     grid-column: 1/2;
     grid-row: 2/3;
     align-self: center;
   }
 }
-
 @media (min-width: 1024px) {
-  .titulo__fondant {
+  .grilla_tortas .titulo__fondant {
     grid-column: 2/3;
     grid-row: 2/3;
     align-self: center;
     justify-self: center;
   }
 }
-
 @media (min-width: 1024px) {
-  .titulo__letter {
+  .grilla_tortas .titulo__letter {
     grid-column: 3/4;
     grid-row: 2/3;
     align-self: center;
   }
 }
-
-.acentuado {
+.grilla_tortas .acentuado {
   color: #90323d;
   text-shadow: none;
   font-family: "Corinthia", cursive;
@@ -2809,65 +2836,74 @@ footer .contenedor__redes ul .ired:hover {
   animation: ampliar 1s infinite alternate ease-in-out;
 }
 @media (min-width: 1024px) {
-  .acentuado {
+  .grilla_tortas .acentuado {
     line-height: 3rem;
     text-align: center;
   }
 }
-
-.foto__butter, .foto__letter, .foto__number, .foto__fon, .foto__fondant, .foto__cream {
+.grilla_tortas img {
   width: 100%;
   height: 100%;
+  border-top: double 8px #bc8034;
+  border-radius: 10% 40%/50% 20%;
+  box-shadow: 0px 8px 10px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  object-fit: cover;
+  overflow: hidden;
+  align-self: center;
+  filter: sepia(40%) brightness(90%);
+  transition: width height 0.8s ease-in-out;
+}
+.grilla_tortas .foto__butter, .grilla_tortas .foto__letter, .grilla_tortas .foto__number, .grilla_tortas .foto__fon, .grilla_tortas .foto__fondant, .grilla_tortas .foto__cream {
+  width: 260px;
+  height: 320px;
   padding: 1rem;
   margin: 3rem auto;
-  object-fit: cover;
   transition: width height 1.2s ease-in-out;
   z-index: 3;
+  align-self: center;
 }
 @media (min-width: 1024px) {
-  .foto__butter, .foto__letter, .foto__number, .foto__fon, .foto__fondant, .foto__cream {
+  .grilla_tortas .foto__butter, .grilla_tortas .foto__letter, .grilla_tortas .foto__number, .grilla_tortas .foto__fon, .grilla_tortas .foto__fondant, .grilla_tortas .foto__cream {
     grid-column: 1/2;
     grid-row: 1/2;
+    padding: 0;
+    margin: 0;
+    align-self: center;
   }
 }
-.foto__butter :hover, .foto__letter :hover, .foto__number :hover, .foto__fon :hover, .foto__fondant :hover, .foto__cream :hover {
+.grilla_tortas .foto__butter :hover, .grilla_tortas .foto__letter :hover, .grilla_tortas .foto__number :hover, .grilla_tortas .foto__fon :hover, .grilla_tortas .foto__fondant :hover, .grilla_tortas .foto__cream :hover {
   border-top: none;
   box-shadow: none;
   cursor: pointer;
   transition: width height 2s ease-in-out;
-  transform: scale(1.2);
+  animation: escalar 2s alternate ease-in-out;
 }
-
 @media (min-width: 1024px) {
-  .foto__cream {
+  .grilla_tortas .foto__cream {
     grid-column: 1/2;
     grid-row: 3/4;
   }
 }
-
 @media (min-width: 1024px) {
-  .foto__fondant {
+  .grilla_tortas .foto__fondant {
     grid-column: 2/3;
     grid-row: 1/2;
   }
 }
-
 @media (min-width: 1024px) {
-  .foto__fon {
+  .grilla_tortas .foto__fon {
     grid-column: 2/3;
     grid-row: 3/4;
   }
 }
-
 @media (min-width: 1024px) {
-  .foto__number {
+  .grilla_tortas .foto__number {
     grid-column: 3/4;
     grid-row: 3/4;
   }
 }
-
 @media (min-width: 1024px) {
-  .foto__letter {
+  .grilla_tortas .foto__letter {
     grid-column: 3/4;
     grid-row: 1/2;
   }
@@ -2875,22 +2911,22 @@ footer .contenedor__redes ul .ired:hover {
 
 /*--- SUBSECCIÓN MENÚ TORTAS ARTESANALES / SECCIÓN TORTAS ARTESANALES ---*/
 /*--- ÍCONOS / SUBSECCIÓN MENÚ TORTAS ARTESANALES ---*/
-.iconos_tortas {
+.iconos_subseccion {
   display: none;
 }
 @media (min-width: 1000px) {
-  .iconos_tortas {
+  .iconos_subseccion {
     display: flex;
     width: 1000px;
     padding: 0 4rem;
     gap: 1rem;
   }
 }
-.iconos_tortas .icono__torta {
+.iconos_subseccion .icono__sub {
   width: 80px;
   animation: caminar 7.3s infinite linear;
 }
-.iconos_tortas .icono__corazon {
+.iconos_subseccion .icono__corazon {
   width: 30px;
   animation: caminarIzq 7.3s alternate infinite linear;
 }
@@ -2977,6 +3013,534 @@ footer .contenedor__redes ul .ired:hover {
     width: 220px;
     height: 220px;
   }
+}
+
+/*--- PAGE / SECCIÓN SERVICIO DE LUNCH - PRESENTACIÓN ---*/
+.boton_outline h4 {
+  font-style: normal;
+}
+
+.grilla_lunch {
+  min-width: 350px;
+  max-width: 1200px;
+  padding: 0 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+}
+.grilla_lunch .parrafo {
+  padding: 0 1rem;
+}
+@media (min-width: 1024px) {
+  .grilla_lunch .parrafo {
+    padding: 0;
+  }
+  .grilla_lunch .parrafo h3 {
+    padding-bottom: 1rem;
+  }
+}
+.grilla_lunch .parrafo h4 {
+  padding: 0 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.8rem;
+  font-style: italic;
+  font-weight: 700;
+  background-color: #5e0b15;
+  color: #d9cab3;
+}
+@media (min-width: 1000px) {
+  .grilla_lunch .parrafo h4 {
+    background-color: #d9cab3;
+    color: #5e0b15;
+  }
+}
+@media (min-width: 480px) {
+  .grilla_lunch {
+    padding: 0 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .grilla_lunch {
+    padding: 0 4rem;
+  }
+}
+@media (min-width: 1000px) {
+  .grilla_lunch {
+    padding: 0 6rem;
+  }
+}
+@media (min-width: 1024px) {
+  .grilla_lunch {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 300px 420px 200px 300px 500px;
+    max-width: 1000px;
+    padding: 0 1.5rem;
+    place-content: center;
+    gap: 2rem;
+  }
+}
+@media (min-width: 1024px) and (min-width: 1200px) {
+  .grilla_lunch {
+    grid-template-rows: 150px 280px 300px 150px 280px 300px;
+    max-width: 1024px;
+    padding: 2rem 3rem 0 3rem;
+    gap: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .grilla_lunch .miga {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    align-self: start;
+  }
+  .grilla_lunch .pollo {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    align-self: start;
+  }
+  .grilla_lunch .chips {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    align-self: start;
+  }
+  .grilla_lunch .salchichitas {
+    grid-column: 1/2;
+    grid-row: 6/7;
+    align-self: start;
+  }
+  .grilla_lunch .brusquetas {
+    grid-column: 2/3;
+    grid-row: 6/7;
+    align-self: start;
+  }
+  .grilla_lunch .empanadas {
+    grid-column: 3/4;
+    grid-row: 6/7;
+    align-self: start;
+  }
+  .grilla_lunch .parrafo {
+    align-self: start;
+    padding-top: 2rem;
+  }
+}
+@media (min-width: 1024px) and (min-width: 1024px) {
+  .grilla_lunch .parrafo {
+    padding-top: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .grilla_lunch .parrafo h2 {
+    text-align: left;
+  }
+}
+.grilla_lunch .parrafo li {
+  padding: 0.8rem 0;
+}
+@media (min-width: 1024px) {
+  .grilla_lunch .parrafo li {
+    padding: 1.5rem 0 0 0;
+  }
+}
+.grilla_lunch .titulo__miga, .grilla_lunch .titulo__empanadas, .grilla_lunch .titulo__brusquetas, .grilla_lunch .titulo__salchichitas, .grilla_lunch .titulo__chips, .grilla_lunch .titulo__pollo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+  padding: 4rem;
+  align-items: center;
+}
+.grilla_lunch .titulo__miga h2, .grilla_lunch .titulo__empanadas h2, .grilla_lunch .titulo__brusquetas h2, .grilla_lunch .titulo__salchichitas h2, .grilla_lunch .titulo__chips h2, .grilla_lunch .titulo__pollo h2 {
+  margin-bottom: 0;
+  color: #bc8034;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5);
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .grilla_lunch .titulo__miga, .grilla_lunch .titulo__empanadas, .grilla_lunch .titulo__brusquetas, .grilla_lunch .titulo__salchichitas, .grilla_lunch .titulo__chips, .grilla_lunch .titulo__pollo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: center;
+  }
+}
+@media (min-width: 1024px) {
+  .grilla_lunch .titulo__pollo {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: center;
+  }
+}
+@media (min-width: 1024px) {
+  .grilla_lunch .titulo__chips {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    align-self: center;
+  }
+}
+@media (min-width: 1024px) {
+  .grilla_lunch .titulo__salchichitas {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    align-self: center;
+    justify-self: center;
+  }
+}
+@media (min-width: 1024px) {
+  .grilla_lunch .titulo__brusquetas {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    align-self: center;
+    justify-self: center;
+  }
+}
+@media (min-width: 1024px) {
+  .grilla_lunch .titulo__empanadas {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    align-self: center;
+    justify-self: center;
+  }
+}
+.grilla_lunch .acentuado {
+  color: #90323d;
+  text-shadow: none;
+  font-family: "Corinthia", cursive;
+  font-size: 3.5rem;
+  animation: ampliar 1s infinite alternate ease-in-out;
+}
+@media (min-width: 1024px) {
+  .grilla_lunch .acentuado {
+    line-height: 3rem;
+    text-align: center;
+  }
+}
+.grilla_lunch img {
+  width: 100%;
+  height: 100%;
+  border-top: double 8px #bc8034;
+  border-radius: 10% 40%/50% 20%;
+  box-shadow: 0px 8px 10px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  object-fit: cover;
+  overflow: hidden;
+  align-self: center;
+  filter: sepia(40%) brightness(90%);
+  transition: width height 0.8s ease-in-out;
+}
+.grilla_lunch .foto__miga, .grilla_lunch .foto__empanadas, .grilla_lunch .foto__brusquetas, .grilla_lunch .foto__salchichitas, .grilla_lunch .foto__chips, .grilla_lunch .foto__pollo {
+  width: 280px;
+  height: 280px;
+  padding: 1rem;
+  margin: 3rem auto;
+  transition: width height 6s ease-in-out;
+  z-index: 3;
+}
+@media (min-width: 1024px) {
+  .grilla_lunch .foto__miga, .grilla_lunch .foto__empanadas, .grilla_lunch .foto__brusquetas, .grilla_lunch .foto__salchichitas, .grilla_lunch .foto__chips, .grilla_lunch .foto__pollo {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 0;
+    margin: 0;
+    align-self: center;
+  }
+}
+.grilla_lunch .foto__miga :hover, .grilla_lunch .foto__empanadas :hover, .grilla_lunch .foto__brusquetas :hover, .grilla_lunch .foto__salchichitas :hover, .grilla_lunch .foto__chips :hover, .grilla_lunch .foto__pollo :hover {
+  border-top: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: width height 4s ease-in-out;
+  animation: escalar 2s alternate ease-in-out;
+}
+@media (min-width: 1024px) {
+  .grilla_lunch .foto__pollo {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}
+@media (min-width: 1024px) {
+  .grilla_lunch .foto__chips {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+}
+@media (min-width: 1024px) {
+  .grilla_lunch .foto__salchichitas {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+}
+@media (min-width: 1024px) {
+  .grilla_lunch .foto__brusquetas {
+    grid-column: 2/3;
+    grid-row: 5/6;
+  }
+}
+@media (min-width: 1024px) {
+  .grilla_lunch .foto__empanadas {
+    grid-column: 3/4;
+    grid-row: 5/6;
+  }
+}
+
+.contenedor__box {
+  max-width: 1024px;
+  padding: 2rem;
+  margin: 0 auto;
+  gap: 5rem;
+}
+.contenedor__box .texto__box h2 {
+  margin-bottom: 2rem;
+  color: #5e0b15;
+  font-size: 1.1rem;
+  font-weight: 900;
+  line-height: 1.5rem;
+  text-align: center;
+}
+.contenedor__box .texto__box h3 {
+  margin-bottom: 4rem;
+  color: #bc8034;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+.contenedor__box .lista__box h3 {
+  padding: 0.3rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #90323d;
+}
+
+.promo_box {
+  padding: 3rem;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 1024px) {
+  .promo_box hr {
+    border: none;
+    width: 0%;
+  }
+}
+.promo_box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  overflow: hidden;
+}
+@media (min-width: 1024px) {
+  .promo_box {
+    width: 1000px;
+    padding: 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 700px 480px;
+    align-items: start;
+    justify-content: center;
+  }
+}
+.promo_box .primer__box, .promo_box .tercer__box, .promo_box .segundo__box {
+  min-width: 300px;
+  height: 750px;
+  padding: 1.5rem;
+  margin: 0 0.5rem;
+  background-color: #5e0b15;
+  border-radius: 1rem 0 1rem 0;
+  color: #8c7a6b;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .promo_box .primer__box, .promo_box .tercer__box, .promo_box .segundo__box {
+    margin: 0 1.8rem;
+  }
+}
+@media (min-width: 1024px) {
+  .promo_box .primer__box, .promo_box .tercer__box, .promo_box .segundo__box {
+    height: 700px;
+    padding: 2rem;
+    margin: 0;
+    border-radius: 1rem 0 0 4rem;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-content: start;
+    align-items: center;
+  }
+}
+.promo_box .primer__box .titulo__primer-box h2, .promo_box .tercer__box .titulo__primer-box h2, .promo_box .tercer__box .titulo__tercer-box h2, .promo_box .segundo__box .titulo__primer-box h2, .promo_box .segundo__box .titulo__segundo-box h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #8c7a6b;
+  animation: cambio__color 2s alternate infinite ease-in-out;
+}
+.promo_box .primer__box .texto__primer-box li, .promo_box .tercer__box .texto__primer-box li, .promo_box .tercer__box .texto__tercer-box li, .promo_box .segundo__box .texto__primer-box li, .promo_box .segundo__box .texto__segundo-box li {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+}
+.promo_box .primer__box .texto__primer-box li h3, .promo_box .tercer__box .texto__primer-box li h3, .promo_box .tercer__box .texto__tercer-box li h3, .promo_box .segundo__box .texto__primer-box li h3, .promo_box .segundo__box .texto__segundo-box li h3 {
+  color: #d9cab3;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  text-align: center;
+}
+.promo_box .primer__box .foto__primer-box, .promo_box .tercer__box .foto__primer-box, .promo_box .tercer__box .foto__tercer-box, .promo_box .segundo__box .foto__primer-box, .promo_box .segundo__box .foto__segundo-box {
+  width: 280px;
+  height: 160px;
+  border-radius: 0.5rem 0 0.5rem 0;
+  box-shadow: -4px -8px 10px rgba(0, 0, 0, 0.204);
+  position: relative;
+}
+.promo_box .primer__box .foto__primer-box:hover, .promo_box .tercer__box .foto__primer-box:hover, .promo_box .tercer__box .foto__tercer-box:hover, .promo_box .segundo__box .foto__primer-box:hover, .promo_box .segundo__box .foto__segundo-box:hover {
+  animation: escalar 2s alternate ease-in-out;
+}
+@media (min-width: 768px) {
+  .promo_box .primer__box .foto__primer-box, .promo_box .tercer__box .foto__primer-box, .promo_box .tercer__box .foto__tercer-box, .promo_box .segundo__box .foto__primer-box, .promo_box .segundo__box .foto__segundo-box {
+    width: 420px;
+    height: 260px;
+  }
+}
+@media (min-width: 1024px) {
+  .promo_box .primer__box .foto__primer-box, .promo_box .tercer__box .foto__primer-box, .promo_box .tercer__box .foto__tercer-box, .promo_box .segundo__box .foto__primer-box, .promo_box .segundo__box .foto__segundo-box {
+    width: 260px;
+    height: 160px;
+    margin-top: 10px;
+  }
+}
+.promo_box .primer__box .valor__primer-box, .promo_box .tercer__box .valor__primer-box, .promo_box .tercer__box .valor__tercer-box, .promo_box .segundo__box .valor__primer-box, .promo_box .segundo__box .valor__segundo-box {
+  padding: 1rem 2rem;
+  background-color: #5e0b15;
+  border-radius: 0.5rem 0.5rem 0 0;
+  box-shadow: -2px -4px 3px rgba(0, 0, 0, 0.548);
+  gap: 1rem;
+  position: relative;
+  bottom: 40px;
+}
+.promo_box .primer__box .valor__primer-box h4, .promo_box .tercer__box .valor__primer-box h4, .promo_box .tercer__box .valor__tercer-box h4, .promo_box .segundo__box .valor__primer-box h4, .promo_box .segundo__box .valor__segundo-box h4 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #8c7a6b;
+  animation: cambio__color 2s alternate infinite ease-in-out;
+}
+@media (min-width: 1024px) {
+  .promo_box .segundo__box {
+    border-radius: 0;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+}
+@media (min-width: 1024px) {
+  .promo_box .segundo__box .foto__segundo-box {
+    margin-top: 105px;
+  }
+}
+@media (min-width: 1024px) {
+  .promo_box .tercer__box {
+    border-radius: 0 1rem 4rem 0;
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+}
+@media (min-width: 1024px) {
+  .promo_box .tercer__box .foto__tercer-box {
+    margin-top: 98px;
+  }
+}
+.promo_box .boton {
+  margin: 2rem;
+}
+@media (min-width: 768px) {
+  .promo_box .boton {
+    margin: 0 10rem;
+  }
+}
+@media (min-width: 1000px) {
+  .promo_box .boton {
+    margin: 0 20rem;
+  }
+}
+@media (min-width: 1024px) {
+  .promo_box .boton {
+    margin: 2rem;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    align-self: start;
+  }
+}
+
+.contenedor__adicional, .contenedor__adicionales {
+  min-width: 350px;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  justify-items: center;
+  gap: 1rem;
+}
+@media (min-width: 1024px) {
+  .contenedor__adicional, .contenedor__adicionales {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
+.contenedor__adicional .enfasis, .contenedor__adicionales .enfasis {
+  font-size: 1.2rem;
+}
+.contenedor__adicional .titulo__mini-tortas h2, .contenedor__adicionales .titulo__mini-tortas h2, .contenedor__adicionales .titulo__adicionales h2 {
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  color: #5e0b15;
+  color: #90323d;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.contenedor__adicional .texto__mini-tortas h3, .contenedor__adicionales .texto__mini-tortas h3 {
+  color: #90323d;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .contenedor__adicionales {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}
+.contenedor__adicionales .texto__adicionales li {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+}
+.contenedor__adicionales .texto__adicionales h3 {
+  color: #90323d;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 2rem;
+  text-align: center;
 }
 
 /*--- PAGE / SECCIÓN CONTACTO ---*/

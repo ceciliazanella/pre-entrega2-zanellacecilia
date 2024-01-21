@@ -1,6 +1,6 @@
 /*--- SUBSECCIÓN MENÚ TORTAS ARTESANALES / SECCIÓN TORTAS ARTESANALES ---*/
 /*--- ÍCONOS / SUBSECCIÓN MENÚ TORTAS ARTESANALES ---*/
-.iconos_tortas {
+.iconos_subseccion {
     display: none;
 
     @include md-1000 {
@@ -12,7 +12,7 @@
         gap: 1rem;
     }
 
-    .icono__torta {
+    .icono__sub {
         width: 80px;
         animation: caminar 7.3s infinite linear;
     }

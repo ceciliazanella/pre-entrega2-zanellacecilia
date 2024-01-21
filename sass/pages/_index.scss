@@ -334,11 +334,11 @@
             align-self: center;
 
             @include md-420 {
-                width: 340px;
+                width: 330px;
             }
 
             @include md-480 {
-                width: 400px;
+                width: 390px;
             }
 
             @include md-520 {
@@ -346,15 +346,16 @@
             }
 
             @include md-620 {
-                width: 460px;
+                width: 450px;
             }
 
             @include md-768 {
                 width: 630px;
+                min-height: 320px;
             }
 
             @include md-820 {
-                min-height: 300px;
+                min-height: 320px;
             }
 
             @include md-1000 {
@@ -394,11 +395,11 @@
             align-self: center;
 
             @include md-420 {
-                width: 340px;
+                width: 330px;
             }
 
             @include md-480 {
-                width: 400px;
+                width: 390px;
             }
 
             @include md-520 {
@@ -406,15 +407,16 @@
             }
 
             @include md-620 {
-                width: 460px;
+                width: 450px;
             }
 
             @include md-768 {
                 width: 630px;
+                min-height: 320px;
             }
 
             @include md-820 {
-                min-height: 300px;
+                min-height: 320px;
             }
 
             @include md-1000 {
@@ -453,11 +455,11 @@
             align-self: center;
 
             @include md-420 {
-                width: 340px;
+                width: 330px;
             }
 
             @include md-480 {
-                width: 400px;
+                width: 390px;
             }
 
             @include md-520 {
@@ -465,15 +467,16 @@
             }
 
             @include md-620 {
-                width: 460px;
+                width: 450px;
             }
 
             @include md-768 {
                 width: 630px;
+                min-height: 320px;
             }
 
             @include md-820 {
-                min-height: 300px;
+                min-height: 320px;
             }
 
             @include md-1000 {
@@ -514,11 +517,11 @@
             align-self: center;
 
             @include md-420 {
-                width: 340px;
+                width: 330px;
             }
 
             @include md-480 {
-                width: 400px;
+                width: 390px;
             }
 
             @include md-520 {
@@ -526,15 +529,16 @@
             }
 
             @include md-620 {
-                width: 460px;
+                width: 450px;
             }
 
             @include md-768 {
                 width: 630px;
+                min-height: 320px;
             }
 
             @include md-820 {
-                min-height: 300px;
+                min-height: 320px;
             }
 
             @include md-1000 {
@@ -667,6 +671,10 @@
 
             @include md-1000 {
                 padding: 0.1rem 0;
+            }
+
+            @include md-1024 {
+                padding: 1rem 0;
             }
 
             @include md-1200 {

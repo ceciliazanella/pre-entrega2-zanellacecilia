@@ -10,6 +10,14 @@
     }
 
     //--- TEXTOS / SECCIÓN SOBRE MÍ ---//
+    .parrafo {
+        padding: 2rem 1rem 0 1rem;
+
+        @include md-1200 {
+            padding: 0 1rem 0 1rem;
+        }
+    }
+
     .parrafo__sobremi {
         padding: 1rem;
         margin-bottom: 0;
@@ -129,7 +137,7 @@
 
     //--- SUBTÍTULO / SECCIÓN SOBRE MÍ ---//
     .subtitulo__sobremi {
-        padding: 3rem;
+        padding: 1rem;
         text-align: left;
 
         @include md-1200 {
