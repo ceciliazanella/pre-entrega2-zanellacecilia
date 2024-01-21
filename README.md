@@ -42,6 +42,7 @@
 - [x] ✔️ Hay Pequeños **Carouseles**</b> **|** *Fotos que muestran Productos Varios y Escenas de Producción* 🍰
 - [x] ✔️ **Tarjetas de Productos** con sus *Descripciones* **> SubSección Productos** 🧁 **---> ;)**
 - [x] ✔️ Un **Menú** dentro de una **SubSección** **--->** *para indagar en más detalles de los productos* **:O** 🍩
+- [x] ✔️ Desarrollé una partecita de la **Versión Gourmet** **--->** La **SubSección** ***Salada*** de **Corazón de Chocolate** con su impronta personal! 🍕🍸
 - [x] ✔️ Bloque *Promoción* **--->** *variable según el mes en curso* 📢
 - [x] ✔️ Bloque *Envíos* *variable según cambios de contenido* 🛒
 - [x] ✔️ Datos de *Contacto* | **Formulario** 📄
