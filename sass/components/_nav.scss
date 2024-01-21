@@ -17,6 +17,13 @@ header {
         }
     }
 
+    /*--- LOGO | VERSIÓN GOURMET ---*/
+    .logo_gourmet {
+        @include md-1000 {
+            margin-top: 0.5rem;
+        }
+    }
+
     /*--- NAV ---*/
     .navbar-nav {
         background: $principalcolor;
@@ -53,6 +60,7 @@ header {
         color: $ultraligthcolor;
     }
 
+    /*--- ÍTEMS DE LA NAV ---*/
     .nav-item {
         background-color: rgba(0, 0, 0, 0);
         width: 100%;
@@ -63,8 +71,13 @@ header {
         color: $ligthcolor;
         font-size: 1rem;
         text-align: right;
+
+        @include md-1000 {
+            text-align: left;
+        }
     }
 
+    /*--- LINKS DE LA NAV ---*/
     .nav-link {
         background-color: rgba(0, 0, 0, 0);
 
@@ -103,15 +116,19 @@ header {
     .dropdown-menu {
         background-color: #00000000;
         border-radius: 50% 20% / 10% 40%;
-        padding: 2rem;
 
         transition: background-color 0.6s ease-in-out;
+
+        position: static;
 
         @include md-1000 {
             background-color: $principalcolor;
             box-shadow: 0px 5px 5px -5px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
             border-radius: 5% 10% 40% 5%;
             width: 250px;
+            padding: 2rem;
+
+            position: absolute;
         }
 
         &:hover {
@@ -121,6 +138,7 @@ header {
         }
     }
 
+    /*--- ÍTEMS DEL MENÚ DESPLEGABLE ---*/
     .dropdown-item {
         color: $ligthcolor;
         font-size: 1rem;
@@ -146,5 +164,77 @@ header {
         font-weight: 900;
 
         transition: color font-style font-weight text-shadow 1s ease-in-out;
+    }
+
+    //--- --- ---//
+
+    /*--- NAV VERSIÓN GOURMET ---*/
+    .navbar-nav-gourmet {
+        @extend .navbar-nav;
+        background: $tomate;
+        padding: 2rem 0;
+
+        & ul {
+            padding-right: 1rem;
+            text-align: right;
+        }
+
+        @include md-1000 {
+            display: flex;
+
+            background: #00000000;
+            @include shadow (0px);
+            margin-top: 0;
+
+            & ul {
+                text-align: left;
+            }
+        }
+
+        /*--- LINKS DE LA NAV | VERSIÓN GOURMET ---*/
+        .nav-link-gourmet {
+            @extend .nav-link;
+
+            &:hover {
+                color: $ultraligthcolor;
+            }
+        }
+
+        /*--- ÍTEMS DE LA NAV | VERSIÓN GOURMET ---*/
+        .nav-item-gourmet {
+            @extend .nav-item;
+            padding: 1rem 2rem;
+
+            @include md-1000 {
+                padding: 0 1rem;
+            }
+        }
+
+        /*--- ITEMS DEL MENÚ DESPLEGABLE | VERSIÓN GOURMET ---*/
+        .dropdown-item-gourmet {
+            color: $ligthcolor;
+            font-size: 1rem;
+            font-weight: 700;
+            text-align: right;
+
+            transition: color font-size font-weight 0.6s ease-in-out;
+
+            @include md-1000 {
+                padding: 0 1rem 0 0;
+            }
+        }
+
+        .dropdown-item-gourmet:focus,
+        .dropdown-item-gourmet:hover {
+            background-color: #00000000;
+            border-radius: 50% 20% / 10% 40%;
+
+            color: $ultraligthcolor;
+            text-shadow: 3px 3px 3px #0000009c;
+            font-style: italic;
+            font-weight: 900;
+
+            transition: color font-style font-weight text-shadow 1s ease-in-out;
+        }
     }
 }

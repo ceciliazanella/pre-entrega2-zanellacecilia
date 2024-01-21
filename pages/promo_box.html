@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Meta Description -->
-    <meta name="description" content="Disfrutá de nuestros sabores más irresistibles a precios super especiales!
-    Podes iniciar o tomarte una pausa en medio de tu día, combinando nuestros productos artesanales en promociones 
-    de desayunos y meriendas creadas deliciosamente para vos">
+    <meta name="description" content="Disfrutá de los sabores más irresistibles que tiene Corazón de Chocolate Gourmet a precios super especiales y accesibles!
+    Podes iniciar las mañanas, picar entre comidas o tomarte una pausa en medio de tu día; disfrutando y combinando todos nuestros productos artesanales con promociones 
+    de picadas, desayunos y meriendas creadas deliciosamente para vos.">
     <!-- Favicon -->
     <link rel="icon" type="image/jpg" href="../imagenes/favicon/favicon.ico">
     <!-- Tipografías -->
@@ -34,16 +34,19 @@
 
 <body>
 
-    <div class="header_seccion">
+    <!-- Header -->
+
+    <div class="header_gourmet">
         <!-- Bloque Contenedor / Elementos No Infinitos -->
         <header class="contenedor">
 
             <div class="navbar navbar-expand-lg" data-bs-theme="dark">
 
                 <div class="container-fluid">
-                    <!-- Logo -->
-                    <a class="logo pull-left" href="../index.html"><img src="../imagenes/images_index/logo/logo.svg"
-                            alt="Logo Corazón de Chocolate"></a>
+                    <!-- Logo Corazón de Chocolate Gourmet -->
+                    <a class="logo logo_gourmet pull-left" href="../index.html"><img
+                            src="../imagenes/images_servicio_lunch/logo_gourmet/logo_gourmet.svg"
+                            alt="Logo Corazón de Chocolate Gourmet"></a>
                     <!-- Botón Menú Hamburgesa -->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -52,32 +55,33 @@
                     </button>
                     <!-- Nav -->
                     <nav class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../index.html">HOME</a>
+                        <ul class="navbar-nav-gourmet">
+                            <li class="nav-item-gourmet">
+                                <a class="nav-link-gourmet" href="../index.html">HOME</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./sobre_mi.html">SOBRE MI</a>
+                            <li class="nav-item-gourmet">
+                                <a class="nav-link-gourmet" href="./sobre_mi.html">SOBRE MI</a>
                             </li>
-                            <li class="nav-item dropdown"> <!-- Item que abre Menú Desplegable -->
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
+                            <li class="nav-item-gourmet dropdown"> <!-- Item que abre Menú Desplegable -->
+                                <a class="nav-link-gourmet dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     PRODUCTOS
                                 </a> <!-- Sección Productos -->
-                                <ul class="dropdown-menu"> <!-- Menú Desplegable -->
-                                    <li><a class="dropdown-item" href="./tortas_artesanales.html">tortas artesanales</a>
+                                <ul class="dropdown-menu" style="background-color: #9A031E"> <!-- Menú Desplegable -->
+                                    <li><a class="dropdown-item-gourmet" href="./tortas_artesanales.html">tortas
+                                            artesanales</a>
                                     </li>
-
-                                    <li><a class="dropdown-item" href="#pastelería-creativa">pastelería creativa</a>
+                                    <li><a class="dropdown-item-gourmet" href="#pastelería-creativa">pastelería
+                                            creativa</a>
                                     </li>
-                                    <li><a class="dropdown-item" href="#mesa-dulce">mesa dulce</a></li>
-                                    <li><a class="nav-link active" aria-current="page"
+                                    <li><a class="dropdown-item-gourmet" href="#mesa-dulce">mesa dulce</a></li>
+                                    <li><a class="nav-link-gourmet active" aria-current="page"
                                             href="./servicio_lunch.html">servicio
                                             de lunch</a></li>
-                                    <!-- SubSección Servicio de Lunch | Dentro está la Page Promo Box Desayuno | Merienda -->
+                                    <!-- SubSección Servicio de Lunch | Dentro de está Page / SubSección está la Page Promo Box Desayuno | Merienda -->
                                 </ul>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./contacto.html">CONTACTO</a>
+                            <li class="nav-item-gourmet">
+                                <a class="nav-link-gourmet" href="./contacto.html">CONTACTO</a>
                             </li>
                             </li>
                         </ul>
@@ -91,9 +95,11 @@
 
     </div>
 
+    <!-- Main -->
+
     <main>
 
-        <section class="contenedor__seccion">
+        <section class="contenedor__gourmet">
             <!-- Título del Anexo Promo Box Desayuno | Merienda | SubSección Servicio de Lunch | Sección Productos -->
             <div>
                 <h1>PROMO BOX</h1>
@@ -106,7 +112,7 @@
 
         </section>
 
-        <section class="descripcion__seccion">
+        <section class="descripcion__gourmet">
             <!-- Bloque Descripción del Anexo Promo Box Desayuno | Merienda | SubSección Servicio de Lunch | Sección Productos -->
             <div>
                 <p>
@@ -150,17 +156,17 @@
                         <h3>Todos los Box vienen presentados en sus respectivas cajas.</h3>
                     </li>
                     <li>
-                        <h3>Consultame por el costo de <span class="enfasis">(Indicándome domicilio exacto y entre
-                                calles estás).</span></h3>
+                        <h3>Consultame por el costo de envío <span class="enfasis">(Indicándome domicilio exacto y entre
+                                calles estás)</span>.</h3>
                     </li>
                     <li>
-                        <h3>Los pedidos los tomo con 2 días de anticipación <span class="enfasis">(Como mínimo).</span>
+                        <h3>Los pedidos los tomo con 2 días de anticipación <span class="enfasis">(Como mínimo)</span>.
                         </h3>
                     </li>
                     <li>
                         <h3>Las Promos las realizo únicamente con las opciones disponibles; sin elección de los
                             productos <span class="enfasis">(Caso contrario,
-                                consultar por costo adiccional).</span></h3>
+                                consultar por costo adiccional)</span>.</h3>
                     </li>
                     <li>
                         <h3>Tomo los Pedidos una vez abonada la seña del 50% del valor total por transferencia; sin
@@ -171,9 +177,9 @@
             </article>
 
         </section>
-
+        <!-- Bloque Box Desayuno | Merienda -->
         <seccion class="contenedor promo_box">
-            <!-- Bloque Box Desayuno | Merienda -->
+            <!-- BOX 1 -->
             <article class="primer__box">
 
                 <div class="titulo__primer-box">
@@ -198,7 +204,7 @@
                             <h3>2 Alfajores de Maicena o 2 Alfacookies.</h3>
                         </li>
                         <li>
-                            <h3>2 Cookies Chip o 2 Cookies Personalizadas Sensillas.</h3>
+                            <h3>2 Cookies Chip o 2 Cookies Personalizadas Sencillas.</h3>
                         </li>
                         <li>
                             <h3>2 Tostados de Pan Casero con Jamón y Queso.</h3>
@@ -207,9 +213,10 @@
                 </div>
 
                 <div class="foto__primer-box">
-                    <img class="img__menu perpetua img-thumbnail"
-                        src="../imagenes/images_promo_box/primer_box.webp" class="rounded float-left"
-                        alt="Torta Lemmon Pie" title="Torta Lemmon Pie">
+                    <img class="img__menu perpetua img-thumbnail" src="../imagenes/images_promo_box/primer_box.webp"
+                        class="rounded float-left"
+                        alt="Postrecito en Frasquito junto a Bandeja con Mini Porciones de Brownies, Alfajores de Dulce de Leche, Cookies con Chips de Chocolate y Sándwiches de Miga Simples de Jamón y Queso"
+                        title="Postrecito en Frasquito junto a Bandeja con Mini Porciones de Brownies, Alfajores de Dulce de Leche, Cookies con Chips de Chocolate y Sándwiches de Miga Simples de Jamón y Queso">
                 </div>
 
                 <div class="valor__primer-box">
@@ -219,7 +226,7 @@
             </article>
 
             <hr>
-
+            <!-- BOX 2 -->
             <article class="segundo__box">
 
                 <div class="titulo__segundo-box">
@@ -232,7 +239,7 @@
                             <h3>2 Cuadrados de Frola.</h3>
                         </li>
                         <li>
-                            <h3>2 Cudrados de Coco.</h3>
+                            <h3>2 Cuadrados de Coco.</h3>
                         </li>
                         <li>
                             <h3>2 Cuadrados de Manzana.</h3>
@@ -253,9 +260,10 @@
                 </div>
 
                 <div class="foto__segundo-box">
-                    <img class="img__menu perpetua img-thumbnail"
-                        src="../imagenes/images_promo_box/segundo_box.webp"
-                        class="rounded float-left" alt="Cheesecake de Frutos Rojos" title="Cheesecake de Frutos Rojos">
+                    <img class="img__menu perpetua img-thumbnail" src="../imagenes/images_promo_box/segundo_box.webp"
+                        class="rounded float-left"
+                        alt="Cupcakes, Mini Porción de Torta Pastafrola, Cuadraditos de Manzana, Alfajores de Maizena, Cookies, Porciones de Budín de Amapola y Tostado de Pan de Campo con Jamón y Queso"
+                        title="Cupcakes, Mini Porción de Torta Pastafrola, Cuadraditos de Manzana, Alfajores de Maizena, Cookies, Porciones de Budín de Amapola y Tostado de Pan de Campo con Jamón y Queso">
                 </div>
 
                 <div class="valor__segundo-box">
@@ -265,7 +273,7 @@
             </article>
 
             <hr>
-
+            <!-- BOX 3 -->
             <article class="tercer__box">
 
                 <div class="titulo__tercer-box">
@@ -287,16 +295,17 @@
                             <h3>2 Cuadrados de Brownie.</h3>
                         </li>
                         <li>
-                            <h3>2 Postres a Elección: Chocotorta | Chocooreo o Cheesecake de Maracuya o Frutos Rojos.
+                            <h3>2 Postres a Elección: Chocotorta, Chocooreo o Cheesecake de Maracuya o Frutos Rojos.
                             </h3>
                         </li>
                     </ul>
                 </div>
 
                 <div class="foto__tercer-box">
-                    <img class="img__menu perpetua img-thumbnail"
-                        src="../imagenes/images_promo_box/tercer_box.webp" class="rounded float-left"
-                        alt="Crumble de Manzana" title="Crumble de Manzana">
+                    <img class="img__menu perpetua img-thumbnail" src="../imagenes/images_promo_box/tercer_box.webp"
+                        class="rounded float-left"
+                        alt="Mini Porción de Torta Pastafrola, Alfajores de Maizena, Cookies, Porciones de Budín de Amapola, Tostado de Pan de Campo con Jamón y Queso y Mini Torta de Mousse de Chocolate con Dulce de Leche"
+                        title="Mini Porción de Torta Pastafrola, Alfajores de Maizena, Cookies, Porciones de Budín de Amapola, Tostado de Pan de Campo con Jamón y Queso y Mini Torta de Mousse de Chocolate con Dulce de Leche">
                 </div>
 
                 <div class="valor__tercer-box">
@@ -306,7 +315,7 @@
             </article>
 
             <hr>
-
+            <!-- Minitortas -->
             <article class="contenedor contenedor__adicional">
 
                 <div class="titulo__mini-tortas">
@@ -350,7 +359,7 @@
             </article>
 
             <hr>
-
+            <!-- Adicionales -->
             <article class="contenedor contenedor__adicionales">
 
                 <div class="titulo__adicionales">
@@ -369,10 +378,10 @@
                             <h3>Dedicatoria BYN <span class="enfasis"> $250</span></h3>
                         </li>
                         <li>
-                            <h3>Impresión a Color o Foto sin edicción <span class="enfasis"> $1200</span></h3>
+                            <h3>Impresión Color o Foto sin edicción <span class="enfasis"> $1200</span></h3>
                         </li>
                         <li>
-                            <h3>Agregado de Bolsita y Stiker Tématico | Personalizado <span class="enfasis">
+                            <h3>Bolsita y Stiker Tématico | Personalizado <span class="enfasis">
                                     $1500</span></h3>
                         </li>
                         </h3>
@@ -401,7 +410,7 @@
 
         <section class="contenedor__footer">
             <!-- Bloque de Contacto -->
-            <div class="whatsapp">
+            <div class="whatsapp footer__color">
                 <ul>
                     <li><img src="../imagenes/icons/whatsapp.svg" alt="Ícono de Whatsapp" class="icon"></li>
                     <li class="order">
@@ -411,7 +420,7 @@
                 </ul>
             </div>
 
-            <div class="mail">
+            <div class="mail footer__color">
                 <ul>
                     <li><img src="../imagenes/icons/email.svg" alt="Ícono de Sobre" class="icon"></li>
                     <li>
@@ -421,7 +430,7 @@
                 </ul>
             </div>
 
-            <div class="ubicacion">
+            <div class="ubicacion footer__color">
                 <ul>
                     <li><img src="../imagenes/icons/ubicación.svg" alt="Ícono de Ubicación" class="icon"></li>
                     <li>
@@ -432,7 +441,7 @@
                 </ul>
             </div>
 
-            <div class="horario">
+            <div class="horario footer__color">
                 <ul>
                     <li><img src="../imagenes/icons/horario.svg" alt="Ícono de Horario" class="icon"></li>
                     <li>

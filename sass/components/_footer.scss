@@ -115,3 +115,14 @@ footer {
         }
     }
 }
+
+/*--- FOOTER VERSIÓN GOURMET ---*/
+.footer__color {
+    & h2 {
+        color: $albahaca;
+    }
+
+    & h3 {
+        color: $tomate;
+    }
+}

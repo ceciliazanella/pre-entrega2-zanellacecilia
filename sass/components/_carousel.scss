@@ -81,3 +81,57 @@
         animation: aparecer 2s cubic-bezier(0.390, 0.575, 0.565, 1.000);
     }
 }
+
+/*--- CAROUSEL PAGE / SUBSECCIÓN SERVICIO DE LUNCH ---*/
+.carousel__lunch {
+    @extend .carousel__sobre;
+    width: 280px;
+    height: 200px;
+    border-radius: 10% 40% / 50% 20%;
+    border-top: none;
+    border-bottom: double 10px $albahaca;
+
+    @include md-420 {
+        width: 320px;
+        height: 230px;
+    }
+
+    @include md-480 {
+        width: 420px;
+        height: 280px;
+    }
+
+    @include md-620 {
+        width: 560px;
+        height: 320px;
+    }
+
+    @include md-768 {
+        width: 600px;
+        height: 380px;
+    }
+
+    @include md-820 {
+        width: 650px;
+        height: 460px;
+    }
+
+    @include md-1024 {
+        width: 620px;
+        height: 400px;
+
+        position: absolute;
+        left: auto;
+        right: auto;
+        top: 0;
+        bottom: 0;
+
+        grid-column: 1 span 4;
+        grid-area: 4/5;
+    }
+
+    @include md-1200 {
+        width: 640px;
+        height: 420px;
+    }
+}

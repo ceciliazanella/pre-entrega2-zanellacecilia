@@ -71,8 +71,8 @@
 
     /*--- ÍCONO DE SECCIONES ---*/
     & .icon {
-        width: 70px;
-        padding-top: 2rem;
+        width: 80px;
+        margin-top: 1rem;
     }
 
     & .animation__icon {
@@ -109,6 +109,63 @@
 
     & h4 {
         color: $terciarycolor;
+        font-size: 1.3rem;
+        font-weight: 600;
+        font-style: italic;
+        line-height: 1.3rem;
+        text-align: center;
+    }
+}
+
+/*--- HEADER PAGES / SECCIONES VERSIÓN GOURMET ---*/
+.header_gourmet {
+    @extend .header_seccion;
+    background-color: $tomate;
+}
+
+.contenedor__gourmet {
+    @extend .contenedor__seccion;
+
+    & h1 {
+        color: $tomate;
+    }
+
+    & h2 {
+        padding-top: 2rem;
+
+        color: $tomate;
+        font-size: 1.6rem;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    & h3 {
+        color: $albahaca;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-align: center;
+        line-height: 0.8rem;
+    }
+
+    & img {
+        width: 50px;
+    }
+}
+
+/*--- DESCRIPCION PAGES / SECCIONES VERSIÓN GOURMET ---*/
+.descripcion__gourmet {
+    @extend .descripcion__seccion;
+
+    & h3 {
+        color: $tomate;
+        font-size: 1.5rem;
+        font-weight: 900;
+        text-align: center;
+        line-height: 1.8rem;
+    }
+
+    & h4 {
+        color: $albahaca;
         font-size: 1.3rem;
         font-weight: 600;
         font-style: italic;

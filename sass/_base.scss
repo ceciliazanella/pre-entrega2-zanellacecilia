@@ -1,10 +1,14 @@
 /*--- VARIABLES ---*/
-/*--- COLORES ---*/
+/*--- COLORES Corazón de Chocolate ---*/
 $principalcolor: #5e0b15;
 $secundarycolor: #90323d;
 $terciarycolor: #bc8034;
 $ligthcolor: #8c7a6b;
 $ultraligthcolor: #d9cab3;
+
+/*--- COLORES Corazón de Chocolate Versión Gourmet ---*/
+$tomate: #9A031E;
+$albahaca: #758E4F;
 
 /*--- TIPOGRAFÍAS ---*/
 // FONT FAMILIES //
@@ -25,8 +29,17 @@ $decorativefont: "Corinthia", cursive;
     font-weight: 700;
 }
 
+%template__color {
+    color: $albahaca;
+    font-weight: 900;
+}
+
 %template__enfasis {
     color: $terciarycolor;
+    font-weight: 900;
+}
+
+%template__grosor {
     font-weight: 900;
 }
 
@@ -333,6 +346,25 @@ $decorativefont: "Corinthia", cursive;
     }
 }
 
+@keyframes cambio__tono {
+    0% {
+        color: $tomate;
+    }
+
+    25% {
+        color: $albahaca;
+    }
+
+    50% {
+        color: $ligthcolor;
+    }
+
+    100% {
+        color: $ultraligthcolor;
+        transform: scale(1.2);
+    }
+}
+
 @keyframes cambiarUltraligth {
     from {
         color: #ffffff00;
@@ -471,12 +503,12 @@ $decorativefont: "Corinthia", cursive;
 
         transform: scale(0.8);
     }
+
     100% {
 
         transform: scale(1.15);
     }
 }
-
 
 // --- --- --- //
 

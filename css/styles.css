@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*--- VARIABLES ---*/
-/*--- COLORES ---*/
+/*--- COLORES Corazón de Chocolate ---*/
+/*--- COLORES Corazón de Chocolate Versión Gourmet ---*/
 /*--- TIPOGRAFÍAS ---*/
 :root {
   --font-weight: 700;
@@ -14,8 +15,17 @@
   font-weight: 700;
 }
 
-.contenedor__adicional .enfasis, .contenedor__adicionales .enfasis, .contenedor__box .enfasis, .contenedor__menu .titulo__menu h2 .enfasis {
+.contenedor__adicional .enfasis, .contenedor__adicionales .enfasis {
+  color: #758E4F;
+  font-weight: 900;
+}
+
+.contenedor__menu .titulo__menu h2 .enfasis {
   color: #bc8034;
+  font-weight: 900;
+}
+
+.contenedor__box .enfasis {
   font-weight: 900;
 }
 
@@ -158,6 +168,21 @@
   }
   100% {
     color: #90323d;
+    transform: scale(1.2);
+  }
+}
+@keyframes cambio__tono {
+  0% {
+    color: #9A031E;
+  }
+  25% {
+    color: #758E4F;
+  }
+  50% {
+    color: #8c7a6b;
+  }
+  100% {
+    color: #d9cab3;
     transform: scale(1.2);
   }
 }
@@ -402,7 +427,7 @@ main .contenedor_main {
 }
 
 /*--- HEADER PAGES / SECCIONES ---*/
-.header_seccion {
+.header_seccion, .header_gourmet {
   background-color: #5e0b15;
   width: 100%;
   max-height: 240px;
@@ -414,7 +439,7 @@ main .contenedor_main {
   align-content: center;
 }
 
-.contenedor__seccion {
+.contenedor__seccion, .contenedor__gourmet {
   background-color: #ffffff;
   width: 100%;
   height: 350px;
@@ -428,7 +453,7 @@ main .contenedor_main {
   flex-direction: column;
   /*--- ÍCONO DE SECCIONES ---*/
 }
-.contenedor__seccion h1 {
+.contenedor__seccion h1, .contenedor__gourmet h1 {
   padding-top: 2rem;
   margin: 0;
   color: #5e0b15;
@@ -438,36 +463,36 @@ main .contenedor_main {
   letter-spacing: 0.3rem;
   text-align: center;
 }
-.contenedor__seccion h2 {
+.contenedor__seccion h2, .contenedor__gourmet h2 {
   padding-top: 2rem;
   color: #5e0b15;
   font-size: 1.6rem;
   font-weight: 900;
   text-align: center;
 }
-.contenedor__seccion h3 {
+.contenedor__seccion h3, .contenedor__gourmet h3 {
   color: #90323d;
   font-size: 1.2rem;
   font-weight: 700;
   text-align: center;
   line-height: 0.8rem;
 }
-.contenedor__seccion img {
+.contenedor__seccion img, .contenedor__gourmet img {
   width: 50px;
 }
-.contenedor__seccion .icon {
-  width: 70px;
-  padding-top: 2rem;
+.contenedor__seccion .icon, .contenedor__gourmet .icon {
+  width: 80px;
+  margin-top: 1rem;
 }
-.contenedor__seccion .animation__icon {
+.contenedor__seccion .animation__icon, .contenedor__gourmet .animation__icon {
   animation: rebotarLugar 1s infinite alternate ease-in-out;
 }
-.contenedor__seccion .animation__icon:hover {
+.contenedor__seccion .animation__icon:hover, .contenedor__gourmet .animation__icon:hover {
   animation: sacudir__horizontal 1.2s infinite alternate ease-in-out;
 }
 
 /*--- DESCRIPCION DE CADA UNA DE LAS PAGES / SECCIONES ---*/
-.descripcion__seccion {
+.descripcion__seccion, .descripcion__gourmet {
   background-color: #ffffff;
   max-width: 1200px;
   height: 280px;
@@ -480,15 +505,58 @@ main .contenedor_main {
   flex-direction: column;
   gap: 1rem;
 }
-.descripcion__seccion h3 {
+.descripcion__seccion h3, .descripcion__gourmet h3 {
   color: #90323d;
   font-size: 1.5rem;
   font-weight: 900;
   text-align: center;
   line-height: 1.8rem;
 }
-.descripcion__seccion h4 {
+.descripcion__seccion h4, .descripcion__gourmet h4 {
   color: #bc8034;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.3rem;
+  text-align: center;
+}
+
+/*--- HEADER PAGES / SECCIONES VERSIÓN GOURMET ---*/
+.header_gourmet {
+  background-color: #9A031E;
+}
+
+.contenedor__gourmet h1 {
+  color: #9A031E;
+}
+.contenedor__gourmet h2 {
+  padding-top: 2rem;
+  color: #9A031E;
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-align: center;
+}
+.contenedor__gourmet h3 {
+  color: #758E4F;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 0.8rem;
+}
+.contenedor__gourmet img {
+  width: 50px;
+}
+
+/*--- DESCRIPCION PAGES / SECCIONES VERSIÓN GOURMET ---*/
+.descripcion__gourmet h3 {
+  color: #9A031E;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.8rem;
+}
+.descripcion__gourmet h4 {
+  color: #758E4F;
   font-size: 1.3rem;
   font-weight: 600;
   font-style: italic;
@@ -502,8 +570,13 @@ header {
   margin: 0 auto;
   z-index: 1;
   /*--- LOGO ---*/
+  /*--- LOGO | VERSIÓN GOURMET ---*/
   /*--- NAV ---*/
+  /*--- ÍTEMS DE LA NAV ---*/
+  /*--- LINKS DE LA NAV ---*/
   /*--- NAV > MENU DESPLEGABLE ---*/
+  /*--- ÍTEMS DEL MENÚ DESPLEGABLE ---*/
+  /*--- NAV VERSIÓN GOURMET ---*/
 }
 header .logo {
   max-width: 60%;
@@ -513,7 +586,12 @@ header .logo:hover {
   transition: 1.6s ease-in-out;
   transform: rotate(360deg);
 }
-header .navbar-nav, header .navbar-seccion {
+@media (min-width: 1000px) {
+  header .logo_gourmet {
+    margin-top: 0.5rem;
+  }
+}
+header .navbar-nav, header .navbar-nav-gourmet, header .navbar-seccion {
   background: #5e0b15;
   background: radial-gradient(circle, rgb(94, 11, 21) 0%, rgba(94, 11, 21, 0.7287289916) 100%);
   box-shadow: 0px 10px 10px -5px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
@@ -523,7 +601,7 @@ header .navbar-nav, header .navbar-seccion {
   gap: 1rem;
 }
 @media (min-width: 1000px) {
-  header .navbar-nav, header .navbar-seccion {
+  header .navbar-nav, header .navbar-nav-gourmet, header .navbar-seccion {
     background: rgba(0, 0, 0, 0);
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
     margin-top: 0;
@@ -538,7 +616,7 @@ header .navbar, header .container {
 header .navbar-toggler-icon {
   color: #d9cab3;
 }
-header .nav-item {
+header .nav-item, header .navbar-nav-gourmet .nav-item-gourmet {
   background-color: rgba(0, 0, 0, 0);
   width: 100%;
   padding-right: 0.5rem;
@@ -547,14 +625,19 @@ header .nav-item {
   font-size: 1rem;
   text-align: right;
 }
-header .nav-link {
+@media (min-width: 1000px) {
+  header .nav-item, header .navbar-nav-gourmet .nav-item-gourmet {
+    text-align: left;
+  }
+}
+header .nav-link, header .navbar-nav-gourmet .nav-link-gourmet {
   background-color: rgba(0, 0, 0, 0);
   color: #d9cab3;
   font-size: 1rem;
   font-weight: 700;
   transition: color font-size font-weight 0.4s ease-in-out;
 }
-header .nav-link:hover {
+header .nav-link:hover, header .navbar-nav-gourmet .nav-link-gourmet:hover {
   color: #bc8034;
   font-weight: 900;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6117647059);
@@ -575,8 +658,8 @@ header [data-bs-theme=dark] {
 header .dropdown-menu {
   background-color: rgba(0, 0, 0, 0);
   border-radius: 50% 20%/10% 40%;
-  padding: 2rem;
   transition: background-color 0.6s ease-in-out;
+  position: static;
 }
 @media (min-width: 1000px) {
   header .dropdown-menu {
@@ -584,6 +667,8 @@ header .dropdown-menu {
     box-shadow: 0px 5px 5px -5px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
     border-radius: 5% 10% 40% 5%;
     width: 250px;
+    padding: 2rem;
+    position: absolute;
   }
 }
 header .dropdown-menu:hover {
@@ -613,11 +698,66 @@ header .dropdown-item:hover {
   font-weight: 900;
   transition: color font-style font-weight text-shadow 1s ease-in-out;
 }
+header .navbar-nav-gourmet {
+  background: #9A031E;
+  padding: 2rem 0;
+  /*--- LINKS DE LA NAV | VERSIÓN GOURMET ---*/
+  /*--- ÍTEMS DE LA NAV | VERSIÓN GOURMET ---*/
+  /*--- ITEMS DEL MENÚ DESPLEGABLE | VERSIÓN GOURMET ---*/
+}
+header .navbar-nav-gourmet ul {
+  padding-right: 1rem;
+  text-align: right;
+}
+@media (min-width: 1000px) {
+  header .navbar-nav-gourmet {
+    display: flex;
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+    margin-top: 0;
+  }
+  header .navbar-nav-gourmet ul {
+    text-align: left;
+  }
+}
+header .navbar-nav-gourmet .nav-link-gourmet:hover {
+  color: #d9cab3;
+}
+header .navbar-nav-gourmet .nav-item-gourmet {
+  padding: 1rem 2rem;
+}
+@media (min-width: 1000px) {
+  header .navbar-nav-gourmet .nav-item-gourmet {
+    padding: 0 1rem;
+  }
+}
+header .navbar-nav-gourmet .dropdown-item-gourmet {
+  color: #8c7a6b;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: right;
+  transition: color font-size font-weight 0.6s ease-in-out;
+}
+@media (min-width: 1000px) {
+  header .navbar-nav-gourmet .dropdown-item-gourmet {
+    padding: 0 1rem 0 0;
+  }
+}
+header .navbar-nav-gourmet .dropdown-item-gourmet:focus,
+header .navbar-nav-gourmet .dropdown-item-gourmet:hover {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 50% 20%/10% 40%;
+  color: #d9cab3;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6117647059);
+  font-style: italic;
+  font-weight: 900;
+  transition: color font-style font-weight text-shadow 1s ease-in-out;
+}
 
 /*--- BOTONES ---*/
 .boton_outline h4 {
   color: #8c7a6b;
-  text-shadow: -1px -1px 2px rgba(255, 255, 255, 0.747), -1px -1px 1.5px rgba(0, 0, 0, 0.767);
+  text-shadow: -1px -1px 3px rgba(255, 255, 255, 0.747), -1px -1px 3px rgba(0, 0, 0, 0.638);
   font-size: 1rem;
   font-weight: 900;
   letter-spacing: 0.2rem;
@@ -627,12 +767,13 @@ header .dropdown-item:hover {
   margin-bottom: 0;
   border: 0.1rem;
   border-radius: 10px 100px/120px;
-  box-shadow: 0px 5px 10px -5px #000000, -25px 10px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.5803921569), -25px 10px 15px 5px rgba(0, 0, 0, 0);
   transition: background-color color 0.4s ease-in-out;
 }
 .boton_outline h4:hover {
   background: #8c7a6b;
-  box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.3843137255);
+  box-shadow: -2px -2px 3px rgba(0, 0, 0, 0.4431372549);
+  box-shadow: inset 2px -2px 2px 2px rgba(0, 0, 0, 0.1843137255);
   color: rgba(0, 0, 0, 0.6);
   text-shadow: 1.5px 1.5px 1.8px rgba(255, 255, 255, 0.452);
   transition: background-color color 0.8s ease-in-out;
@@ -644,15 +785,7 @@ header .dropdown-item:hover {
   background-color: #d9cab3;
   border-radius: 10px 100px/120px;
   box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
-  transition: background-color 0.2s ease-in-out;
-}
-.boton:hover {
-  background-color: #5e0b15;
-  box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.3843137255);
-  box-shadow: inset 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
-  color: #d9cab3;
-  transition: background-color color 0.6s ease-in-out;
-  animation: sacudir__vertical 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  transition: background-color shadow 0.2s ease-in-out;
 }
 .boton h4 {
   margin-bottom: 0;
@@ -662,12 +795,18 @@ header .dropdown-item:hover {
   font-weight: 900;
   letter-spacing: 0.1rem;
   text-align: center;
-  transition: color 0.2s ease-in-out;
+  transition: color text-shadow 0.2s ease-in-out;
 }
-.boton h4:hover {
+.boton:hover {
+  background-color: #5e0b15;
+  box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.3843137255);
+  box-shadow: inset 1.5px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.5);
+  transition: background-color color text-shadow 0.6s ease-in-out;
+  animation: sacudir__vertical 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+.boton:hover h4 {
   color: #d9cab3;
   text-shadow: 1px 1px 2px #000000;
-  transition: color 0.6s ease-in-out;
 }
 
 /*--- CAROUSEL ---*/
@@ -701,7 +840,7 @@ header .dropdown-item:hover {
 }
 
 /*--- CAROUSEL PAGE / SECCIÓN SOBRE MÍ ---*/
-.carousel__sobre {
+.carousel__sobre, .carousel__lunch {
   width: 320px;
   height: 220px;
   border-radius: 1rem;
@@ -714,30 +853,30 @@ header .dropdown-item:hover {
   animation: aparecer 1s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 @media (min-width: 480px) {
-  .carousel__sobre {
+  .carousel__sobre, .carousel__lunch {
     width: 400px;
     height: 250px;
   }
 }
 @media (min-width: 620px) {
-  .carousel__sobre {
+  .carousel__sobre, .carousel__lunch {
     width: 460px;
     height: 250px;
   }
 }
 @media (min-width: 768px) {
-  .carousel__sobre {
+  .carousel__sobre, .carousel__lunch {
     width: 500px;
     height: 340px;
   }
 }
 @media (min-width: 1024px) {
-  .carousel__sobre {
+  .carousel__sobre, .carousel__lunch {
     width: 560px;
     height: 380px;
   }
 }
-.carousel__sobre .carousel-item {
+.carousel__sobre .carousel-item, .carousel__lunch .carousel-item {
   width: 100%;
   height: 100%;
   border-radius: 1rem;
@@ -745,6 +884,64 @@ header .dropdown-item:hover {
   overflow: hidden;
   filter: sepia(50%), contrast(30%);
   animation: aparecer 2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+/*--- CAROUSEL PAGE / SUBSECCIÓN SERVICIO DE LUNCH ---*/
+.carousel__lunch {
+  width: 280px;
+  height: 200px;
+  border-radius: 10% 40%/50% 20%;
+  border-top: none;
+  border-bottom: double 10px #758E4F;
+}
+@media (min-width: 420px) {
+  .carousel__lunch {
+    width: 320px;
+    height: 230px;
+  }
+}
+@media (min-width: 480px) {
+  .carousel__lunch {
+    width: 420px;
+    height: 280px;
+  }
+}
+@media (min-width: 620px) {
+  .carousel__lunch {
+    width: 560px;
+    height: 320px;
+  }
+}
+@media (min-width: 768px) {
+  .carousel__lunch {
+    width: 600px;
+    height: 380px;
+  }
+}
+@media (min-width: 820px) {
+  .carousel__lunch {
+    width: 650px;
+    height: 460px;
+  }
+}
+@media (min-width: 1024px) {
+  .carousel__lunch {
+    width: 620px;
+    height: 400px;
+    position: absolute;
+    left: auto;
+    right: auto;
+    top: 0;
+    bottom: 0;
+    grid-column: 1 span 4;
+    grid-area: 4/5;
+  }
+}
+@media (min-width: 1200px) {
+  .carousel__lunch {
+    width: 640px;
+    height: 420px;
+  }
 }
 
 /*--- FORMULARIO ---*/
@@ -760,7 +957,7 @@ form {
   align-content: center;
   align-items: center;
   gap: 1rem;
-  /*--- TEXTAREA / Editor de Texto para el Textarea ---*/
+  /*--- TEXTAREA ---*/
   /*--- INPUTS ---*/
 }
 form div {
@@ -1001,6 +1198,14 @@ footer .contenedor__redes ul .ired {
 footer .contenedor__redes ul .ired:hover {
   transition: 0.8s ease-in-out;
   transform: rotate(360deg);
+}
+
+/*--- FOOTER VERSIÓN GOURMET ---*/
+.footer__color h2 {
+  color: #758E4F;
+}
+.footer__color h3 {
+  color: #9A031E;
 }
 
 /*--- HEADER > H1 / INDEX ---*/
@@ -2439,6 +2644,7 @@ footer .contenedor__redes ul .ired:hover {
   flex-direction: column;
   justify-items: center;
   align-content: center;
+  /*--- IMÁGENES GENERAL / SECCIÓN SOBRE MÍ ---*/
 }
 .contenedor__grilla .parrafo {
   padding: 2rem 1rem 0 1rem;
@@ -2457,45 +2663,6 @@ footer .contenedor__redes ul .ired:hover {
   font-size: 1.08rem;
   font-weight: 400;
   line-height: 1.7rem;
-}
-.contenedor__grilla img {
-  width: 350px;
-  height: 400px;
-  margin: 0 auto;
-  object-fit: cover;
-  object-position: top;
-  overflow: hidden;
-}
-@media (min-width: 520px) {
-  .contenedor__grilla img {
-    min-width: 400px;
-    height: 400px;
-  }
-}
-@media (min-width: 620px) {
-  .contenedor__grilla img {
-    min-width: 480px;
-  }
-}
-@media (min-width: 768px) {
-  .contenedor__grilla img {
-    min-width: 580px;
-    height: 480px;
-  }
-}
-@media (min-width: 1024px) {
-  .contenedor__grilla img {
-    min-width: 580px;
-  }
-}
-@media (min-width: 1200px) {
-  .contenedor__grilla img {
-    min-width: 540px;
-    height: 800px;
-    padding: 0;
-    align-self: start;
-    justify-self: start;
-  }
 }
 @media (min-width: 480px) {
   .contenedor__grilla {
@@ -2542,6 +2709,7 @@ footer .contenedor__redes ul .ired:hover {
     grid-template-rows: 920px 880px 880px;
     justify-content: center;
     align-items: start;
+    /*--- TEXTOS / SECCIÓN SOBRE MÍ ---*/
   }
   .contenedor__grilla .izquierda h4 {
     padding: 0 1.5rem;
@@ -2605,7 +2773,47 @@ footer .contenedor__redes ul .ired:hover {
     justify-self: center;
   }
 }
+.contenedor__grilla img {
+  width: 350px;
+  height: 400px;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: top;
+  overflow: hidden;
+}
+@media (min-width: 520px) {
+  .contenedor__grilla img {
+    min-width: 400px;
+    height: 400px;
+  }
+}
+@media (min-width: 620px) {
+  .contenedor__grilla img {
+    min-width: 480px;
+  }
+}
+@media (min-width: 768px) {
+  .contenedor__grilla img {
+    min-width: 580px;
+    height: 480px;
+  }
+}
+@media (min-width: 1024px) {
+  .contenedor__grilla img {
+    min-width: 580px;
+  }
+}
+@media (min-width: 1200px) {
+  .contenedor__grilla img {
+    min-width: 540px;
+    height: 800px;
+    padding: 0;
+    align-self: start;
+    justify-self: start;
+  }
+}
 
+/*--- IMAGÉNES DETALLES / SECCIÓN SOBRE MÍ ---*/
 .img {
   width: 100%;
   height: 100%;
@@ -2652,7 +2860,7 @@ footer .contenedor__redes ul .ired:hover {
   filter: brightness(60%);
 }
 
-/*--- PAGE / SECCIÓN TORTAS ARETESANALES - PRESENTACIÓN ---*/
+/*--- PAGE / SUBSECCIÓN TORTAS ARETESANALES - PRESENTACIÓN ---*/
 .boton_outline h4 {
   font-style: normal;
 }
@@ -2667,6 +2875,8 @@ footer .contenedor__redes ul .ired:hover {
   flex-direction: column;
   justify-items: center;
   align-content: center;
+  /*--- IMÁGENES / SUBSECCIÓN TORTAS ARTESANALES ---*/
+  /*--- DETALLES PARA FOTOS / SECCIÓN TORTAS ARTESANALES ---*/
 }
 .grilla_tortas .parrafo {
   padding: 0 1rem;
@@ -2854,8 +3064,8 @@ footer .contenedor__redes ul .ired:hover {
   transition: width height 0.8s ease-in-out;
 }
 .grilla_tortas .foto__butter, .grilla_tortas .foto__letter, .grilla_tortas .foto__number, .grilla_tortas .foto__fon, .grilla_tortas .foto__fondant, .grilla_tortas .foto__cream {
-  width: 260px;
-  height: 320px;
+  width: 280px;
+  height: 400px;
   padding: 1rem;
   margin: 3rem auto;
   transition: width height 1.2s ease-in-out;
@@ -2909,7 +3119,7 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 
-/*--- SUBSECCIÓN MENÚ TORTAS ARTESANALES / SECCIÓN TORTAS ARTESANALES ---*/
+/*--- SUBSECCIÓN MENÚ TORTAS ARTESANALES / SUBSECCIÓN TORTAS ARTESANALES ---*/
 /*--- ÍCONOS / SUBSECCIÓN MENÚ TORTAS ARTESANALES ---*/
 .iconos_subseccion {
   display: none;
@@ -3015,7 +3225,7 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 
-/*--- PAGE / SECCIÓN SERVICIO DE LUNCH - PRESENTACIÓN ---*/
+/*--- PAGE / SUBSECCIÓN SERVICIO DE LUNCH - PRESENTACIÓN ---*/
 .boton_outline h4 {
   font-style: normal;
 }
@@ -3030,6 +3240,10 @@ footer .contenedor__redes ul .ired:hover {
   flex-direction: column;
   justify-items: center;
   align-content: center;
+  position: relative;
+  /*--- TÍTULOS / SUBSECCIÓN SERVICIO DE LUNCH ---*/
+  /*--- IMÁGENES / SUBSECCIÓN SERVICIO DE LUNCH ---*/
+  /*--- DETALLES PARA FOTOS / SUBSECCIÓN SERVICIO DE LUNCH ---*/
 }
 .grilla_lunch .parrafo {
   padding: 0 1rem;
@@ -3039,55 +3253,29 @@ footer .contenedor__redes ul .ired:hover {
     padding: 0;
   }
   .grilla_lunch .parrafo h3 {
+    color: #90323d;
     padding-bottom: 1rem;
-  }
-}
-.grilla_lunch .parrafo h4 {
-  padding: 0 1.5rem;
-  font-size: 1.05rem;
-  line-height: 1.8rem;
-  font-style: italic;
-  font-weight: 700;
-  background-color: #5e0b15;
-  color: #d9cab3;
-}
-@media (min-width: 1000px) {
-  .grilla_lunch .parrafo h4 {
-    background-color: #d9cab3;
-    color: #5e0b15;
-  }
-}
-@media (min-width: 480px) {
-  .grilla_lunch {
-    padding: 0 2rem;
-  }
-}
-@media (min-width: 768px) {
-  .grilla_lunch {
-    padding: 0 4rem;
-  }
-}
-@media (min-width: 1000px) {
-  .grilla_lunch {
-    padding: 0 6rem;
   }
 }
 @media (min-width: 1024px) {
   .grilla_lunch {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 200px 300px 420px 200px 300px 500px;
+    grid-template-rows: 200px 400px 700px 560px 200px 400px 780px;
     max-width: 1000px;
     padding: 0 1.5rem;
-    place-content: center;
+    align-items: center;
+    justify-content: center;
     gap: 2rem;
   }
 }
 @media (min-width: 1024px) and (min-width: 1200px) {
   .grilla_lunch {
-    grid-template-rows: 150px 280px 300px 150px 280px 300px;
+    grid-template-rows: 200px 400px 710px 560px 200px 400px 810px;
     max-width: 1024px;
     padding: 2rem 3rem 0 3rem;
+    align-items: center;
+    justify-content: center;
     gap: 2rem;
   }
 }
@@ -3109,17 +3297,17 @@ footer .contenedor__redes ul .ired:hover {
   }
   .grilla_lunch .salchichitas {
     grid-column: 1/2;
-    grid-row: 6/7;
+    grid-row: 7/8;
     align-self: start;
   }
   .grilla_lunch .brusquetas {
     grid-column: 2/3;
-    grid-row: 6/7;
+    grid-row: 7/8;
     align-self: start;
   }
   .grilla_lunch .empanadas {
     grid-column: 3/4;
-    grid-row: 6/7;
+    grid-row: 7/8;
     align-self: start;
   }
   .grilla_lunch .parrafo {
@@ -3156,7 +3344,7 @@ footer .contenedor__redes ul .ired:hover {
 }
 .grilla_lunch .titulo__miga h2, .grilla_lunch .titulo__empanadas h2, .grilla_lunch .titulo__brusquetas h2, .grilla_lunch .titulo__salchichitas h2, .grilla_lunch .titulo__chips h2, .grilla_lunch .titulo__pollo h2 {
   margin-bottom: 0;
-  color: #bc8034;
+  color: #9A031E;
   text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5);
   font-size: 1.6rem;
   font-weight: 700;
@@ -3188,7 +3376,7 @@ footer .contenedor__redes ul .ired:hover {
 @media (min-width: 1024px) {
   .grilla_lunch .titulo__salchichitas {
     grid-column: 1/2;
-    grid-row: 4/5;
+    grid-row: 5/6;
     align-self: center;
     justify-self: center;
   }
@@ -3196,7 +3384,7 @@ footer .contenedor__redes ul .ired:hover {
 @media (min-width: 1024px) {
   .grilla_lunch .titulo__brusquetas {
     grid-column: 2/3;
-    grid-row: 4/5;
+    grid-row: 5/6;
     align-self: center;
     justify-self: center;
   }
@@ -3204,13 +3392,13 @@ footer .contenedor__redes ul .ired:hover {
 @media (min-width: 1024px) {
   .grilla_lunch .titulo__empanadas {
     grid-column: 3/4;
-    grid-row: 4/5;
+    grid-row: 5/6;
     align-self: center;
     justify-self: center;
   }
 }
 .grilla_lunch .acentuado {
-  color: #90323d;
+  color: #758E4F;
   text-shadow: none;
   font-family: "Corinthia", cursive;
   font-size: 3.5rem;
@@ -3225,18 +3413,19 @@ footer .contenedor__redes ul .ired:hover {
 .grilla_lunch img {
   width: 100%;
   height: 100%;
-  border-top: double 8px #bc8034;
+  border-top: double 8px #9A031E;
   border-radius: 10% 40%/50% 20%;
   box-shadow: 0px 8px 10px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
   object-fit: cover;
   overflow: hidden;
+  object-position: left;
   align-self: center;
   filter: sepia(40%) brightness(90%);
   transition: width height 0.8s ease-in-out;
 }
 .grilla_lunch .foto__miga, .grilla_lunch .foto__empanadas, .grilla_lunch .foto__brusquetas, .grilla_lunch .foto__salchichitas, .grilla_lunch .foto__chips, .grilla_lunch .foto__pollo {
   width: 280px;
-  height: 280px;
+  height: 400px;
   padding: 1rem;
   margin: 3rem auto;
   transition: width height 6s ease-in-out;
@@ -3273,39 +3462,45 @@ footer .contenedor__redes ul .ired:hover {
 @media (min-width: 1024px) {
   .grilla_lunch .foto__salchichitas {
     grid-column: 1/2;
-    grid-row: 5/6;
+    grid-row: 6/7;
   }
 }
 @media (min-width: 1024px) {
   .grilla_lunch .foto__brusquetas {
     grid-column: 2/3;
-    grid-row: 5/6;
+    grid-row: 6/7;
   }
 }
 @media (min-width: 1024px) {
   .grilla_lunch .foto__empanadas {
     grid-column: 3/4;
-    grid-row: 5/6;
+    grid-row: 6/7;
   }
 }
 
+/*--- SUBSECCIÓN PROMO BOX DESAYUNO | MERIENDA / SUBSECCIÓN SERVICIO DE LUNCH ---*/
 .contenedor__box {
-  max-width: 1024px;
+  max-width: 1000px;
   padding: 2rem;
   margin: 0 auto;
   gap: 5rem;
 }
+@media (min-width: 1024px) {
+  .contenedor__box {
+    padding: 3rem;
+  }
+}
 .contenedor__box .texto__box h2 {
   margin-bottom: 2rem;
-  color: #5e0b15;
+  color: #9A031E;
   font-size: 1.1rem;
-  font-weight: 900;
+  font-weight: 600;
   line-height: 1.5rem;
   text-align: center;
 }
 .contenedor__box .texto__box h3 {
   margin-bottom: 4rem;
-  color: #bc8034;
+  color: #758E4F;
   font-size: 1rem;
   font-weight: 700;
   text-align: center;
@@ -3319,10 +3514,10 @@ footer .contenedor__redes ul .ired:hover {
 }
 
 .promo_box {
-  padding: 3rem;
+  width: 1000px;
+  padding: 4rem;
   margin: 0 auto;
-  align-items: center;
-  justify-content: center;
+  /*--- BOX ---*/
 }
 @media (min-width: 1024px) {
   .promo_box hr {
@@ -3344,17 +3539,19 @@ footer .contenedor__redes ul .ired:hover {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 700px 480px;
+    grid-template-rows: 735px 330px;
     align-items: start;
     justify-content: center;
   }
 }
 .promo_box .primer__box, .promo_box .tercer__box, .promo_box .segundo__box {
   min-width: 300px;
+  max-width: 1000px;
   height: 750px;
   padding: 1.5rem;
-  margin: 0 0.5rem;
-  background-color: #5e0b15;
+  padding-top: 4rem;
+  margin: 0 1rem;
+  background-color: #9A031E;
   border-radius: 1rem 0 1rem 0;
   color: #8c7a6b;
   gap: 1rem;
@@ -3362,6 +3559,11 @@ footer .contenedor__redes ul .ired:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+@media (min-width: 480px) {
+  .promo_box .primer__box, .promo_box .tercer__box, .promo_box .segundo__box {
+    margin: 0 2rem;
+  }
 }
 @media (min-width: 768px) {
   .promo_box .primer__box, .promo_box .tercer__box, .promo_box .segundo__box {
@@ -3371,7 +3573,7 @@ footer .contenedor__redes ul .ired:hover {
 @media (min-width: 1024px) {
   .promo_box .primer__box, .promo_box .tercer__box, .promo_box .segundo__box {
     height: 700px;
-    padding: 2rem;
+    padding: 2.5rem;
     margin: 0;
     border-radius: 1rem 0 0 4rem;
     grid-column: 1/2;
@@ -3381,10 +3583,11 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 .promo_box .primer__box .titulo__primer-box h2, .promo_box .tercer__box .titulo__primer-box h2, .promo_box .tercer__box .titulo__tercer-box h2, .promo_box .segundo__box .titulo__primer-box h2, .promo_box .segundo__box .titulo__segundo-box h2 {
+  color: #8c7a6b;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5);
   font-size: 2rem;
   font-weight: 900;
-  color: #8c7a6b;
-  animation: cambio__color 2s alternate infinite ease-in-out;
+  animation: cambio__tono 3s alternate infinite ease-in-out;
 }
 .promo_box .primer__box .texto__primer-box li, .promo_box .tercer__box .texto__primer-box li, .promo_box .tercer__box .texto__tercer-box li, .promo_box .segundo__box .texto__primer-box li, .promo_box .segundo__box .texto__segundo-box li {
   display: flex;
@@ -3401,19 +3604,38 @@ footer .contenedor__redes ul .ired:hover {
   text-align: center;
 }
 .promo_box .primer__box .foto__primer-box, .promo_box .tercer__box .foto__primer-box, .promo_box .tercer__box .foto__tercer-box, .promo_box .segundo__box .foto__primer-box, .promo_box .segundo__box .foto__segundo-box {
-  width: 280px;
+  width: 250px;
   height: 160px;
+  margin-top: 20px;
   border-radius: 0.5rem 0 0.5rem 0;
-  box-shadow: -4px -8px 10px rgba(0, 0, 0, 0.204);
+  box-shadow: -2px -4px 10px rgba(0, 0, 0, 0.429);
   position: relative;
 }
 .promo_box .primer__box .foto__primer-box:hover, .promo_box .tercer__box .foto__primer-box:hover, .promo_box .tercer__box .foto__tercer-box:hover, .promo_box .segundo__box .foto__primer-box:hover, .promo_box .segundo__box .foto__segundo-box:hover {
   animation: escalar 2s alternate ease-in-out;
 }
+@media (min-width: 420px) {
+  .promo_box .primer__box .foto__primer-box, .promo_box .tercer__box .foto__primer-box, .promo_box .tercer__box .foto__tercer-box, .promo_box .segundo__box .foto__primer-box, .promo_box .segundo__box .foto__segundo-box {
+    width: 290px;
+    height: 180px;
+  }
+}
+@media (min-width: 480px) {
+  .promo_box .primer__box .foto__primer-box, .promo_box .tercer__box .foto__primer-box, .promo_box .tercer__box .foto__tercer-box, .promo_box .segundo__box .foto__primer-box, .promo_box .segundo__box .foto__segundo-box {
+    width: 350px;
+    height: 220px;
+  }
+}
+@media (min-width: 520px) {
+  .promo_box .primer__box .foto__primer-box, .promo_box .tercer__box .foto__primer-box, .promo_box .tercer__box .foto__tercer-box, .promo_box .segundo__box .foto__primer-box, .promo_box .segundo__box .foto__segundo-box {
+    width: 390px;
+    height: 280px;
+  }
+}
 @media (min-width: 768px) {
   .promo_box .primer__box .foto__primer-box, .promo_box .tercer__box .foto__primer-box, .promo_box .tercer__box .foto__tercer-box, .promo_box .segundo__box .foto__primer-box, .promo_box .segundo__box .foto__segundo-box {
-    width: 420px;
-    height: 260px;
+    width: 520px;
+    height: 300px;
   }
 }
 @media (min-width: 1024px) {
@@ -3425,9 +3647,9 @@ footer .contenedor__redes ul .ired:hover {
 }
 .promo_box .primer__box .valor__primer-box, .promo_box .tercer__box .valor__primer-box, .promo_box .tercer__box .valor__tercer-box, .promo_box .segundo__box .valor__primer-box, .promo_box .segundo__box .valor__segundo-box {
   padding: 1rem 2rem;
-  background-color: #5e0b15;
+  background-color: #9A031E;
   border-radius: 0.5rem 0.5rem 0 0;
-  box-shadow: -2px -4px 3px rgba(0, 0, 0, 0.548);
+  box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.624);
   gap: 1rem;
   position: relative;
   bottom: 40px;
@@ -3436,11 +3658,12 @@ footer .contenedor__redes ul .ired:hover {
   font-size: 1.5rem;
   font-weight: 900;
   color: #8c7a6b;
-  animation: cambio__color 2s alternate infinite ease-in-out;
+  animation: cambio__tono 6s alternate infinite ease-in-out;
 }
 @media (min-width: 1024px) {
   .promo_box .segundo__box {
     border-radius: 0;
+    padding: 2.5rem 3rem 0 0;
     grid-column: 2/3;
     grid-row: 1/2;
   }
@@ -3453,6 +3676,7 @@ footer .contenedor__redes ul .ired:hover {
 @media (min-width: 1024px) {
   .promo_box .tercer__box {
     border-radius: 0 1rem 4rem 0;
+    padding: 2.5rem 3rem 0 0;
     grid-column: 3/4;
     grid-row: 1/2;
   }
@@ -3463,27 +3687,49 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 .promo_box .boton {
-  margin: 2rem;
+  margin: 3rem;
+}
+@media (min-width: 480px) {
+  .promo_box .boton {
+    margin: 0 5rem;
+  }
+}
+@media (min-width: 520px) {
+  .promo_box .boton {
+    margin: 0 6rem;
+  }
+}
+@media (min-width: 620px) {
+  .promo_box .boton {
+    margin: 0 9rem;
+  }
 }
 @media (min-width: 768px) {
   .promo_box .boton {
-    margin: 0 10rem;
+    margin: 0 14rem;
+  }
+}
+@media (min-width: 820px) {
+  .promo_box .boton {
+    margin: 0 15rem;
   }
 }
 @media (min-width: 1000px) {
   .promo_box .boton {
-    margin: 0 20rem;
+    margin: 0 21rem;
   }
 }
 @media (min-width: 1024px) {
   .promo_box .boton {
-    margin: 2rem;
+    margin: 2rem 3.5rem;
     grid-column: 3/4;
     grid-row: 2/3;
     align-self: start;
+    justify-self: start;
   }
 }
 
+/*--- MINITORTAS ---*/
 .contenedor__adicional, .contenedor__adicionales {
   min-width: 350px;
   padding: 2rem;
@@ -3503,14 +3749,13 @@ footer .contenedor__redes ul .ired:hover {
   }
 }
 .contenedor__adicional .enfasis, .contenedor__adicionales .enfasis {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 .contenedor__adicional .titulo__mini-tortas h2, .contenedor__adicionales .titulo__mini-tortas h2, .contenedor__adicionales .titulo__adicionales h2 {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 900;
   letter-spacing: 0.1rem;
-  color: #5e0b15;
-  color: #90323d;
+  color: #9A031E;
   text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5);
   text-align: center;
 }
@@ -3522,10 +3767,12 @@ footer .contenedor__redes ul .ired:hover {
   text-align: center;
 }
 
+/*--- ADICIONALES ---*/
 @media (min-width: 1024px) {
   .contenedor__adicionales {
     grid-column: 2/3;
     grid-row: 2/3;
+    padding: 2rem 3rem 0 0;
   }
 }
 .contenedor__adicionales .texto__adicionales li {
@@ -3688,6 +3935,7 @@ footer .contenedor__redes ul .ired:hover {
   filter: drop-shadow(2px -1px 1px #bc8034);
 }
 
+/*--- BOTÓN VALUE ---*/
 .boton_value {
   background-color: #5e0b15;
   box-shadow: 0px 8px 8px -2px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
